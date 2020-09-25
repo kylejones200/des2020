@@ -1,0 +1,1041 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Kyle Jones">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Evaluating the Simple Linear Regression Model&ndash;Part 1 The essential components of regression analysis are the following:
+  We assume that two variables, $x$ and $Y,$ are somehow related.
+  Specifically, we assume the probability distribution of $Y$ (which is called the response or dependent variable) changes as $x$ (which is called the predictor or independent variable) changes.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/courses/bana3363/17-evaluating-linear-regression/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/courses/bana3363/17-evaluating-linear-regression/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Kyle Jones">
+  <meta property="og:url" content="/courses/bana3363/17-evaluating-linear-regression/">
+  <meta property="og:title" content="Evaluating Linear Regression | Kyle Jones">
+  <meta property="og:description" content="Evaluating the Simple Linear Regression Model&ndash;Part 1 The essential components of regression analysis are the following:
+  We assume that two variables, $x$ and $Y,$ are somehow related.
+  Specifically, we assume the probability distribution of $Y$ (which is called the response or dependent variable) changes as $x$ (which is called the predictor or independent variable) changes."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-07-28T15:19:27&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-07-28T15:19:27&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Evaluating Linear Regression | Kyle Jones</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/">Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/1-basic-statistics-concepts/">Descriptive Statistics</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/1-basic-statistics-concepts/">Basic Statistics Concepts</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/2-the-normal-distribution/">The Normal Distribution</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/2-types-of-statistical-analysis/">Types of Statistical Analysis</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing and Inference</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing for a Proportion</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/7-interval-for-differences-in-means-independent-samples/">Interval for Differences in Means--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-test-for-differences-in-proportions-independent-samples/">Hypothesis Test for a Difference in Proportion (Independent Samples)</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-intervals-for-differences-in-proportions-independent-samples/">Intervals for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/5-ci-for-mean/">Confidence Interval for the Mean</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/5-1-hypothesis-testing-basics/">Hypothesis Testing for a Population Mean</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-confidence-interval-for-matched-pairs/">Confidence Interval for Matched Pairs</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-1-test-for-diff-in-means-proportions/">Test for Diff in Means, Proportions</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-1-test-for-differences-in-proportions-independent-samples/">Test for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-2-test-for-diff-in-means-independent-samples/">Test for Diff in Means Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-anova-basics/">ANOVA Basics</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/12-anova-mc/">ANOVA - Bonferroni Method of Multiple Comparisons</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Goodness-of-Fit Test</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-matched-pairs/">Matched Pairs</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/14-chi-squared-test-of-independence/">Chi Squared Test of Independence</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/15-intro-to-regression/">Regression</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/15-intro-to-regression/">Intro to Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/16-simple-linear-regression/">Simple Linear Regression</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/bana3363/17-evaluating-linear-regression/">Evaluating Linear Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/18-multiple-linear-regression/">Multiple Linear Regression</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#evaluating-the-simple-linear-regression-model--part-1">Evaluating the Simple Linear Regression Model&ndash;Part 1</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Evaluating Linear Regression</h1>
+
+          <div class="article-style">
+            <h2 id="evaluating-the-simple-linear-regression-model--part-1">Evaluating the Simple Linear Regression Model&ndash;Part 1</h2>
+<p>The essential components of regression analysis are the following:</p>
+<ul>
+<li>
+<p>We assume that two variables, $x$ and $Y,$ are somehow related.</p>
+</li>
+<li>
+<p>Specifically, we assume the probability distribution of $Y$ (which is called the response or dependent variable) changes as $x$ (which is called the predictor or independent variable) changes.</p>
+</li>
+<li>
+<p>Specifically, we assume that <em>the mean (or expected value)</em> of $Y,$ denoted as $E(Y),$ changes as $x$ changes. To indicate this we write $E(Y|x)$ read as &ldquo;the expected value of $Y$ given $x.&ldquo;$</p>
+</li>
+<li>
+<p>We can also indicate $E(Y|x)$ using the notation $\widehat{Y},$ read as $&quot;y$ hat.&rdquo;</p>
+</li>
+<li>
+<p>Specifically, with simple regression, we assume that $Y=\beta_{0}+\beta_{1}x+\varepsilon$, where $\varepsilon$ has a normal distribution with mean $0$ and standard deviation $\sigma.$</p>
+</li>
+<li>
+<p>Given a set of paired data points ${(Y_{i},x_{i})},$ we can fit     the simple linear regression model $\widehat{y}=b_{0}+b_{1}x$ by finding the values $b_{0}$ and $b_{1}$ that makes the &ldquo;sum of squared errors&rdquo; $SSE= \sum (y_{i}-(b_{0}+b_{1}x_{i}))^{2}$ as small as possible. This is the **OLS (ordinary least squares) criterion.**</p>
+</li>
+</ul>
+<p>Once the model is fit, we should examine how good the fit is. Several items should be checked, but they fall under three general categories: $1)$. Does the model make sense? $2).$ Are the assumptions satisfied?, and $3).$ Is the model practically useful? Statisticians have devised many ways to address these questions, some qualitative, some quantitative. Many of the quantitative methods are focused on examining $(2)$, since the validity of the predictions from the model rest upon the assumptions being at least reasonably satisfied. However, even if the assumptions are badly violated, the model might be useful and sensible. In practice, then, adjustments to the model-fitting process would be performed to make $(2)$ more reasonable. We won&rsquo;t be worried too much about adjusting anything at this point. We will focus on $(1)$ in this handout.</p>
+<p>Whether the fitted model $\widehat{y}=b_{0}+b_{1}x$ makes sense or not depends on your knowledge of the subject you are trying to learn about, and specifically on your idea of how the two variables should be related. For example, it seems sensible that as income increases,. the total amount of charitable contributions should increase as well. The relationship might be linear or non-linear. Two possible relationships are shown in Figures 
+<a href="#reg_model">[reg_model]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_model&rdquo;} and 
+<a href="#quadreg">[quadreg]</a>{reference-type=&quot;ref&rdquo; reference=&quot;quadreg&rdquo;} below. However, other relationships are possible. 
+<a href="http://www.npr.org/2013/09/03/218627288/why-being-wealthy-doesnt-lead-to-more-giving" target="_blank" rel="noopener">A recent study</a> has shown that the very wealthy are less generous in that they give a smaller percentage of their income to charity.</p>
+<p>The most important way to determine the relationship between variables is to simply graph the data. Scatterplots such as those in Figures 
+<a href="#gas_scatter">[gas_scatter]</a>{reference-type=&quot;ref&rdquo; reference=&quot;gas_scatter&rdquo;} and 
+<a href="#c02">[c02]</a>{reference-type=&quot;ref&rdquo; reference=&quot;c02&rdquo;} confirm what we suspect: higher oil prices lead to higher gas prices, and the more cars on the road, the higher the CO$_{2}$ output. But what about the relationship between the square footage of a house and its selling price? Figure 
+<a href="#housescatter">[housescatter]</a>{reference-type=&quot;ref&rdquo; reference=&quot;housescatter&rdquo;} is a scatterplot of over $2,000$ selling prices of houses in Ames, Iowa, and their associated square footage. Is the relationship linear or quadratic? In this case, it is a little harder to see.</p>
+<p>One way of measuring the fit of a model is known as $R^{2},$ read as $&quot;R$ square,&rdquo; which we now define.</p>
+<p>$R^{2}$, also known as <strong>&ldquo;the coefficient of determination&rdquo;</strong> is the proportion of total variability in $Y$ that is accounted for, or &ldquo;explained,&rdquo; by the regression fit between $Y$ and $x.$</p>
+<p>&ldquo;Accounting for variability&rdquo; seems to be an odd concept. After all, shouldn&rsquo;t we be aiming for <em>no</em> variability in the data? Remember that the <strong>fundamental assumption of statistics</strong> is that variability exists in the world. It is inescapable. So the question is not whether we can eliminate variability,* but rather how we can model it.* In the three data sets plotted in the figures above, we clearly see variability in the $Y$ variable. Some of that variability can potentially be &ldquo;explained&rdquo; by a regression line fit to the data. The rest we regard as &ldquo;unexplained.&rdquo;</p>
+<p>Figure 
+<a href="#rsq">[rsq]</a>{reference-type=&quot;ref&rdquo; reference=&quot;rsq&rdquo;} shows the idea. Panel (a) shows that the total variability in the data can be measured by the differences between each actual observation and the sample mean $\overline{y}.$ We already know a measure for that: the sample standard deviation $s.$ However, the variability is really measured just by the numerator of that equation, which we defined as $% &ldquo;SSTOT,&ldquo;$ which stands for &ldquo;total sum of squares.&rdquo; This is defined as</p>
+<p>$$SSTOT=\sum (y_{i}-\overline{y})^{2}$$</p>
+<p>In panel (c), we see that some of this variability can be &ldquo;explained&rdquo; by the regression line through the differences between the values $\widehat{y_{i}}$ and the sample mean $\overline{y}.$ This &ldquo;explained&rdquo; variability is measured by a sum of squares as well, which we call $SSR$, which stands for &ldquo;sum of squares for regression.&rdquo; This is defined as:</p>
+<p>$$SSR=\sum (\widehat{y_{i}}-\overline{y})^{2}$$</p>
+<p>The remaining variability is accounted for by the differences in the actual values, $y_{i},$ and the predicted values $\widehat{y_{i}}.$ This is also a sum of squares, called , $SSE,$ which stands for &ldquo;sum of squares for error.&rdquo; It is defined as:</p>
+<p>$$SSE=\sum (y_{i}-\widehat{y_{i}})^{2}$$</p>
+<p>As implied in the figure, the following relationship holds:</p>
+<p>$$SSTOT=SSR+SSE$$</p>
+<p>This should remind you of the ANOVA decomposition. In fact, regression <em>is</em> ANOVA, except that the $x$ variable is not called a &ldquo;treatment,&rdquo; and is numeric rather than categorical. If a &ldquo;large&rdquo; proportion of variability in the data can be accounted for by the model then we have evidence that the model is useful. The statistic that quantifies the proportion of variability accounted for by the model is known as $R^{2}$, which we now define.</p>
+<p>$R^{2},$ read as &ldquo;r squared&rdquo; and also known as <strong>the coefficient of determination</strong>, measures the proportion of total variability in the $Y$ data that is accounted for by the regression fit. The formula is</p>
+<p>$$R^{2}=\frac{SSR}{SSTOT}=1-\frac{SSE}{SSTOT}$$</p>
+<p>Here is a useful fact relating $R^{2}$ to correlation.</p>
+<p>In the simple linear regression model $Y=\beta_{0}+\beta_{1}x+\varepsilon ,$ $R^{2}$ is equal to the square of the correlation coefficient $r.$ That is $R^{2}=r^{2}.$</p>
+<p>Here are some exercises to practice these concepts.</p>
+<p>For the following values of SSR, SSE, and SSTOT, calculate $R^{2}.$</p>
+<p>a). $SSE=159$, $SSTOT=309.3$</p>
+<p>b). $SSR=1682,$ $SSTOT=1982$</p>
+<p>c). $SSR=149,$ $SSE=592$</p>
+<p>a).  Draw a scatter plot of the data. Does a linear model make sense?</p>
+<p>b). Fit the simple linear regression model $Y=\beta_{0}+\beta_{1}x+\varepsilon$ to the following data by finding $b_{0}$ and $b_{1}.$</p>
+<p>b). Compute and interpret $R^{2}.$</p>
+<p>$\begin{array}{cc} x &amp; y \  2 &amp; 4 \  3 &amp; 7 \  4 &amp; 11 \  7 &amp; 14% \end{array}%$</p>
+<p>Using the output in Figure 
+<a href="#reg_ouytpu">[reg_ouytpu]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_ouytpu&rdquo;}, answer the following questions:</p>
+<p>a). Show how $R^{2}$ was calculated.</p>
+<p>b). Interpret $R^{2}$ in the context of the problem</p>
+<p>Use the output in Figure 
+<a href="#house_out">[house_out]</a>{reference-type=&quot;ref&rdquo; reference=&quot;house_out&rdquo;} to answer the following questions.</p>
+<p>a). Show how $R^{2}$ was calculated.</p>
+<p>b). Interpret $R^{2}$ in the context of the problem.</p>
+<p>b). Construct a $95%$ confidence interval for $\beta_{1}.$</p>
+<p>d). Interpret the estimated parameters $b_{0}$ and $b_{1}.$</p>
+<p><strong>1). Evaluating the Simple Linear Regression Model&ndash;Part 2</strong></p>
+<p><strong>2). Confidence Interval for</strong> $E(Y|x)$** and Prediction of New Response** $Y^{new}$</p>
+<p>In the last handout we examined $R^{2}$, the coefficient of determination, as a measure of how good the fit of a regression model was to the data. Another important element to examine are the assumptions in the regression model itself. Remember the key points (bullet point $4$ is an expansion from Handout 17):</p>
+<ul>
+<li>
+<p>We assume the probability distribution of $Y$ changes as $x$     changes.</p>
+</li>
+<li>
+<p>Specifically, we assume that <em>the mean (or expected value)</em> of     * *$Y,$ denoted as $E(Y),$ changes as $x$ changes. To indicate this     we write $E(Y|x)$ read as &ldquo;the expected value of $Y$ given $x.&ldquo;$</p>
+</li>
+<li>
+<p>We can also indicate $E(Y|x)$ using the notation $\widehat{Y},$ read as $&quot;y$ hat.&rdquo;</p>
+</li>
+<li>
+<p>With simple regression, we assume that $Y_{i}=\beta_{0}+\beta_{1}x_{i}+\varepsilon_{i}$, where the $\varepsilon_{i}$ are independent random variables from a normal distribution with mean $0$ and standard deviation $\sigma .$</p>
+</li>
+</ul>
+<p>The basic ways that a simple linear regression model can go wrong are 1). the true $E(Y|x)$ is not linear, but some other function; 2). The error terms $\varepsilon_{i}$ are not independent; 3). The error terms $% \varepsilon_{i}$ do not have the same standard deviation $\sigma ;$ 4). Several of these assumptions are violated. Let&rsquo;s expand upon points (2) and (3). The error terms $\varepsilon_{i}$ arise due to the imperfect fit between the regression line $\beta_{0}+\beta_{1}x$ and the actual value $Y.$ For each value of $Y_{i}$ and $x_{i},$ there is an associated $\varepsilon_{i}$ that &ldquo;absorbs&rdquo; the effects of all of the variables that we didn&rsquo;t include in the model. One of the key assumptions is that the variance of the error term $V(\varepsilon )$ *does not change* as $x$ changes. That is, $V(\varepsilon_{i})=V(\varepsilon_{j})$ for any $i\neq j.$ We further assume that the correlation between $\varepsilon_{i}$ and $\varepsilon_{j}$ is exactly $0,$ that is, the error in predicting $Y_{i}$ using $x_{i}$ is unrelated to the error in predicting $Y_{j}$ using $x_{j}$, for any $i$ and $% j.$ If these assumptions about the $\varepsilon_{i}$ are not satisfied, inferential statements we make using the fitted model (for example, calculating a confidence interval or test for $\beta_{1}$, or predicting a new observation of $Y)$ are not strictly valid, and may thus be highly misleading.</p>
+<p>The most common method by which we evaluate the assumptions of the regression model is by examining what are called &ldquo;residuals.&rdquo; First, we need to define what a residual is.</p>
+<p>A regression <strong>residual</strong> $e_{i}$** **is the difference between the actual value $Y_{i}$ and the fitted value $\widehat{Y_{i}}.$ For a fitted regression model, the residual is</p>
+<p>$$e_{i}=y_{i}-\widehat{y_{i}}$$</p>
+<p>A scatterplot of $(e_{i},\widehat{y_{i}})$ is called a **residual plot** . Examining residual plots can help identify problems with the model fit. How should the residual plot look if all of the assumptions are reasonably met? The short answer is: *look for the absence of a pattern.* Figure 
+<a href="#good_resid">[good_resid]</a>{reference-type=&quot;ref&rdquo; reference=&quot;good_resid&rdquo;} illustrates this idea. Notice that the residuals seem to scatter around $0$ with no apparent pattern. We would say this model is a reasonably good fit to the data.</p>
+<p>A violation of the assumption of constant standard deviation (known formally as <strong>heteroscedasticity)</strong> is shown in Figure 
+<a href="#hetero">[hetero]</a>{reference-type=&quot;ref&rdquo; reference=&quot;hetero&rdquo;}. Notice that as the $x$ variable (&ldquo;time&rdquo; in this case) gets larger, the residuals begin to &ldquo;fan out&rdquo; in a megaphone pattern, indicating an increase in the variability. In practice, an analyst would employ a <strong>variable transformation</strong> to the data to correct for this. Discussion of how this transformation is accomplished is beyond the scope of this course.</p>
+<p>An example of a model in which the assumption that $E(Y|x)$ is linear is not met is shown next in Figure 
+<a href="#misspesified">[misspesified]</a>{reference-type=&quot;ref&rdquo; reference=&quot;misspesified&rdquo;}. Such a model is called a <strong>misspecified model,</strong> and many times such models will result in error terms that are correlated. Moreover, misspecified models are problematic in their own right simply because any predictions we get from using the model will be wrong because the wrong relationship was postulated between $Y$ and $% x.$ In the example below, it can be shown that fitting a parabola $% E(Y|x)=\beta_{0}+\beta_{1}x+\beta_{2}^{2}$ rather than a line will lead to a residual plot that looks like Figure 
+<a href="#good_resid">[good_resid]</a>{reference-type=&quot;ref&rdquo; reference=&quot;good_resid&rdquo;} above.</p>
+<p>For many of the real-world data sets we will use, the assumptions of the simple model will be violated. For instance, Figure 
+<a href="#crude_resid">[crude_resid]</a>{reference-type=&quot;ref&rdquo; reference=&quot;crude_resid&rdquo;} indicates that the standard deviation of the residual terms increases as the price of oil increases. The pattern is that of the &ldquo;megaphone&rdquo; we saw earlier. It turns out that for this model, the fitted values $\widehat{y}_{i}$ (i.e., the predictions of $y$ for each price per barrel of oil) don&rsquo;t differ by much when the problem of non-constant variability is corrected. Such correction is beyond the scope of the course in any event. Therefore, <em>we will proceed in the examples as if the model assumptions are reasonably met</em>, although in &ldquo;real life,&rdquo; as you should always do in any situation, you will need to check assumptions.</p>
+<p>Once you have fit the model, there are two things you might want to do with it: make an inference about $E(Y|x)$ for a specific $x$ and predict a new value of $Y,$ call it $Y^{new}.$ We will discuss these two issues in the next section.</p>
+<h1 id="estimation-of-mean-of-y-and-prediction-of-new-y">Estimation of Mean of Y and Prediction of New Y</h1>
+<p>It turns out that estimating the mean of $Y$ for a specific value of $x$ and predicting a new value of $Y$ for a specific value of $x$ are done the same way: plug the specific value of $x$, call it $x_{0}$, into the fitted model.  What differs is constructing the interval. In general, the confidence interval for $E(Y|x_{0})$ will be narrower than the **prediction interval** for the value of $Y^{new}.$ This fact makes sense because estimating a specific value of a distribution should logically be less precise than estimating its mean.</p>
+<p>Here are the two formulas</p>
+<p>A $(1-\alpha )100%$ <strong>confidence interval</strong> for $E(Y|x_{0})$ for the simple linear regression model is</p>
+<p>$$\widehat{y}\pm t_{n-2,\alpha /2}\sqrt{\frac{SSE}{n-2}\left[ \frac{1}{n}+% \frac{(x_{0}-\overline{x})^{2}}{(n-1)s_{x}^{2}}\right] }$$</p>
+<p>where $x_{0}$ is the specific value of $x$ for which we want to estimate the mean of $Y.$</p>
+<p>A $(1-\alpha )100%$ <strong>prediction interval</strong>  for a new observation $% Y^{new}$ at a specific value of $x,x_{0}$, is</p>
+<p>$$\widehat{y}\pm t_{n-2,\alpha /2}\sqrt{\frac{SSE}{n-2}\left[ 1+\frac{1}{n}+% \frac{(x_{0}-\overline{x})^{2}}{(n-1)s_{x}^{2}}\right] }$$</p>
+<p>Notice that the only difference between the two is the addition of the $&quot;1&quot;$ in the prediction interval formula. This makes the interval wider to account for the fact that we are trying to estimate a <em>particular value of</em> $Y$ , which is a more uncertain task than estimating the mean of $Y.$</p>
+<p>Let&rsquo;s work some examples to put these formulas into practice.</p>
+<p>Using the output in Figure 
+<a href="#reg_ouytpu">[reg_ouytpu]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_ouytpu&rdquo;} and the fact that the average crude oil price was $$38.13$ with a standard deviation of $$27.85,$ do the following:</p>
+<p>a). Compute a $90%$ confidence interval for the average price of gasoline when oil costs $$80$ per barrel.</p>
+<p>b). Compute a $90%$ prediction interval for the average price of gasoline when oil costs $$80$ per barrel.</p>
+<p>Use the output in Figure 
+<a href="#house_out">[house_out]</a>{reference-type=&quot;ref&rdquo; reference=&quot;house_out&rdquo;}  and the fact that the average age of a house is $36.4$ years with a standard deviation of $30.3$ years to answer the following questions.</p>
+<p>a). Compute a $99%$ confidence interval for the average price of a $10$ -year-old home.</p>
+<p>b). Compute a $99%$ prediction interval for the price of a $10$-year-old home.</p>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/bana3363/16-simple-linear-regression/" rel="next">Simple Linear Regression</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/bana3363/18-multiple-linear-regression/" rel="prev">Multiple Linear Regression</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jul 28, 2020</p>
+
+          
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/BANA3363/17%20-%20Evaluating%20Linear%20Regression.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+          
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

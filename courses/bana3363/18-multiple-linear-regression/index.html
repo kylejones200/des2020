@@ -1,0 +1,1332 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Kyle Jones">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Multiple Linear Regression The point of regression analysis is to use the relationship between a random variable $Y$ and another variable $x$ to make better predictions about $Y$ than could be made by simply using the overall average $\overline{y}.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/courses/bana3363/18-multiple-linear-regression/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/courses/bana3363/18-multiple-linear-regression/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Kyle Jones">
+  <meta property="og:url" content="/courses/bana3363/18-multiple-linear-regression/">
+  <meta property="og:title" content="Multiple Linear Regression | Kyle Jones">
+  <meta property="og:description" content="Multiple Linear Regression The point of regression analysis is to use the relationship between a random variable $Y$ and another variable $x$ to make better predictions about $Y$ than could be made by simply using the overall average $\overline{y}."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-07-28T15:19:27&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-07-28T15:19:27&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Multiple Linear Regression | Kyle Jones</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/">Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/1-basic-statistics-concepts/">Descriptive Statistics</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/1-basic-statistics-concepts/">Basic Statistics Concepts</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/2-the-normal-distribution/">The Normal Distribution</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/2-types-of-statistical-analysis/">Types of Statistical Analysis</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing and Inference</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing for a Proportion</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/7-interval-for-differences-in-means-independent-samples/">Interval for Differences in Means--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-test-for-differences-in-proportions-independent-samples/">Hypothesis Test for a Difference in Proportion (Independent Samples)</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-intervals-for-differences-in-proportions-independent-samples/">Intervals for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/5-ci-for-mean/">Confidence Interval for the Mean</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/5-1-hypothesis-testing-basics/">Hypothesis Testing for a Population Mean</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-confidence-interval-for-matched-pairs/">Confidence Interval for Matched Pairs</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-1-test-for-diff-in-means-proportions/">Test for Diff in Means, Proportions</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-1-test-for-differences-in-proportions-independent-samples/">Test for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-2-test-for-diff-in-means-independent-samples/">Test for Diff in Means Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-anova-basics/">ANOVA Basics</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/12-anova-mc/">ANOVA - Bonferroni Method of Multiple Comparisons</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Goodness-of-Fit Test</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-matched-pairs/">Matched Pairs</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/14-chi-squared-test-of-independence/">Chi Squared Test of Independence</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/15-intro-to-regression/">Regression</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/15-intro-to-regression/">Intro to Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/16-simple-linear-regression/">Simple Linear Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/17-evaluating-linear-regression/">Evaluating Linear Regression</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/bana3363/18-multiple-linear-regression/">Multiple Linear Regression</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#multiple-linear-regression">Multiple Linear Regression</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#model-f-test">Model F Test</a></li>
+    <li><a href="#test-and-confidence-interval-for-individual-beta_j">Test and Confidence Interval for Individual $\beta_{j}$</a></li>
+    <li><a href="#multiple-linear-regression-1">Multiple Linear Regression</a></li>
+    <li><a href="#using-the-multiple-linear-regression-model-1">Using the Multiple Linear Regression Model</a>
+      <ul>
+        <li><a href="#model-f-test-1">Model F Test</a></li>
+        <li><a href="#test-and-confidence-interval-for-individual-beta_j-1">Test and Confidence Interval for Individual $\beta_{j}$</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Multiple Linear Regression</h1>
+
+          <div class="article-style">
+            <h2 id="multiple-linear-regression">Multiple Linear Regression</h2>
+<p>The point of regression analysis is to use the relationship between a random variable $Y$ and another variable $x$ to make better predictions about $Y$ than could be made by simply using the overall average $\overline{y}.$ In the &ldquo;real world,&rdquo; variables are related to one another, and thus a model that allows the distribution of one variable to change with another is one way to model this relationship. However, it would be rather silly to conclude that $Y$ is influenced only by a single variable $x.$ Rather, it is much more sensible that $Y$ is influenced by a collection of $x$ variables, say $\mathbf{x=(}x_{1},x_{2},\ldots ,x_{p})$ where $p&gt;2.$</p>
+<p>For example, if $Y$ is a person&rsquo;s cholesterol level, a person&rsquo;s age would be a logical choice for an $x$ variable. We might call it $x_{1}.$ But cholesterol might also be related to gender $(x_{2})$, weight $(x_{3})$, blood pressure $(x_{4})$, and many other variables. Being able to model $Y$ as a function of all of these variables simultaneously would allow doctors and researchers to examine the effects of each of these variables on cholesterol level in the presence of the other variables, and make predictions that could help patients make decisions about their lifestyles.</p>
+<p>Fortunately, regression analysis extends naturally from one independent variable to many independent variables. The basic concept is essentially the same, except we add more $x$ variables to the mix:</p>
+<ul>
+<li>
+<p>We assume the probability distribution of $Y$ changes as the collection of $x$ variables $\mathbf{x=(}x_{1},x_{2},\ldots ,x_{p})$ changes</p>
+</li>
+<li>
+<p>Specifically, we assume that the mean (or expected value) of  $Y$, denoted as $E(Y)$, changes as $\mathbf{x}$ changes. To indicate this we write $E(Y|\mathbf{x})$ read as &ldquo;the expected value of $Y$ given $\mathbf{x}$.&rdquo;</p>
+</li>
+</ul>
+<p>When multiple $x$ variables are involved, however, we can define many types of functional relationships between $Y$ and $\mathbf{x.}$ The simplest one is known as the &ldquo;first-order multiple linear regression model,&rdquo; which we now define:</p>
+<p>A first-order multiple linear regression model is specified by</p>
+<p>$$Y=\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\ldots +\beta_{p}x_{p}+\varepsilon$$</p>
+<p>where the $\beta$ terms are fixed (but unknown) parameters and $\varepsilon$ has a normal distribution with mean $0$ and standard deviation $\sigma$.</p>
+<p>The implication of the multiple linear regression model is that the mean of $% Y$ is $E(Y|\mathbf{x})=\widehat{Y}=$ $\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\ldots +\beta_{p}x_{p}$ because, by the rules of expected value (see Handout $1$),</p>
+<p>$$\begin{aligned} E(Y|\mathbf{x}) &amp;=&amp;E(\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\ldots +\beta_{p}x_{p}+\varepsilon ) \ &amp;=&amp;\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\ldots +\beta_{p}x_{p}+E(\varepsilon )\text{ [since }\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\ldots +\beta_{p}x_{p}\text{ is a constant]} \ &amp;=&amp;\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\ldots +\beta_{p}x_{p}\text{ [since we assume }E(\varepsilon )=0]\end{aligned}$$</p>
+<p>We can interpret the parameters in a similar manner as with the simple linear regression model, except that we must now be mindful of the other $x$ variables in the model. Here are the general interpretations.</p>
+<ul>
+<li>
+<p>$\beta_{0}$ is the mean of $Y$ when all the $x$ variables are $0$.</p>
+</li>
+<li>
+<p>$\beta_{1}$ is the increase in the mean of $Y$ for a one-unit increase in $x_{1}$, holding the other $x$ variables fixed$.$</p>
+</li>
+<li>
+<p>In general, $\beta_{j}$ is the increase in the mean of $Y$ for a one-unit increase in $x_{j}$, holding the other $x$ variables fixed.</p>
+</li>
+</ul>
+<p>The parameters are estimated with <strong>ordinary least squares (OLS)</strong> just as with the simple linear regression model. However, in the case of multiple $x$ variables, the formulas are not simple to write out by hand. In fact, the values that minimize $SSE=\sum (y_{i}-b_{0}-b_{1}x_{i1}-b_{2}x_{i2}-\ldots -b_{p}x_{ip})^{2}$ are found using matrix algebra, which is beyond the scope of this course. Suffice it to say that you will never have to find these values by hand. Multiple regression is nearly always carried out using specialized software such as Excel.</p>
+<p>With the simple linear regression model, the fitted function $\widehat{y}% =b_{0}+b_{1}x_{1}$ was a line. With a multiple linear regression model, the fitted function $\widehat{y}=b_{0}+b_{1}x_{1}+b_{2}x_{2}+\ldots +b_{p}x_{p}$ is a **plane** (flat surface) in $p+1$ dimensions. For instance if we were to fit a model with two $x$ variables, we would obtain the following function in Figure 
+<a href="#regplane">[regplane]</a>{reference-type=&quot;ref&rdquo; reference=&quot;regplane&rdquo;}, a plane in three dimensions. With more than two $x$ variables, we obtain a **hyperplane**, a figure that we can no longer easily visualize.</p>
+<p>Let&rsquo;s now discuss how we might use assess and use the multiple linear regression model.</p>
+<h1 id="using-the-multiple-linear-regression-model">Using the Multiple Linear Regression Model</h1>
+<p>After the model has been fit, the next logical question is whether the model is useful or not. One way of assessing this is to determine if there is an <strong>overall regression relationship</strong> between $Y$ and the $x$ variables. We can examine the overall regression relationship by examining $R^{2}$ and by conducting the <strong>model F test</strong>. Let&rsquo;s discuss the overall test first.</p>
+<h2 id="model-f-test">Model F Test</h2>
+<ol>
+<li>Specify the hypothesis. The hypothesis is very similar to the ANOVA hypothesis of Chapter 14.</li>
+</ol>
+<p>$$\begin{aligned} H_{0} &amp;:&amp;\beta_{1}=\beta_{2}=\ldots =\beta_{p}=0 \ H_{1} &amp;:&amp;\text{ Not all }\beta ^{\prime }s\text{ equal 0 [or, at least one }% \beta \text{ is not equal to }0]\end{aligned}$$</p>
+<ol>
+<li>
+<p>Calculate the test statistic.</p>
+<p>The test uses an $F$ statistic</p>
+<p>$$f=\frac{SSR/p}{SSE/(n-(p+1))}$$</p>
+</li>
+<li>
+<p>Compute the $p$-value</p>
+<p>$$p=P(F_{p,n-(p+1)}&gt;f)$$</p>
+<p>Alternatively, we can define the rejection region as follows:</p>
+<p>$${\text{ }f_{p,n-(p+1)}:f_{p,n-(p+1)}&gt;f_{p,n-(p+1)},_{\alpha }}$$</p>
+</li>
+<li>
+<p>Make a conclusion</p>
+<p>If the $p$-value $\leq \alpha $, we reject $H_{0}.$ If the $p$-value $% &gt;\alpha $, we fail to reject $H_{0}.$ Equivalently, if $f$ lies within the rejection region, we reject $H_{0}$. If $f$ lies outside the rejection region, we fail to reject $H_{0}.$</p>
+</li>
+</ol>
+<p>In general, to construct confidence intervals or tests for regression coefficients, we need the standard error and the appropriate value of $t$ from the Student&rsquo;s t distribution. The test for an individual regression coefficient $\beta_{j}$ is as follows.</p>
+<h2 id="test-and-confidence-interval-for-individual-beta_j">Test and Confidence Interval for Individual $\beta_{j}$</h2>
+<ol>
+<li>
+<p>Specify the hypotheses.</p>
+<p>The parameter of interest is $\beta_{j}$, so the hypotheses are statements about its value.</p>
+<p>$$\begin{aligned} \text{(a) }H_{0} &amp;:&amp;\beta_{j}\leq c\text{ vs. }H_{0}:\beta_{j}&gt;c \ \text{(b) }H_{0} &amp;:&amp;\beta_{j}\geq c\text{ vs. }H_{0}:\beta_{j}&lt;c \ \text{(c) }H_{0} &amp;:&amp;\beta_{j}=c\text{ vs. }H_{0}:\beta_{j}\neq c\end{aligned}$$</p>
+<p>In practice, $c$ is usually $0$, but it could be anything. In regression programs such as Excel, the hypothesis tested by default is</p>
+<p>$$H_{0}:\beta_{j}=0\text{ vs. }H_{0}:\beta_{j}\neq 0$$</p>
+</li>
+<li>
+<p>Calculate the test statistic.</p>
+<p>The test statistic is a $t$ statistic:</p>
+<p>$$t_{0}=\frac{b_{j}-c}{s.e.(b_{j})}$$</p>
+</li>
+<li>
+<p>Compute the p-value</p>
+<p>$$\begin{aligned} \text{(a) }p &amp;=&amp;P(t_{n-(p+1)}&gt;t_{0}) \ \text{(b) }p &amp;=&amp;P(t_{n-(p+1)}&lt;t_{0}) \ \text{(c) }p &amp;=&amp;2\min [P(t_{n-(p+1)}&lt;t_{0}),P(t_{n-(p+1)}&gt;t_{0})]\end{aligned}$$</p>
+<p>Alternatively, we can define the rejection region as follows:</p>
+<p>$$\begin{aligned} \text{(a)}{\text{ }t_{n-(p+1)} &amp;:&amp;t_{n-(p+1)}&gt;t_{n-(p+1),\alpha }} \ \text{(b)}{\text{ }t_{n-(p+1)} &amp;:&amp;t_{n-(p+1)}&lt;-t_{n-(p+1),\alpha }} \ \text{(c)}{t_{n-(p+1)} &amp;:&amp;|t_{n-(p+1)}|&gt;t_{n-(p+1),\alpha /2}}\end{aligned}$$</p>
+</li>
+<li>
+<p>Make a conclusion</p>
+<p>If the $p$-value $\leq \alpha $, we reject $H_{0}.$ If the $p$-value $% &gt;\alpha $, we fail to reject $H_{0}.$ Equivalently, if $t_{0}$ lies within the rejection region, we reject $H_{0}$. If $t_{0}$ lies outside the rejection region, we fail to reject $H_{0}.$</p>
+</li>
+</ol>
+<p>An important issue arises in multiple regression with respect to $R^{2}$ that we summarize in the following theorem.</p>
+<p>The confidence interval for an individual coefficient is given in the following definition.</p>
+<p>A $(1-\alpha )100%$ confidence interval for $\beta_{j}$ is given by</p>
+<p>$$b_{j}\pm t_{n-(p+1),\alpha /2}s.e.(b_{j})$$</p>
+<p>where $t_{n-(p+1),\alpha /2}$ is the value of Student&rsquo;s $t$ distribution with $n-(p+1)$ degrees of freedom and $\alpha /2$ probability to the right, and $s.e.(b_{j})$ is the standard error of $b_{j}.$</p>
+<p>The interpretation of a confidence interval in the multiple regression context must mention the other variables being held constant.</p>
+<p>An important issue arises in multiple regression with respect to $R^{2}$ that we summarize in the following theorem.</p>
+<p>$R^{2}$ will never decrease with the addition of $x$ variables. In other words, it is possible to &ldquo;force&rdquo; $R^{2}$ to $1$ by adding additional $x$ variables, whether they are useful for predicting $Y$ or not.</p>
+<p>Therefore, what is needed is a measure of fit that penalizes us for adding additional variables that don&rsquo;t really help in predicting $Y.$ Statisticians have defined many such measures, but the one most used in practice (and which is reported in Excel) is called <strong>adjusted</strong> $R^{2}.$</p>
+<p><strong>Adjusted</strong> $R^{2}$ (denoted as $R_{adj}^{2})$ is a penalizing measure of fit for a multiple regression model defined by</p>
+<p>$$R_{adj}^{2}=1-\left( \frac{n-1}{n-(p+1)}\right) (1-R^{2})$$</p>
+<p>Some facts about $R_{adj}^{2}$ that make it useful for assessing model fit are: 1). it is possible for $R_{adj}^{2}$ to decrease if the addition of an independent variable is not useful for predicting $Y$, and 2). it is possible for $R_{adj}^{2}$ to be negative. When fitting a multiple regression model, $R_{adj}^{2}$ is the preferred measure of fit over $R^{2}.$</p>
+<p>Let&rsquo;s work an example or two using Excel.</p>
+<p>We can think of many factors that might influence the final sale of a house, such as age, square footage, # of bathrooms, # of bedrooms, amenities, etc. Let&rsquo;s fit a model to age, square footage, and # of bathrooms using the Ames housing data set from earlier handouts.  Using the excel output in Figure 
+<a href="#reg_output">[reg_output]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_output&rdquo;}, answer the following questions.</p>
+<p>a). What would be the estimated selling price of a house that is $10$ years old, and for which there are $2$ bathrooms and $% 1400$ square feet?</p>
+<p>b). How would you interpret the coefficients?</p>
+<p>c). How would you interpret the coefficient for Bath?</p>
+<p>d). Show how adjusted $R^{2}$ was calculated. Why should we look at this value rather than $R^{2}?$</p>
+<p>e). Conduct the overall $F$ test (specify hypotheses, report test statistic, report rejection region, report conclusion).</p>
+<p>f). Report and interpret the confidence interval for Bath.</p>
+<p>Data on $4,137$ college students was obtained and a first-order multiple linear regression model was fit in order to determine the effects of various factors on college GPA, measured on the usual four-point scale. The results are shown in the Excel output below in Figure 
+<a href="#col_gpa">[col_gpa]</a>{reference-type=&quot;ref&rdquo; reference=&quot;col_gpa&rdquo;}.</p>
+<p>a). Write down the estimated model.</p>
+<p>b). What would be the estimated GPA of a student with an SAT score of $1190$ who graduated $3^{rd\text{ \ }}$ in a class of $542$ students?</p>
+<p>c). How would you interpret the coefficients?</p>
+<p>d). Calculate and interpret a $95%$ confidence interval for $\beta_{3}$, the coefficient for high school rank.</p>
+<p>e). Test the hypothesis that $\beta_{2}\neq 0$ using the four-step procedure.</p>
+<p>An economist is studying the nature of street vending in Mexico. She has gathered the following data for $15$ vendors: age, hours worked per day, and annual earnings. Fit a multiple linear regression model using the data below.</p>
+<table>
+<thead>
+<tr>
+<th>Earnings</th>
+<th>Age</th>
+<th>Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2841</td>
+<td>29</td>
+<td>12</td>
+</tr>
+<tr>
+<td>1876</td>
+<td>21</td>
+<td>8</td>
+</tr>
+<tr>
+<td>2934</td>
+<td>62</td>
+<td>10</td>
+</tr>
+<tr>
+<td>1552</td>
+<td>18</td>
+<td>10</td>
+</tr>
+<tr>
+<td>3065</td>
+<td>40</td>
+<td>11</td>
+</tr>
+<tr>
+<td>3670</td>
+<td>50</td>
+<td>11</td>
+</tr>
+<tr>
+<td>2005</td>
+<td>65</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3215</td>
+<td>44</td>
+<td>8</td>
+</tr>
+<tr>
+<td>1930</td>
+<td>17</td>
+<td>8</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>70</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3111</td>
+<td>20</td>
+<td>9</td>
+</tr>
+<tr>
+<td>2882</td>
+<td>29</td>
+<td>9</td>
+</tr>
+<tr>
+<td>1683</td>
+<td>15</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1817</td>
+<td>14</td>
+<td>7</td>
+</tr>
+<tr>
+<td>4066</td>
+<td>33</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<p>a). Write down the estimated model.</p>
+<p>b). What would be the estimated average earnings for a $19$ -year-old vendor working $5$ hours per day?</p>
+<p>c). How would you interpret the coefficients?</p>
+<p>d). Test the hypothesis that $\beta_{1}$, the coefficient for age, is not equal to $0$ using the four-step procedure.</p>
+<p>e). Calculate and interpret a $99%$ confidence interval for $\beta_{2}$, the coefficient for hours.</p>
+<h2 id="multiple-linear-regression-1">Multiple Linear Regression</h2>
+<p>The point of regression analysis is to use the relationship between a random variable $Y$ and another variable $x$ to make better predictions about $Y$ than could be made by simply using the overall average $\overline{y}.$ In the &ldquo;real world,&rdquo; variables are related to one another, and thus a model that allows the distribution of one variable to change with another is one way to model this relationship. However, it would be rather silly to conclude that $Y$ is influenced only by a single variable $x.$ Rather, it is much more sensible that $Y$ is influenced by a collection of $x$ variables, say $\mathbf{x=(}x_{1},x_{2},\ldots ,x_{p})$ where $p&gt;2.$ For example, if $Y$ is a person&rsquo;s cholesterol level, a person&rsquo;s age would be a logical choice for an $x$ variable. We might call it $x_{1}.$ But cholesterol might also be related to gender $(x_{2})$, weight $(x_{3})$, blood pressure $(x_{4})$, and many other variables. Being able to model $Y$ as a function of all of these variables simultaneously would allow doctors and researchers to examine the effects of each of these variables on cholesterol level in the presence of the other variables, and make predictions that could help patients make decisions about their lifestyles.</p>
+<p>Fortunately, regression analysis extends naturally from one independent variable to many independent variables. The basic concept is essentially the same, except we add more $x$ variables to the mix:</p>
+<ul>
+<li>
+<p>We assume the probability distribution of $Y$ changes as the collection of $x$ variables $\mathbf{x=(}x_{1},x_{2},\ldots ,x_{p})$ changes</p>
+</li>
+<li>
+<p>Specifically, we assume that the mean (or expected value) of  $Y$, denoted as $E(Y)$, changes as $\mathbf{x}$ changes. To indicate this we write $E(Y|\mathbf{x})$ read as &ldquo;the expected value of $Y$ given $\mathbf{x}.&ldquo;$</p>
+</li>
+</ul>
+<p>When multiple $x$ variables are involved, however, we can define many types of functional relationships between $Y$ and $\mathbf{x.}$ The simplest one is known as the &ldquo;first-order multiple linear regression model,&rdquo; which we now define:</p>
+<p>A first-order multiple linear regression model is specified by</p>
+<p>$$Y=\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\ldots +\beta_{p}x_{p}+\varepsilon$$</p>
+<p>where the $\beta$ terms are fixed (but unknown) parameters and $\varepsilon$ has a normal distribution with mean $0$ and standard deviation $\sigma$.</p>
+<p>The implication of the multiple linear regression model is that the mean of $% Y$ is $E(Y|\mathbf{x})=\widehat{Y}=$ $\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\ldots +\beta_{p}x_{p}$ because, by the rules of expected value (see Handout $1$),</p>
+<p>$$\begin{aligned} E(Y|\mathbf{x}) &amp;=&amp;E(\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\ldots +\beta_{p}x_{p}+\varepsilon ) \ &amp;=&amp;\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\ldots +\beta_{p}x_{p}+E(\varepsilon )\text{ [since }\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\ldots +\beta_{p}x_{p}\text{ is a constant]} \ &amp;=&amp;\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\ldots +\beta_{p}x_{p}\text{ [since we assume }E(\varepsilon )=0]\end{aligned}$$</p>
+<p>We can interpret the parameters in a similar manner as with the simple linear regression model, except that we must now be mindful of the other $x$ variables in the model. Here are the general interpretations.</p>
+<ul>
+<li>
+<p>$\beta_{0}$ is the mean of $Y$ when all the $x$ variables are $0$.</p>
+</li>
+<li>
+<p>$\beta_{1}$ is the increase in the mean of $Y$ for a one-unit increase in $x_{1}$, holding the other $x$ variables fixed$.$</p>
+</li>
+<li>
+<p>In general, $\beta_{j}$ is the increase in the mean of $Y$ for a one-unit increase in $x_{j}$, holding the other $x$ variables fixed.</p>
+</li>
+</ul>
+<p>The parameters are estimated with ordinary least squares (OLS) just as with the simple linear regression model. However, in the case of multiple $x$ variables, the formulas are not simple to write out by hand. In fact, the values that minimize $SSE=\sum (y_{i}-b_{0}-b_{1}x_{i1}-b_{2}x_{i2}-\ldots -b_{p}x_{ip})^{2}$ are found using matrix algebra, which is beyond the scope of this course. Suffice it to say that you will never have to find these values by hand. Multiple regression is nearly always carried out using specialized software such as Excel.</p>
+<p>Let&rsquo;s now discuss how we might use assess and use the multiple linear regression model.</p>
+<h2 id="using-the-multiple-linear-regression-model-1">Using the Multiple Linear Regression Model</h2>
+<p>After the model has been fit, the next logical question is whether the model is useful or not. One way of assessing this is to determine if there is an <strong>overall regression relationship</strong> between $Y$ and the $x$ variables. We can examine the overall regression relationship by examining $R^{2}$ and by conducting the <strong>model F test</strong>. Let&rsquo;s discuss the overall test first.</p>
+<h3 id="model-f-test-1">Model F Test</h3>
+<ol>
+<li>Specify the hypothesis. The hypothesis is very similar to the ANOVA hypothesis of Chapter 14.</li>
+</ol>
+<p>$$\begin{aligned} H_{0} &amp;:&amp;\beta_{1}=\beta_{2}=\ldots =\beta_{p}=0 \ H_{1} &amp;:&amp;\text{ Not all }\beta ^{\prime }s\text{ equal 0 [or, at least one }% \beta \text{ is not equal to }0]\end{aligned}$$</p>
+<ol>
+<li>
+<p>Calculate the test statistic.</p>
+<p>The test uses an $F$ statistic</p>
+<p>$$f=\frac{SSR/p}{SSE/(n-(p+1))}$$</p>
+</li>
+<li>
+<p>Compute the $p$-value</p>
+<p>$$p=P(F_{p,n-(p+1)}&gt;f)$$</p>
+<p>Alternatively, we can define the rejection region as follows:</p>
+<p>$${\text{ }f_{p,n-(p+1)}:f_{p,n-(p+1)}&gt;f_{p,n-(p+1)},_{\alpha }}$$</p>
+</li>
+<li>
+<p>Make a conclusion</p>
+<p>If the $p$-value $\leq \alpha $, we reject $H_{0}.$ If the $p$-value $% &gt;\alpha $, we fail to reject $H_{0}.$ Equivalently, if $f$ lies within the rejection region, we reject $H_{0}$. If $f$ lies outside the rejection region, we fail to reject $H_{0}.$</p>
+</li>
+</ol>
+<p>In general, to construct confidence intervals or tests for regression coefficients, we need the standard error and the appropriate value of $t$ from the Student&rsquo;s t distribution. The test for an individual regression coefficient $\beta_{j}$ is as follows.</p>
+<h3 id="test-and-confidence-interval-for-individual-beta_j-1">Test and Confidence Interval for Individual $\beta_{j}$</h3>
+<ol>
+<li>
+<p>Specify the hypotheses.</p>
+<p>The parameter of interest is $\beta_{j}$, so the hypotheses are statements about its value.</p>
+<p>$$\begin{aligned} \text{(a) }H_{0} &amp;:&amp;\beta_{j}\leq c\text{ vs. }H_{0}:\beta_{j}&gt;c \ \text{(b) }H_{0} &amp;:&amp;\beta_{j}\geq c\text{ vs. }H_{0}:\beta_{j}&lt;c \ \text{(c) }H_{0} &amp;:&amp;\beta_{j}=c\text{ vs. }H_{0}:\beta_{j}\neq c\end{aligned}$$</p>
+<p>In practice, $c$ is usually $0$, but it could be anything. In regression programs such as Excel, the hypothesis tested by default is</p>
+<p>$$H_{0}:\beta_{j}=0\text{ vs. }H_{0}:\beta_{j}\neq 0$$</p>
+</li>
+<li>
+<p>Calculate the test statistic.</p>
+<p>The test statistic is a $t$ statistic:</p>
+<p>$$t_{0}=\frac{b_{j}-c}{s.e.(b_{j})}$$</p>
+</li>
+<li>
+<p>Compute the p-value</p>
+<p>$$\begin{aligned} \text{(a) }p &amp;=&amp;P(t_{n-(p+1)}&gt;t_{0}) \ \text{(b) }p &amp;=&amp;P(t_{n-(p+1)}&lt;t_{0}) \ \text{(c) }p &amp;=&amp;2\min [P(t_{n-(p+1)}&lt;t_{0}),P(t_{n-(p+1)}&gt;t_{0})]\end{aligned}$$</p>
+<p>Alternatively, we can define the rejection region as follows:</p>
+<p>$$\begin{aligned} \text{(a)}{\text{ }t_{n-(p+1)} &amp;:&amp;t_{n-(p+1)}&gt;t_{n-(p+1),\alpha }} \ \text{(b)}{\text{ }t_{n-(p+1)} &amp;:&amp;t_{n-(p+1)}&lt;-t_{n-(p+1),\alpha }} \ \text{(c)}{t_{n-(p+1)} &amp;:&amp;|t_{n-(p+1)}|&gt;t_{n-(p+1),\alpha /2}}\end{aligned}$$</p>
+</li>
+<li>
+<p>Make a conclusion</p>
+<p>If the $p$-value $\leq \alpha $, we reject $H_{0}.$ If the $p$-value $% &gt;\alpha $, we fail to reject $H_{0}.$ Equivalently, if $t_{0}$ lies within the rejection region, we reject $H_{0}$. If $t_{0}$ lies outside the rejection region, we fail to reject $H_{0}.$</p>
+</li>
+</ol>
+<p>An important issue arises in multiple regression with respect to $R^{2}$ that we summarize in the following theorem.</p>
+<p>The confidence interval for an individual coefficient is given in the following definition.</p>
+<p>A $(1-\alpha )100%$ confidence interval for $\beta_{j}$ is given by</p>
+<p>$$b_{j}\pm t_{n-(p+1),\alpha /2}s.e.(b_{j})$$</p>
+<p>where $t_{n-(p+1),\alpha /2}$ is the value of Student&rsquo;s $t$ distribution with $n-(p+1)$ degrees of freedom and $\alpha /2$ probability to the right, and $s.e.(b_{j})$ is the standard error of $b_{j}.$</p>
+<p>The interpretation of a confidence interval in the multiple regression context must mention the other variables being held constant.</p>
+<p>An important issue arises in multiple regression with respect to $R^{2}$ that we summarize in the following theorem.</p>
+<p>$R^{2}$ will never decrease with the addition of $x$ variables. In other words, it is possible to &ldquo;force&rdquo; $R^{2}$ to $1$ by adding additional $x$ variables, whether they are useful for predicting $Y$ or not.</p>
+<p>Therefore, what is needed is a measure of fit that penalizes us for adding additional variables that don&rsquo;t really help in predicting $Y.$ Statisticians have defined many such measures, but the one most used in practice (and which is reported in Excel) is called <strong>adjusted</strong> $R^{2}.$</p>
+<p><strong>Adjusted</strong> $R^{2}$ (denoted as $R_{adj}^{2})$ is a penalizing measure of fit for a multiple regression model defined by</p>
+<p>$$R_{adj}^{2}=1-\left( \frac{n-1}{n-(p+1)}\right) (1-R^{2})$$</p>
+<p>Some facts about $R_{adj}^{2}$ that make it useful for assessing model fit are: 1). it is possible for $R_{adj}^{2}$ to decrease if the addition of an independent variable is not useful for predicting $Y$, and 2). it is possible for $R_{adj}^{2}$ to be negative. When fitting a multiple regression model, $R_{adj}^{2}$ is the preferred measure of fit over $R^{2}.$</p>
+<p>Let&rsquo;s work an example or two using Excel.</p>
+<p>We can think of many factors that might influence the final sale of a house, such as age, square footage, # of bathrooms, # of bedrooms, amenities, etc. Let&rsquo;s fit a model to age, square footage, and # of bathrooms using the Ames housing data set from earlier handouts.  Using the excel output in Figure 
+<a href="#reg_output">[reg_output]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_output&rdquo;}, answer the following questions.</p>
+<p>a). What would be the estimated selling price of a house that is $10$ years old, and for which there are $2$ bathrooms and $% 1400$ square feet?</p>
+<p>b). How would you interpret the coefficients?</p>
+<p>c). How would you interpret the coefficient for Bath?</p>
+<p>d). Show how adjusted $R^{2}$ was calculated. Why should we look at this value rather than $R^{2}?$</p>
+<p>e). Conduct the overall $F$ test (specify hypotheses, report test statistic, report rejection region, report conclusion).</p>
+<p>f). Report and interpret the confidence interval for Bath.</p>
+<p>Data on $4,137$ college students was obtained and a first-order multiple linear regression model was fit in order to determine the effects of various factors on college GPA, measured on the usual four-point scale. The results are shown in the Excel output below in Figure 
+<a href="#col_gpa">[col_gpa]</a>{reference-type=&quot;ref&rdquo; reference=&quot;col_gpa&rdquo;}.</p>
+<p>a). Write down the estimated model.</p>
+<p>b). What would be the estimated GPA of a student with an SAT score of $1190$ who graduated $3^{rd\text{ \ }}$in a class of $% 542$ students?</p>
+<p>c). How would you interpret the coefficients?</p>
+<p>d). Calculate and interpret a $95%$ confidence interval for $\beta_{3}$, the coefficient for high school rank.</p>
+<p>e). Test the hypothesis that $\beta_{2}\neq 0$ using the four-step procedure.</p>
+<p>An economist is studying the nature of street vending in Mexico. She has gathered the following data for $15$ vendors: age, hours worked per day, and annual earnings. Fit a multiple linear regression model using the data below.</p>
+<table>
+<thead>
+<tr>
+<th>Earnings</th>
+<th>Age</th>
+<th>Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2841</td>
+<td>29</td>
+<td>12</td>
+</tr>
+<tr>
+<td>1876</td>
+<td>21</td>
+<td>8</td>
+</tr>
+<tr>
+<td>2934</td>
+<td>62</td>
+<td>10</td>
+</tr>
+<tr>
+<td>1552</td>
+<td>18</td>
+<td>10</td>
+</tr>
+<tr>
+<td>3065</td>
+<td>40</td>
+<td>11</td>
+</tr>
+<tr>
+<td>3670</td>
+<td>50</td>
+<td>11</td>
+</tr>
+<tr>
+<td>2005</td>
+<td>65</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3215</td>
+<td>44</td>
+<td>8</td>
+</tr>
+<tr>
+<td>1930</td>
+<td>17</td>
+<td>8</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>70</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3111</td>
+<td>20</td>
+<td>9</td>
+</tr>
+<tr>
+<td>2882</td>
+<td>29</td>
+<td>9</td>
+</tr>
+<tr>
+<td>1683</td>
+<td>15</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1817</td>
+<td>14</td>
+<td>7</td>
+</tr>
+<tr>
+<td>4066</td>
+<td>33</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<p>a). Write down the estimated model.</p>
+<p>b). What would be the estimated average earnings for a $19$ -year-old vendor working $5$ hours per day?</p>
+<p>c). How would you interpret the coefficients?</p>
+<p>d). Test the hypothesis that $\beta_{1}$, the coefficient for age, is not equal to $0$ using the four-step procedure.</p>
+<p>e). Calculate and interpret a $99%$ confidence interval for $\beta_{2}$, the coefficient for hours.</p>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/bana3363/17-evaluating-linear-regression/" rel="next">Evaluating Linear Regression</a>
+  </div>
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jul 28, 2020</p>
+
+          
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/BANA3363/18%20-%20Multiple%20Linear%20Regression.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+          
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

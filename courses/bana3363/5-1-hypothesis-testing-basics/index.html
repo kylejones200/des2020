@@ -1,0 +1,1013 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Kyle Jones">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Hypothesis Testing Inference for a Single Population/Process Mean Basic Concepts In the previous two handouts, we discussed confidence intervals for a population mean and a population proportion. Confidence intervals give us a range of reasonable values for the true parameter, based on the data at hand.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/courses/bana3363/5-1-hypothesis-testing-basics/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/courses/bana3363/5-1-hypothesis-testing-basics/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Kyle Jones">
+  <meta property="og:url" content="/courses/bana3363/5-1-hypothesis-testing-basics/">
+  <meta property="og:title" content="Hypothesis Testing for a Population Mean | Kyle Jones">
+  <meta property="og:description" content="Hypothesis Testing Inference for a Single Population/Process Mean Basic Concepts In the previous two handouts, we discussed confidence intervals for a population mean and a population proportion. Confidence intervals give us a range of reasonable values for the true parameter, based on the data at hand."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2019-05-05T00:00:00&#43;01:00">
+    
+    <meta property="article:modified_time" content="2019-05-05T00:00:00&#43;01:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Hypothesis Testing for a Population Mean | Kyle Jones</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/">Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/1-basic-statistics-concepts/">Descriptive Statistics</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/1-basic-statistics-concepts/">Basic Statistics Concepts</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/2-the-normal-distribution/">The Normal Distribution</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/2-types-of-statistical-analysis/">Types of Statistical Analysis</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing and Inference</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing for a Proportion</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/7-interval-for-differences-in-means-independent-samples/">Interval for Differences in Means--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-test-for-differences-in-proportions-independent-samples/">Hypothesis Test for a Difference in Proportion (Independent Samples)</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-intervals-for-differences-in-proportions-independent-samples/">Intervals for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/5-ci-for-mean/">Confidence Interval for the Mean</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/bana3363/5-1-hypothesis-testing-basics/">Hypothesis Testing for a Population Mean</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-confidence-interval-for-matched-pairs/">Confidence Interval for Matched Pairs</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-1-test-for-diff-in-means-proportions/">Test for Diff in Means, Proportions</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-1-test-for-differences-in-proportions-independent-samples/">Test for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-2-test-for-diff-in-means-independent-samples/">Test for Diff in Means Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-anova-basics/">ANOVA Basics</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/12-anova-mc/">ANOVA - Bonferroni Method of Multiple Comparisons</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Goodness-of-Fit Test</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-matched-pairs/">Matched Pairs</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/14-chi-squared-test-of-independence/">Chi Squared Test of Independence</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/15-intro-to-regression/">Regression</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/15-intro-to-regression/">Intro to Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/16-simple-linear-regression/">Simple Linear Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/17-evaluating-linear-regression/">Evaluating Linear Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/18-multiple-linear-regression/">Multiple Linear Regression</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic-concepts">Basic Concepts</a></li>
+    <li><a href="#a-hypothesis-test-for-a-single-populationprocess-mean">A Hypothesis Test for a Single Population/Process Mean</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Hypothesis Testing for a Population Mean</h1>
+
+          <div class="article-style">
+            <h1 id="hypothesis-testing-inference-for-a-single-populationprocess-mean">Hypothesis Testing Inference for a Single Population/Process Mean</h1>
+<h2 id="basic-concepts">Basic Concepts</h2>
+<p>In the previous two handouts, we discussed confidence intervals for a population mean and a population proportion. Confidence intervals give us a range of reasonable values for the true parameter, based on the data at hand. That is, confidence intervals &ldquo;fix the data&rdquo; and create an interval of possible values of the parameter are consistent with what has been observed. <strong>Hypothesis testing</strong> addresses the inference problem from another angle by fixing <em>the parameter</em> at a specified value and determining if the observed data is consistent with that chosen value.</p>
+<p>To discuss hypothesis testing, we need some terms. Let&rsquo;s begin with some definitions:</p>
+<p>A <strong>hypothesis test</strong> (also called a <strong>significance test</strong> ) is a method of using data to evaluate the evidence about a specified value of a parameter.</p>
+<p>Every statistical test has two mutually exclusive <strong>hypotheses</strong>, or claims about the value of a parameter.</p>
+<p>The <strong>null hypothesis</strong>, denoted $H_{0}$ and pronounced &ldquo;$H$ not&rdquo; or &ldquo;$H$ sub-zero,&rdquo; is typically a statement of &ldquo;no effect,&rdquo; &ldquo;no difference,&rdquo; &ldquo;no special ability beyond random chance,&rdquo; &ldquo;equality,&rdquo; etc. This is usually what the researcher wants to disprove or **reject**.</p>
+<p>The <strong>alternative hypothesis</strong>, denoted $H_{1}$, is the complement (&ldquo;opposite&rdquo;) of the null, and usually what the researcher is trying to establish.</p>
+<p>Hypotheses always come in pairs, and the general forms of the hypothesis pairs are given in Figure 
+<a href="#hyps">[hyps]</a>{reference-type=&quot;ref&rdquo; reference=&quot;hyps&rdquo;}.</p>
+<p>When performing a hypothesis test, it is possible to be wrong, or, more formally, to commit an error. Here are the two types of errors we&rsquo;ll be concerned with (there is a third type as well but we won&rsquo;t worry about that one).</p>
+<p>A <strong>Type I error</strong> occurs when we reject a true null hypothesis. This is akin to a &ldquo;false positive&rdquo; (claiming there is an effect or difference in the population when there isn&rsquo;t).</p>
+<p>A <strong>Type II error</strong> occurs when we don&rsquo;t reject a false null hypothesis. This is akin to a &ldquo;false negative&rdquo; (claiming there is not an effect or difference in the population when there is).</p>
+<p>These errors are depicted in Figure  below.</p>
+<p>For any given test, we don&rsquo;t know if we have committed a Type I error because we don&rsquo;t know what the true value of the parameter is (if we did, we wouldn&rsquo;t be doing any testing!). What we can do is specify that we want to construct our test such that the $P($Type I error$)$ $=\alpha$ is &ldquo;small.&rdquo; That is, if we could imagine doing the test repeatedly for different samples from the same population, in the long run, we would only want an error $\alpha (100)%$ of the time. A similar criterion exists for a Type II error: we want $P($Type II error) $=\beta$ to be small as well.</p>
+<p>The two types of errors cannot be minimized at the same time; lowering one error probability raises the other. What is done in practice is to find tests with a small $\alpha$, and from that set, find the test that also has a small $\beta$. For our purposes, we will only consider Type I error. It can be shown that the hypothesis tests presented next also have &ldquo;small&rdquo; $% \beta$.</p>
+<p>Hypothesis testing can be thought of as a process with a number of steps. Here they are:</p>
+<ol>
+<li>Define the hypotheses</li>
+<li>Calculate the <strong>test statistic</strong></li>
+<li>Calculate the <strong>p-value</strong> or determine the <strong>rejection region</strong> based on (1)</li>
+<li>Make a conclusion</li>
+</ol>
+<p>We already talked about $(1)$ in Figure 
+<a href="#hyps">[hyps]</a>{reference-type=&quot;ref&rdquo; reference=&quot;hyps&rdquo;}. Here are some more definitions:</p>
+<p>A <strong>test statistic</strong> is a specific function of data and the parameter value specified by the null hypothesis.</p>
+<p>The test statistic is chosen so that it has a known probability distribution (e. g. the standard normal or Student&rsquo;s t) when the null hypothesis is true.</p>
+<p>The <strong>p-value</strong> of a test is the probability, <em>assuming the null is true</em>, that we would observe a value of the test statistic as extreme or more extreme than what we actually got.</p>
+<p>A <strong>rejection region</strong> is the set of all values of the test statistic distribution for which we would reject $H_{0}$.</p>
+<p>We make a conclusion based on the $p$-value or the rejection region. In either case, we decide <em>before we analyze the data</em> what the Type I error rate $\alpha$ should be. Typical choices are $0.05,0.01,$ or $0.10$ (in order of popularity in research). $P$-values are more commonly used in practice because they are calculated easily using software. Using $p$ -values, the judgement is simple:</p>
+<ul>
+<li>if the $p$-value $\leq \alpha$, then we <strong>reject</strong> the null hypothesis</li>
+<li>if the $p$-value $&gt;\alpha$, we <strong>fail to reject</strong> the null hypothesis</li>
+</ul>
+<p>Notice that we do not say &ldquo;accept the null hypothesis.&rdquo; To &ldquo;fail to reject&rdquo; means to say that there is not enough evidence to reject the null hypothesis. It is a weak conclusion, similar to the &ldquo;not guilty&rdquo; verdict in the U. S. court system. When someone is found &ldquo;not guilty,&rdquo; it does not mean that the person is innocent; rather such a verdict claims lack of evidence to support a conviction. <em>We can never conclude that the null hypothesis is true using data</em>. There is an <em>entire set</em> of values of the parameter that you could plug into the null hypothesis that would lead to a &ldquo;fail to reject&rdquo; decision. This set is, in fact, the $(1-\alpha )100%$ confidence interval for the parameter (see Theorem 
+<a href="#ci_tst_theorem">[ci_tst_theorem]</a>{reference-type=&quot;ref&rdquo; reference=&quot;ci_tst_theorem&rdquo;} below).</p>
+<p>Alternatively, we could, using our specified value of $\alpha$, the form of the hypothesis, and the distribution of the test statistic under the null hypothesis to decide on a <strong>critical value</strong> that defines the boundary of the <strong>rejection region</strong> on the distribution of the test statistic. This region is a collection of values of the test statistic that have a low probability, specified as $\alpha$, of being observed if the null hypothesis is true. The logic is that if our calculated test statistic falls in the rejection region, either a very unlikely event occurred or the null hypothesis is false. Practically, <em>if our test statistic falls in the rejection region, we reject the null hypothesis.</em></p>
+<p>A visual of this idea is shown in Figure 
+<a href="#rr">[rr]</a>{reference-type=&quot;ref&rdquo; reference=&quot;rr&rdquo;} for a test of a population mean with a sample size of $15$. In this example, let&rsquo;s assume that under the null hypothesis, the test statistic $t_{0}$ has Student&rsquo;s $t$ distribution with $n-1=14$ degrees of freedom. If the alternative hypothesis $H_{1}$ is that the true population mean $\mu &gt;\mu _{0}$, for some specified $\mu _{0},$ then &ldquo;large&rdquo; values of $t_{0}$ would support the alternative and make us doubt the null hypothesis that $\mu \leq \mu _{0}$. Our rejection region is defined as all values of the Student&rsquo;s $t$ distribution that are larger than the critical value. To determine the critical value, we would first have to set $\alpha$ to some small value, say $0.05.$ In this example, the critical value is $1.761,$ since $P(t_{n-1}&gt;1.761)=0.05.$ If the calculated value of the test statistic falls in the shaded region, we would reject the null hypothesis; otherwise we would fail to reject.</p>
+<p>You might wonder why we&rsquo;re using $\alpha$ for both confidence intervals and hypothesis tests. There is a good reason! Here is an important fact connecting hypothesis testing and confidence intervals:</p>
+<p>[[ci_tst_theorem]]{#ci_tst_theorem label=&quot;ci_tst_theorem&rdquo;}If a $(1-\alpha )100%$ confidence interval <strong>contains</strong> the parameter value specified by $H_{0},$ then a test of $H_{0}$ conducted at the $\alpha$ level will **fail to reject** the null hypothesis.</p>
+<p>This fact can be proven but the intuition is simple: if the interval contains the most reasonable values of the parameter (based on the data and the confidence level) then it&rsquo;s sensible that the test should not reject one of the values that lies inside the interval. This logic extends to all hypothesis tests by construction.</p>
+<h2 id="a-hypothesis-test-for-a-single-populationprocess-mean">A Hypothesis Test for a Single Population/Process Mean</h2>
+<p>Let&rsquo;s now address a specific test. In every equation that follows, $\mu _{0}$ is a specified value of $\mu$, such as $6.2$, that we are testing.</p>
+<ol>
+<li>
+<p>Specify the hypotheses: Choose one of the three hypotheses depending upon what you are trying to show.</p>
+<p>$$\begin{aligned} \text{(a) }H_{0} &amp;:&amp;\mu \leq \mu _{0}\text{ vs. }H_{1}:\mu &gt;\mu _{0} \ \text{(b) }H_{0} &amp;:&amp;\mu \geq \mu _{0}\text{ vs. }H_{1}:\mu &lt;\mu _{0}\text{ } \ \text{(c) }H_{0} &amp;:&amp;\mu =\mu _{0}\text{ vs. }H_{1}:\mu \neq \mu _{0}\end{aligned}$$</p>
+</li>
+</ol>
+<p>As you can see, the alternative hypothesis is the complement or &ldquo;opposite&rdquo; of the null.</p>
+<ol>
+<li>
+<p>Calculate the test statistic:</p>
+<p>For a test of a single mean, it can be shown that the best test statistic is</p>
+<p>$$t=\frac{\overline{y}-\mu _{0}}{s/\sqrt{n}}$$</p>
+</li>
+</ol>
+<p>Notice that we plug in the null hypothesis value of $\mu _{0}$ into the test statistic. We do this because it turns out that if we can reject for this specific value, we could also reject for any value less than (in the case of hypothesis (a)) or any value greater than (in the case of hypothesis set (b)) $\mu _{0}.$</p>
+<p>When the null hypothesis is true, $t$ has the Student&rsquo;s $t$ distribution with $n-1$ degrees of freedom. Therefore, we know that $P(-t_{\alpha /2,n-1}&lt;t,&lt;t_{\alpha /2,n-1})=1-\alpha$. This means that there is a total area of $\alpha$ either greater than $t_{\alpha /2,n-1}$ or less than $-t_{\alpha /2,n-1}.$ We use this fact in step 3 to determine the rejection region.</p>
+<ol>
+<li>
+<p>Calculate the $p$-value (or determine the rejection region)</p>
+<p>In practice, software almost always reports $p$-values by default. Without software, you cannot calculate $p$-values for the Student&rsquo;s $t$ distribution. Still, the concept of a $p$-value is important, so it is useful to see how they could be calculated in theory. The form of the $p$ -value depends on the form of the alternative hypothesis. The following table gives the $p$-values associated with the hypotheses in (1).
+$$\begin{aligned} \text{(a) }p-value &amp;=&amp;P(t_{n-1}&gt;t) \ \text{(b) }p-value &amp;=&amp;P(t_{n-1}&lt;t) \ \text{(c) }p-value &amp;=&amp;2\min [P(t_{n-1}&gt;t),P(t_{n-1}&lt;t)]\end{aligned}$$</p>
+</li>
+</ol>
+<p>The rejection regions also depend on the form of the alternative hypothesis. The general appearances of these rejection regions are given in the following figures.</p>
+<p>Referring to step 1 above, the rejection region for hypothesis set (a) shown in Figure 
+<a href="#right_tail">[right_tail]</a>{reference-type=&quot;ref&rdquo; reference=&quot;right_tail&rdquo;} contains all values of $t$ that are &ldquo;too large,&rdquo; expected to be seen with probability $\alpha$ or less. A test with rejection region in the right tail is called a <strong>right-tailed test.</strong></p>
+<p>The rejection region for hypothesis set (b) shown in Figure 
+<a href="#left_tail">[left_tail]</a>{reference-type=&quot;ref&rdquo; reference=&quot;left_tail&rdquo;} contains all values of $t$ that are &ldquo;too small,&rdquo; expected to be seen with probability $\alpha$ or less. A test with rejection region in the left tail is called a <strong>left-tailed test.</strong></p>
+<p>The rejection region for hypothesis set (c) contains all the values of $t$ that are either &ldquo;too small&rdquo; <em>or</em> &ldquo;too large.&rdquo; Since the $t$ distribution is symmetric around 0 under the null hypotheses, by convention we split $\alpha$ into two equal parts, putting $\frac{\alpha }{2}$ area in each tail. Because there is a rejection region on either side of the distribution, this type of test is known as a <strong>two-tailed test.</strong> See Figure 
+<a href="#two_tail">[two_tail]</a>{reference-type=&quot;ref&rdquo; reference=&quot;two_tail&rdquo;} below.</p>
+<ol>
+<li>Make a conclusion.</li>
+</ol>
+<p>If the $p$-value $\leq \alpha$, we reject $H_{0}.$ If the $p$-value $% &gt;\alpha$, we fail to reject $H_{0}.$ Equivalently, if $t$ lies within the rejection region, we reject $H_{0}$. If $t$ lies outside the rejection region, we fail to reject $H_{0}.$</p>
+<p>Here are some examples.</p>
+<p>A machine produces ball bearings is calibrated to produce diameters of $0.5$ inches on average. A sample of $10$ ball bearings from the process was taken. The average diameter was $0.493$ inches, with a standard deviation of $0.022$ inches. A quality control inspector wants to determine if the machine is calibrated properly. Conduct a hypothesis test at the $\alpha =0.05$ level to answer his question.</p>
+<p>A specialty cell phone manufacturer wants to determine how many pictures are stored on phones used by older consumers. A survey was conducted and a random sample of six older consumers reported the following numbers of pictures on their cell phones: $13$ $\ 6$ $\ \ 9$ $\ \ 10$ $\ \ 16$ $\ 18.$ Historically, the average number of pictures stored on phones by this consumer group has been $10.$ The company wants to know if this number has increased. Use a hypothesis test at the $\alpha =0.10$ level to answer this question.</p>
+<p>A recent article on pregnancy<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> discussed a study performed in California on the effects of maternal age on birth defects. The study found that the best age for a woman to have a first child, in terms of the lowest rate of birth defects was $26.$ In the $% 2012$ General Social Survey (GSS), a sample of $846$ women were asked the question, &ldquo;How old were you when you had your first child?&rdquo; The average age was $25.1$ years, with a standard deviation of $5.2$ years. Test the hypothesis that the mean age of GSS respondents is less than $26$ at the $% \alpha =0.05$ level.</p>
+<p>A researcher is interested in the amount of time young men $18-30$ spend on the internet per week. In the $2012$ GSS, $121$ men aged $18-30$ reported an average time on the internet of $15.6$ hours per week, with a standard deviation of $18.8$ hours. Test the hypothesis that the average time spent on the internet for young men is greater than $14$ hours, at the $\alpha =0.01$ level. Then, construct a $99%$ confidence interval for the true average time spent on the internet.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="http://www.huffingtonpost.com/robin-marantz-henig/whats-the-best-age-to-hav_b_2206136.html">http://www.huffingtonpost.com/robin-marantz-henig/whats-the-best-age-to-hav_b_2206136.html</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/bana3363/5-ci-for-mean/" rel="next">Confidence Interval for the Mean</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/bana3363/6-1-interval-for-differences-in-means-independent-samples/" rel="prev">Interval Inference about Two Population/Process Means</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on May 5, 2019</p>
+
+          
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/BANA3363/5-1%20-%20Hypothesis%20Testing%20Basics.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+          
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

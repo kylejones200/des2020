@@ -1,0 +1,867 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Kyle Jones">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Motivation for Examining Variances The notion of quality means different things to different people. Some popular definitions include: fitness for an intended purpose; conformance to specifications; value as perceived by the customer; meeting design specifications; meeting customer expectations; and many more.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/courses/bana3363/10-3-test-for-diff-in-variances/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/courses/bana3363/10-3-test-for-diff-in-variances/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Kyle Jones">
+  <meta property="og:url" content="/courses/bana3363/10-3-test-for-diff-in-variances/">
+  <meta property="og:title" content="Confidence Interval for the Difference in Variances | Kyle Jones">
+  <meta property="og:description" content="Motivation for Examining Variances The notion of quality means different things to different people. Some popular definitions include: fitness for an intended purpose; conformance to specifications; value as perceived by the customer; meeting design specifications; meeting customer expectations; and many more."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-07-28T15:19:27&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-07-28T15:19:27&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Confidence Interval for the Difference in Variances | Kyle Jones</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/3-1-sampling-distributions/">Descriptive Statistics</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/3-1-sampling-distributions/">Sampling Distributions &amp; Central Limit Theorem</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/3-2-sampling-distributions-clt/">Sampling Distributions, the Central Limit Theorem, Inference about Means</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/10-3-test-for-diff-in-variances/">Hypothesis Testing and Inference</a>
+    <ul class="nav docs-sidenav">
+      
+      <li class="active">
+        <a href="/courses/bana3363/10-3-test-for-diff-in-variances/">Confidence Interval for the Difference in Variances</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#motivation-for-examining-variances">Motivation for Examining Variances</a></li>
+    <li><a href="#the-confidence-interval-for-differences-in-two-variances--normal-populations">The Confidence Interval for Differences in Two Variances&ndash;Normal Populations</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Confidence Interval for the Difference in Variances</h1>
+
+          <div class="article-style">
+            <h2 id="motivation-for-examining-variances">Motivation for Examining Variances</h2>
+<p>The notion of <strong>quality</strong> means different things to different people. Some popular definitions include: fitness for an intended purpose; conformance to specifications; value as perceived by the customer; meeting design specifications; meeting customer expectations; and many more. Quality is of particular interest to managers because, after all, everyone wants to make a &quot;quality product.&quot; There is even an organization called the 
+<a href="http://asq.org/index.aspx" target="_blank" rel="noopener">American Society for Quality</a> devoted to the lofty goal of transforming the world by promoting the notion of quality assurance as a key component of any organization&rsquo;s strategic plan. This group offers certification and training in several areas, including 
+<a href="http://www.iso.org/iso/iso_9000" target="_blank" rel="noopener">IS09000</a> , and conducts research on emerging issues that affect quality. It is a good bet that during your career you will hear about concepts such as Six Sigma, total quality management, quality at the source, process capability, kaizen, poka-yoke, jidoka, lean manufacturing, control charts, and people such as W. Edwards Deming, Walter Shewhart, and Joseph Juran. In an era where traditional barriers to competitor entry (such as access to customer base and capital) have been weakened, the notion of quality has become a key competitive tool for businesses around the world.</p>
+<p>You will notice that one of the definitions of quality is &quot;conformance to specifications.&quot; We can map this idea directly to the notion of variability. When things &quot;conform,&quot; by definition, they exhibit little variability. Thus, one might consider a service or product as being of poor quality if the performance of the product or service varies highly from one experience to the next. Conversely, a high-quality product or service might be defined as one that offers consistent performance from one experience to the next. Of course, consistency is not enough; after all, for example, a car that consistently overheats cannot be said to be high quality. Thus, it is important to set the standards of performance properly before the product or service is offered to the marketplace. Proper standard setting begins and ends with the customer in mind, and is often accomplished through observational studies, surveys, and focus groups. Product development is a key component of marketing science.</p>
+<p>Assuming that we do have some idea of a standard, how can we use statistics to help us see if our product is of high quality? If we are willing to make some assumptions about the populations, we can derive a confidence interval to determine whether the variability of two populations is the same. The two populations could be defined by the time of collection (say, yesterday&rsquo;s production run versus today&rsquo;s) or by process changes (comparing an old production method versus a new one). The key assumptions will be that we have <strong>two independent, normally distributed populations</strong> from which we are taking samples of size $n_{1}$ and $n_{2}.$ <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> We then construct a confidence interval, not for the difference but for the *ratio of the two variances.* Using the general relationship between confidence intervals and hypothesis tests, we can use the confidence interval to perform the test.</p>
+<h2 id="the-confidence-interval-for-differences-in-two-variances--normal-populations">The Confidence Interval for Differences in Two Variances&ndash;Normal Populations</h2>
+<p>The distribution used to form the confidence interval is the $F$ <strong>distribution.</strong> This distribution arises when we calculate the variances from samples from two normally distributed populations and make a quotient out of them in a certain way. The following theorem spells out the details.</p>
+<p>If $s_{1}^{2}$ and $s_{2}^{2}$ are two sample variances calculated by taking samples of size $n_{1}$ and $n_{2}$ from two independent normal populations with variances $\sigma _{1}^{2}$ and $\sigma _{2}^{2},$ then the quantity $$F_{\nu _{1},\nu _{2}}=\frac{s_{1}^{2}/\sigma _{1}^{2}}{s_{2}^{2}/\sigma _{2}^{2}}$$</p>
+<p><em>has an</em> $F$ distribution with $\nu <em>{1}=n</em>{1}-1$ numerator degrees of freedom and and $\nu <em>{2}=n</em>{2}-1$ denominator degrees of freedom. The $F$ distribution takes on a variety of appearances depending on these two parameters, as you can see in Figure 
+<a href="#fdist">[fdist]</a>{reference-type=&quot;ref&rdquo; reference=&quot;fdist&rdquo;}.</p>
+<p>\FRAME{ftbphFU}{3.5552in}{2.6749in}{0pt}{\Qcb{The $F_{v_{1},\protect\nu _{2}} $ distribution for various values of $v_{1}$ and $\protect\nu _{2}.$}}{}{% Figure}{\special{language &ldquo;Scientific Word&rdquo;;type &ldquo;GRAPHIC&rdquo;;maintain-aspect-ratio TRUE;display &ldquo;USEDEF&rdquo;;valid_file &ldquo;T&rdquo;;width 3.5552in;height 2.6749in;depth 0pt;original-width 4.5143in;original-height 3.3892in;cropleft &ldquo;0&rdquo;;croptop &ldquo;1&rdquo;;cropright &ldquo;1&rdquo;;cropbottom &ldquo;0&rdquo;;tempfilename &lsquo;N7I88L01.bmp&rsquo;;tempfile-properties &ldquo;XPR&rdquo;;}}</p>
+<p>Notice that the $F$ distribution, unlike the Student&rsquo;s $t$ and the standard normal, is not, in general, symmetric. In fact, it is <strong>right-skewed</strong>, meaning it has a &quot;tail&quot; to its right. Therefore, we must find two values, $% F_{\alpha /2,\nu _{1},\nu _{2}}$ and $F_{1-\alpha /2,v_{1},\nu _{2}}$ to specify the confidence interval. If software were not available, we would use an $F$ table, an excerpt of which is shown in Figure 
+<a href="#ftable">[ftable]</a>{reference-type=&quot;ref&rdquo; reference=&quot;ftable&rdquo;}. Then, using the theorem above, we can say that</p>
+<p>$$P(F_{1-\alpha /2,v_{1},\nu _{2}}\leq \frac{s_{1}^{2}/\sigma _{1}^{2}}{% s_{2}^{2}/\sigma _{2}^{2}}\leq F_{\alpha /2,\nu _{1},\nu _{2}})=1-\alpha$$</p>
+<p>By manipulating this equation to get $\frac{\sigma _{1}^{2}}{% \sigma _{2}^{2}}$ in the middle (details omitted) we get the confidence interval.</p>
+<p>A $(1-\alpha )100%$ confidence interval for $\frac{\sigma <em>{1}^{2}}{\sigma <em>{2}^{2}}$ is given by $\left[ \frac{s</em>{1}^{2}}{s</em>{2}^{2}}\frac{1}{F_{\alpha /2,\nu _{1},\nu _{2}}},\frac{s_{1}^{2}}{s_{2}^{2}}F_{\alpha /2,\nu _{2},\nu _{1}}\right]$</p>
+<p>Notice that on the upper bound the degrees of freedom are switched, with $% \nu _{2}$ becoming the numerator degrees of freedom and $\nu _{1}$ now the denominator degrees of freedom. This interval can be used to test the two-sided hypothesis</p>
+<p>$$\text{ }H_{0}:\frac{\sigma _{1}^{2}}{\sigma _{2}^{2}}=1\text{ vs. }H_{1}:% \frac{\sigma _{1}^{2}}{\sigma _{2}^{2}}\neq 1\text{ }$$</p>
+<p>To use the confidence interval, we simply look to see if it contains $1.$ The logic is that if the two population variances are equal, their ratio will be exactly $1$ (any number divided by itself is $1).$ Therefore, if $1$ is in the interval, it is plausible that the two variances are equal.</p>
+<p>\FRAME{ftbphFU}{4.8317in}{2.6299in}{0pt}{\Qcb{Table of $F$ distribution critical values. The value $F_{0.05,3,2}$, for example, would be $19.16$}}{% \Qlb{ftable}}{Figure}{\special{language &ldquo;Scientific Word&rdquo;;type &ldquo;GRAPHIC&rdquo;;maintain-aspect-ratio TRUE;display &ldquo;USEDEF&rdquo;;valid_file &ldquo;T&rdquo;;width 4.8317in;height 2.6299in;depth 0pt;original-width 10.6528in;original-height 5.7726in;cropleft &ldquo;0&rdquo;;croptop &ldquo;1&rdquo;;cropright &ldquo;1&rdquo;;cropbottom &ldquo;0&rdquo;;tempfilename &lsquo;N33PC601.wmf&rsquo;;tempfile-properties &ldquo;XPR&rdquo;;}}</p>
+<p>Let us work some examples.</p>
+<p>A golf club manufacturer is designing a new driver and wants to market it as giving more consistent results than the competitor&rsquo;s club. To test this, the manufacturer used a specially designed machine to precisely hit $51$ golf balls with the new club $($Group $1)$ and $25$ golf balls with the competitor&rsquo;s club $($Group $2)$. The new club resulted in an average drive length of $150.1$ yards with a standard deviation of $3.1$ yards, while the competitor&rsquo;s club gave an average drive length of $150.5$ yards with a standard deviation of $5.8$ yards. Can the manufacturer conclude at the $% \alpha =0.05$ level that the two population variances are not equal?</p>
+<p>The critical value of $F$ that we need is $F_{0.025,50,24}=2.11$, which gives $F_{0.025,24,50}=1.93$ for the upper bound (notice the $50$ and $24$ have switched places). So the interval is $\left[ \frac{3.1^{2}}{5.8^{2}}% \frac{1}{2.11},\frac{3.1^{2}}{5.8^{2}}1.93\right] =[0.14,0.55].$ This interval does not include $1,$ so we would conclude that the two population variances are different, with evidence that the variance of the old club is larger, making it less consistent.</p>
+<p>\bigskip  A fertilizer plant produces $60$-pound bags to sell at a nationwide home-improvement store. To minimize costs, it buys a filling machine that has a tolerance of $+/-0.03$pounds. One day, the store weighs a sample of $13$ bags using a precision scale and finds that the average weight of the bags is $60.001$ pounds, with a standard deviation of $0.045$ pounds. The next day, they weigh another sample of $13$ bags and find that the average weight is $60.002$ pounds, with a standard deviation of $0.058$ pounds. Can the manufacturer conclude that the process variability differs between the two days at the $0.10$ level?</p>
+<p>\bigskip  In a recent survey of $29$ accounting majors and $38$ general business majors, researchers asked the students to report the amount of time spent studying per week. The sample mean hours for accounting majors was $13.5$ and the sample mean hours for general business majors was $14$. The sample standard deviations are $10$ and $9.8,$ respectively. Determine at the $% \alpha =0.10$ level if there is a difference in the variability in study time between accounting and general business majors.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Other tests are more sensitive to differences in the population     variances when the assumption of normality in the populations is     violated. The violation only has to be slight for the test to lose     sensitivity, or &quot;power,&quot; to detect differences in variances. For     this reason, this test is considered &quot;not robust&quot; to violations of     normality. The 
+<a href="http://en.wikipedia.org/wiki/Levene_test" target="_blank" rel="noopener">Levene and Brown-Forsythe     tests</a> work better in this     case. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/bana3363/10-2-test-for-diff-in-means-independent-samples/" rel="next">Test for Diff in Means Independent Samples</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/bana3363/11-anova-basics/" rel="prev">ANOVA Basics</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jul 28, 2020</p>
+
+          
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/BANA3363/10-3%20-%20Test%20for%20Diff%20in%20Variances.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+          
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

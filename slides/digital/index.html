@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  
+  
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/slides/digital/">
+
+  <title>Slides | Kyle Jones</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reveal.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/theme/black.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous">
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/reveal_custom.min.css">
+
+  
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/css/print/pdf.css' : 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+</head>
+<body>
+
+  
+<div class="reveal">
+  <div class="slides">
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    <section>
+    
+      <h1 id="create-websites-in-markdown">Create websites in Markdown</h1>
+<p>
+<a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic</a> | 
+<a href="https://sourcethemes.com/academic/docs/managing-content/#create-slides" target="_blank" rel="noopener">Documentation</a></p>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="what-problem-are-we-trying-to-solve">What problem are we trying to solve?</h2>
+<ul>
+<li>Write in Markdown not HTML</li>
+<li>Spend time focused on content not format</li>
+<li>Separate content from presentation format</li>
+<li>3-in-1: Create, Present, and Publish your content</li>
+<li>Automatically update/deploy new versions</li>
+<li>Track all pervious versions for version control</li>
+<li>Free</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="why-did-i-chose-to-do-this">Why did I chose to do this?</h2>
+<ul>
+<li>Writing code and math in PPT stinks</li>
+<li>I wanted to write things in one place, not have to have versions in Word, PowerPoint, and Code editor</li>
+<li>I wanted a way to do code syntax highlighting</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="additional-requires-i-had">Additional requires I had</h2>
+<ul>
+<li>Must be able to create PDF of slides</li>
+<li>Must be able handle math</li>
+<li>Must be beautiful</li>
+<li>Must have an active user community</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="what-does-good-look-like">What does good look like?</h2>
+<ul>
+<li>A website that is interactive and beautiful</li>
+<li>A simple process for adding, deleting, or changing content</li>
+<li>Supports images, videos, and mathematical expressions</li>
+<li>Works with tools like Jupyter Notebooks and R-Markdown</li>
+<li>Free</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="static-site-generator-ssg">Static Site Generator (SSG)</h2>
+<ul>
+<li>We will use Hugo</li>
+<li>There are lots of options including:
+<ul>
+<li>Jekyll</li>
+<li>MKDocs</li>
+<li>Cleaver</li>
+</ul>
+</li>
+</ul>
+<p>I like Hugo because:</p>
+<ul>
+<li>It has lots of nice templates</li>
+<li>It is wicked fast</li>
+<li>It has widgets that can be used on multiple sites</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="tools-required">Tools required</h2>
+<ul>
+<li>Terminal</li>
+<li>
+<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a></li>
+<li>Markdown editor (like 
+<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a> or 
+<a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>)</li>
+<li>GitHub account and Git installed on computer</li>
+<li>Netlify account</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="what-is-markdown">What is Markdown?</h2>
+<p>Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by John Gruber in 2004, Markdown is now one of the world’s most popular markup languages.</p>
+<p>Using Markdown is different than using a WYSIWYG editor. In an application like Microsoft Word, you click buttons to format words and phrases, and the changes are visible immediately. Markdown isn’t like that. When you create a Markdown-formatted file, you add Markdown syntax to the text to indicate which words and phrases should look different.</p>
+<p>
+<a href="https://www.markdownguide.org/getting-started/" target="_blank" rel="noopener">Markdown Guide</a></p>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="why-use-markdown">Why use Markdown?</h2>
+<ol>
+<li>Markdown can be used for <strong>everything</strong>.</li>
+<li>Markdown is <em>portable</em>.</li>
+<li>Markdown is <em>platform independent</em>.</li>
+<li>Markdown is <strong>future proof</strong>.</li>
+<li>Markdown is <strong>everywhere</strong>.</li>
+</ol>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="what-does-it-look-like">What does it look like?</h2>
+<pre><code class="language-markdown">## Why use Markdown?
+
+1. Markdown can be used for **everything**. 
+1. Markdown is *portable*. 
+1. Markdown is _platform independent_.
+1. Markdown is __future proof__. 
+1. Markdown is __everywhere__. 
+</code></pre>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="how-does-the-process-work">How does the process work?</h2>
+<pre><code class="language-mermaid">graph LR; 
+  A(Write Markdown) --&gt; B(Convert Markdown to HTML);
+  B --&gt; C(Push HTML to GitHub);
+  C --&gt; D(Render New Version of Site);
+</code></pre>
+<pre><code class="language-mermaid">graph LR; 
+  subgraph Your Computer
+  A(VS Code) --&gt; B(Hugo and Terminal);
+  end
+  subgraph Internet
+  B --&gt; C(Git and GitHub);
+  C --&gt; D(Netlify);
+  end
+</code></pre>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="netlify">Netlify</h2>
+<ol>
+<li>Free for basic features</li>
+<li>Connects to GitHub and automatically refreshes</li>
+<li>You can change the default name in the URL</li>
+<li>You can also bring your own URL</li>
+</ol>
+<p>Other options include 
+<a href="https://aws.amazon.com/amplify/console/" target="_blank" rel="noopener">AWS Amplify</a> and 
+<a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a></p>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="how-do-i-convert-existing-material">How do I convert existing material?</h2>
+<ul>
+<li>
+<a href="https://pandoc.org/" target="_blank" rel="noopener">Pandoc</a></li>
+<li>
+<a href="https://github.com/ssine/pptx2md" target="_blank" rel="noopener">pptx2md</a></li>
+<li>Online converters</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="beware-of-these-dangers">Beware of these Dangers</h2>
+<ul>
+<li>Markdown spell checkers don&rsquo;t work well</li>
+<li>Sometimes the formatting gets messed up</li>
+<li>Markdown comes in multiple &ldquo;flavors&rdquo;</li>
+<li>Converters are not perfect</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="where-do-we-go-from-here">Where do we go from here?</h2>
+<ul>
+<li>Efficiently write slides in Markdown</li>
+<li>3-in-1: Create, Present, and Publish your slides</li>
+<li>Supports speaker notes</li>
+<li>
+<a href="https://sourcethemes.com/academic/docs/managing-content/#create-slides" target="_blank" rel="noopener">Template Documentation</a></li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="controls">Controls</h2>
+<ul>
+<li>Next: <code>Right Arrow</code> or <code>Space</code></li>
+<li>Previous: <code>Left Arrow</code></li>
+<li>Start: <code>Home</code></li>
+<li>Finish: <code>End</code></li>
+<li>Overview: <code>Esc</code></li>
+<li>Speaker notes: <code>S</code></li>
+<li>Fullscreen: <code>F</code></li>
+<li>Zoom: <code>Alt + Click</code></li>
+<li>
+<a href="https://github.com/hakimel/reveal.js#pdf-export" target="_blank" rel="noopener">PDF Export</a>: <code>E</code></li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="code-highlighting">Code Highlighting</h2>
+<p>Inline code: <code>variable</code></p>
+<p>Code block:</p>
+<pre><code class="language-python">porridge = &quot;blueberry&quot;
+if porridge == &quot;blueberry&quot;:
+    print(&quot;Eating...&quot;)
+</code></pre>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="math">Math</h2>
+<p>In-line math: $x + y = z$</p>
+<p>Block math:</p>
+<p>$$
+f\left( x \right) = ;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+$$</p>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="fragments">Fragments</h2>
+<p>Make content appear incrementally</p>
+<pre><code>{{% fragment %}} One {{% /fragment %}}
+{{% fragment %}} **Two** {{% /fragment %}}
+{{% fragment %}} Three {{% /fragment %}}
+</code></pre>
+<p>Press <code>Space</code> to play!</p>
+<p><span class="fragment " >
+One
+</span>
+<span class="fragment " >
+<strong>Two</strong>
+</span>
+<span class="fragment " >
+Three
+</span></p>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<p>A fragment can accept two optional parameters:</p>
+<ul>
+<li><code>class</code>: use a custom style (requires definition in custom CSS)</li>
+<li><code>weight</code>: sets the order in which a fragment appears</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="speaker-notes">Speaker Notes</h2>
+<p>Add speaker notes to your presentation</p>
+<pre><code class="language-markdown">{{% speaker_note %}}
+- Only the speaker can read these notes
+- Press `S` key to view
+{{% /speaker_note %}}
+</code></pre>
+<p>Press the <code>S</code> key to view the speaker notes!</p>
+<aside class="notes">
+  <ul>
+<li>Only the speaker can read these notes</li>
+<li>Press <code>S</code> key to view</li>
+</ul>
+
+</aside>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="themes">Themes</h2>
+<ul>
+<li>black: Black background, white text, blue links (default)</li>
+<li>white: White background, black text, blue links</li>
+<li>league: Gray background, white text, blue links</li>
+<li>beige: Beige background, dark text, brown links</li>
+<li>sky: Blue background, thin dark text, blue links</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<ul>
+<li>night: Black background, thick white text, orange links</li>
+<li>serif: Cappuccino background, gray text, brown links</li>
+<li>simple: White background, black text, blue links</li>
+<li>solarized: Cream-colored background, dark green text, blue links</li>
+</ul>
+
+    </section>
+    
+
+    
+    
+    
+      
+
+<section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image="/img/boards.jpg"
+  >
+
+<h2 id="custom-slide">Custom Slide</h2>
+<p>Customize the slide style and background</p>
+<pre><code class="language-markdown">{{&lt; slide background-image=&quot;/img/boards.jpg&quot; &gt;}}
+{{&lt; slide background-color=&quot;#0000FF&quot; &gt;}}
+{{&lt; slide class=&quot;my-style&quot; &gt;}}
+</code></pre>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h2 id="custom-css-example">Custom CSS Example</h2>
+<p>Let&rsquo;s make headers navy colored.</p>
+<p>Create <code>assets/css/reveal_custom.css</code> with:</p>
+<pre><code class="language-css">.reveal section h1,
+.reveal section h2,
+.reveal section h3 {
+  color: navy;
+}
+</code></pre>
+
+    </section>
+    
+
+    
+    
+    
+    <section>
+    
+      
+<h1 id="questions">Questions?</h1>
+<p>
+<a href="https://spectrum.chat/academic" target="_blank" rel="noopener">Ask</a></p>
+
+    </section>
+    
+
+    
+    
+  </div>
+</div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js"></script>
+
+  <script>
+    window.revealPlugins = { dependencies: [
+      
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/zoom-js/zoom.js', async: true },
+      
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/math/math.js', async: true },
+      
+      { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.8.0/plugin/print-pdf/print-pdf.js', async: true },
+      
+      { src: '\/js\/vendor\/reveal.js\/plugin\/notes\/notes.js', async: true }
+    ]};
+
+    let revealDefaults = { center: true, controls: true, history: true, progress: true, transition: 'slide', mouseWheel: true };
+    let revealOptions = Object.assign({}, revealDefaults, revealPlugins);
+    Reveal.initialize(revealOptions);
+  </script>
+
+</body>
+</html>

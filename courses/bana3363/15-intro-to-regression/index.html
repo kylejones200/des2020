@@ -1,0 +1,1108 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Kyle Jones">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Dependence Between Numeric Variables (Correlation) There are an infinite number of possible relationships between numeric variables. There could be quadratic relationships, cubic relationships, logarithmic relationships, and so forth. In much of statistics, the focus is on the linear relationship because it is generally easy to specify, it captures the notion of dependence in many real-world situations, and many other relationships can be at least approximated by a line in some small, focused area.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/courses/bana3363/15-intro-to-regression/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/courses/bana3363/15-intro-to-regression/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Kyle Jones">
+  <meta property="og:url" content="/courses/bana3363/15-intro-to-regression/">
+  <meta property="og:title" content="Intro to Regression | Kyle Jones">
+  <meta property="og:description" content="Dependence Between Numeric Variables (Correlation) There are an infinite number of possible relationships between numeric variables. There could be quadratic relationships, cubic relationships, logarithmic relationships, and so forth. In much of statistics, the focus is on the linear relationship because it is generally easy to specify, it captures the notion of dependence in many real-world situations, and many other relationships can be at least approximated by a line in some small, focused area."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-07-28T15:19:27&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-07-28T15:19:27&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Intro to Regression | Kyle Jones</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/">Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/1-basic-statistics-concepts/">Descriptive Statistics</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/1-basic-statistics-concepts/">Basic Statistics Concepts</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/2-the-normal-distribution/">The Normal Distribution</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/2-types-of-statistical-analysis/">Types of Statistical Analysis</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing and Inference</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing for a Proportion</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/7-interval-for-differences-in-means-independent-samples/">Interval for Differences in Means--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-test-for-differences-in-proportions-independent-samples/">Hypothesis Test for a Difference in Proportion (Independent Samples)</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-intervals-for-differences-in-proportions-independent-samples/">Intervals for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/5-ci-for-mean/">Confidence Interval for the Mean</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/5-1-hypothesis-testing-basics/">Hypothesis Testing for a Population Mean</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-confidence-interval-for-matched-pairs/">Confidence Interval for Matched Pairs</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-1-test-for-diff-in-means-proportions/">Test for Diff in Means, Proportions</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-1-test-for-differences-in-proportions-independent-samples/">Test for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-2-test-for-diff-in-means-independent-samples/">Test for Diff in Means Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-anova-basics/">ANOVA Basics</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/12-anova-mc/">ANOVA - Bonferroni Method of Multiple Comparisons</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Goodness-of-Fit Test</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-matched-pairs/">Matched Pairs</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/14-chi-squared-test-of-independence/">Chi Squared Test of Independence</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/15-intro-to-regression/">Regression</a>
+    <ul class="nav docs-sidenav">
+      
+      <li class="active">
+        <a href="/courses/bana3363/15-intro-to-regression/">Intro to Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/16-simple-linear-regression/">Simple Linear Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/17-evaluating-linear-regression/">Evaluating Linear Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/18-multiple-linear-regression/">Multiple Linear Regression</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#dependence-between-numeric-variables-correlation">Dependence Between Numeric Variables (Correlation)</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Intro to Regression</h1>
+
+          <div class="article-style">
+            <h2 id="dependence-between-numeric-variables-correlation">Dependence Between Numeric Variables (Correlation)</h2>
+<p>There are an infinite number of possible relationships between numeric variables. There could be quadratic relationships, cubic relationships, logarithmic relationships, and so forth. In much of statistics, the focus is on the <em>linear relationship</em> because it is generally easy to specify, it captures the notion of dependence in many real-world situations, and many other relationships can be at least approximated by a line in some small, focused area. The measure of linear relationship between two numeric variables is known as <strong>correlation.</strong></p>
+<p>The <strong>population correlation coefficient</strong> $\rho ,$ pronounced &ldquo;row,&rdquo; describes the linear association between two random variables $X$ and $Y$. It is calculated as</p>
+<p>$$\rho =\frac{E(XY)-E(X)E(Y)}{\sqrt{V(X)}\sqrt{V(Y)}}$$</p>
+<p>where $E$ stands for &ldquo;expected value&rdquo; and $V$ stands for variance.</p>
+<p>The correlation coefficient $\rho$ is a <em>population parameter,</em> like $% \mu$ and $p,$ and must therefore be estimated with data. This leads to the next definition.</p>
+<p>The <strong>sample correlation coefficient</strong> $r$ is a random variable that describes the relationship between two sets of numeric data that are considered in pairs $(y_{1},x_{1}),(y_{2},x_{2}),\ldots ,(y_{n},x_{n})$. It is given by</p>
+<p>$$r=\frac{\dsum_{i}x_{i}y_{i}-n(\overline{x})(\overline{y})}{(n-1)s_{x}s_{y}}$$</p>
+<p>where $s_{x\text{ }}$ and $s_{y}$ are the standard deviations of $x$ and $y$ , respectively.</p>
+<p>The following are facts about correlation:</p>
+<ul>
+<li>
+<p>Always lies between $-1$ and $1$ (inclusive)</p>
+</li>
+<li>
+<p>The strength of correlation is measured by $|r|$, the absolute value     of the correlation coefficient</p>
+</li>
+<li>
+<p>Correlations of $1$ (or $-1$) indicate perfect positive (or     negative) linear relationship</p>
+</li>
+<li>
+<p>Correlation of $0$ indicates no linear relationship</p>
+</li>
+</ul>
+<p>Suppose we wanted to create a model of gasoline prices that factors in crude oil prices. The data would appear as shown in Figure 
+<a href="#data">[data]</a>{reference-type=&quot;ref&rdquo; reference=&quot;data&rdquo;} in a spreadsheet program. Using Excel&rsquo;s chart feature, we could make a scatter plot as shown in Figure 
+<a href="#gas_scatter">[gas_scatter]</a>{reference-type=&quot;ref&rdquo; reference=&quot;gas_scatter&rdquo;}. The correlation between crude oil price and gasoline price can be shown to be $r=0.987,$ which is an extremely strong positive linear relationship as can be seen.</p>
+<p>The concept of correlation plays a key role in estimating the simple linear regression model, as we will see in the next section.</p>
+<h1 id="introduction-to-regression">Introduction to Regression</h1>
+<p>The broad set of techniques that fall under the &ldquo;regression analysis&rdquo; title drive most practical research studies, from drug trials in the pharmaceutical industry to new product test marketing. Businesses face tough competition in the information age. Not only must they navigate an increasingly fragmented customer base, manage their reputations through traditional and social media channels, innovate with products and services at an increasing rate, and negotiate with many suppliers and distributors, but they must also make short- and long-term decisions about personnel, production, new markets to enter, and strategies to increase (or at least maintain) market share against competitors. Sites such as Kickstarter <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and Fundable<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> specialize in a type of online venture capital process called &ldquo;crowdfunding,&rdquo; where ordinary individuals can contribute to a project in exchange for a variety of rewards, from a simple acknowledgement as a supporter, to a functioning prototype of the company&rsquo;s product, to a percentage of sales. You will no doubt hear a good deal more on this topic in your marketing and management classes.</p>
+<p>Managers must be able to make decisions that incorporate a number of factors. Increasingly, these decisions have been influenced by mathematical modeling. A new field called <strong>business analytics</strong><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> has arisen that seeks to use advanced mathematics and large data sets to discover patterns and relationships among consumer choices that can help optimize product and service delivery. If you have ever wondered why grocery stores have rewards cards, the answer is simple: it allows the store to track your purchases in order to present you with customized deals and to understand how your purchases relate to those of other customers. If you use Netflix to stream movies, you should know that everything you do&ndash;the programs you search for, the number of searches you perform, the time you spend browsing your recommendations, the device you are using to watch the program, the genre of the programs you view most often, and more&ndash;is being monitored<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>. The data are fed into complex models designed by mathematicians and statisticians, and the patterns extracted from the data imply that, for instance, <em>Hot Tub Time Machine</em> and <em>Les Miserables</em> might appeal to the same user.</p>
+<p>Mathematical models can be divided into two three broad classes: <strong>deterministic,</strong> <strong>probabilistic,</strong> and <strong>regression</strong> models. The last type is actually a blend of the first two. Let&rsquo;s define these terms.</p>
+<p>A <strong>deterministic model</strong> is a mathematical equation for which, if a set of inputs $\mathbf{x}$ are known, the output $y$ is known with certainty.</p>
+<p>Deterministic models are what we are most familiar with in elementary mathematics. They are why mathematics is seen as &ldquo;objective,&rdquo; in the sense that there is often only one &ldquo;right answer&rdquo; to a problem. One simple example of a deterministic model that you should be familiar with is the formula for future value:$\ FV=P(1+r/n)^{nt}$. This formula is deterministic because, given a present value $P,$ an interest rate $r$, the compounding frequency $n$, and the investment period $t$, we can calculate what the future value of the investment will be. That is, given $P,r,n,$ and $t,$ $FV$ is known with certainty. Another example of a deterministic model is the formula for a company&rsquo;s total cost: $T=F+Vq$, where $F$ is a company&rsquo;s fixed cost, $V$ is the variable cost per unit, and $q$ is the quantity produced. Given $F$, $V$, and $q$, we can compute the company&rsquo;s total cost. Remembering the formula for distance ($D=st,$ where $s=speed),$ the time it takes to drive $45$ miles to campus, if you drive $s$ miles per hour is $t=% \frac{45}{s}$.</p>
+<p>These models are simple and leave much room for improvement. For instance, the future value formula assumes the interest rate remains fixed over time, which will rarely be the case. The total cost equation, meanwhile, ignores the fact that, for some level of production $q^{\ast },$ the company will need to expand and change its fixed costs to $F^{\ast }$ to keep up. More sophisticated models could be built to account for these factors. However, even when we incorporate these other variables, it is unlikely that we will be able to perfectly, to an infinite number of decimal places, the total cost of making a product or the future value of an investment.</p>
+<p><strong>Variability</strong> is a basic characteristic of the natural world. Every time you drive $45$ miles to get to campus, it takes you a different amount of time to arrive here because your speed fluctuates by small amounts over the course of your trip. Everyone lives to a different age. People spend different amounts of money on each shopping trip. Differing amounts of soda are in a can that states that it contains $12$ ounces. With deterministic models, variability is ignored, so they are technically wrong.</p>
+<p>A <strong>probabilistic model</strong> assumes that the values of a variable arise from a random sample from a probability distribution (for example, the normal distribution).</p>
+<p>These are the models that we have been working with all semester! For instance, if we were to calculate a confidence interval for the population mean amount of money that Americans give to charity each year, we might have said: &ldquo;Assume you have a random sample of $n=1000$ people and their average yearly charitable contribution was $\overline{y}=1000$ and $s=300.&ldquo;$ The histogram of the charitable contributions might appear as in Figure 
+<a href="#charity_cont">[charity_cont]</a>{reference-type=&quot;ref&rdquo; reference=&quot;charity_cont&rdquo;}.</p>
+<p>It is undeniable that the amount of money that people contribute to charity varies from person to person and even from time to time for the same person over different years. Assuming that &ldquo;charitable contributions&rdquo; is a random variable is a useful first approach to understanding the natural world, but we can do much better by bringing in additional information.</p>
+<p>It is sensible that charitable contributions depend on many factors, one of which is a person&rsquo;s income (other variables might be education level, political affiliation, gender, etc.). We can model the idea that charitable contribution is a random variable, but one that is influenced by another (possibly nonrandom) variable. We can get at this idea by making a reasonable assumption:</p>
+<p><em>for any given income, there is an entire distribution of possible &gt; charitable contributions that a person with that income could choose &gt; to make</em> .</p>
+<p>It would make sense that, as income increases, at least the mean contribution should increase, but how?</p>
+<p>One possibility is that the mean changes linearly with income. That is, if income is $x$ dollars per year, the average charitable contribution is $% \beta_{0}+\beta_{1}x,$ where $\beta_{0}$ (read as &ldquo;beta zero&rdquo;) is the intercept of the line and $\beta_{1}$ (read as &ldquo;beta one&rdquo;) is the slope. These two $\beta$ values are **population parameters**, like $\mu$ and $p$, that we can use data to estimate. This is shown in Figure 
+<a href="#reg_model">[reg_model]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_model&rdquo;}. The linear part that specifies how the mean changes with increasing income is **deterministic** (if we know $x$, $\beta_{0},$ and $\beta_{1},$ we know the mean with certainty), but the actual value is random, modeled as a draw from a normal distribution with mean $\beta_{0}+\beta_{1}x$. Now we have the next definition.</p>
+<p>A <strong>regression model</strong> is a blend of deterministic and probabilistic models that specifies how the distribution of some random variable $Y$ changes for a function of other (possibly nonrandom) variables $% f(x_{1},x_{2},\ldots ,x_{p})$.</p>
+<p>How do we figure out what that function $f(x_{1},x_{2},\ldots ,x_{p})$ is? The best way is to simply graph the $\ Y$ variable with each of the $x$ variables using a **scatter plot**, a graph that plots each pair of points $(y_{i},x_{ij})$ in the ordinary $x-y$ plane. Looking at the scatter, you can see if a line might fit the data fairly well, or if another function such as a quadratic might work better. The simple linear regression model, which we now define, claims that the distribution of $Y$ depends only on one other variable, $x$.</p>
+<p>For a random sample of bivariate data $(Y_{1},x_{1}),(Y_{2},x_{2}),\ldots ,(Y_{n},x_{n}),$ where the $Y_{i}$ are random variables and the $x_{i}$ are constants, the **simple linear regression model** relating $Y$ to $x$ is given by</p>
+<p>$$\begin{aligned} Y_{i} &amp;=&amp;\beta_{0}+\beta_{1}x_{i}+\varepsilon_{i},\text{ }i=1,2,\ldots n% \text{ [sample form]}  \label{simple_model_eq} \ Y &amp;=&amp;\beta_{0}+\beta_{1}x+\varepsilon \text{ [population form]} \label{pop_version}\end{aligned}$$</p>
+<p><em>where</em> $\beta_{0}$* (read as &ldquo;beta zero&rdquo;) and* $\beta_{1}$ * (read as &ldquo;beta one&rdquo;) are fixed (but unknown) parameters and* $% \varepsilon_{i}$* (read as &ldquo;epsilon&rdquo;) are independent normally distributed random variables with mean* $0$* and standard deviation* $\sigma$* that are uncorrelated with* $x$.</p>
+<p>In Figure 
+<a href="#reg_model">[reg_model]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_model&rdquo;}, the only $x$ variable is income, but there are many other factors that affect charity that we could add to the model. What this equation says is that the actual value of $Y$ that we observe is made up of a deterministic (fixed and known) $x$ and a random (unknown) component $\varepsilon$. The $\varepsilon$ value is made up of the countless other factors that influence $Y$ that we have not explicitly included as an $x$ variable in the model. We require $\varepsilon$ to be in the model because we can never know $Y$ with absolute certainty. However, we hope that the relationship between $Y$ and $x$ is strong enough to account for a good bit of the change in $Y,$ because we can quantify this change by estimating $% \beta_{0}$ and $\beta_{1}$ (more on this below).</p>
+<p>The implication of equation 
+<a href="#pop_version">[pop_version]</a>{reference-type=&quot;ref&rdquo; reference=&quot;pop_version&rdquo;} is that the mean of $Y$ is $% E(Y|x)=$ $\beta_{0}+\beta_{1}x$ because, by the rules of expected value (see Handout $1$),</p>
+<p>$$\begin{aligned} E(Y|x) &amp;=&amp;E(\beta_{0}+\beta_{1}x+\varepsilon ) \ &amp;=&amp;\beta_{0}+\beta_{1}x+E(\varepsilon )\text{ [since }\beta_{0}+\beta_{1}x\text{ is a constant]} \ &amp;=&amp;\beta_{0}+\beta_{1}x\text{ [since we assume }E(\varepsilon )=0]\end{aligned}$$</p>
+<p>We put the $&quot;|x&quot;$ part in the expected value to emphasize that the mean of $% Y$ depends on $x$. A shorthand notation for this is $\widehat{Y}$, read as $% &ldquo;Y$ hat.&rdquo; We also have the following important fact:</p>
+<p>Because $\varepsilon$ is assumed to have a normal distribution, $Y$ also has a normal distribution, but with mean $\beta_{0}+\beta_{1}x.\label% {simple_ols_theorem}$</p>
+<p>We can interpret $\beta_{0}$ and $\beta_{1}$ as follows:</p>
+<ul>
+<li>
+<p>$\beta_{0}$ is the mean of $Y$ when $x=0$.</p>
+</li>
+<li>
+<p>$\beta_{1}$ is the increase in the mean of $Y$ for a one-unit     increase in $x$.</p>
+</li>
+</ul>
+<p>As stated above, the values of $\beta_{0}$ and $\beta_{1}$ are parameters ** **that we must use data to estimate. It is not immediately obvious what the &ldquo;best&rdquo; way to do this is, but a reasonable choice would be to find the estimated values $b_{0}$ and $b_{1}$ such that the line $b_{0}+b_{1}x$ goes through most of the data points. Consider Figure 
+<a href="#gas_scatter">[gas_scatter]</a>{reference-type=&quot;ref&rdquo; reference=&quot;gas_scatter&rdquo;}. It is fairly easy to imagine drawing a line through the scatterplot in such a way that the data fall close to the line. It&rsquo;s a bit more challenging to do this with a data set such as the one shown in Figure 
+<a href="#c02">[c02]</a>{reference-type=&quot;ref&rdquo; reference=&quot;c02&rdquo;}, but it still appears as if a line might be an okay fit.</p>
+<p>Notice that, even though we know that gasoline is directly related to crude oil through refining, we cannot perfectly predict gasoline prices using crude oil prices. However, using crude oil prices will let us make a much better prediction than if we just worked with the gasoline data alone. Figure 
+<a href="#gasonoly">[gasonoly]</a>{reference-type=&quot;ref&rdquo; reference=&quot;gasonoly&rdquo;} displays a histogram of only the gas prices, which would (falsely) lead us to believe that our best prediction of gasoline price would be in the $$0.50-$1$ range, which is clearly not realistic.</p>
+<p>One way to fit a line is to choose two points, say, $(x_{1},y_{1})$ and $% (x_{2},y_{2}),$ out of all the points in the scatterplot and find the slope and $y$ intercept. But which points would you pick? Your choice of two points might not match mine, and ours might still be different from a third person&rsquo;s. Clearly, we need a more objective way of fitting the line. The most common method used in practice is known as the** method of ordinary least squares (OLS)**, which we now define.</p>
+<p>The <strong>ordinary least squares (OLS) estimates,</strong> $b_{0}$ and $b_{1},$ estimate $\beta_{0}$ and $\beta_{1}$ and are chosen such that the &ldquo;sum of squared errors&rdquo;, SSE, is made as small as possible. That is, we choose $b_{0}$ and $b_{1}$ so that</p>
+<p>$$SSE=\sum (y_{i}-b_{0}-b_{1}x_{i})^{2}$$</p>
+<p><em>is minimized.</em></p>
+<p>If you know about multivariable calculus, the approach is clear: find the partial derivatives of $SSE$ with respect to $b_{0}$ and $b_{1},$ set them equal to $0$, and solve for $b_{0}$ and $b_{1}$. In this course, we will simply state the solution as a theorem without proof.</p>
+<p>The values of $b_{0}$ and $b_{1}$ that minimize $\sum (y_{i}-b_{0}-b_{1}x_{i})^{2}$ are $b_{1}=r\frac{s_{y}}{s_{x}}$ and $b_{0}=% \overline{y}-b_{1}(\overline{x}),$ where $s_{y}$ and $s_{x}$ are the standard deviations of the observed data ${y_{i}}$ and ${x_{i}}$, respectively, and $r$ is the sample correlation coefficient between $% {y_{i}}$ and ${x_{i}}$.</p>
+<p>Once we have estimated $b_{0}$ and $b_{1},$ we can estimate $y$ using the equation</p>
+<p>$$\widehat{y}=b_{0}+b_{1}x$$</p>
+<p>We can simply plug in any value of $x$ and we get an estimate of $y$. What happened to the error term $\varepsilon ?$ Since the error term is not known, we simply use its mean of $0$ to estimate it. What does our estimate of $y$ represent? $\widehat{y\text{ }}$** is the estimated mean of the random variable** $Y$** at the value of** $x!$ Thus, through equation 
+<a href="#simple_model_eq">[simple_model_eq]</a>{reference-type=&quot;ref&rdquo; reference=&quot;simple_model_eq&rdquo;}, we have now defined a model that allows the distribution of $Y$ to change with $x$.</p>
+<p>The scatter plot of gasoline and oil prices with the least-square line is shown in Figure 
+<a href="#scatter_and_reg">[scatter_and_reg]</a>{reference-type=&quot;ref&rdquo; reference=&quot;scatter_and_reg&rdquo;}. The plot was made using Excel&rsquo;s scatter plot and &ldquo;Add trendline&rdquo; options. The estimated equation is</p>
+<p>$$\widehat{y}=0.0268x+0.0315$$</p>
+<p>where $x$ is the price of oil per barrel. From this equation referring to 
+<a href="#simple_ols_theorem">[simple_ols_theorem]</a>{reference-type=&quot;ref&rdquo; reference=&quot;simple_ols_theorem&rdquo;}, we estimate that for each $$1$ increase in the price of oil per barrel, the average price of gasoline increases by about $$0.0268,$ or about three cents. Further, looking at $% b_{0},$ we can say (rather pointlessly) that the average price of gasoline when oil is $$0$ per barrel is $$0.0315$. Of course, oil will always cost something per barrel, so $b_{0}$ does not have a realistic interpretation here.</p>
+<h1 id="using-the-simple-linear-regression-model">Using the Simple Linear Regression Model</h1>
+<p>After the model has been fit, the next logical question is whether the model is useful or not. One way of assessing this is to determine if $x$ has significant predictive ability for $Y$. Since the effect of $x$ on $Y$ is measured by the unknown parameter $\beta_{1},$ the natural approach is to conduct a hypothesis test or construct a confidence interval for $\beta_{1}$ . First, we will address the confidence interval, since we can essentially define the test by determining whether a specified null hypothesis value of $% \beta_{1}$ lies in the interval or not, much like we have done already. Before we can define the interval, we have to define a few terms related to the estimate $b_{1}$, which is what we use to construct the interval.</p>
+<p>The estimated value of $\beta_{1},$ known as $b_{1}$, is a random variable with a mean equal to $\beta_{1}$ and a standard deviation (called a **standard error)** of $\sqrt{\frac{\sigma ^{2}}{\dsum (x_{i}-\overline{x})^{2}}% }$ . Since we rarely assume $\sigma ^{2}$ is known, we set $s.e.(b_{1})=% \sqrt{\frac{SSE/(n-2)}{\dsum (x_{i}-\overline{x})^{2}}}=\sqrt{\frac{SSE/(n-2)% }{(n-1)s_{x}^{2}}},$ where $s_{x}$ is the standard deviation of the $x$ data.</p>
+<p>A consequence of this fact leads to the definition of the $(1-\alpha )100%$ confidence interval for $\beta_{1}:$</p>
+<p>A $(1-\alpha)100%$ confidence interval for $\beta_{1}$ is given by</p>
+<p>$$b_{1}\pm t_{\alpha /2,n-2}\sqrt{\frac{SSE/(n-2)}{(n-1)s_{x}^{2}}}$$</p>
+<p><em>where</em> $t_{n-2,\alpha /2}$ is the value of Student&rsquo;s $t$  distribution with* $n-2$ degrees of freedom and* $\alpha /2$ probability to the right.</p>
+<p>We use $n-2$ because we had to estimate two values, $b_{0}$ and $b_{1},$ using the data. The hypothesis testing procedure follows a familiar pattern:</p>
+<ol>
+<li>Specify the hypotheses</li>
+</ol>
+<p>The parameter of interest is $\beta_{1},$ so the hypotheses are statements about its value.</p>
+<p>$$\begin{aligned} \text{(a) }H_{0} &amp;:&amp;\beta_{1}\leq c\text{ vs. }H_{0}:\beta_{1}&gt;c \ \text{(b) }H_{0} &amp;:&amp;\beta_{1}\geq c\text{ vs. }H_{0}:\beta_{1}&lt;c \ \text{(c) }H_{0} &amp;:&amp;\beta_{1}=c\text{ vs. }H_{0}:\beta_{1}\neq c\end{aligned}$$</p>
+<p>In practice, $c$ is usually $0,$ but it could be anything. In regression programs such as Excel, the hypothesis tested by default is</p>
+<p>$$H_{0}:\beta_{1}=0\text{ vs. }H_{0}:\beta_{1}\neq 0$$</p>
+<ol>
+<li>Calculate the test statistic.</li>
+</ol>
+<p>The test statistic is a $t$ statistic:</p>
+<p>$$t=\frac{b_{1}-c}{s.e.(b_{1})}$$</p>
+<ol>
+<li>Determine the rejection region (or compute the $p$-value).</li>
+</ol>
+<p>The test statistic is a Student&rsquo;s $t$ statistic, so the critical values that mark the rejection regions are as follows:</p>
+<p>$$\begin{aligned} \text{(a)}{\text{ }t_{n-2} &amp;:&amp;t_{n-2}&gt;\text{ }t_{n-2,\alpha }} \ \text{(b) }{\text{ }t_{n-2} &amp;:&amp;t_{n-2}&lt;-\text{ }t_{n-2,\alpha }} \ \text{(c) }{\text{ }t_{n-2} &amp;:&amp;|t_{n-2}|&gt;\text{ }t_{n-2,\alpha /2}\end{aligned}$$</p>
+<p>Alternatively, with software we can calculate the $p$-value as follows:</p>
+<p>$$\begin{aligned} \text{(a) }p &amp;=&amp;P(t_{n-2}&gt;t) \ \text{(b) }p &amp;=&amp;P(t_{n-2}&lt;t) \ \text{(c) }p &amp;=&amp;2\min [P(t_{n-2}&lt;t_{0}),P(t_{n-2}&gt;t)]\end{aligned}$$</p>
+<ol>
+<li>Make a conclusion</li>
+</ol>
+<p>If the $p$-value $\leq \alpha ,$ we reject $H_{0}$. If the $p$-value $% &gt;\alpha ,$ we fail to reject $H_{0}$. Equivalently, if $t$ lies within the rejection region, we reject $H_{0}$. If $t$ lies outside the rejection region, we fail to reject $H_{0}$.</p>
+<p>As was the case when we tested means from one and two populations, the following theorem is true:</p>
+<p>If the $(1-\alpha )100%$ confidence interval for $\beta_{1}$ **contains** $c$, then a test of $H_{0}:\beta_{1}=c$ vs. $H_{0}:\beta_{1}\neq c$ at the $\alpha$ level will **fail to reject** $H_{0}$.</p>
+<p>In practice, software programs such as Excel are used to fit regression models. Excel has a built-in tool to do this in the same location as the ANOVA program. The output even looks similar. As an example, let&rsquo;s fit a simple linear regression model to the crude oil/gasoline price data which are graphed in Figure 
+<a href="#gas_scatter">[gas_scatter]</a>{reference-type=&quot;ref&rdquo; reference=&quot;gas_scatter&rdquo;}. Fitting the model using Excel gives output shown below in Figure 
+<a href="#reg_ouytpu">[reg_ouytpu]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_ouytpu&rdquo;}. Let&rsquo;s examine the output.</p>
+<p>Using the output above, answer the following questions:</p>
+<p>a). What is the estimated model?</p>
+<p>b). Interpret the coefficients $b_{0}$ and $b_{0}$  in context.</p>
+<p>c). What is the $95%$ confidence interval for $\beta_{1}?$</p>
+<p>d). What are the hypotheses that the $\mathit{p}$-value refers to?</p>
+<p>e). Based on the $p$-value and on the confidence interval, what conclusion can you make about the relationship between crude oil price and gasoline price?</p>
+<p>What is the relationship between the square footage of a house and its selling price? Figure 
+<a href="#housescatter">[housescatter]</a>{reference-type=&quot;ref&rdquo; reference=&quot;housescatter&rdquo;} is a scatterplot of over $2,000$ selling prices of houses in Ames, Iowa, and their associated square footages. This plot was made using a free statistics program called R <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>. The regression output from Excel is shown in Figure</p>
+<p>a). What is the estimated model?</p>
+<p>b). Interpret the coefficients $b_{0}$ and $b_{0}$  in context.</p>
+<p>c). Calculate the $95%$ confidence interval for $\beta_{1}$.</p>
+<p>d). What are the hypotheses that the $\mathit{p}$-value refers to?</p>
+<p>e). Based on the $p$-value and on the confidence interval, what conclusion can you make about the relationship between the selling price of a house and its square footage?</p>
+<p>Does the amount of education that one&rsquo;s father has influence the amount of education his children have? A sample of $20$ people were asked to report the number of years of formal schooling they had along with the number of years their fathers had. The data are shown in the table below.</p>
+<hr>
+<p>Dad_Schooling   Child_Schooling<br>
+16               18<br>
+15               15<br>
+12               14<br>
+12               20<br>
+12               13<br>
+12               16<br>
+12               12<br>
+12               14<br>
+12               16<br>
+14               16<br>
+12               20<br>
+12               14<br>
+20               17<br>
+16               13<br>
+9                15<br>
+11               12<br>
+12               12<br>
+10               11<br>
+16               18<br>
+8                10</p>
+<hr>
+<p>a). Use Excel to fit the simple linear regression model to the data above.</p>
+<p>b). Interpret the coefficients $b_{0}$ and $b_{0}$  in context.</p>
+<p>c). Calculate a $90%$ confidence interval for $\beta_{1}$.</p>
+<p>d). What are the hypotheses that the $\mathit{p}$-value refers to?</p>
+<p>e). Based on the $p$-value and on the confidence interval, what conclusion can you make about the relationship between a child&rsquo;s education level and his or her father&rsquo;s education level?</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>
+<a href="www.kickstarter.com/">www.kickstarter.com/</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>
+<a href="www.fundable.com/">www.fundable.com/</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="http://www.indeed.com/jobs?q=business+analytics&amp;l">http://www.indeed.com/jobs?q=business+analytics&amp;l</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p><a href="http://www.wired.com/underwire/2013/08/qq_netflix-algorithm/?mbid=social10558894">http://www.wired.com/underwire/2013/08/qq_netflix-algorithm/?mbid=social10558894</a> <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p>Available here: 
+<a href="www.r-project.org">www.r-project.org</a> <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/bana3363/14-chi-squared-test-of-independence/" rel="next">Chi Squared Test of Independence</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/bana3363/16-simple-linear-regression/" rel="prev">Simple Linear Regression</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jul 28, 2020</p>
+
+          
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/BANA3363/15%20-%20Intro%20to%20Regression.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+          
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

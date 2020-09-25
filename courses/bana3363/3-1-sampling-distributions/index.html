@@ -1,0 +1,1094 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Kyle Jones">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Sampling Distributions Let&rsquo;s get a definition out of the way. This comes very close to the &ldquo;official&rdquo; Google definition:
+ A sample is a small collection of objects whose properties are thought to correspond closely with those of a large (or even infinite) collection of items or quantities that is the main interest of the researcher.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/courses/bana3363/3-1-sampling-distributions/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/courses/bana3363/3-1-sampling-distributions/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Kyle Jones">
+  <meta property="og:url" content="/courses/bana3363/3-1-sampling-distributions/">
+  <meta property="og:title" content="Sampling Distributions &amp; Central Limit Theorem | Kyle Jones">
+  <meta property="og:description" content="Sampling Distributions Let&rsquo;s get a definition out of the way. This comes very close to the &ldquo;official&rdquo; Google definition:
+ A sample is a small collection of objects whose properties are thought to correspond closely with those of a large (or even infinite) collection of items or quantities that is the main interest of the researcher."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2019-05-05T00:00:00&#43;01:00">
+    
+    <meta property="article:modified_time" content="2019-05-05T00:00:00&#43;01:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Sampling Distributions &amp; Central Limit Theorem | Kyle Jones</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/3-1-sampling-distributions/">Descriptive Statistics</a>
+    <ul class="nav docs-sidenav">
+      
+      <li class="active">
+        <a href="/courses/bana3363/3-1-sampling-distributions/">Sampling Distributions &amp; Central Limit Theorem</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/3-2-sampling-distributions-clt/">Sampling Distributions, the Central Limit Theorem, Inference about Means</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/10-3-test-for-diff-in-variances/">Hypothesis Testing and Inference</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/10-3-test-for-diff-in-variances/">Confidence Interval for the Difference in Variances</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sampling-distributions">Sampling Distributions</a></li>
+    <li><a href="#sampling-distribution-of-the-sample-mean">Sampling Distribution of the Sample Mean</a>
+      <ul>
+        <li><a href="#the-central-limit-theorem">The Central Limit Theorem</a></li>
+      </ul>
+    </li>
+    <li><a href="#interval-inference-about-a-single-population-process-mean">Interval Inference about a Single Population (Process) Mean</a>
+      <ul>
+        <li><a href="#basic-concepts">Basic Concepts</a></li>
+        <li><a href="#a-confidence-interval-for-the-mean-when-sigma-is-known">A Confidence Interval for the Mean When $\sigma$ Is Known</a></li>
+        <li><a href="#a-confidence-interval-for-the-mean-when-sigma-is-unknown">A Confidence Interval for the Mean When $\sigma$ Is Unknown</a></li>
+      </ul>
+    </li>
+    <li><a href="#interval-inference-about-two-populationprocess-means">Interval Inference about Two Population/Process Means</a>
+      <ul>
+        <li><a href="#case-1-confidence-interval-for-difference-in-means-sigma_1sigma_2">Case 1: Confidence Interval for Difference in Means $\sigma_{1}=\sigma_{2}$</a></li>
+        <li><a href="#case-2-confidence-interval-for-difference-in-means-sigma_1neq-sigma_2">Case 2: Confidence Interval for Difference in Means $\sigma_{1}\neq \sigma_{2}$</a></li>
+      </ul>
+    </li>
+    <li><a href="#hypothesis-testing-inference-for-a-single-populationprocess-mean">Hypothesis Testing Inference for a Single Population/Process Mean</a>
+      <ul>
+        <li><a href="#basic-concepts-1">Basic Concepts</a></li>
+        <li><a href="#a-hypothesis-test-for-a-single-populationprocess-mean">A Hypothesis Test for a Single Population/Process Mean</a></li>
+        <li><a href="#a-hypothesis-test-for-two-populationprocess-means">A Hypothesis Test for Two Population/Process Means</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Sampling Distributions &amp; Central Limit Theorem</h1>
+
+          <div class="article-style">
+            <h2 id="sampling-distributions">Sampling Distributions</h2>
+<p>Let&rsquo;s get a definition out of the way. This comes very close to the &ldquo;official&rdquo; Google definition:</p>
+<div class="alert alert-note">
+  <div>
+    A <strong>sample</strong> is a small collection of objects whose properties are thought to correspond closely with those of a large (or even infinite) collection of items or quantities that is the main interest of the researcher.
+  </div>
+</div>
+<p>This large collection of items or quantities about which we would like to make reasonable statements is called a <strong>population</strong>, or, more accurately, a <strong>statistical process</strong>, or just <strong>process</strong>.</p>
+<p>You will see the word &ldquo;population&rdquo; used more often than &ldquo;process&rdquo; in most of the material you read despite &ldquo;process&rdquo; being a more accurate description of how a statistician views the natural world. The word &ldquo;population&rdquo; evokes images of a single, fixed collection of objects that we sample from. In much of statistics, and especially in forecasting and time series, the population view is simply wrong. In many cases, what a researcher is trying to study is an ever-changing process with many factors that can influence the actual data the researcher can see. For these situations, the process view is better <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>For example, suppose wish to study income of beginning accounting professionals in the U. S. Many factors interact to produce the income population: labor markets, the government, regional events, education, etc.. You take a sample of $300$ professionals and invite them to complete a survey about income. Your goal might be to estimate the &ldquo;population&rdquo; mean beginning accounting salary, $\mu$, using the sample of size $300$. There are two main problems. First, the population you want to make a conclusion about (all beginning accountants) is not the population you drew from (all beginning accountants who don&rsquo;t mind filling out a survey). Furthermore, some respondents no doubt will (unintentionally or intentionally) give you incorrect responses, so the &ldquo;population&rdquo; you are sampling from is again not quite what you want. Taking the process view, though, you can view $\mu$ as the mean of the process that produces the actual accounting salary data you see, and you can use inference to make conclusions about that process. If your study is designed properly, your results will be a reasonable representation of the &ldquo;population&rdquo; you are really interested in, beginning accounting graduates.</p>
+<p>For purposes of doing the work in this class, however, you can use phrases such as &ldquo;the population mean&rdquo; (I probably will, just out of habit) and be fine. Now we need to be more specific about what a sample is.</p>
+<p>A <strong>random sample</strong> is a collection of $n$ independent random variables $Y_{1},Y_{2},\ldots,Y_{n}$ that are assumed to have been &ldquo;drawn&rdquo; from the same probability distribution $f(y|\mathbf{\theta ),}$where $\mathbf{\theta }$ is a generic collection of parameters. For example, if we are taking a sample from a normal distribution $\mathbf{\theta ={}\mu,\sigma }$.</p>
+<p>Figure 
+<a href="#sampling">[sampling]</a>{reference-type=&quot;ref&rdquo; reference=&quot;sampling&rdquo;} illustrates this idea. Essentially, before the researcher gathers data, he or she imagines that some (usually unknown) probability distribution produces data from which he or she will draw a single sample of size, say, $300$. When the data are actually gathered, the researcher takes the view that he or she is observing one possible realization of those $300$ random variables.</p>
+<p>The key to understanding statistical inference is that <em>different samples produce different values of calculated statistics such as the sample mean and sample standard deviation, but these values behave in a predictable way.</em> Although we only work with one sample, we use the properties, we use the fact that the samples behave in a predictable way to make the leap from any one sample to the population or process of interest.</p>
+<p>A <strong>sampling distribution</strong> is the distribution of a calculated statistic (for example, the sample mean) when we imagine taking repeated samples from the same process and calculating the statistic over and over.</p>
+<p>There is an entire distribution of values because each random sample of size $n$ will have different data in it. So, a statistic is actually a random variable too. Therefore, when we talk about a statistic like the sample mean in general terms, we will use a capital letter, $\overline{Y}$, and when we talk about a specific value of the statistic, like $2.3$, we will use lowercase, as in $\overline{y}=2.3$. A good illustration of this concept is found here <a href="http://onlinestatbook.com/stat_sim/sampling_dist/">http://onlinestatbook.com/stat_sim/sampling_dist/</a>, courtesy of our friends at Rice University.</p>
+<p>We can summarize the distribution like we have before using expected value and variance. It turns out that if we choose the right statistic, we can make some powerful conclusions about the population. Here are some cool facts.</p>
+<p>[[samp_dist]]{#samp_dist label=&quot;samp_dist&rdquo;} For a random sample of size $n$ from a process (or population), the sample mean, $\overline{Y}$, is a random variable with mean $=E(\overline{Y})=% %TCIMACRO{\U{3bc} }% %BeginExpansion \mu %EndExpansion$ (the process/population mean) and variance $V(\overline{Y})=$ $\frac{% \sigma ^{2}}{n}$, the population variance divided by $n$.</p>
+<p>Stand by for the most important fact in statistics. It&rsquo;s so important that it deserves its own section.</p>
+<h2 id="sampling-distribution-of-the-sample-mean">Sampling Distribution of the Sample Mean</h2>
+<h3 id="the-central-limit-theorem">The Central Limit Theorem</h3>
+<p>The sampling distribution of the sample mean $\overline{Y}$ is approximately a normal distribution with mean $=\mu$ and variance $\frac{\sigma ^{2}}{n}$, <em>no matter what the original distribution looks like</em>, as the sample size $n$ gets large.</p>
+<p>&ldquo;Large&rdquo; here technically refers to letting the sample size go to infinity, but in most practical cases, the Central Limit Theorem (CLT) applies when $n$ is as small as $30$.</p>
+<p>If we assume the sample is drawn from a normal distribution, then the distribution of $\overline{Y}$ is normal regardless of sample size.</p>
+<p>The CLT is the reason we don&rsquo;t really have to worry about what the population distribution looks like in Figure #sampling. It says that the distribution can take <em>any shape</em> and the distribution of the sample average will still be approximately normal. The CLT is what makes most of statistics work for practical problems.</p>
+<p>We can use the distribution of the sample mean to make conclusions about a sample. For example, we can ask, what is $P(\overline{Y}&gt;4)?$ To answer this question, we can use our old friend the $z$-score. Remember that a $z$-score is, in general,</p>
+<p>$$\frac{\text{observation }-\text{ mean}}{\text{standard deviation}}$$.</p>
+<p>Z-scores for sample averages are found by subtracting the mean and dividing by the standard deviation, which are given in Theorem 
+<a href="#samp_dist">[samp_dist]</a>{reference-type=&quot;ref&rdquo; reference=&quot;samp_dist&rdquo;}:</p>
+<p>$$Z=\frac{\overline{Y}-\mu }{\sigma /\sqrt{n}}$$</p>
+<p>Here are some examples to try out.</p>
+<p>The foreman of a bottling plant has observed that the amount of soda in each &ldquo;$32$-ounce&rdquo; bottle is actually a normally distributed random variable, with a mean of $32$ ounces and a standard deviation of $0.3$ ounce. If the foreman is doing quality control by taking samples of $n$ $=4$ bottles from the line and calculating the average fill, would a reading of $32.5$ be unusually high? Answer by finding $P(\overline{Y}&gt;32.5)$. How would your answer change if we took away the assumption that the amount of soda in each bottle comes from a normal distribution?</p>
+<p>You take a random sample of size $50$ from a population with mean $\mu =16$ and standard deviation $\sigma = 8$.</p>
+<p>a). What are the mean and standard deviation of $\overline{Y}$, the sample mean?</p>
+<p>b). Sketch the distribution, indicating the intervals within which $68%$, $% 95%$, and $99.7%$ of the observations are expected to lie.</p>
+<p>c). Find $P(\overline{Y}&gt;18)$</p>
+<p>d). Find $P(17&lt;\overline{Y}&lt;19.5)$</p>
+<p>e). Explain why all of these probabilities are approximate.</p>
+<p>In a random sample of $20$ college students, the average reported working time was $15.4$ hours per week. A researcher claims that the true working time of college students is normally distributed with a mean of $16$ hours and a standard deviation of $2.5$ hours. Let $\overline{Y}$ denote the sample mean.</p>
+<p>a). What is $P(\overline{Y}&lt;15.4)$?</p>
+<p>b). Using your answer to (a), how reasonable do you think the researcher&rsquo;s claim is?</p>
+<p>c). Using the $68-95-99.7$ rule, find a set of sample averages that would be unusual to see (either &ldquo;too large&rdquo; or &ldquo;too small&rdquo;) if the true mean and standard deviation of college student working hours were as the researcher claims.</p>
+<p>In the next section, we will discuss how we can use the sampling distribution of the sample mean to make inferences about $\mu $.</p>
+<h2 id="interval-inference-about-a-single-population-process-mean">Interval Inference about a Single Population (Process) Mean</h2>
+<h3 id="basic-concepts">Basic Concepts</h3>
+<p>Our ultimate goal is to obtain a reasonable &quot; guess&rdquo; at the true value of a process parameter (in this section, $\mu$) using a sample of data. Before we do that, we have to introduce some terms.</p>
+<p>A** point estimator** for a parameter is a particular function of the random sample that gives a single number that we hope is &quot; close&rdquo; to the true value of the parameter.</p>
+<p>An <strong>interval estimator</strong> is a range of values, constructed using observed data, within which the parameter is believed to fall.</p>
+<p>This sounds very technical, but it really is not so bad. An example of a point estimator is the sample mean: $\overline{Y}=\frac{\sum Y_{i}}{n}$. Notice how it is a function of the data (the values of $Y_{i})$. In practice, we typically use the point estimator to construct an interval estimator.</p>
+<p>In theory, there are an infinite number of point estimators we could pick to estimate $\mu$, but it turns out that only one, $\overline{Y}$, is &ldquo;the best.&rdquo; The following criteria are used to judge whether a point estimator is &ldquo;good:&rdquo;</p>
+<ol>
+<li>
+<p><strong>Unbiasedness</strong> &ndash; The average of the estimator is equal to the population parameter.</p>
+</li>
+<li>
+<p><strong>Consistency</strong> &ndash; The estimator gets closer and closer to the true population parameter as the sample size increases</p>
+</li>
+<li>
+<p><strong>Relative efficiency</strong> &ndash;Given two different estimators with the same sample size, we choose the one with the smaller variance.</p>
+</li>
+</ol>
+<p>We know from Theorem 
+<a href="#samp_dist">[samp_dist]</a>{reference-type=&quot;ref&rdquo; reference=&quot;samp_dist&rdquo;} that the sample mean $% \overline{Y}$ is unbiased because the theorem states that $E(\overline{Y})=% %TCIMACRO{\U{3bc} }% %BeginExpansion \mu %EndExpansion $.</p>
+<p>The other two properties are also true, but we won&rsquo;t prove it; just take my word for it. Also, it can be shown that $\overline{Y}$ is has the smallest variability among all unbiased estimators, so when we use it, we are using &ldquo;the best&rdquo; guess of $\mu $.</p>
+<h3 id="a-confidence-interval-for-the-mean-when-sigma-is-known">A Confidence Interval for the Mean When $\sigma$ Is Known</h3>
+<p>By the Central Limit Theorem, we know that the distribution of $\overline{Y}$ is approximately $N(\mu,\sigma /\sqrt{n})$. This implies that we can predict something about the behavior of any given sample average $\overline{x}$. Specifically, we know that a sample average will have about a $68%$ chance of being within one standard deviation of $% \mu$ about a $95%$ chance of being within two standard deviations of $\mu$, and about a $99.7%$ chance of being within three standard deviations of $% \mu $.</p>
+<p>Confidence intervals flip this logic around and use the fact that if $% \overline{Y}$ has a $68%$ chance of being within one standard deviation of $% \mu$, then we can also say that $\mu$ has a $68%$ chance of being within one standard deviation of $\overline{Y}$. This means that</p>
+<p>$$P(\mu -2\sigma /\sqrt{n}&lt;\overline{Y}&lt;\mu +2\sigma /\sqrt{n})$$</p>
+<p>and</p>
+<p>$$P(\overline{Y}-2\sigma /\sqrt{n}&lt;\mu &lt;\overline{Y}+2\sigma /\sqrt{n})$$</p>
+<p>are equal. One statement can be made from the other simply by rearranging what goes in the middle using algebra.</p>
+<p>Here&rsquo;s a picture that might make things clearer.</p>
+<p>We don&rsquo;t know what $\mu$ is, but we know that $\overline{Y}$ should fall around it in a predictable way. So we use this idea to &ldquo;guess&rdquo; at the location of $\mu$. If we were to take the range of numbers $% \overline{x}-2\sigma /\sqrt{n}$ to $\overline{x}+2\sigma /\sqrt{n}$ as our interval estimator, about $95%$ of the time, the true value of $\mu$ would fall in the interval; about $5%$ of the time it wouldn&rsquo;t. So we could say we were $95%$ confident in the interval.</p>
+<p>What if we want a different level of confidence than $68,95$, or $99.7%?$ Suppose we wanted to be $98%$ confident, for example? Recall from Handout 2 that $P(-z_{\alpha /2}&lt;Z&lt;z_{\alpha /2})=1-\alpha$. If we want $98%$ confidence, we begin by setting $1-\alpha =0.98$, which means $\alpha =0.02$. Then $z_{\alpha /2}=z_{0.02/2}=z_{0.01}=2.33$. Then we substitute $Z=\frac{% \overline{Y}-\mu }{\sigma /\sqrt{n}}$ in the middle and solve for $\mu$:</p>
+<p>$$\begin{aligned} P(-2.33 &amp;&lt;&amp;Z&lt;2.33)=0.98 \ &amp;\Rightarrow &amp;P(-2.33&lt;\frac{\overline{Y}-\mu }{\sigma /\sqrt{n}}&lt;2.33)=0.98 \ &amp;\Rightarrow &amp;P(-2.33\sigma /\sqrt{n}&lt;\overline{Y}-\mu &lt;2.33\sigma /\sqrt{n}% )=0.98 \ &amp;\Rightarrow &amp;P(-2.33\sigma /\sqrt{n}+\overline{Y}&lt;-\mu &lt;2.33\sigma /\sqrt{n}% -\overline{Y})=0.98 \ &amp;&amp;\text{Multiply by }-1\text{ and rearrange to get} \ P(\overline{Y}-2.33\sigma /\sqrt{n} &amp;&lt;&amp;\mu &lt;\overline{Y}+2.33\sigma /\sqrt{n}% )=0.98\end{aligned}$$</p>
+<p>You can apply these steps for any confidence level you want. Therefore, we have the following:</p>
+<div class="alert alert-note">
+  <div>
+    <p>A $(1-\alpha )100%$ confidence interval for $\mu$ when $\sigma$ is known (or when $n$ is large) is given by</p>
+<p>$$\overline{x}\pm z_{\alpha /2}\frac{\sigma }{\sqrt{n}}$$</p>
+  </div>
+</div>
+<p>Calculation is easy with software. Interpretation is key. We view the mean $\mu$ as a <em>fixed</em> but unknown quantity. Once we gather data and compute the sample mean $\overline{x}$ and the associated confidence interval, the interval either contains $\mu$ or it does not (see Figure 
+<a href="#Figure_c_int">[Figure_c_int]</a>{reference-type=&quot;ref&rdquo; reference=&quot;Figure_c_int&rdquo;} above). In the long run, however, if you took repeated samples of size $n$ and computed the interval each time, $(1-\U{3b1} )100%$ of them would contain $\mu$.Thus, the &ldquo;confidence&rdquo; you have is in the <em>method</em> used to construct an interval, <em>not in the particular interval</em> you have constructed.</p>
+<p>Rarely do we know $\sigma$, but at times we have fairly large samples, so we can use Definition 
+<a href="#CI_sig_known">[CI_sig_known]</a>{reference-type=&quot;ref&rdquo; reference=&quot;CI_sig_known&rdquo;} anyway by just replacing $\sigma$ with the sample standard deviation $s$. If we have a small sample and do not know $\sigma$, we must use some other multiplier other than $z_{\alpha /2}$. For this, we use values from Student&rsquo;s t distribution.</p>
+<h3 id="a-confidence-interval-for-the-mean-when-sigma-is-unknown">A Confidence Interval for the Mean When $\sigma$ Is Unknown</h3>
+<p>Student&rsquo;s $t$ distribution with $\nu$ degrees of freedom is the probability distribution of the quantity</p>
+<p>$$t=\frac{\overline{Y}-\mu }{s/\sqrt{n}}$$</p>
+<p>As with the standard normal distribution, it is symmetric, bell-shaped, and centered at $0$. The degrees of freedom $\nu$ is a parameter that governs the width of the distribution. The notation $t_{\nu }$ refers to a random variable from a $t$ distribution with $\nu$ degrees of freedom.</p>
+<p>Here&rsquo;s a picture. As you can see in Figure 
+<a href="#studt">[studt]</a>{reference-type=&quot;ref&rdquo; reference=&quot;studt&rdquo;}, Student&rsquo;s $t$ distribution looks a lot like the standard normal. In fact, it can be shown that as $\nu$ gets very large, the the $t$ distribution &ldquo;becomes&rdquo; the standard normal distribution. That&rsquo;s why we can use values of $z$ when $n$ is large in a confidence interval.</p>
+<p>Using the $t$ distribution, we can define a confidence interval as follows:</p>
+<p>$(1-\alpha )100%$ confidence interval for $\mu$ when $\sigma$ is unknown (or when $n$ is small) is given by</p>
+<p>$$\overline{x}\pm t_{n-1,\alpha /2}\frac{s}{\sqrt{n}}$$</p>
+<p>with $t_{n-1,\alpha /2}$, being the value of a $t$ distribution with $n-1$ degrees of freedom that has probability $\alpha /2$ to its right.</p>
+<p>Here are some examples.</p>
+<p>A recent survey asked, &ldquo;What is the ideal number of children for a person to have?&rdquo; A sample of $15$ American adults aged $20$ to $30$ reported the following numbers:</p>
+<p>$1$ $2$ $0$ $3$ $4$ $2$ $0$ $1$ $3$ $4$ $2$ $2$ $2$ $3$ $8$.</p>
+<p>Find a $93%$ confidence interval for the mean number of children American adults in this age group believe is ideal.</p>
+<p>In a recent survey of $29$ accounting majors and $38$ general business majors, researchers asked the students to report the amount of time spent studying per week. The sample mean hours for accounting majors was $13.5$ and the sample mean hours for general business majors was $14$. The sample standard deviations are $10$ and $9.8$, respectively. Calculate $95%$ confidence intervals for the amount of time spent studying per week for both accounting and general business majors. Interpret the intervals in context.</p>
+<p>In the next subsection, we address the situation in which you wish examine two population/process means.</p>
+<h2 id="interval-inference-about-two-populationprocess-means">Interval Inference about Two Population/Process Means</h2>
+<p>Many times we are not interested only in a single group, but multiple $(\geq 2)$ groups. For example, we might compare the amount of weight lost for two groups to determine the effect of a new drug on adult men $45-60$. Let Group $1$ be men 45-60 who follow a specific diet and let Group $2$ be men $45-60$ who use the same diet but also take a weight loss drug. In the language of experimental design, Group $1$ is a <strong>control group</strong>, the group that receives no <strong>treatment</strong> (i.e., a specific manipulation of the members of the group), or no treatment above a reasonable standard.  Group $2$ is an <strong>experimental</strong> or <strong>treatment group.</strong></p>
+<p>By the fundamental assumption of statistics (that variability is inescapable), any one person in Group $1$ could lose more weight than any one person in Group $2$, even if the drug is effective, simply by random chance. The question is not whether the drug works for everyone, but if it &ldquo;works on average.&rdquo; The average for Group $1$ we can specify as $\mu_{1}$ and the average for Group 2 we can specify as $\mu_{2}$. Then the question is whether $\mu_{1}=\mu_{2}$, or, equivalently, whether $\mu_{1}-\mu_{2}=0$. We can address this question either through a confidence interval or a hypothesis test. We will discuss the first of these here. There are two cases to consider:</p>
+<ol>
+<li>
+<p>You know (or assume) that the two population standard deviations are the same, that is, $\sigma_{1}=\sigma_{2}$</p>
+</li>
+<li>
+<p>You don&rsquo;t know (or don&rsquo;t wish to assume) that the two population standard deviations are the same, that is $\sigma_{1}\neq \sigma_{2}$</p>
+</li>
+</ol>
+<h3 id="case-1-confidence-interval-for-difference-in-means-sigma_1sigma_2">Case 1: Confidence Interval for Difference in Means $\sigma_{1}=\sigma_{2}$</h3>
+<p>A $(1-\alpha )100%$ confidence interval for $\mu_{1}-\mu_{2}$ is given by $\overline{x}_{1}-\overline{x}_{2}\pm t_{n_{1}+n_{2}-2,\alpha /2}s_{p}\sqrt{% \frac{1}{n_{1}}+\frac{1}{n_{2}}}$, where $s_{p}=\sqrt{\frac{% (n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2}}$ is the &ldquo;pooled&rdquo; standard deviation from the two samples.</p>
+<h3 id="case-2-confidence-interval-for-difference-in-means-sigma_1neq-sigma_2">Case 2: Confidence Interval for Difference in Means $\sigma_{1}\neq \sigma_{2}$</h3>
+<p>A $(1-\alpha )100%$ confidence interval for $\mu_{1}-\mu_{2}$ is given by $\overline{x}_{1}-\overline{x}_{2}\pm t_{\nu,\alpha /2}\sqrt{\frac{s_{1}^{2}% }{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}$, where $\nu =\frac{\left( \frac{s_{1}^{2}% }{n_{1}}+\frac{s_{2}^{2}}{n_{2}}\right) ^{2}}{\frac{\left( \frac{s_{1}^{2}}{% n_{1}}\right) ^{2}}{n_{1}-1}+\frac{\left( \frac{s_{2}^{2}}{n_{2}}\right) ^{2}% }{n_{2}-1}}$.</p>
+<p>The Case 2 interval makes one less assumption than Case 1, so it is closer to the truth (in reality, it&rsquo;s unlikely that the two standard deviations will be exactly equal). On the other hand, it is known that the Case 2 interval is only an approximate interval, although the approximation is quite good. As with most things in life, there is a trade-off. In general, however, Case 2 is the safer bet. The degrees of freedom parameter, $\nu$, is easily calculated using software.</p>
+<p>Here&rsquo;s an example:</p>
+<p>In a recent survey of $29$ accounting majors and $38$ general business majors, researchers asked the students to report the amount of time spent studying per week. The sample mean hours for accounting majors was $13.5$ and the sample mean hours for general business majors was $14$. The sample standard deviations are $10$ and $9.8$, respectively. Calculate a $90%$ confidence interval for mean difference in the amount of time spent studying per week between accounting and general business majors. Interpret the interval in context. Assume the population standard deviations are equal.</p>
+<p>In the next section, we&rsquo;ll address another form of inference for means, hypothesis testing.</p>
+<h2 id="hypothesis-testing-inference-for-a-single-populationprocess-mean">Hypothesis Testing Inference for a Single Population/Process Mean</h2>
+<h3 id="basic-concepts-1">Basic Concepts</h3>
+<p>Let&rsquo;s begin with a definition.</p>
+<p>A <strong>hypothesis test</strong> (also called a <strong>significance test</strong>) is a method of using data to evaluate the evidence about a specified value of a parameter.</p>
+<p>Every statistical test has two mutually exclusive <strong>hypotheses</strong>, or claims about the value of a parameter.</p>
+<p>The <strong>null hypothesis</strong>, denoted $H_{0}$ and pronounced &ldquo;$H$ not&rdquo; or &ldquo;$H$ sub-zero,&rdquo; is typically a statement of &quot; no effect,&rdquo; &ldquo;no difference,&rdquo; &ldquo;no special ability beyond random chance,&rdquo; &quot; equality,&rdquo; etc. This is usually what the researcher wants to disprove, or reject.</p>
+<p>The <strong>alternative hypothesis</strong>, denoted $H_{a}$ or $H_{1}$, is the complement (&ldquo;opposite&rdquo;) of the null, and usually what the researcher is trying to establish.</p>
+<p>Hypotheses always come in pairs.</p>
+<p>When performing a hypothesis test, it is possible to be wrong, or, more formally, to commit an error. Here are the two types of errors we&rsquo;ll be concerned with (there is a third type as well but we won&rsquo;t worry about that one).</p>
+<p>A <strong>Type I error</strong> occurs when we reject a true null hypothesis. This is akin to a &ldquo;false positive&rdquo; (claiming there is an effect or difference when there isn&rsquo;t).</p>
+<p>A <strong>Type II error</strong> occurs when we don&rsquo;t reject a false null hypothesis. This is akin to a &ldquo;false negative&rdquo; (claiming there is not an effect or difference when there is).</p>
+<p>For any given test, we don&rsquo;t know if we have committed a Type I error because we don&rsquo;t know what the true value of the parameter is (if we did, why do a test at all?). What we can do is specify that we want to construct our test such that the $P($Type I error$)$ $=\alpha$ is &ldquo;small.&rdquo; That is, if we could imagine doing the test repeatedly for different samples from the same population, in the long run, we would only want to reject $H_{0}$ $% \alpha (100)%$ of the time. A similar criterion exists for a Type II error: we want $P($Type II error) $=\beta$ to be small as well.</p>
+<p>The two types of errors cannot be minimized at the same time; lowering one error probability raises the other. What is done is to find tests with a small $\alpha$, and from that set, find the test that also has a small $% \beta$. For our purposes, we will only consider Type I error. It can be shown that the hypothesis tests presented next also have small $\beta $.</p>
+<p>Hypothesis testing can be thought of as a process with a number of steps. Here they are:</p>
+<ol>
+<li>
+<p>Specify the hypothesis</p>
+</li>
+<li>
+<p>Calculate the <strong>test statistic</strong></p>
+</li>
+<li>
+<p>Compute the <strong>p-value</strong> or <strong>rejection region</strong></p>
+</li>
+<li>
+<p>Make a conclusion</p>
+</li>
+</ol>
+<p>We already talked about (1) in Figure 
+<a href="#hyps">[hyps]</a>{reference-type=&quot;ref&rdquo; reference=&quot;hyps&rdquo;}. Here are some more definitions:</p>
+<p>A <strong>test statistic</strong> is a specific function of data and the parameter value specified by the null hypothesis.</p>
+<p>The <strong>p-value</strong> of a test is the probability, assuming the null is true, that we would observe a value of the test statistic as extreme or more extreme than what we actually got.</p>
+<p>We make a conclusion based on the $p$-value or the rejection region. $P$ -values are more commonly used in practice. The judgement is simple: if the $p$-value $\leq$ $\alpha$ (i.e., our Type I error probability),then we <strong>reject</strong> the null hypothesis; if the $p$-value $&gt;\alpha$, we fail to reject the null hypothesis. Most software programs report $p$-values automatically.</p>
+<p>Another approach is to specify, <em>before examining the data</em>, the $% \alpha$ (Type I error probability) that we want and determine a <strong>critical value</strong>, a value of test statistic distribution <em>under the null hypothesis</em> such that if the test statistic falls within that region, we reject the null hypothesis. A visual of this idea is shown in Figure 
+<a href="#rr">[rr]</a>{reference-type=&quot;ref&rdquo; reference=&quot;rr&rdquo;} for a test of a mean. If the calculated value of the test statistic falls in the shaded region, we would reject the null hypothesis.</p>
+<div class="alert alert-note">
+  <div>
+    If a $(1-\alpha )100%$ confidence interval <strong>contains</strong> the value of $% H_{0}$, then a test of $H_{0}:\mu =\mu_{0}$ conducted at the $\alpha$ level will **fail to reject** the null hypothesis.
+  </div>
+</div>
+<p>This fact can be proven but the intuition is simple: if the interval contains the most reasonable values of the parameter (based on the data and the confidence level) then it&rsquo;s sensible that the test should not reject one of the values that lies inside the interval. This logic extends to the situation of testing the difference of two means, described below.</p>
+<h3 id="a-hypothesis-test-for-a-single-populationprocess-mean">A Hypothesis Test for a Single Population/Process Mean</h3>
+<p>Let&rsquo;s now address a specific test. In every equation that follows, $\mu_{0}$ is the value specified value of $\mu$ that we are testing.</p>
+<ol>
+<li>
+<p>Specify the hypotheses</p>
+<p>$$\begin{aligned} \text{(a) }H_{0} &amp;:&amp;\mu \leq \mu_{0}\text{ or} \ \text{(b) }H_{0} &amp;:&amp;\mu \geq \mu_{0}\text{ or } \ \text{(c) }H_{0} &amp;:&amp;\mu =\mu_{0}\end{aligned}$$</p>
+</li>
+</ol>
+<p>The alternative hypothesis is the complement of the null.</p>
+<ol>
+<li>
+<p>Calculate the test statistic</p>
+<p>For a test of a single mean, the test statistic is</p>
+<p>$$t_{0}=\frac{\overline{y}-\mu_{0}}{s/\sqrt{n}}$$</p>
+</li>
+<li>
+<p>Compute the <strong>rejection region</strong></p>
+<p>The the rejection region (i.e., the &ldquo;critical values&rdquo;) for a test with the $% \alpha$ level of significance would be computed as follows:</p>
+<p>$$\begin{aligned} \text{(a)}{\text{ }t_{n-1} &amp;:&amp;t_{n-1}&gt;\text{ }t_{\alpha,n-1}} \ \text{(b) }{t_{n-1} &amp;:&amp;t_{n-1}&lt;-t_{\alpha,n-1}} \ \text{(c) }{t_{n-1} &amp;:&amp;|t_{n-1}|&gt;\text{ }t_{\alpha /2,n-1}}\end{aligned}$$</p>
+<p>where $t_{n-1}$is a Student&rsquo;s $t$ random variable with $n_{d}-1$ degrees of freedom. Alternatively, we can calculate the $p$-value as</p>
+</li>
+</ol>
+<p>$$\begin{aligned} \text{(a) }p &amp;=&amp;P(t_{n-1}&lt;t_{0}) \ \text{(b) }p &amp;=&amp;P(t_{n-1}&gt;t_{0}) \ \text{(c) }p &amp;=&amp;2\min [P(t_{n-1}&gt;t_{0}),P(t_{n-1}&lt;t_{0})]\end{aligned}$$</p>
+<p>Calculating the $p$-value for a test involving the $t$ distribution requires software.</p>
+<ol>
+<li>Make a conclusion.</li>
+</ol>
+<p>Here are some examples.</p>
+<p>A machine produces ball bearings is calibrated to produce diameters of $0.5$ inches. A sample of $10$ ball bearings from the process was taken. The average diameter was $0.493$ inches, with a standard deviation of $0.022$ inches. A quality control inspector wants to determine if the machine is not calibrated properly. Conduct a hypothesis test at the $\alpha =0.05$ level to answer his question.</p>
+<p>A specialty cell phone manufacturer wants to determine how many pictures are stored on phones used by older consumers. A survey was conducted and a random sample of $6$ older consumers reported the following numbers of pictures on their cell phones:$25$ $\ 6$ $22$ $26$ $31$ $18$. Historically, the average number of pictures stored on phones by this consumer group has been $10$. The company wants to know if this has changed. Use a hypothesis test at the $\alpha =0.05$ level to answer this question.</p>
+<h3 id="a-hypothesis-test-for-two-populationprocess-means">A Hypothesis Test for Two Population/Process Means</h3>
+<p>Here is the procedure for testing two means.</p>
+<ol>
+<li>
+<p>Specify the hypotheses.</p>
+<p>$$\begin{aligned} \text{(a) }H_{0} &amp;:&amp;\mu_{1}-\mu_{2}\leq d\text{ or} \ \text{(b) }H_{0} &amp;:&amp;\mu_{1}-\mu_{2}\geq d\text{ or } \ \text{(c) }H_{0} &amp;:&amp;\mu_{1}-\mu_{2}\neq d\end{aligned}$$</p>
+<p>where $d$ is some specified difference (usually $0)$.</p>
+</li>
+<li>
+<p>Calculate the test statistic.</p>
+<p><strong>Case 1:</strong> $\sigma_{1}=\sigma_{2}$</p>
+<p>$$t_{0}=\frac{\overline{x}_{1}-\overline{x}_{2}-d}{s_{p}\sqrt{\frac{1}{n_{1}}+% \frac{1}{n_{2}}}}$$</p>
+<p><strong>Case 2:</strong> $\sigma_{1}\neq \sigma_{2}$</p>
+<p>$$t_{0}=\frac{\overline{x}_{1}-\overline{x}_{2}-d}{\sqrt{\frac{s_{1}^{2}}{n_{1}% }+\frac{s_{2}^{2}}{n_{2}}}}$$</p>
+</li>
+<li>
+<p>Compute the p-value</p>
+<p><strong>Case 1:</strong> $\sigma_{1}=\sigma_{2}$</p>
+<p>$$\begin{aligned} \text{(a) }p &amp;=&amp;P(t_{n_{1}+n_{2}-2}&lt;t_{0}) \ \text{(b) }p &amp;=&amp;P(t_{n_{1}+n_{2}-2}&gt;t_{0}) \ \text{(c) }p &amp;=&amp;2\min [P(t_{n_{1}+n_{2}-2}&gt;t_{0}),P(t_{n_{1}+n_{2}-2}&lt;t_{0})]\end{aligned}$$</p>
+<p><strong>Case 2:</strong> $\sigma_{1}\neq \sigma_{2}$</p>
+<p>$$\begin{aligned} \text{(a) }p &amp;=&amp;P(t_{\nu }&lt;t_{0}) \ \text{(b) }p &amp;=&amp;P(t_{\nu }&gt;t_{0}) \ \text{(c) }p &amp;=&amp;2\min [P(t_{\nu }&gt;t_{0}),P(t_{\nu }&lt;t_{0})]\end{aligned}$$</p>
+<p>where $\nu =\frac{\left( \frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}% \right) ^{2}}{\frac{\left( \frac{s_{1}^{2}}{n_{1}}\right) ^{2}}{n_{1}-1}+% \frac{\left( \frac{s_{2}^{2}}{n_{2}}\right) ^{2}}{n_{2}-1}}$.</p>
+</li>
+<li>
+<p>Make a conclusion</p>
+<p>If $p\leq \alpha $, reject $H_{0}$. If $p&gt;\alpha $, fail to reject $H_{0}$.</p>
+</li>
+</ol>
+<p>Here are some examples:</p>
+<p>In a recent survey of $29$ accounting majors and $38$ general business majors, researchers asked the students to report the amount of time spent studying per week. The sample mean hours for accounting majors was $13.5$ and the sample mean hours for general business majors was $14$. The sample standard deviations are $10$ and $9.8$, respectively. Determine at the $% \alpha =0.05$ level if there is a difference in the population mean amount of time spent studying per week between accounting and general business majors. Assume the population standard deviations are equal.</p>
+<p>In a recent survey of $121$ undergraduates, students reported the number of hours per week they spend on school work. Figure 
+<a href="#table1">[table1]</a>{reference-type=&quot;ref&rdquo; reference=&quot;table1&rdquo;} below summarizes the data for finance and marketing majors.</p>
+<p>A researcher claims that marketing majors and finance majors do not study the same amount of time per week on average. Test the hypothesis at the $% 10%$ level of significance, assuming the two population standard deviations are not the same.</p>
+<p>The critical region approach can be used for testing two means as well (and for every hypothesis test, in fact). However, because software generally reports $p$-values, and $p$-values are what are used most often in practice, we will not address this approach here.</p>
+<p>This document has been a &ldquo;quick and dirty&rdquo; review of hypothesis testing. The basic principles discussed here will apply to all of the tests we examine in this class. I encourage you to go back to this document each time we discuss a new test so that you can see the general pattern.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>If you want to know more about how statisticians really view the world, here&rsquo;s a shameless plug for Kevin&rsquo;s book: <a href="http://www.amazon.com/Understanding-Advanced-Statistical-Methods-Chapman/dp/1466512105">http://www.amazon.com/Understanding-Advanced-Statistical-Methods-Chapman/dp/1466512105</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/bana3363/1-basic-statistics-concepts/" rel="next">Basic Statistics Concepts</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/bana3363/3-2-sampling-distributions-clt/" rel="prev">Sampling Distributions, the Central Limit Theorem, Inference about Means</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on May 5, 2019</p>
+
+          
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/BANA3363/3-1%20-%20Sampling%20Distributions.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+          
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

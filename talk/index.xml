@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recent &amp; Upcoming Talks | Kyle Jones</title>
+    <link>/talk/</link>
+      <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent &amp; Upcoming Talks</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 24 Sep 2020 11:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>/talk/</link>
+    </image>
+    
+    <item>
+      <title>Digital Education Summit</title>
+      <link>/talk/example/</link>
+      <pubDate>Thu, 24 Sep 2020 11:00:00 +0000</pubDate>
+      <guid>/talk/example/</guid>
+      <description>&lt;p&gt;We will build an example website and host it during the presentation. The site will be written using Markdown, a simple, plain text formatting syntax. We will show how you can make web pages and slides using Markdown that because stylish websites. The site will be integrated with Github so that changes we make will automatically update the public facing site.&lt;/p&gt;
+&lt;p&gt;Participants will leave the session able to make websites using Markdown. We will also discuss how Markdown can be used with Jupyter Notebooks and R for incorporating code and math ($\rm \LaTeX$) into websites.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

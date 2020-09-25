@@ -1,0 +1,1581 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Kyle Jones">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="What is statistics? Statistics is the science of collecting, organizing, analyzing, and interpreting data in order to make decisions.
+Statistics is all around us. We hear statsitics on the news and we use statistics to make buisnes decisions.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/courses/bana3363/1-basic-statistics-concepts/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/courses/bana3363/1-basic-statistics-concepts/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Kyle Jones">
+  <meta property="og:url" content="/courses/bana3363/1-basic-statistics-concepts/">
+  <meta property="og:title" content="Basic Statistics Concepts | Kyle Jones">
+  <meta property="og:description" content="What is statistics? Statistics is the science of collecting, organizing, analyzing, and interpreting data in order to make decisions.
+Statistics is all around us. We hear statsitics on the news and we use statistics to make buisnes decisions."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2019-05-05T00:00:00&#43;01:00">
+    
+    <meta property="article:modified_time" content="2019-05-05T00:00:00&#43;01:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Basic Statistics Concepts | Kyle Jones</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/">Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/1-basic-statistics-concepts/">Descriptive Statistics</a>
+    <ul class="nav docs-sidenav">
+      
+      <li class="active">
+        <a href="/courses/bana3363/1-basic-statistics-concepts/">Basic Statistics Concepts</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/2-the-normal-distribution/">The Normal Distribution</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/2-types-of-statistical-analysis/">Types of Statistical Analysis</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing and Inference</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing for a Proportion</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/7-interval-for-differences-in-means-independent-samples/">Interval for Differences in Means--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-test-for-differences-in-proportions-independent-samples/">Hypothesis Test for a Difference in Proportion (Independent Samples)</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-intervals-for-differences-in-proportions-independent-samples/">Intervals for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/5-ci-for-mean/">Confidence Interval for the Mean</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/5-1-hypothesis-testing-basics/">Hypothesis Testing for a Population Mean</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-confidence-interval-for-matched-pairs/">Confidence Interval for Matched Pairs</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-1-test-for-diff-in-means-proportions/">Test for Diff in Means, Proportions</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-1-test-for-differences-in-proportions-independent-samples/">Test for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-2-test-for-diff-in-means-independent-samples/">Test for Diff in Means Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-anova-basics/">ANOVA Basics</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/12-anova-mc/">ANOVA - Bonferroni Method of Multiple Comparisons</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Goodness-of-Fit Test</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-matched-pairs/">Matched Pairs</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/14-chi-squared-test-of-independence/">Chi Squared Test of Independence</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/15-intro-to-regression/">Regression</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/15-intro-to-regression/">Intro to Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/16-simple-linear-regression/">Simple Linear Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/17-evaluating-linear-regression/">Evaluating Linear Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/18-multiple-linear-regression/">Multiple Linear Regression</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-do-we-need-statistics">Why do we need statistics?</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#sample-mean">Sample mean</a></li>
+    <li><a href="#some-key-terms">Some key terms</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#estimator-parameter-and-excel-command">Estimator, Parameter, and Excel Command</a></li>
+    <li><a href="#sample-mean-and-standard-deviation">Sample Mean and Standard Deviation</a></li>
+    <li><a href="#numerical-graphical-techniques">Numerical Graphical Techniques</a></li>
+    <li><a href="#probability-distributions">Probability Distributions</a>
+      <ul>
+        <li><a href="#example-accodents">Example: Accodents</a></li>
+        <li><a href="#example-coffee">Example: Coffee</a></li>
+        <li><a href="#example-weight">Example: Weight</a></li>
+      </ul>
+    </li>
+    <li><a href="#binomial-distribution">Binomial Distribution</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#estimating-probabilities-using-a-histogram">Estimating Probabilities Using a Histogram</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Basic Statistics Concepts</h1>
+
+          <div class="article-style">
+            <h1 id="what-is-statistics">What is statistics?</h1>
+<p>Statistics is the science of collecting, organizing, analyzing, and interpreting data in order to make decisions.</p>
+<p>Statistics is all around us. We hear statsitics on the news and we use statistics to make buisnes decisions.</p>
+<p>There are five general things you can do with statistics:<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<ol>
+<li>Describe — characterizing populations and samples using descriptive statistics, statistical intervals, correlation coefficients, graphics, and maps.</li>
+<li>Compare or Test — detecting differences between statistical populations or reference values using simple hypothesis tests, and analysis of variance and covariance.</li>
+<li>Identify or Classify — classifying and identifying a known or hypothesized entity or group of entities using descriptive statistics; statistical intervals and tests, graphics, and multivariate techniques such as cluster analysis.</li>
+<li>Predict — predicting measurements using regression and neural networks, forecasting using time-series modeling techniques, and interpolating spatial data.</li>
+<li>Explain — Explaining latent aspects of phenomena using regression, cluster analysis, discriminant analysis, factor analysis, and other data mining techniques.</li>
+</ol>
+<p>How do we do this? This table shows some statitical methods that can be used to accomplish different goals.</p>
+<table>
+<thead>
+<tr>
+<th>Objective</th>
+<th>Common Tools</th>
+<th>Example Applications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Describe</td>
+<td>graphs; Descriptive Statistics</td>
+<td>Opinion Surveys; Demographic Surveys</td>
+</tr>
+<tr>
+<td>Compare or Test</td>
+<td>Statistical Tests</td>
+<td>Program Evaluation; Pharma/Education Effectiveness</td>
+</tr>
+<tr>
+<td>Identify or Classify</td>
+<td>Classification Trees; Data Mining</td>
+<td>Customer Churn</td>
+</tr>
+<tr>
+<td>Predict</td>
+<td>Regression</td>
+<td>Credit Score; Cost for House</td>
+</tr>
+<tr>
+<td>Explain</td>
+<td>Regression; ANOVA</td>
+<td>Research; Root cause analysis</td>
+</tr>
+</tbody>
+</table>
+<h2 id="why-do-we-need-statistics">Why do we need statistics?</h2>
+<p>The world is full of uncertainy. Variability arises from two primary sources: variability in the natural process (inherent variability) and variability due to our imperfect measurement devices (measurement variability).</p>
+<hr>
+<h1 id="summary-statistics">Summary Statistics</h1>
+<ul>
+<li>Once we have data set (sample), want to determine basic summary statistics</li>
+<li>Quantitative summaries of data, give rough contours</li>
+<li>Useful for giving you a feel for what data actually look like</li>
+<li>Common summary statistics: mean, median, mode, quartiles, max, min</li>
+<li>Note: n = number of observations in our sample</li>
+</ul>
+<h1 id="variance-and-standard-deviation">Variance and Standard Deviation</h1>
+<ul>
+<li>Standard Deviation (like variance but better)</li>
+<li>However, variance is a squared term</li>
+<li>Difficult to understand – squared ages? Squared income? (Difficult substantive meaning)</li>
+<li>Standard deviation: Square root of variance</li>
+<li>Another measure of spread</li>
+<li>Reverts back to original scale</li>
+</ul>
+<h1 id="summary">Summary</h1>
+<ul>
+<li>Samples are data sampled from an underlying population</li>
+<li>Use summary statistics to get a sense of the data</li>
+<li>Common examples: mean, median, variance, standard deviation</li>
+<li>Describe different properties, useful in different contexts</li>
+</ul>
+<h1 id="measures-of-central-tendency">Measures of Central Tendency</h1>
+<h2 id="sample-mean">Sample mean</h2>
+<p>The sample mean (also called the arithmetic mean or sample average), is found by adding up all observations and dividing by the total number of observations.</p>
+<p>The symbol $\bar{x}$ is read as “x-bar”</p>
+<ul>
+<li>We don’t always have to use the letter X. We can use any letter we want to indicate a variable (𝑋, 𝑌, 𝑊, 𝑉, etc.). Whatever we call the variable, a letter with a bar over it indicates the sample mean.</li>
+<li>$\bar{x}$ is a statistic, specifically, a point estimate for the population mean “mu”: $\mu$</li>
+</ul>
+<h2 id="some-key-terms">Some key terms</h2>
+<ul>
+<li>
+<p>Mean: The Average - The mean of a data set is the sum of the data entries divided by the number of entries.</p>
+</li>
+<li>
+<p>Median: The Middle - The median of a data set is the value that lies in the middle of the data when the data set is ordered from least to greatest. How do you find it? 1. Order the data entries. 2. Find the middle data entry. 3. Interpret the results in the context of the data.</p>
+</li>
+<li>
+<p>Mode: The Most - The mode of the data set is the data entry that occurs with the greatest frequency. A data set can have one mode, more than one mode, or no mode. How do you find it? 1. Write the data in order. 2. Identify the entry, or entries, that occur with the greatest frequency. 3. Interpret the results in the context of the data.</p>
+</li>
+<li>
+<p>Range: Smallest-Largest</p>
+</li>
+<li>
+<p>Outlier: A data entry that is far removed from the other entries in the data set.</p>
+</li>
+<li>
+<p>Descriptive Statistics: The branch of statistics that involves the organization, summarization, and display of data. Example: &ldquo;For unmarried men, approximately 70% were alive at age 65&rdquo; and &ldquo;For married men, 90% were alive at 65.&rdquo;</p>
+</li>
+<li>
+<p>Inferential Statistics: The branch of statistics that involves using a sample to draw conclusions about a population. A basic tool in the study of inferential statistics is probability. Inferential statistics is a collection of techniques designed to use sample data to make generally-applicable statements about the natural process or population from which the data arose. Example: Possible Inference: Being married is associated with a longer life for men.</p>
+</li>
+<li>
+<p>Probability: We typically aren’t interested in just the sample that we have (although the sample is still interesting).</p>
+</li>
+<li>
+<p>Example: An insurance company sends out a survey to 100 policy holders asking them to rate their satisfaction with the service.</p>
+<ul>
+<li>Managers aren’t just interested in only those 100 people. They want to be able to say something about the process (or population of customers) that is behind those customer satisfaction ratings</li>
+<li>That is, they want to infer (make a conclusion about) the process, so they can (perhaps) make adjustments to their website, coverage, customer service, etc.</li>
+<li>Probability helps us make the leap from a sample to population (or process) in an objective, mathematically justified way</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Population Mean</th>
+<th>Sample Mean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mu = \frac{\sum x}{N}$</td>
+<td>$\bar{x} = \frac{\sum x}{n}$</td>
+</tr>
+<tr>
+<td>$N$ is the number of items in the population</td>
+<td>$n$ is the number of items in the sample (and the sample is drawn from the population)</td>
+</tr>
+<tr>
+<td>It has higher accuracy</td>
+<td>It has lower accuracy</td>
+</tr>
+<tr>
+<td>The population is very large and not known, the population mean is an unknown constant</td>
+<td>It is an efficient and unbiased estimator of the population mean. The expected value of the sample mean is the population mean.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="measures-of-central-tendency-1">Measures of Central Tendency</h1>
+<p>Estimators and Estimates:  a mathematical function of the sample that tell us how to calculate an estimate of a parameter form a sample. Smaller the variance, most efficient the estimator. Hence, we require to find what are the &ldquo;good&rdquo; estimators.</p>
+<p>Few vital criterial for goodness of an estimator are based on these properties:</p>
+<h2 id="estimator-parameter-and-excel-command">Estimator, Parameter, and Excel Command</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Estimator</th>
+<th>Parameter</th>
+<th>Excel Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean</td>
+<td>$\bar{x}$</td>
+<td>$\mu$</td>
+<td><code>=AVERAGE(A1:A10)</code></td>
+</tr>
+<tr>
+<td>Variance</td>
+<td>$s^2$</td>
+<td>$\sigma^2$</td>
+<td><code>=STDEV(A1:A:10)</code></td>
+</tr>
+<tr>
+<td>Median</td>
+<td></td>
+<td></td>
+<td><code>=Median(A1:A:10)</code></td>
+</tr>
+<tr>
+<td>Mode</td>
+<td></td>
+<td></td>
+<td><code>=Mode(A1:A:10)</code></td>
+</tr>
+<tr>
+<td>Correlation</td>
+<td>R</td>
+<td>$\rho$</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="sample-mean-and-standard-deviation">Sample Mean and Standard Deviation</h2>
+<p>Given a sample of $n$ numerical data values $x_{1}, x_{2},\ldots ,x_{n},$ the general first step is to calculate summary measures (or **statistics)** to get a feel for the population or process from which the data arises. Many summary measures exist, but the two most important are the sample mean and the sample standard deviation, which we now review.</p>
+<p>The <strong>sample mean</strong> of a sample of $n$ data values $x_{1},x_{2},&hellip;,x_{n}$ is a measure of the center of a set of data and is defined as</p>
+<p>$$\overline{x}=\frac{\sum x_{i}}{n}$$</p>
+<p>where $\overline{x}$ is read as &ldquo;x bar.&rdquo;</p>
+<p>The <strong>sample standard deviation</strong> of a sample of $n$ data values $x_{1},x_{2},&hellip;,x_{n}$ is a measure of variability in the data and is defined as</p>
+<p>$$s=\sqrt{\frac{\sum (x_{i}-\overline{x})^{2}}{n-1}}$$</p>
+<p>A shortcut formula is</p>
+<p>$$s=\sqrt{\frac{\sum x_{i}^{2}-n\overline{x}^{2}}{n-1}}$$</p>
+<p>The <strong>sample variance</strong> of a sample of $n$ data points $x_{1},x_{2},&hellip;,x_{n}$ is the square of the standard deviation $s$. That is</p>
+<p>$$\text{Sample Variance }=\text{ }s^{2}$$</p>
+<ol>
+<li>Researchers working for a hospitality trade publication surveyed a random sample of $10$ restaurant servers, asking them to report their best guess at their hourly wage (including tips). The data are given below.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Tips</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$13$</td>
+</tr>
+<tr>
+<td>$9.29$</td>
+</tr>
+<tr>
+<td>$11.88$</td>
+</tr>
+<tr>
+<td>$10.04$</td>
+</tr>
+<tr>
+<td>$12.15$</td>
+</tr>
+<tr>
+<td>$6.77$</td>
+</tr>
+<tr>
+<td>$8.86$</td>
+</tr>
+<tr>
+<td>$11.49$</td>
+</tr>
+<tr>
+<td>$11.39$</td>
+</tr>
+<tr>
+<td>$10.41$</td>
+</tr>
+</tbody>
+</table>
+<p>a). Calculate the sample mean hourly wage for the 10 restaurant servers.</p>
+<p>b). Calculate the sample standard deviation of the hourly wages.</p>
+<ol>
+<li>A researcher is interested in the number of years that individuals employed in the financial services industry spend with their current employer. A sample of $11$ individuals ages $25-30$ who worked in the industry was collected. The data are shown below.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Years</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$6.6$</td>
+</tr>
+<tr>
+<td>$6.2$</td>
+</tr>
+<tr>
+<td>$3.9$</td>
+</tr>
+<tr>
+<td>$6.5$</td>
+</tr>
+<tr>
+<td>$6.8$</td>
+</tr>
+<tr>
+<td>$5.2$</td>
+</tr>
+<tr>
+<td>$5.4$</td>
+</tr>
+<tr>
+<td>$5.1$</td>
+</tr>
+<tr>
+<td>$4.7$</td>
+</tr>
+<tr>
+<td>$8.4$</td>
+</tr>
+<tr>
+<td>$4.4$</td>
+</tr>
+</tbody>
+</table>
+<p> a). Calculate the sample mean number of years spent with the current employer.</p>
+<p>b). Calculate the sample standard deviation of years spent with the current employer.</p>
+<h2 id="numerical-graphical-techniques">Numerical Graphical Techniques</h2>
+<p>Another early step in the analysis of data is the construction of <strong>graphical summaries</strong>, which represent the data using a picture designed to highlight key attributes. One of the most important tools for analyzing numerical data is a <strong>histogram.</strong> A histogram is a type of bar chart that divides the total range of the data into a number of &ldquo;bins&rdquo; of equal width and then sorts the data into the bins based upon those ranges. It answers the questions about 1). center (Where do the numbers tend to concentrate?), 2). spread (How variable is the data?) and 3). shape (In what pattern do the data tend to fall?)</p>
+<p>Figure 
+<a href="#calls">[calls]</a>{reference-type=&quot;ref&rdquo; reference=&quot;calls&rdquo;}  below is an example of a histogram made from a set of waiting times (in minutes) for a technical support call center during a specific shift. From this chart, a supervisor could learn quite a lot about the customer service process. It seems most of the time, people are being served fairly quickly and the general pattern is that very short waiting times are common (notice that the tallest bar is above the $0-2$ range, and the bars decrease in height systematically from left to right). This pattern is precisely what a customer service supervisor wants to see! Were the pattern reversed (with small bars over small waiting times and large bars over large waiting times), the call center would need to be investigated to determine why customers are having to wait so long for service.</p>
+<p>Another graphical tool for numerical data is the <strong>box plot.</strong> This plot typically shows five numbers: the minimum value, the $25^{th}$ percentile, the median (or $50^{th}$ percentile), the $75^{th}$ percentile, and the maximum value<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. The $25^{th}$ percentile is the number $x_{0.25}$ such that (approximately) $25%$ of the data falls below it and (approximately) $75%$ of the data falls above it. In general, the $p^{th}$ percentile is a number $x_{p}$ that splits the data such that (approximately) $p%$ of the data falls below it and $(100-p)%$ of the data falls above it. **Outliers** , data values that are extremely small or large compared to the rest of the data, are typically plotted separately. Figure 
+<a href="#boxplot">[boxplot]</a>{reference-type=&quot;ref&rdquo; reference=&quot;boxplot&rdquo;} displays the waiting time data. From this plot, we can see that about $25%$ of the data falls below $0.75$ minutes$,$ about $50%$ falls below $1.5$ minutes, and about $75%$ falls below $4$ minutes. The largest non-outlier waiting time was about $9$ minutes, and one unlucky soul had to wait over $12$ minutes!</p>
+<h2 id="probability-distributions">Probability Distributions</h2>
+<p>The mathematical concept of <strong>probability theory</strong> forms the basis of all statistical inference. It allows us to &ldquo;make the leap&rdquo; from the sample we have to the population or process that we are trying to study.  In order for us to be able to talk about statistics in an efficient way, we must agree upon some definitions. In this section, we will review some concepts that you should be familiar with from earlier classes.</p>
+<p>A <strong>random variable</strong> $X$ is a numerical or categorical characteristic of a population or process whose range of possible values is known or assumed but for which the values are subject to random (or &ldquo;chance&rdquo;) variation.</p>
+<p>Any letter of the alphabet can be used to indicate a random variable. The most common choices are $X$, $Z$, and $Y$. The name of the random variable is written in capital letters, while a specific value that the random variable takes on is written in lowercase.</p>
+<p>[[5k]]{#5k label=&quot;5k&rdquo;}Let $X$ be number of people out of $30$ who finish a $5$K race. This is a random variable before the race occurs because we cannot say with certainty how many people will ultimately finish. We know that the possible values are ${0,1,2,\ldots ,30}$. If it turns out that $25$ people finish, then $x=25$.</p>
+<h3 id="example-accodents">Example: Accodents</h3>
+<p>Let $V$ be the number of accidents that occur on a particular length of highway on a Tuesday between 5 p.m. and 9 p.m. Before this time period occurs, $V$ is a random variable because we cannot say with certainty how many accidents will occur. We do know that the least number of accidents is $0,$ so we would say the possible values of $V$ are ${0,1,2,\ldots }$</p>
+<h3 id="example-coffee">Example: Coffee</h3>
+<p>Let $Y$ be the time (in seconds) you spend in line at a coffee shop on a Wednesday morning. This is a random variable before you visit the coffee shop. The smallest possible wait time is $0,$ while the largest possible time is not clearly defined without more assumptions. If you decide that you will leave, with coffee or without, if the wait is more than $15$ minutes, then the range of possible values is $0\leq y\leq 900$. If on this particular trip you wait $350.96$ seconds, then $y=350.96$, or about $5$ minutes and $51$ seconds.</p>
+<h3 id="example-weight">Example: Weight</h3>
+<p>Let $W$ be the number of pounds lost for an adult male over a six-week period of following a particular exercise program. This is a random variable before the six-week period is over because we cannot say for certain what the weight loss will be. We do know that it is possible to gain weight (through building muscle, for example) or to lose weight. Here it is a bit more difficult to assign a range to the random variable without knowing more about the study, but one reasonable choice would be $-35\leq y\leq 55$ ($-35$ implies that it is possible to gain $35$ pounds). If a particular man loses $35.4$ pounds, then $w=35.4$.</p>
+<p>Here are some additional important definitions.</p>
+<p>A <strong>probability,</strong> in practical (i.e., non-mathematically formal) terms can be thought of as a chance of something happening. The range of a valid probability for an event is $0$ (no chance of the event occurring) to $1$ (guaranteed for the event to occur). Probabilities cannot be negative.</p>
+<p>A <strong>discrete random variable</strong> is a random variable whose entire set of values and associated probabilities can be completely listed or at least counted.</p>
+<p>Examples 
+<a href="#5k">[5k]</a>{reference-type=&quot;ref&rdquo; reference=&quot;5k&rdquo;} and 
+<a href="#accidents">[accidents]</a>{reference-type=&quot;ref&rdquo; reference=&quot;accidents&rdquo;} above involve discrete random variables because the possibilities can be completely listed (example 
+<a href="#5k">[5k]</a>{reference-type=&quot;ref&rdquo; reference=&quot;5k&rdquo;}) or counted 
+<a href="#accidents">[accidents]</a>{reference-type=&quot;ref&rdquo; reference=&quot;accidents&rdquo;}.</p>
+<p>A <strong>continuous random variable</strong> is a random variable whose entire set of values cannot be listed because the possible values extend, in theory, to an infinite number of decimal places.</p>
+<p>Examples 
+<a href="#coffee">[coffee]</a>{reference-type=&quot;ref&rdquo; reference=&quot;coffee&rdquo;} and 
+<a href="#weight">[weight]</a>{reference-type=&quot;ref&rdquo; reference=&quot;weight&rdquo;} above involve continuous random variables because time and weight are measurements that can take on, in theory, an infinite number of decimal places depending upon how precise our measurement instruments are.</p>
+<p>Once we have defined a random variable, we need some way to assign the probabilities to its values. In general, how we do this depends on whether the random variable is discrete or continuous. There is some highly technical mathematics involved in that we are going to skip right over in favor of the following definition:</p>
+<p>A <strong>probability distribution</strong> is a specification of the possible values of a random variable and their associated probabilities, made either by listing the possible values and their probabilities or by providing a function that gives probabilities for a collection of possible values of the random variable.</p>
+<p>When we write $P(X=x),$ this stands for &ldquo;the probability that the random variable $X$ equals $x,&ldquo;$ or, more simply, &ldquo;the probability that $X$ equals $x.&ldquo;$ For example, $P(X=4),$ referring to example 
+<a href="#5k">[5k]</a>{reference-type=&quot;ref&rdquo; reference=&quot;5k&rdquo;} above, would be read as &ldquo;the probability that $X=4,&ldquo;$ which in context is the probability that $4$ runners finish the $5K$ run.</p>
+<p>In general, how we assign probabilities depends on whether the random variable is discrete or continuous. Discrete probability distributions can be specified as two-column tables listing the possible values of the random variable and their associated probabilities, or by writing a function that outputs probabilities. Continuous random variables must be specified by writing a function $f(y)$ and the outputs of these functions are not probabilities, but &ldquo;relative likelihoods&rdquo; of various values.</p>
+<p>A discrete probability distribution for a random variable $X$ must meet the following criteria:</p>
+<ol>
+<li>
+<p>$\sum_{all\text{ }x}P(X=x)=1$  [probabilities must sum to $1$]</p>
+</li>
+<li>
+<p>$0\leq P(X=x)\leq 1$ for all $x$ [probabilities are between $0$ and $1]$</p>
+</li>
+</ol>
+<p>A continuous distribution for a random variable $Y$ must meet the following criteria:</p>
+<ol>
+<li>
+<p>$f(y)\geq 0$ for all possible $y$   [graph of the function is above the horizontal axis]</p>
+</li>
+<li>
+<p>Total area under the curve $f(y)=1$</p>
+</li>
+</ol>
+<p>Referring to example 
+<a href="#5k">[5k]</a>{reference-type=&quot;ref&rdquo; reference=&quot;5k&rdquo;}, one way to define the probability distribution of $X$ would be to list the values of $x$ and their probabilities as in Table 
+<a href="#TableKey">[TableKey]</a>{reference-type=&quot;ref&rdquo; reference=&quot;TableKey&rdquo;} below (the three dots notation, $\vdots$ ,means that the rows between $3$ and $29$ have been left out for space reasons)$$. Note that the probabilities listed are just examples.</p>
+<table>
+<thead>
+<tr>
+<th>$x$</th>
+<th>$P(X=x)$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$0$</td>
+<td>$0.000001$</td>
+</tr>
+<tr>
+<td>$1$</td>
+<td>$0.000003$</td>
+</tr>
+<tr>
+<td>$2$</td>
+<td>$0.00004$</td>
+</tr>
+<tr>
+<td>$3$</td>
+<td>$0.00005$</td>
+</tr>
+<tr>
+<td>$\vdots$</td>
+<td>$\vdots$</td>
+</tr>
+<tr>
+<td>$29$</td>
+<td>$0.10$</td>
+</tr>
+<tr>
+<td>$30$</td>
+<td>$0.05$</td>
+</tr>
+</tbody>
+</table>
+<p>All of the probabilities above must be between $0$ and $1$ , and they must add up to exactly $1$. Another way to define this distribution would be to use a function. If we assume that each runner has the same probability of &ldquo;success&rdquo; $p$ (finishing the race) and that they perform independently of other runners, we might use the binomial distribution to describe the probabilities of $x$ number of runners finishing:</p>
+<p>$$P(X=x)=\frac{30!}{(30-x)!x!}p^{x}(1-p)^{30-x}$$</p>
+<p>where the symbol $&rdquo;!&ldquo;$ denotes the factorial function (for example $5!=5\times 4\times 3\times 2\times 1)$.</p>
+<p>Referring to example 
+<a href="#weight">[weight]</a>{reference-type=&quot;ref&rdquo; reference=&quot;weight&rdquo;}, we might assume that the amount of weight lost could be described by a bell-shaped curve with a peak value at $10$ pounds, such as the one in Figure 
+<a href="#wt_dist">[wt_dist]</a>{reference-type=&quot;ref&rdquo; reference=&quot;wt_dist&rdquo;}.</p>
+<p>The particular function that produces this graph is</p>
+<p>$$f(y)=\frac{1}{15\sqrt{2\pi }}e^{\frac{-(y-10)^{2}}{450}}$$</p>
+<p>The graph meets the criterion that it must lie above the horizontal axis. Further, if you were to use calculus to find the area under the curve, it would be exactly $1$. The distribution shown in Figure 
+<a href="#wt_dist">[wt_dist]</a>{reference-type=&quot;ref&rdquo; reference=&quot;wt_dist&rdquo;} is known as the normal distribution, and we will be seeing it again and again.</p>
+<p>Many times, a histogram of the data can suggest a particular probability distribution. Look again at Figure 
+<a href="#calls">[calls]</a>{reference-type=&quot;ref&rdquo; reference=&quot;calls&rdquo;}, which shows the distribution of waiting times at a call center. This &ldquo;downstairs&rdquo; pattern suggests another widely used continuous probability distribution called the exponential distribution. Figure 
+<a href="#exp_dist">[exp_dist]</a>{reference-type=&quot;ref&rdquo; reference=&quot;exp_dist&rdquo;}  shows the exponential distribution drawn over the histogram.</p>
+<p>Once we have a random variable and its distribution, we can talk about its properties. The two most common properties to examine are its mean ( <strong>expected</strong> or average) value and its degree of variability (variance or standard deviation). We will only look at the definitions of these quantities for the discrete case because integral calculus is required to define them for continuous random variables.</p>
+<p>The <strong>expected value</strong> (or <strong>mean)</strong> of a discrete random variable $X,$ denoted by either $E(X)$ or $\mu$ (and pronounced &ldquo;mu&rdquo;)$,$ is defined as</p>
+<p>$$\mu =E(X)=\sum_{all\text{ }x}xP(X=x)$$</p>
+<p>That is, it is a weighted (by the probabilities) sum of the possible values of the random variable.</p>
+<p>The <strong>variance</strong> of a discrete random variable $X,$ denoted by either $V(X)$ or $\sigma ^{2}$ (and pronounced &ldquo;sigma squared&rdquo;) is defined as</p>
+<p>$$V(X)=\sum_{all\text{ }x}(x-\mu )^{2}P(X=x)$$</p>
+<p>A shortcut formula is
+$$E(X^{2})-[E(X)]^{2}$$</p>
+<p>The standard deviation, denoted as either $StDev(X)$ or $\sigma$ (read as &ldquo;sigma&rdquo;)$,$ is defined as $\sqrt{V(X)}$.</p>
+<p>Basically, $E(X)$ is the population version of $\overline{x}$ and $V(X)$ is the population version of $s^{2}$.</p>
+<p>The following facts will come in handy later.</p>
+<p>(math fact) If $X$ and $Y$ are random variables and $a$ and $b$ are any constants (fixed values), then all of the following statements about expected value and variance are true:</p>
+<p>$$\begin{gathered} E(aX+b)=aE(X)+b \ E(aX+bY)=aE(X)+bE(Y) \ V(aX+b)=a^{2}V(X) \ V(aX+bY)=a^{2}V(X)+b^{2}V(Y)+2ab\rho StDev(X)StDev(Y)\end{gathered}$$</p>
+<p>That is, you get to pull the constants out in front of the mean and variance operators, but with variance you square the constant while with expected value, you just pull it out. The mean of a constant is just the constant, while the variance of a constant is $0$.</p>
+<p>The Greek letter $\rho$ is pronounced &ldquo;row&rdquo; and describes the <strong>correlation</strong> (or linear relationship) between two numerical variables. We will return to this concept toward the end of the course.</p>
+<p>The following questions address the topics above. Most, if not all, of these questions are review from BANA 2372.</p>
+<ol>
+<li>The General Social Survey asked the following question : In the last 12 months, how many times have you been injured on the job?</li>
+</ol>
+<p>a). What must $P(X=12)$ be for this to be a valid probability distribution?</p>
+<p>b). Find $\mu =E(X),$ the mean of the distribution of $X$.</p>
+<p>c). Find $\sigma ^{2}=V(X),$ the variance of the distribution of $X$.</p>
+<p>e). Find $\sigma =StDev(X),$ the standard deviation of the distribution of $X$.</p>
+<p>f). Find $E(10X+2)$ using the rules of expected value.</p>
+<p>g). Find $V(9X-7)$ using the rules of variance.</p>
+<ol>
+<li>(Real-world application). A potential customer for a $50,000$ fire insurance policy has a home in an area that, according to past experience, may sustain a total loss in a given year with a probability of $0.001$ and a $50%$ loss with a probability of $0.01$. There is a $0.989$ chance that the customer will make no claim in the coverage year. The company also offers renter&rsquo;s insurance. This same potential customer wants a $20,000$ policy. Based on historical data the company has for the area, the probability of a total loss due to fire is $0.005,$ the probability of a $50%$ loss is $0.015,$ and the probability of no loss is $0.98$. Let $X$ be the company&rsquo;s loss on the fire insurance policy and $Y$ be the company&rsquo;s loss on the renter&rsquo;s insurance policy.</li>
+</ol>
+<p>a). Find the expected loss for the fire policy and for the renter&rsquo;s insurance policy individually. That is, find $E(X)$ and $E(Y)$.</p>
+<p>b). Find the combined expected loss for the company on the two policies. That is, find $E(X+Y)$.</p>
+<p>c). Suppose the company combines the premiums for the two policies and charges $600$ per year. Based on your answer to (b), is this a good business decision for the company?</p>
+<p>d). Suppose the company offers the fire policy to $20$ customers and the renter&rsquo;s insurance to $10$ customers in the same area. Find the combined expected loss for the company, assuming each customer has identical loss probabilities. That is, Find $E(20X+10Y)$.</p>
+<h2 id="binomial-distribution">Binomial Distribution</h2>
+<p>In this section, we review in more detail one of the most important discrete distributions.</p>
+<p>The binomial distribution is used to model the situation in which there are $n$ identical trials or experiments and you want to know the chance of getting $x$ &ldquo;successes&rdquo; or &ldquo;events&rdquo; out of those $n$ trials when the probability of success is known to be $p$. If $X$ has the binomial distribution, then</p>
+<p>$$P(X=x)=\frac{n!}{(n-x)!x!}p^{x}(1-p)^{n-x}$$</p>
+<p>where $!$ is the factorial operation. For example $5!=5\times 4\times 3\times 2\times 1$.</p>
+<p>This can also be written as</p>
+<p>$$P(X=x)=\binom{n}{x}p^{x}(1-p)^{n-x}$$</p>
+<p>where $\binom{n}{x}=\frac{n!}{(n-x)!x!}$ and is read as &ldquo;$n$ choose $x$&rdquo;</p>
+<ol>
+<li>(Real-world application). An operations manager for Umbrella Corporation, a consumer products company, is in charge of determining if one of its current suppliers should be dropped because of an unacceptably high defect rate in the chemical it is sending to the company. The supplier provides the chemical in bottles. Management personnel from both companies have agreed that $1$ bottle out of $100$ (a defect rate of $0.01)$ is an acceptable risk. Suppose the company receives a batch of $50$ bottles and finds that $2$ bottles contain defective product.</li>
+</ol>
+<p>a). What is the probability that Umbrella would find exactly $2$ defective bottles in a shipment of $50$, if the real defect rate is $0.01$ as promised?</p>
+<p>b). What is the probability that Umbrella would find more than $1$ defect?</p>
+<p>c). Using your answer to (b), as a supply chain manager, what is your recommendation for keeping or dropping the supplier?</p>
+<ol>
+<li>
+<p>Suppose you are investigating whether there is a difference in taste between organic milk and regular milk. You recruit $10$ random volunteers and ask each one individually after tasting to tell you which of two unmarked glasses contains the organic milk. Let X be the number of correct guesses. If there really were no difference in taste between organic milk and regular milk, what would be the probability of $8$ or more correct guesses, to three decimal places?</p>
+</li>
+<li>
+<p>The marketing department of Low-Brau, a microbrewery that makes what it considers an excellent light beer, asked $7$ volunteers, individually, to taste $10$ types of light beer (one of which was the company&rsquo;s brand and the others being competitor brands) and report which one they liked the best. Out of those $7$ people, $3$ said they liked Low-Brau&rsquo;s light beer the best. The taste test was &ldquo;blind&rdquo; in that the volunteers did not know beforehand which of the $7$ beers they tasted was Low-Brau&rsquo;s. If there is no difference in the taste of the light beers, what is the chance that $3$ out of $7$ people would be able to rate Low-Brau&rsquo;s as the best?</p>
+</li>
+</ol>
+<h1 id="descriptive-statistics">Descriptive Statistics</h1>
+<p>Definition: Descriptive statistics is a collection of techniques for organizing, summarizing, and presenting a sample of data in a convenient, informative way.</p>
+<ul>
+<li>
+<p>If you follow sports, you know this definition:</p>
+<ul>
+<li>Completed passes, yards gained by passing, rushing touchdowns</li>
+<li>Turnovers, rebounds, free-throws made</li>
+<li>Batting average, on-base percentage, runs produced</li>
+</ul>
+</li>
+<li>
+<p>Business/Economics</p>
+<ul>
+<li>Average time customers spend on hold in a call center</li>
+<li>Proportion of prospects at a car dealership who end up purchasing</li>
+<li>Variability in stock returns for the Dow Jones for the past year</li>
+<li>Average amount of debt students carry after graduation</li>
+<li>Average market value of homes in a neighborhood</li>
+<li>Proportion of members of a focus group who think favorably about a new product</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="heading"></h1>
+<ol>
+<li>Bias</li>
+<li>Variance</li>
+<li>Mean Square Error</li>
+</ol>
+<h1 id="histograms">Histograms</h1>
+<p>A histogram is a bar graph that represents the frequency distribution of a dataset. It is a way to visualize a pattern in a numerical data set. It answers the questions about</p>
+<ol>
+<li>Center (where the numbers tend to fall)</li>
+<li>Spread (the degree of variability in the data) and</li>
+<li>Shape (the pattern in which the numbers tend to fall)</li>
+</ol>
+<ul>
+<li>A histogram can be used to estimate continuous probability distributions</li>
+</ul>
+<p>Properties of a histogram:</p>
+<ol>
+<li>Horizontal scale measures the data values</li>
+<li>Vertical scale measures the frequencies of the bins</li>
+<li>Consecutive bars touch</li>
+</ol>
+<hr>
+<h1 id="histogram-example-call-durations">Histogram Example: Call Durations</h1>
+<p>Suppose you work at a call center for a cable company. Your job is to help customers troubleshoot their technology problems. Many people are bad with technology, and so the call center stays busy. Your manager wants to make sure that people aren’t on hold for too long; otherwise they might bail and go to another provider. Your department keeps track of the hold times for customers. Each week, your manager reviews the data to see if changes need to be made. To do this, she makes a histogram of the duration times, which we will call Y.</p>
+<p>Here we see that most customers get served pretty quickly (the times between 0 and 2 are far more frequent). However, some customers have to wait a lot longer.</p>
+<p>Suppose we want to find the probability that a customer has to wait between 1 and 4 minutes for service. How can we do that?</p>
+<p><img src="img/Continuous-Distributions_CURRENT0.png" alt="phone graph"></p>
+<p>It looks like we might be able to fit a smooth curve to the histogram. For N = 100 calls, it doesn’t fit so well, but for n = 10,000 calls, it gets better.</p>
+<p>This smooth curve is an example of a continuous distribution function, and using it, we can find the probabilities that a caller has to wait between 1 and 4 minutes.</p>
+<p><img src="img/Continuous-Distributions_CURRENT1.png" alt="phone graph"></p>
+<p><img src="img/Continuous-Distributions_CURRENT2.png" alt="phone graph 2"></p>
+<h2 id="estimating-probabilities-using-a-histogram">Estimating Probabilities Using a Histogram</h2>
+<ol>
+<li>Find Relative Frequencies</li>
+<li>Estimate the Density</li>
+<li>Probabilities Are Estimated as (width of the rectangle) * density</li>
+</ol>
+<p><img src="img/Continuous-Distributions_CURRENT3.png" alt="phone graph 3"></p>
+<p>This is an estimate of the probability without resorting to calculus, which gives exact answers.</p>
+<h1 id="what-is-a-scatter-plot">What is a scatter plot?</h1>
+<p>A way to graph paired data sets where the ordered pairs are graphed as points in a coordinate plane. Scatter plots show the relationship between two quantitative variables.</p>
+<hr>
+<h1 id="central-limit-theorem">Central limit theorem</h1>
+<p>In the central limit theorem:</p>
+<ul>
+<li>No matter the distribution* the more samples, closer to normal</li>
+<li>the bigger the samples, the closer to normal</li>
+</ul>
+<hr>
+<hr>
+<h1 id="measures-of-dispersion">Measures of dispersion</h1>
+<p>Population variance: The mean of the squares of the deviations.
+Population standard deviation: The square root of the population variance.</p>
+<ol>
+<li>Find the mean and each deviation.</li>
+<li>Square each deviation.</li>
+<li>Find the sum of the squares.</li>
+<li>Divide by the number of data entries.</li>
+<li>Take the square root of the population variance.</li>
+</ol>
+<p>Standard Deviation: $\sigma = \sqrt{\frac{\Sigma(x-\bar{x})^2}{n}}$</p>
+<hr>
+<h1 id="empirical-ruleor-68-95-997-rule">Empirical Rule(Or 68-95-99.7 Rule)</h1>
+<p>For data with a (symmetric) bell-shaped distribution, the standard deviation has the following characteristics.</p>
+<ol>
+<li>About 68% of the data lie within one standard deviation of the mean.</li>
+<li>About 95% of the data lie within two standard deviations of the mean.</li>
+<li>About 99.7% of the data lie within three standard deviations of the mean.</li>
+</ol>
+<hr>
+<h1 id="quartiles-of-a-data-set">Quartiles of a Data Set</h1>
+<p>What are quartiles?</p>
+<p>The three quartiles, $Q_1$ ,$Q_2$ ,and $Q_3$ , approximately divide an ordered data set into four equal parts. About one quarter of the data fall on or below the first quartile $Q_1$.About one half of the data fall on or below the second quartile $Q_2$.About three quarters of the data fall on or below the third quartile $Q_3$.</p>
+<hr>
+<h1 id="interquartile-range-iqr">Interquartile Range (IQR)</h1>
+<p>The interquartile range (IQR) of a data set is a measure of variation that gives the range of the middle 50% of the data. It is the difference between the third and first quartiles.</p>
+<hr>
+<h1 id="box-and-whisker-plot">Box-and-Whisker Plot</h1>
+<ol>
+<li>Find the five-number summary of the data set. (minimum entry, first quartile, median, third quartile, maximum entry)</li>
+<li>Construct a horizontal scale that spans the range of the data.</li>
+<li>Plot the five numbers above the horizontal scale.</li>
+<li>Draw a box above the horizontal scale from
+$Q_1$ to $Q_3$ and draw a vertical line in the box at
+$Q_2$.</li>
+<li>Draw whiskers from the box to the minimum and maximum entries.</li>
+</ol>
+<hr>
+<h1 id="the-shapes-of-frequency-distributions">The Shapes of Frequency Distributions</h1>
+<p><img src="img/paranormal.png" alt="Distributions"></p>
+<hr>
+<h1 id="skewed-distributions">Skewed Distributions</h1>
+<p><img src="img/skewed_dist.jpeg" alt="Skewed"></p>
+<table>
+<thead>
+<tr>
+<th>Skew</th>
+<th>Neg/Positive</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Left</td>
+<td>Negatively Skewed</td>
+<td>The tail of the graph extends more to the left. More of the data entries are clumped on the right.</td>
+</tr>
+<tr>
+<td>Right</td>
+<td>Positively Skewed</td>
+<td>The tail of the graph extends more to the right. More of the data entries are clumped on the left.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="heading-1"></h1>
+<p><img src="img/Continuous_Distributions_and_the_Normal_Distribution_CURRENT4.png" alt="normal"></p>
+<hr>
+<h1 id="standard-normal-distribution">Standard normal distribution</h1>
+<p>It is a normal distribution with a mean of 0 and a standard deviation of 1.</p>
+<p>Every normal distribution can be standardized using the following formula:</p>
+<p>$$\alpha = \frac{x-/mu}{\sigma}$$</p>
+<hr>
+<h1 id="discrete-probability-distributions">Discrete Probability Distributions</h1>
+<p>Definition: A discrete probability distribution is a listing or specification of the possible values of a random variable and their associated probabilities
+Notation:</p>
+<ul>
+<li>An upper-case letter (like X) will represent the name of the random variable,</li>
+<li>Its lower-case counterpart  (like x) will represent the value of the random variable.</li>
+<li>The probability that the random variable X will equal x is P(X = x)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Distribution</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal distribution</td>
+<td>Also known as Gaussian distribution or Bell Curve. it is mostly used in regression analysis. When data is normally distributed then distribution is symmetric and mean = median = mode.</td>
+</tr>
+<tr>
+<td>Uniform or Rectangular</td>
+<td>All entries in the distribution have approximately equal frequencies.</td>
+</tr>
+<tr>
+<td>Symmetric</td>
+<td>If a vertical line is drawn through the middle of the graph, then the two halves would be mirror images.</td>
+</tr>
+<tr>
+<td>Continuous Distributions</td>
+<td>A distribution for a continuous random variable, say, Y, is written as f(y). It is a smooth function with points on the curve indicating “relative likelihoods” of observations. It must meet two criteria: 1. f(y) ≥ 0 for all possible values that the random variable can take on. 2. The total area under the curve is exactly 1. Probabilities are calculated as areas under the curve.</td>
+</tr>
+</tbody>
+</table>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>There are many ways of calculating percentiles from data, and no method is truly the standard. You can read more about this issue here: <a href="http://www.dummies.com/how-to/content/how-to-calculate-percentiles-in-statistics.html">http://www.dummies.com/how-to/content/how-to-calculate-percentiles-in-statistics.html</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/bana3363/3-1-sampling-distributions/" rel="prev">Sampling Distributions &amp; Central Limit Theorem</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on May 5, 2019</p>
+
+          
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/BANA3363/1%20-%20Basic%20Statistics%20Concepts.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+          
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

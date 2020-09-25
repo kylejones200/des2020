@@ -1,0 +1,1108 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Kyle Jones">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Another Example of Goodness-of-Fit We begin with another example of the chi-squared goodness-of-fit test. The sources for the data are the National Highway Traffic Safety Administration and the Texas Department of Transportation.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/courses/bana3363/14-chi-squared-test-of-independence/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/courses/bana3363/14-chi-squared-test-of-independence/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Kyle Jones">
+  <meta property="og:url" content="/courses/bana3363/14-chi-squared-test-of-independence/">
+  <meta property="og:title" content="Chi Squared Test of Independence | Kyle Jones">
+  <meta property="og:description" content="Another Example of Goodness-of-Fit We begin with another example of the chi-squared goodness-of-fit test. The sources for the data are the National Highway Traffic Safety Administration and the Texas Department of Transportation."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-07-28T15:19:27&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-07-28T15:19:27&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Chi Squared Test of Independence | Kyle Jones</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/">Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/1-basic-statistics-concepts/">Descriptive Statistics</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/1-basic-statistics-concepts/">Basic Statistics Concepts</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/2-the-normal-distribution/">The Normal Distribution</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/2-types-of-statistical-analysis/">Types of Statistical Analysis</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing and Inference</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing for a Proportion</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/7-interval-for-differences-in-means-independent-samples/">Interval for Differences in Means--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-test-for-differences-in-proportions-independent-samples/">Hypothesis Test for a Difference in Proportion (Independent Samples)</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-intervals-for-differences-in-proportions-independent-samples/">Intervals for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/5-ci-for-mean/">Confidence Interval for the Mean</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/5-1-hypothesis-testing-basics/">Hypothesis Testing for a Population Mean</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-confidence-interval-for-matched-pairs/">Confidence Interval for Matched Pairs</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-1-test-for-diff-in-means-proportions/">Test for Diff in Means, Proportions</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-1-test-for-differences-in-proportions-independent-samples/">Test for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-2-test-for-diff-in-means-independent-samples/">Test for Diff in Means Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-anova-basics/">ANOVA Basics</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/12-anova-mc/">ANOVA - Bonferroni Method of Multiple Comparisons</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Goodness-of-Fit Test</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-matched-pairs/">Matched Pairs</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/bana3363/14-chi-squared-test-of-independence/">Chi Squared Test of Independence</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/15-intro-to-regression/">Regression</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/15-intro-to-regression/">Intro to Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/16-simple-linear-regression/">Simple Linear Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/17-evaluating-linear-regression/">Evaluating Linear Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/18-multiple-linear-regression/">Multiple Linear Regression</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#another-example-of-goodness-of-fit">Another Example of Goodness-of-Fit</a></li>
+    <li><a href="#chi-squared-test-of-independence">Chi-Squared Test of Independence</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Chi Squared Test of Independence</h1>
+
+          <div class="article-style">
+            <h2 id="another-example-of-goodness-of-fit">Another Example of Goodness-of-Fit</h2>
+<p>We begin with another example of the chi-squared goodness-of-fit test. The sources for the data are the 
+<a href="http://www.nhtsa.gov/NCSA" target="_blank" rel="noopener">National Highway Traffic Safety Administration</a> and the 
+<a href="http://ftp.dot.state.tx.us/pub/txdot-info/trf/crash_statistics/2012/15_2012.pdf" target="_blank" rel="noopener">Texas Department of Transportation.</a></p>
+<p>The percentage of fatal accidents by day of the week for the United States as a whole is shown in Figure 
+<a href="#accidents">[accidents]</a>{reference-type=&quot;ref&rdquo; reference=&quot;accidents&rdquo;} below, and the number of accidents in Texas by day of the week is shown in Figure 
+<a href="#texas_crah">[texas_crah]</a>{reference-type=&quot;ref&rdquo; reference=&quot;texas_crah&rdquo;}. Can we conclude at the $\alpha =0.05$ level that Texas differs from the rest of the United States in the distribution of crashes over the days of the week?</p>
+<p>\FRAME{ftbphFU}{5.5019in}{1.4235in}{0pt}{\Qcb{Distribution of fatal accidents by day of the week.}}{\Qlb{accidents}}{Figure}{\special{language &ldquo;Scientific Word&rdquo;;type &ldquo;GRAPHIC&rdquo;;maintain-aspect-ratio TRUE;display &ldquo;USEDEF&rdquo;;valid_file &ldquo;T&rdquo;;width 5.5019in;height 1.4235in;depth 0pt;original-width 9.8442in;original-height 2.5209in;cropleft &ldquo;0&rdquo;;croptop &ldquo;1&rdquo;;cropright &ldquo;1&rdquo;;cropbottom &ldquo;0&rdquo;;tempfilename &lsquo;MVWFYL04.wmf&rsquo;;tempfile-properties &ldquo;XPR&rdquo;;}}</p>
+<p>\FRAME{ftbphFU}{5.5495in}{2.3229in}{0pt}{\Qcb{Number of fatal crashes in Texas for 2012 by day of the week.}}{\Qlb{texas_crah}}{Figure}{\special% {language &ldquo;Scientific Word&rdquo;;type &ldquo;GRAPHIC&rdquo;;maintain-aspect-ratio TRUE;display &ldquo;USEDEF&rdquo;;valid_file &ldquo;T&rdquo;;width 5.5495in;height 2.3229in;depth 0pt;original-width 8.8851in;original-height 3.6979in;cropleft &ldquo;0&rdquo;;croptop &ldquo;1&rdquo;;cropright &ldquo;1&rdquo;;cropbottom &ldquo;0&rdquo;;tempfilename &lsquo;MVWG5406.wmf&rsquo;;tempfile-properties &ldquo;XPR&rdquo;;}}</p>
+<h2 id="chi-squared-test-of-independence">Chi-Squared Test of Independence</h2>
+<p>A common question in research is what, if any, relationship two variables have with one another. If the two variables are numeric, then the most common measure of dependence is <strong>correlation</strong>, which we will discuss later. Correlation specifically measures the degree of linear relationship between two numeric variables. The central question in this handout is: how can we examine the relationship between two nominal/categorical variables?</p>
+<p>Just as with the chi-squared goodness-of-fit test, we can employ two basic (and complementary) techniques: graphs and a hypothesis test. Graphs such as <strong>side-by-side bar charts</strong> allow us to examine the distribution of one variable (called the response variable) for each level of another variable that we believe somehow influences the response variable; this latter variable is called the** explanatory (independent) variable. If there is a relationship, the pattern of the response variable will change at different levels of the explanatory variable.</p>
+<p>Let&rsquo;s look again at the question on the 2012 General Social Survey (GSS) that asked respondents to what degree they agreed with the statement &ldquo;Both men and women contribute to household income.&rdquo; The results are summarized below in Figure 
+<a href="#husweef">[husweef]</a>{reference-type=&quot;ref&rdquo; reference=&quot;husweef&rdquo;}. We can easily see that most people agree or strongly agree with the statement.</p>
+<p>This graph shows the responses of all $1,974$ people in the 2012 survey added across all age groups,income levels, ages, and political affiliations. What if we were interested in examining whether there was a relationship between belief in both men and women contributing to household income and gender? Figure 
+<a href="#two_inc_gen">[two_inc_gen]</a>{reference-type=&quot;ref&rdquo; reference=&quot;two_inc_gen&rdquo;} shows the distribution of agreement on the question by gender. What we look for when we examine a side-by-side bar chart is a change in the <em>pattern</em> of responses by the levels of the independent variable. The heights of the bars will usually differ, as there are typically different sample sizes in the two categories of the independent variable. In the figure below, we do not see a clear change to the pattern of responses between men and women, and would therefore (informally) conclude that there is little or no relationship between gender and belief in both men and women contributing to household income.</p>
+<p>How can we assess this relationship formally? As you might have gathered, we can accomplish this by the use of a hypothesis test. In order to understand the test, we have to recall the definition of joint and marginal probabilities.</p>
+<p>The <strong>joint probability distribution</strong> for two discrete random variables is a specification of the possible values that the two variables can take on simultaneously and their simultaneous, or &ldquo;joint,&rdquo; probabilities.</p>
+<p>As a simple example, suppose the random variable $X$ can take on the values of $1,2$, or $3$,  and the random variable $Y$ can take on the values $1$ and $2.$ Then a joint probability distribution for $X$ and $Y$ might be as follows:</p>
+<table>
+<thead>
+<tr>
+<th>$X$</th>
+<th>$\mathbf{1}$</th>
+<th>$\mathbf{2}$</th>
+<th>$\mathbf{3}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mathbf{1}$</td>
+<td>$.24$</td>
+<td>$.12$</td>
+<td>$.06$</td>
+</tr>
+<tr>
+<td>$\mathbf{2}$</td>
+<td>$.30$</td>
+<td>$.14$</td>
+<td>$.14$</td>
+</tr>
+</tbody>
+</table>
+<p>The numbers inside the table are the <strong>joint probabilities,</strong> the probabilities that $X$ will take on a certain value $x$ and $Y$ will take on a certain value $y,$ which we write as $P(X=x,Y=y).$ For instance, we could say that the probability that $X$ $=$ $1$ <em>and</em> $Y=2$ is $% P(X=1,Y=2)=0.12,$ since this number is in the intersection of the $&quot;1&quot;$ row and and $&quot;2&quot;$ column. Similarly, $P(X=2,Y=1)=0.28.$ Let&rsquo;s check our understanding.</p>
+<p>[[joint_prob_ex]]{#joint_prob_ex label=&quot;joint_prob_ex&rdquo;}Find the following joint probabilities.</p>
+<p>a). $P(X=1,Y=1)$</p>
+<p>b). $P(X=1,Y=2)$</p>
+<p>c). $P(X=1,Y=3)$</p>
+<p>d). $P(X=2,Y=1)$</p>
+<p>e). $P(X=2,Y=2)$</p>
+<p>f). $P(X=2,Y=3)$</p>
+<p>From a joint distribution, we can always obtain the distribution of each variable individually by adding across the levels of the other variable. These distributions are called <strong>marginal distributions</strong> because they can be computed in the margins of a table like the one above. Here is the table above, with the totals of the rows and columns in the margins:</p>
+<table>
+<thead>
+<tr>
+<th>$X$</th>
+<th>$\mathbf{1}$</th>
+<th>$\mathbf{2}$</th>
+<th>$\mathbf{3}$</th>
+<th><strong>Total</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mathbf{1}$</td>
+<td>$.24$</td>
+<td>$.12$</td>
+<td>$.06$</td>
+<td>$\mathbf{.42}$</td>
+</tr>
+<tr>
+<td>$\mathbf{2}$</td>
+<td>$.30$</td>
+<td>$.14$</td>
+<td>$.14$</td>
+<td>$\mathbf{.58}$</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td>$\mathbf{.54}$</td>
+<td>$\mathbf{.26}$</td>
+<td>$\mathbf{.20}$</td>
+<td>$\mathbf{%1}$</td>
+</tr>
+</tbody>
+</table>
+<p>The marginal distributions for $X$ and $Y$ can then be listed separately. The marginal distribution of $X$ is</p>
+<table>
+<thead>
+<tr>
+<th>$x$</th>
+<th>$P(X=x)$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$1$</td>
+<td>$.42$</td>
+</tr>
+<tr>
+<td>$2$</td>
+<td>$.58$</td>
+</tr>
+<tr>
+<td>,</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>and the marginal distribution of $Y$ is</p>
+<table>
+<thead>
+<tr>
+<th>$y$</th>
+<th>$P(Y=y)$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$1$</td>
+<td>$.54$</td>
+</tr>
+<tr>
+<td>$2$</td>
+<td>$.26$</td>
+</tr>
+<tr>
+<td>$3$</td>
+<td>$.20$</td>
+</tr>
+</tbody>
+</table>
+<p>.</p>
+<p>We can now define the concept of independence.</p>
+<p>[[independence_def]]{#independence_def label=&quot;independence_def&rdquo;}Two (discrete) random variables $X$ and $Y$ are independent if (and only if) $P(X=x,Y=y)=P(X=x)P(Y=y)$ for all possible $x$ and $y.$ That is, $X$ and $Y$ are independent if every one of the joint probabilities equals the product of its associated marginal probabilities.</p>
+<p>Are $X$ and $Y$ independent in the table above? To establish independence, we need to check all of the probabilities in Exercise 
+<a href="#joint_prob_ex">[joint_prob_ex]</a>{reference-type=&quot;ref&rdquo; reference=&quot;joint_prob_ex&rdquo;} to see if the relation $P(X=x,Y=y)=P(X=x)P(Y=y)$ holds for each one. If we find even one instance where this relation does not hold, then we can say that $X$ and $Y$ are <em>not independent</em> (or, more simply, we call them <strong>dependent).</strong> Let&rsquo;s find $P(X=1)P(Y=1)$ and compare to $P(X=1,Y=1).$ From the tables above we see that</p>
+<p>$$P(X=1)P(Y=1)=(0.42)(0.58)=0.2436$$</p>
+<p>and that</p>
+<p>$$P(X=1,Y=1)=0.24$$</p>
+<p>Since $0.2436\neq 0.24,$ we can conclude that $X$ and $Y$ are not independent (that is, they are dependent). We need not check the rest of the joint probabilities.</p>
+<p>Of course, in practice, we do not have tables of probabilities given to us. The contingency tables we see are formed from observed data on two variables. If we have a sufficient number of observations, we can estimate joint and marginal probabilities. Since the probabilities will be estimated, the requirement of Definition 
+<a href="#independence_def">[independence_def]</a>{reference-type=&quot;ref&rdquo; reference=&quot;independence_def&rdquo;}, that the joint probabilities be <em>exactly</em> equal to the product of the marginal probabilities, will be too strict. The question we will need to ask is not <em>if</em> there is a difference between the two probabilities, but rather <em>how large</em> the difference is. The basis of the <strong>chi-squared test of independence</strong> is how closely the estimated probabilities conform to the requirements of Definition 
+<a href="#independence_def">[independence_def]</a>{reference-type=&quot;ref&rdquo; reference=&quot;independence_def&rdquo;} when given a table of data from which these probabilities are estimated.</p>
+<p>Let us now define the test.</p>
+<ol>
+<li>
+<p>Specify the hypothesis:</p>
+<p>To set up the test, we assume we have two <em>nominal/categorical</em>     random variables $X$ and $Y.$ There are $r&gt;1$ categories in $X$ and     $c&gt;1$ categories in $Y.$ The general contingency table looks like     the following.</p>
+</li>
+</ol>
+<p>&mdash;&ndash; &mdash;&mdash;&mdash;- &mdash;&mdash;&mdash; &mdash;&mdash;&mdash;- &mdash;&mdash;&mdash;- &mdash;&mdash;&mdash;- &ndash;                    $Y$                                                 $y_{1}$    $y_{2}$   $\ldots$   $y_{c}$                     <br>
+$x_{1}$              $p_{12}$   $\ldots$   $p_{1c}$      $X$   $x_{2}$              $p_{21}$   $\ldots$   $%                                                             p_{2c}$             $\vdots$             $\ldots$   $\ldots$   $%                                                             \vdots$             $x_{r}$              $p_{r2}$   $\ldots$   $p_{rc}$      &mdash;&ndash; &mdash;&mdash;&mdash;- &mdash;&mdash;&mdash; &mdash;&mdash;&mdash;- &mdash;&mdash;&mdash;- &mdash;&mdash;&mdash;- &ndash;</p>
+<p>Here, $p_{ij}$ is the joint probability that the variable $X$ will take on the category $x_{i}$ and $Y$ will take on category $j.$ For example, $p_{21}$ is the probability that $X$ takes on category $x_{2}$ and $Y$ takes on category $y_{1},$ that is, $p_{21}=P(X=x_{2},Y=y_{1}).$ The null hypothesis is that $X$ and $Y$ are independent, which, according to Definition 
+<a href="#independence_def">[independence_def]</a>{reference-type=&quot;ref&rdquo; reference=&quot;independence_def&rdquo;}, means that the joint probabilities should equal the marginal probabilities. So, if the null hypothesis is true, then $% p_{21}=P(X=x_{2},Y=y_{1})=P(X=x_{2})P(Y=y_{1}),$ and similarly for all $% (x,y)$ combinations. So, we have the null hypothesis:</p>
+<p>$$\begin{aligned} H_{0} &amp;:&amp;p_{ij}=P(X=x_{i})P(Y=y_{j})\text{ for all }i,j \ H_{1} &amp;:&amp;\text{ }p_{ij}\neq P(X=x_{i})P(Y=y_{j})\text{ for some }i,j\end{aligned}$$</p>
+<p>For our purposes, it will be sufficient to write the following (equivalent, but less precise) statements:</p>
+<p>$$\begin{aligned} H_{0} &amp;:&amp;\text{ \TEXTsymbol{&lt;}Variable }X&gt;\text{ is independent of  \TEXTsymbol{&lt;} Variable }Y&gt; \ H_{1} &amp;:&amp;\text{ The two variables are dependent}\end{aligned}$$</p>
+<p>where we would substitute the name of the variables for the text in the brackets.</p>
+<ol>
+<li>
+<p>Calculate the <strong>test statistic</strong></p>
+<p>The test statistic is a similar to the goodness-of-fit statistic:</p>
+<p>$$\chi^{2}=\frac{\sum_{i=1}^{r}\sum_{j=1}^{c}(f_{ij}-e_{ij})^{2}}{e_{ij}}$$</p>
+</li>
+</ol>
+<p>where $f_{ij}$ is the &ldquo;observed frequency&rdquo; in cell $(i,j)$ and $% e_{ij}$ is the &ldquo;expected number of observations&rdquo; in cell $(i,j)$ under the null hypothesis$.$ The observed frequencies $f_{ij}$ are given by the data in the table. If the null hypothesis is true, the expected number of observations to fall in cell $(i,j)$ would be the total sample size, $n,$ times the marginal probabilities for category $x_{i}$ and category $y_{j}.$ To find the $e_{ij},$ note that we can estimate the marginal probability of category $x_{i}$ by defining $\widehat{p}_{i,x}=\dsum_{j=1}^{c}\frac{f_{ij}}{% n}$, that is, the total number of observations in row $i$ divided by the total number of observations in the data set. Similarly, we can estimate the marginal probability of category $\widehat{p}_{j,y}$ by taking $\widehat{p}% _{j,y}=\dsum_{i=1}^{r}\frac{f_{ij}}{n},$ that is, the total number of observations in column $j$ divided by the total number of observations in the data set. Then the expected number of observations in cell $(i,j)$ is $$e_{ij}=n\left( \widehat{p}_{i,x}\right) \left( \widehat{p}_{j,y}\right)$$</p>
+<p>Note the logic behind the test statistic is the same as for the goodness-of-fit test. What it essentially is doing is comparing the actual frequencies we have to what we should see if the null hypothesis were true. If $\chi^{2}$ is &ldquo;too large,&rdquo; this implies that the estimated distribution is far from the theorized distribution, and therefore we doubt that the theorized distribution is the one that gave rise to the data that we have.</p>
+<ol>
+<li>
+<p>Compute the <strong>p-value</strong> or <strong>rejection region</strong></p>
+<p>$$p\text{-value}=P(\chi _{(r-1)(c-1)}^{2}&gt;\chi^{2})$$</p>
+<p>The the degrees of freedom value here is found by taking     $(r-1)(c-1)$, or the number of rows minus one times the number of     columns minus one. Like the test for means, unless we have software,     we usually go with the rejection region approach. The the rejection     region (i.e., the &ldquo;critical values&rdquo;) for a test with the $\alpha$     level of significance would be computed as follows:</p>
+<p>$${\chi _{(r-1)(c-1)}^{2}:\chi _{(r-1)(c-1)}^{2}&gt;\chi _{(r-1)(c-1),\alpha     }^{2}}$$</p>
+</li>
+</ol>
+<p>As with the ANOVA $F$ test, there is only one &ldquo;guard&rdquo; for the rejection region, since the test is one-sided. This reflects the nature of the test statistic above. If $\chi^{2}$ is small, we are inclined to believe that the observed distribution could have been produced by the theorized distribution. If $\chi^{2}$ is large, we would conclude the opposite. So we only look for &ldquo;large&rdquo; values.</p>
+<ol>
+<li>Make a conclusion</li>
+</ol>
+<p>If the $p$-value $\leq \alpha$, we reject $H_{0}.$ If the $p$-value $% &gt;\alpha$, we fail to reject $H_{0}.$ Equivalently, if $\chi^{2}$ lies within the rejection region, we reject $H_{0}$. If $\chi^{2}$ lies outside the rejection region, we fail to reject $H_{0}$.</p>
+<p>This test is known as an <strong>asymptotic test</strong> because it is only valid if the sample size is &ldquo;large enough.&rdquo; and the $e_{i}$ are all &ldquo;large enough.&rdquo; There is some debate about how &ldquo;large&rdquo; these have to be in practice for the test to work properly, but the general recommendation is that all of the $e_{ij}$ must be above $5$ for small tables, or for large tables, $80%$ are above $5.$ If this is not the case, we combine some categories.</p>
+<p>All of the above makes this test look a lot more complicated than it is. Let&rsquo;s work an example putting all of this together.</p>
+<p>In the $2012$ General Social Survey, respondents were asked the question &ldquo;In general, can people be trusted?&rdquo; A researcher is interested in seeing if whether someone has been divorced influences their response to this question. The data are shown in the table below. Can we conclude at the $% \alpha =0.01$ level that being divorced affects one&rsquo;s ability to trust? To help organize your answer, fill out the &ldquo;Expected&rdquo; table.</p>
+<p>Refer to Figure 
+<a href="#two_inc_gen">[two_inc_gen]</a>{reference-type=&quot;ref&rdquo; reference=&quot;two_inc_gen&rdquo;}, the distribution of agreement with the question &ldquo;Both men and women should contribute to household income. The data for the total sample size of $1,267$ is shown below. Can we conclude at the $% \alpha =0.05$ level that gender and agreement on the two-income question are dependent? To help organize your answer, fill out the &ldquo;Expected&rdquo; table.</p>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/bana3363/8-matched-pairs/" rel="next">Matched Pairs</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/bana3363/15-intro-to-regression/" rel="prev">Intro to Regression</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jul 28, 2020</p>
+
+          
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/BANA3363/14%20-%20Chi%20Squared%20Test%20of%20Independence.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+          
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1138 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Kyle Jones">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Chi Squared Goodness-of-Fit Test Beginning with our discussion of ANOVA, we have moved away from making inferences about single parameters such as $\mu$ and $p$ and have instead been examining a general or overall model.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Kyle Jones">
+  <meta property="og:url" content="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">
+  <meta property="og:title" content="Chi Squared Goodness-of-Fit Test | Kyle Jones">
+  <meta property="og:description" content="Chi Squared Goodness-of-Fit Test Beginning with our discussion of ANOVA, we have moved away from making inferences about single parameters such as $\mu$ and $p$ and have instead been examining a general or overall model."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-07-28T15:19:27&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-07-28T15:19:27&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Chi Squared Goodness-of-Fit Test | Kyle Jones</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/">Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/1-basic-statistics-concepts/">Descriptive Statistics</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/1-basic-statistics-concepts/">Basic Statistics Concepts</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/2-the-normal-distribution/">The Normal Distribution</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/2-types-of-statistical-analysis/">Types of Statistical Analysis</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing and Inference</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing for a Proportion</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/7-interval-for-differences-in-means-independent-samples/">Interval for Differences in Means--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-test-for-differences-in-proportions-independent-samples/">Hypothesis Test for a Difference in Proportion (Independent Samples)</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-intervals-for-differences-in-proportions-independent-samples/">Intervals for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/5-ci-for-mean/">Confidence Interval for the Mean</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/5-1-hypothesis-testing-basics/">Hypothesis Testing for a Population Mean</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-confidence-interval-for-matched-pairs/">Confidence Interval for Matched Pairs</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-1-test-for-diff-in-means-proportions/">Test for Diff in Means, Proportions</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-1-test-for-differences-in-proportions-independent-samples/">Test for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-2-test-for-diff-in-means-independent-samples/">Test for Diff in Means Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-anova-basics/">ANOVA Basics</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/12-anova-mc/">ANOVA - Bonferroni Method of Multiple Comparisons</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Goodness-of-Fit Test</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-matched-pairs/">Matched Pairs</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/14-chi-squared-test-of-independence/">Chi Squared Test of Independence</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/15-intro-to-regression/">Regression</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/15-intro-to-regression/">Intro to Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/16-simple-linear-regression/">Simple Linear Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/17-evaluating-linear-regression/">Evaluating Linear Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/18-multiple-linear-regression/">Multiple Linear Regression</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#chi-squared-goodness-of-fit-test">Chi Squared Goodness-of-Fit Test</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Chi Squared Goodness-of-Fit Test</h1>
+
+          <div class="article-style">
+            <h2 id="chi-squared-goodness-of-fit-test">Chi Squared Goodness-of-Fit Test</h2>
+<p>Beginning with our discussion of ANOVA, we have moved away from making inferences about single parameters such as $\mu$ and $p$ and have instead been examining a general or <strong>overall model.</strong> The ANOVA $F$ test is testing whether the means of $g&gt;1$ groups $\mu_{1},\ldots ,\mu_{g}$ are identical against the alternative hypothesis that at least one of the means is different from the rest. The ANOVA $F$ test is used to examine numerical data divided into groups.</p>
+<p>To examine nominal or categorical data (i.e., data that we cannot directly summarize using mathematical measures such as the sample mean and standard deviation), we could examine a graph. The primary tools used to graph nominal or categorical variables are <strong>bar charts</strong> and <strong>pie charts.</strong> For example, the 2012 General Social Survey (GSS) asked respondents to what degree they agreed with the statement &ldquo;Both men and women contribute to household income.&rdquo; The results are summarized below in Figure 
+<a href="#husweef">[husweef]</a>{reference-type=&quot;ref&rdquo; reference=&quot;husweef&rdquo;}. We can easily see that most people agree or strongly agree with the statement.</p>
+<p>What if we wanted to determine whether attitudes on this issue have changed over time, say, since 1994? One way we could analyze this is to make side-by-side bar charts and examine the patterns for the two years. If the patterns differed, we would have evidence of a shift. However, the problem with the graphical approach is that it is based solely on individual judgement. What one person might think is a pattern shift worth investigating another person might dismiss as unimportant. Therefore, we need another tool to remove some (not all) of the subjectivity. A hypothesis test is one such tool.</p>
+<p>Before we continue, we need to discuss the concept of a multinomial experiment.</p>
+<p>A <strong>multinomial experiment</strong> is one that is conducted such that i). the experiment consists of a fixed number of &ldquo;trials,&rdquo; $n$; ii). the outcome of each trial can be classified into one and only one of $k&gt;2$ categories; iii). the probability $p_{i}$ of an outcome falling into category $i$ is constant for each trial; iv). the sum of all the probabilities is one, that is, $\dsum p_{i}=1;$ v). each trial is independent of the other trials.</p>
+<p>A binomial experiment is one you are familiar with. There are $n$ trials, the outcome of each trial can be classified as a &ldquo;success&rdquo; or &ldquo;failure,&rdquo; and the probability of success remains the same on each trial. With a binomial experiment, the probability of success is $p$, which means that the probability of failure is $1-p$ because, by design, there are only two outcomes, and one of them has to happen. I could simply rename the probability of success as $p_{1}$ and the probability of failure $p_{2}=1-p_{1}.$ Then $p_{1}+p_{2}=p_{1}+(1-p_{1})=1.$ In a binomial experiment, we further assume that each of the $n$ trials is independent (see Handout 1). Therefore, we can view the binomial experiment as a special case of the multinomial experiment when $k=2.$ If we let the random variable $X$ be the number of successes out of $n$ trials, we say that &ldquo;$X$ has a binomial distribution with parameters $n$ and $p.&ldquo;$</p>
+<p>A multinomial experiment simply adds more categories. Instead of only two (&ldquo;success&rdquo; and &ldquo;failure&rdquo;), we have three, four, five, six, or, in general, $k$ different categories. To see the idea, suppose the experiment is to ask a random sample of $n$ Americans to report their job classification as one of the following: ${$working full time, working part time, keeping house, in school, other$}.$ Then, there are five probabilities $p_{1},p_{2},p_{3},p_{4}$, and $p_{5}$, one for every possible category. The probability that someone answers &ldquo;working full time&rdquo; is $p_{1}$, the probability that someone answers &ldquo;working part time&rdquo; is $p_{2}$, and so on. By including the &ldquo;other&rdquo; category, we ensure that each person we ask can be classified into exactly one of the five categories. Therefore, $p_{1}+p_{2}+p_{3}+p_{4}+p_{5}=1.$ Just like with the binomial model, however, we can say that $p_{5}=1-(p_{1}+p_{2}+p_{3}+p_{4})$, so if we know four of the probabilities, we can get the fifth by subtraction. This fact will play a part in understanding the test to be presented.</p>
+<p>The generalization of the binomial distribution to $k&gt;2$ categories is called the <strong>multinomial distribution</strong>, which is defined now.</p>
+<p>If $X_{1}$ is the number of outcomes classified in Category $1$, $X_{2}$ is the number of outcomes classified in Category $2,\ldots , and X_{k}$ is the number of outcomes classified in Category $k$, then</p>
+<p>$$P(X_{1}=x_{1},X_{2}=x_{2},\ldots ,X_{k}=x_{k})=\frac{n!}{x_{1}!x_{2}!\ldots x_{k}!}p_{1}^{x_{1}}p_{2}^{x_{2}}\cdots p_{k}^{x_{k}}$$</p>
+<p>Here is a simple example.</p>
+<p>In a certain town, $40%$ of the eligible voters prefer candidate A, $10%$ prefer candidate B, and the remaining $50%$ have no preference. You randomly sample $10$ eligible voters. What is the probability that $4$ will prefer candidate A, $1$ will prefer candidate B, and the remaining $5$ will have no preference?</p>
+<p>According to the 
+<a href="http://www.chron.com/opinion/outlook/article/Why-juries-don-t-reflect-the-demographics-of-3761368.php" target="_blank" rel="noopener">Houston Chronicle,</a> the race/ethnicity distribution in 2010 for Harris county is as shown in Figure 
+<a href="#race">[race]</a>{reference-type=&quot;ref&rdquo; reference=&quot;race&rdquo;}.</p>
+<p>Suppose that a jury of twelve members is chosen from the adult population in Harris County in such a way that each resident has an equal probability of being selected independently of every other resident. What is the probability of obtaining a jury with $5$ people who are non-hispanic white, $2$ people who are Hispanic, $3$ people who are African American, $1$ person who is Asian, and $1$ person who belongs to the &ldquo;other&rdquo; category?</p>
+<p>The connection between the multinomial distribution and Figure 
+<a href="#husweef">[husweef]</a>{reference-type=&quot;ref&rdquo; reference=&quot;husweef&rdquo;} is that we can imagine that, in 2012, there were &ldquo;true&quot;proportions $p_{1}$, $p_{2},\ldots ,p_{5}$ corresponding the probability that an adult $18$ and over would respond with one of the categories shown. Therefore, we can view Figure 
+<a href="#husweef">[husweef]</a>{reference-type=&quot;ref&rdquo; reference=&quot;husweef&rdquo;} as the outcome of a (large) multinomial trial where the bar heights are the number of people who fell into each category.</p>
+<p>In practice, we don&rsquo;t know these true values, but we can estimate them using data. The idea is exactly the same as estimating $p$ using the sample proportion, except now we have $k$ different sample proportions. Specifically, we can say that $\widehat{p}<em>{1}$ is the number of people who &ldquo;strongly agree,&rdquo; call it $n</em>{1}$, out of the total number of people surveyed, $n.$ That is $\widehat{p}<em>{1}=\frac{n</em>{1}}{n}$. Similarly, $\widehat{p}<em>{2}$ is the number of people who &ldquo;Agree,&rdquo; call it $n</em>{2}$, out of the total number of people surveyed. That is, $\widehat{p}<em>{2}=\frac{n</em>{2}% }{n}.$ In this data set, there were $1,267$ observations, and $249$ people &ldquo;strongly agreed.&rdquo; Therefore, $\widehat{p}_{1}=\frac{249}{1267}=0.197.$ The sample proportions are shown in the following table.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Sample Proportion</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strongly Agree</td>
+<td>$0.197$</td>
+</tr>
+<tr>
+<td>Agree</td>
+<td>$0.452$</td>
+</tr>
+<tr>
+<td>Neutral</td>
+<td>$0.242$</td>
+</tr>
+<tr>
+<td>Disagree</td>
+<td>$0.096$</td>
+</tr>
+<tr>
+<td>Strongly Disagree</td>
+<td>$0.013$</td>
+</tr>
+</tbody>
+</table>
+<p>These sample proportions form an <em>estimated</em> multinomial distribution. It is estimated because it was formed using data, not the true parameters. The true distribution could be summarized in a table. The true probabilities are, of course, unknown.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Pr(Category)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strongly Agree</td>
+<td>$p_{1}$</td>
+</tr>
+<tr>
+<td>Agree</td>
+<td>$p_{2}$</td>
+</tr>
+<tr>
+<td>Neutral</td>
+<td>$p_{3}$</td>
+</tr>
+<tr>
+<td>Disagree</td>
+<td>$p_{4}$</td>
+</tr>
+<tr>
+<td>Strongly Disagree</td>
+<td>$p_{5}$</td>
+</tr>
+</tbody>
+</table>
+<p>We can use the sample proportions that we have to determine the &ldquo;goodness of fit&rdquo; between a theorized distribution and an observed distribution. If the observed distribution is &ldquo;too different&rdquo; from the theorized distribution, the &ldquo;fit&rdquo; will be poor and we would have objective evidence to claim that the two distributions are different. The mechanism by which this works is the subject of the <strong>chi-squared goodness-of-fit test.</strong> It is a hypothesis test just like any other, but, as always, the specifics differ. Here is a rundown of the test.</p>
+<ol>
+<li>
+<p>Specify the hypothesis:</p>
+<p>Now, instead of one or two proportions we have several. The null     hypothesis specifies that the different $p^{\prime }s$ are equal to     specified values, which we will denote as $p_{0i}.$ Note that they     *do not* have to be equal to one another.</p>
+<p>$$\begin{aligned}     H_{0} &amp;:&amp;p_{1}=p_{01},p_{2}=p_{02},\ldots ,p_{k}=p_{0k} \     H_{1} &amp;:&amp;\text{ at least one }p\text{ is not equal to its specified value}\end{aligned}$$</p>
+</li>
+<li>
+<p>Calculate the <strong>test statistic</strong></p>
+<p>The test statistic is a bit different:</p>
+<p>$$\chi ^{2}=\frac{\dsum (f_{i}-e_{i})^{2}}{e_{i}}$$</p>
+</li>
+</ol>
+<p>where $f_{i}$ is the &ldquo;observed frequency&rdquo; in category $i$ and $e_{i}$ is the &ldquo;expected frequency&rdquo; in category $i.$ The observed frequencies are given by the data. To find the $e_{i}$, note that if we have a total of $n$ observations, and there is probability $p_{i0}$ that an observation falls into category $i$ under the null hypothesis, it is natural to say that the expected number of observations falling into category $i$ is</p>
+<p>$$e_{i}=np_{i0}.$$</p>
+<p>Note the logic behind the test statistic. What it essentially is doing is comparing the actual frequencies we have to what we should see if the null hypothesis were true. If $\chi ^{2}$ is &ldquo;too large,&rdquo; this implies that the estimated distribution is far from the theorized distribution, and therefore we doubt that the theorized distribution is the one that gave rise to the data that we have.</p>
+<p>The test statistic has what is called a <strong>&ldquo;chi-squared distribution.&quot;</strong> This is a new distribution to us.</p>
+<p>A <strong>chi-squared random variable</strong> with $k$ degrees of freedom, denoted $\chi_{k}^{2}$, arises as the sum of $k$ independent squared standard normal random variables, $Z_{i}^{2}$.</p>
+<p>The distribution takes on various shapes according to $k$ as you can see in Figure 
+<a href="#chisq">[chisq]</a>{reference-type=&quot;ref&rdquo; reference=&quot;chisq&rdquo;}. Importantly, it always ranges from $0$ to $\infty .$</p>
+<ol>
+<li>Compute the <strong>p-value</strong> or <strong>rejection region</strong></li>
+</ol>
+<p>$$pval=P(\chi_{k-1}^{2}&gt;\chi ^{2})$$</p>
+<p>Like the test for means, unless we have software, we usually go with     the rejection region approach. The the rejection region (i.e., the &ldquo;critical values&rdquo;) for a test with the $\alpha$ level of     significance would be computed as follows:</p>
+<p>$${\chi_{k-1}^{2}:\chi_{k-1}^{2}&gt;\chi_{k-1,\alpha }^{2}}$$</p>
+<p>The reason we use $k-1$ rather than $k$ is that there is a restriction on the $p_{i}:$ they must sum to $1.$ So, if we know $k-1$ of the probabilities, we can get the $k^{th}$ one.</p>
+<p>As with the ANOVA $F$ test, there is only one &ldquo;guard&rdquo; for the rejection region, since the test is one-sided. This reflects the nature of the test statistic above. If $\chi ^{2}$ is small, we are inclined to believe that the observed distribution could have been produced by the theorized distribution. If $\chi ^{2}$ is large, we would conclude the opposite. So we only look for &ldquo;large&rdquo; values.</p>
+<ol>
+<li>Make a conclusion</li>
+</ol>
+<p>If the $p$-value $\leq \alpha $, we reject $H_{0}.$ If the $p$-value $&gt;\alpha $, we fail to reject $H_{0}.$ Equivalently, if $\chi ^{2}$ lies within the rejection region, we reject $H_{0}$. If $\chi ^{2}$ lies outside the rejection region, we fail to reject $H_{0}.$</p>
+<p>This test is known as an <strong>asymptotic test</strong> because it is only valid if the sample size is &ldquo;large enough.&rdquo; and the $e_{i}$ are all &ldquo;large enough.&rdquo; There is some debate about how &ldquo;large&rdquo; these have to be in practice for the test to work properly, but one simple rule that has been shown to work is to require that $n\geq$ $10,\frac{n^{2}}{c}\geq 10$, and all $e_{i}\geq 0.25$. Usually the last requirement will be the problem. An easy fix is to simply combine categories.</p>
+<p>Let&rsquo;s work an example putting all of this together.</p>
+<p>In $1994$, the distribution of responses to the statement &ldquo;Both husband and wife should contribute to household income&rdquo; was as follows:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Pr(Category)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strongly Agree</td>
+<td>$0.197$</td>
+</tr>
+<tr>
+<td>Agree</td>
+<td>$0.379$</td>
+</tr>
+<tr>
+<td>Neutral</td>
+<td>$0.296$</td>
+</tr>
+<tr>
+<td>Disagree</td>
+<td>$0.115$</td>
+</tr>
+<tr>
+<td>Strongly Disagree</td>
+<td>$0.013$</td>
+</tr>
+</tbody>
+</table>
+<p>$1,267$* people were surveyed in* $2012$* and the numbers of responses in each category are shown below. Do we have evidence at the* $\alpha =0.05$* level of significance that opinion on this issue has changed since* $1994$*?*</p>
+<p>According to the 
+<a href="http://www.chron.com/opinion/outlook/article/Why-juries-don-t-reflect-the-demographics-of-3761368.php" target="_blank" rel="noopener">Houston Chronicle,</a> the race/ethnicity distribution in 2010 for Harris county is as shown in Figure 
+<a href="#race">[race]</a>{reference-type=&quot;ref&rdquo; reference=&quot;race&rdquo;}. From January through May of 2013, a total of $63,207$ people were called for jury service. The distribution by race is as shown in Figure 
+<a href="#jury_call">[jury_call]</a>{reference-type=&quot;ref&rdquo; reference=&quot;jury_call&rdquo;}.</p>
+<p>Do we have evidence at the $\alpha =0.10$ level that juries in Harris county do not reflect the true demographics of the county?</p>
+<p>According to the 
+<a href="http://www.statisticbrain.com/eye-color-distribution-percentages/" target="_blank" rel="noopener">American Academy of Ophthalmology</a> , the distribution of eye color in the United States is as follows:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Color</strong></th>
+<th><strong>Percent of U. S. Pop</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blue /Grey Irises</td>
+<td>$32%$</td>
+</tr>
+<tr>
+<td>Blue / Grey / Green Irises with Brown / Yellow Specks</td>
+<td>$15$</td>
+</tr>
+<tr>
+<td>Green / Light Brown Irises with Minimal Specks</td>
+<td>$12$</td>
+</tr>
+<tr>
+<td>Brown Irises with Specks</td>
+<td>$16$</td>
+</tr>
+<tr>
+<td>Dark Brown Irises</td>
+<td>$25$</td>
+</tr>
+</tbody>
+</table>
+<p>Record the number of people in our class who fall into each category in the table below. Do we have evidence at the $\alpha =0.05$ level to conclude that our class has the same distribution of eye color as the U. S. population? Note: You should verify that the assumptions are met first.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Color</strong></th>
+<th><strong>Percent of U. S. Pop</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blue /Grey Irises</td>
+<td>$32%$</td>
+</tr>
+<tr>
+<td>Blue / Grey / Green Irises with Brown / Yellow Specks</td>
+<td>$15$</td>
+</tr>
+<tr>
+<td>Green / Light Brown Irises with Minimal Specks</td>
+<td>$12$</td>
+</tr>
+<tr>
+<td>Brown Irises with Specks</td>
+<td>$16$</td>
+</tr>
+<tr>
+<td>Dark Brown Irises</td>
+<td>$25$</td>
+</tr>
+</tbody>
+</table>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/bana3363/12-anova-mc/" rel="next">ANOVA - Bonferroni Method of Multiple Comparisons</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/bana3363/8-matched-pairs/" rel="prev">Matched Pairs</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jul 28, 2020</p>
+
+          
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/BANA3363/13%20-%20Chi%20Squared%20Goodness-of-Fit%20Test.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+          
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

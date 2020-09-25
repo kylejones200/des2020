@@ -1,0 +1,1008 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Kyle Jones">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Basic Concepts Because the values and associated probabilities for a continuous random variable cannot be listed, we use a probability density function (pdf) to describe the &ldquo;relative likelihoods&rdquo; of various values of the function.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/courses/bana3363/2-the-normal-distribution/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/courses/bana3363/2-the-normal-distribution/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Kyle Jones">
+  <meta property="og:url" content="/courses/bana3363/2-the-normal-distribution/">
+  <meta property="og:title" content="The Normal Distribution | Kyle Jones">
+  <meta property="og:description" content="Basic Concepts Because the values and associated probabilities for a continuous random variable cannot be listed, we use a probability density function (pdf) to describe the &ldquo;relative likelihoods&rdquo; of various values of the function."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2019-05-05T00:00:00&#43;01:00">
+    
+    <meta property="article:modified_time" content="2019-05-05T00:00:00&#43;01:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>The Normal Distribution | Kyle Jones</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Kyle Jones</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/">Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/1-basic-statistics-concepts/">Descriptive Statistics</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/1-basic-statistics-concepts/">Basic Statistics Concepts</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/bana3363/2-the-normal-distribution/">The Normal Distribution</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/2-types-of-statistical-analysis/">Types of Statistical Analysis</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing and Inference</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/6-hypothesis-testing-for-a-proportion/">Hypothesis Testing for a Proportion</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/7-interval-for-differences-in-means-independent-samples/">Interval for Differences in Means--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-test-for-differences-in-proportions-independent-samples/">Hypothesis Test for a Difference in Proportion (Independent Samples)</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-intervals-for-differences-in-proportions-independent-samples/">Intervals for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/5-ci-for-mean/">Confidence Interval for the Mean</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/5-1-hypothesis-testing-basics/">Hypothesis Testing for a Population Mean</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-confidence-interval-for-matched-pairs/">Confidence Interval for Matched Pairs</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/9-1-test-for-diff-in-means-proportions/">Test for Diff in Means, Proportions</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-1-test-for-differences-in-proportions-independent-samples/">Test for Differences in Proportions--Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/10-2-test-for-diff-in-means-independent-samples/">Test for Diff in Means Independent Samples</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/11-anova-basics/">ANOVA Basics</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/12-anova-mc/">ANOVA - Bonferroni Method of Multiple Comparisons</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Goodness-of-Fit Test</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/8-matched-pairs/">Matched Pairs</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/14-chi-squared-test-of-independence/">Chi Squared Test of Independence</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/bana3363/15-intro-to-regression/">Regression</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/bana3363/15-intro-to-regression/">Intro to Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/16-simple-linear-regression/">Simple Linear Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/17-evaluating-linear-regression/">Evaluating Linear Regression</a>
+      </li>
+      
+      <li >
+        <a href="/courses/bana3363/18-multiple-linear-regression/">Multiple Linear Regression</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic-concepts">Basic Concepts</a></li>
+    <li><a href="#finding-normal-probabilities">Finding Normal Probabilities</a></li>
+    <li><a href="#finding-a-normal-interval-with-a-specified-probability">Finding a Normal Interval with a Specified Probability</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>The Normal Distribution</h1>
+
+          <div class="article-style">
+            <h2 id="basic-concepts">Basic Concepts</h2>
+<p>Because the values and associated probabilities for a continuous random variable cannot be listed, we use a <strong>probability density function (pdf)</strong> to describe the &ldquo;relative likelihoods&rdquo; of various values of the function. For a pdf to be valid, 1). it must lie completely above the horizontal axis, and 2). the total area under the curve must equal $1$ exactly.</p>
+<p>We can plug in values to the pdf to graph the distribution of a continuous random variable and we can use calculus to find the mean and variance of the random variable. For any continuous random variable $X$, the probability that $X$ lies between two values, say $3$ and $8$, is denoted $P(3\leq X\leq 8)$ and would be found by taking $\int_{3}^{8}f(x)dx$, where $f(x)$ is the probability density function. In simpler terms, probabilities are found by finding the area under the curve (the integral) between two specified values and $\int$ is the integral sign from calculus.</p>
+<p>In this class, we won&rsquo;t worry about finding the mean and variance of a continuous distribution, nor will we find probabilities directly. For the most part, we will restrict our attention to a few distributions for which we can use software or tables to find probabilities.</p>
+<p>For continuous distributions, the probability that the random variable $X$ equals any specific value $x$ is always $0,$ so $P(X\leq x)=P(X&lt;x).$ The same goes if you reverse the inequality.</p>
+<p>The <strong>normal distribution</strong> is a continuous probability distribution that is completely defined by its mean, $\mu ,$ and standard deviation, $% \sigma .$ If a random variable $Y$ has a normal distribution with a specified mean $\mu$ and standard deviation $\sigma$, we write this as $Y% \symbol{126}N(\mu ,\sigma )$, where the $\symbol{126}$ symbol stands for &ldquo;is distributed as.&rdquo; Also, $Y$ has the following pdf:</p>
+<p>$$f(y|\mu ,\sigma )=\frac{1}{\sqrt{2\pi }\sigma }e^{\frac{-(y-\mu )^{2}}{% 2\sigma ^{2}}},\text{ }-\infty &lt;\mu &lt;\infty ;\text{ }\sigma &gt;0 \label{norm_pdf}$$</p>
+<p>The possible values of $y$ range from $-\infty$ to $\infty$, but most of &ldquo;the action&rdquo; of the curve takes place within a narrow range. The graph of a normal distribution is, in general, <strong>symmetric</strong> around $\mu$ and <strong>bell shaped</strong>.</p>
+<p>Figure 
+<a href="#normcrve">[normcrve]</a>{reference-type=&quot;ref&rdquo; reference=&quot;normcrve&rdquo;} examples of normal distributions. In general, the effect of changing $\mu$ is to move the graph to the left or right on the horizontal axis, while the effect of changing $\sigma$ is to make the graph narrower (decreasing $\sigma$) or wider (increasing $\sigma$).</p>
+<p><strong>(<strong>$68-95-99.7$</strong> Rule)</strong>. If $Y$ has a normal distribution with mean $\mu$ and standard deviation $\sigma$, then the following are true:</p>
+<ol>
+<li>
+<p>About $68%$ of the normal curve lies within $1$ standard deviation     of the mean. That is,     $P(\mu -\sigma \leq Y\leq \mu +\sigma )\approx 0.68$</p>
+</li>
+<li>
+<p>About $95%$ of the normal curve lies within $2$ standard deviations     of the mean. That is,     $P(\mu -2\sigma \leq Y\leq \mu +2\sigma )\approx 0.95$</p>
+</li>
+<li>
+<p>About $99.7%$ of the normal curve lies within $3$ standard     deviation of the mean. That is,     $P(\mu -3\sigma \leq Y\leq \mu +3\sigma )\approx 0.997$</p>
+</li>
+</ol>
+<p>A special type of normal distribution where $\mu =0$ and $\sigma =1$ is called <strong>the standard normal distribution</strong> or &ldquo;$Z$ distribution,&rdquo; after the letter that we use to denote a random variable with a standard normal distribution.</p>
+<p>This is the distribution that you had a table for in BANA 2372.</p>
+<p>The standard normal distribution is so important because of the following fact.</p>
+<p>($Z$**-Score Theorem**). If $Y$ has a normal distribution with mean $\mu$ and standard deviation $\sigma$, then</p>
+<p>$$Z=\frac{Y-\mu }{\sigma }$$</p>
+<p>has a standard normal distribution</p>
+<p>For any specific value of $y$ (note the lowercase letter), we can calculate the $z$ (again, not the lowercase) score as</p>
+<p>$$z=\frac{y-\mu }{\sigma }$$</p>
+<p>So, you can &ldquo;transform&rdquo; any normal random variable to a standard normal simply by subtracting the mean and dividing by the standard deviation.</p>
+<p>Another important implication of equation $(\ref{z_score})$ above is that you can think of a $Z$ score as the number of standard deviations that an observation is away from its mean**.** This idea comes into play when we look at finding confidence intervals.</p>
+<p>The number of hits per day to a small company&rsquo;s website have a normal distribution with mean $\mu =90,000$ and standard deviation $\sigma = 5,000.$ Sketch this distribution and indicate the intervals within with about $68%$, $95%$, and $99.7%$ of the hits are expected to lie.</p>
+<h2 id="finding-normal-probabilities">Finding Normal Probabilities</h2>
+<p>Essentially, there are three types of questions we can ask about a normal random variable, say, $Y$. For each of these we can &ldquo;turn a question about $% Y$ into a question about $Z&quot;$ using the Z-Score Theorem. The idea is to transform each side of the inequality into a $z$-score using the basic algebra concept of &ldquo;whatever you do to one side you do to the other,&rdquo; as shown below:</p>
+<ol>
+<li>
+<p>What is the probability that $Y$ is less than or equal to some     specific number $y?$     Answer:$\ P(Y\leq y)=P\left( \frac{Y-\mu }{\sigma }\leq      \frac{y-\mu }{\sigma }\right) =P(Z\leq z)$</p>
+</li>
+<li>
+<p>What is the probability that $Y$ is greater than or equal to some     value $y?$ Answer:     $P(Y\geq y)=1-P(Y&lt;y)=1-P\left( \frac{Y-\mu }{\sigma }&lt;%     \frac{y-\mu }{\sigma }\right) =1-P(Z&lt;z)$</p>
+</li>
+<li>
+<p>What is the probability that $Y$ is between $y_{1}$ and $y_{2}?$     Answer: $P(y_{1}\leq Y\leq y_{2})=P(Y\leq y_{2})-P(Y\leq y_{1})$</p>
+</li>
+</ol>
+<p>$=P\left( \frac{Y-\mu }{\sigma }\leq \frac{y_{2}-\mu }{\sigma }\right)     -P\left( \frac{Y-\mu }{\sigma }\leq \frac{y_{1}-\mu }{\sigma }\right)     =P(Z\leq z_{2})-P(Z\leq z_{1})$</p>
+<p>You can see how three works by drawing a picture.</p>
+<p>The number of hits per day to a small company&rsquo;s website have a normal distribution with mean $\mu = 90,000$ and standard deviation $\sigma = 5,000.$</p>
+<p>(a). Find the z-score associated with $84,000$ hits.</p>
+<p>b). Find the probability that the website will have fewer than $84,000$ hits on any given day.</p>
+<p>c). Find the probability that the website will have more than $84,000$ hits on any given day.</p>
+<p>The number of hits per day to a small company&rsquo;s website have a normal distribution with mean $\mu =90,000$ and standard deviation $\sigma =$ $% 5,000.$ The company believes that customers will be dissatisfied with the site&rsquo;s performance if daily hits get above $99,000$, since that might make the site less responsive. What is the probability that customers will be dissatisfied on any given day due to this issue?</p>
+<p>The number of hits per day to a small company&rsquo;s website have a normal distribution with mean $\mu =90,000$ and standard deviation $\sigma =$ $% 5,000.$ The IT department has concluded that if the site receives between $% 89,000$ and $97,000$ hits per day, service should be considered &ldquo;acceptable&rdquo; for that day. What is the probability that on any given day, service is considered acceptable?</p>
+<p>c). Adult systolic blood pressure (the top number) has a normal distribution with a mean of $120$ and a standard deviation of $20$. What percentage of adults have blood pressures greater than $140?$</p>
+<h2 id="finding-a-normal-interval-with-a-specified-probability">Finding a Normal Interval with a Specified Probability</h2>
+<p>Suppose now that I want to find two values, call them $z_{L}$ and $z_{U}$, on the standard normal curve so that $P(z_{L}\leq Z\leq z_{U})=1-\alpha .$ To make things easier, we&rsquo;ll take advantage of the symmetry of the normal distribution and say that $% -z_{L}=z_{U},$ that is, the two numbers are just negatives of one another. The area we want is the area between the negative and positive value of $% z_{U}.$</p>
+<p>For example, suppose we want to find two values $z_{L}$ and $z_{U}$ so that $% P(z_{L}\leq Z\leq z_{U})=0.90.$ So $1-\alpha =0.90,$ and therefore $\alpha =0.10.$ Look at Figure 
+<a href="#shade_norm">[shade_norm]</a>{reference-type=&quot;ref&rdquo; reference=&quot;shade_norm&rdquo;}. If we want the area *between* $z_{L}$ and $z_{U}$ to be $0.90$, that means that the area *outside* of this interval must be $0.10$. Furthermore, since we specify that $% -z_{L}=z_{U}$, then the symmetry of the distribution implies that $% P(Z&gt;z_{U})=P(Z&lt;z_{L})$, i.e., the area to the right of $z_{U}$ is the same as the area to the left of $z_{L}.$ That combined area must be $0.10,$ so that must mean $P(Z&gt;z_{U})=P(Z&lt;z_{L})=0.05$ (i.e., we have $0.05$ on either end, since $0.05+0.05=0.10).$ Therefore, we can find these two values of $z$ simply by finding $z_{U}=z_{0.05}$ and then taking the negative of this amount to find $z_{L}.$</p>
+<p>To answer this question, we can use the fact that we can solve the $z$-score formula for $y$ to &ldquo;recover&rdquo; an original observation if we know a specific value of $z:$</p>
+<p>$$z=\frac{y-\mu }{\sigma }\Leftrightarrow y=\sigma z+\mu$$</p>
+<p>For example, if $z=2.5$, $\mu =3$, and $\sigma =10$, then</p>
+<p>$$\begin{aligned} y &amp;=&amp;\sigma z+\mu \ &amp;=&amp;(10)\ast 2.5+3=28\end{aligned}$$</p>
+<p>Let&rsquo;s practice this concept first.</p>
+<p>Find the original observation $(y)$ from the following $z$-scores, listed along with the mean $\mu$ and standard deviation $\sigma$.</p>
+<p>a). $z=1.23,\mu =12,\sigma =3$</p>
+<p>b). $z=-0.65,\mu =30,\sigma =11$</p>
+<p>c). $z=2.33,\mu =9,\sigma =15$</p>
+<p>The value $z_{\alpha }$ is the value of the standard normal curve that has area (i.e., probability) $\alpha$ **to its right**. That is, $% P(Z&gt;z_{\alpha })=\alpha$ (and therefore, $P(Z\leq z_{\alpha })=1-\alpha )$.</p>
+<p>For example, $z_{0.30\text{ }}$is the value of $z$ such that $% P(Z&gt;z_{0.30})=0.30.$ This is just notation that we will have to get used to. These values of $z$ can be found two ways. One way is to go inside the $z$ table and find $(1-\alpha )$, and then read outward to the associated row and column. An easier way is to use the **quantile function** that is found in statistics software. For example, in Excel, the function is <code> NORMINV</code>. You supply $(1-\alpha )$ and it gives you $z_{\alpha }.$ We will focus on using tables to find these values.</p>
+<p>Let&rsquo;s make sure we have this down.</p>
+<p>Find the values of $z_{\alpha }$ indicated below.</p>
+<p>a). $z_{0.10}$</p>
+<p>b). $z_{0.025}$</p>
+<p>c). $z_{0.98}$</p>
+<p>d). $z_{0.80}$</p>
+<p>e). $z_{0.1271}$</p>
+<p>f). $z_{0.9838}$</p>
+<p>In this case of $P(z_{L}\leq Z\leq z_{U})=0.90$, $z_{0.05}$ can be found (using software or a table) to be $1.645,$ so $z_{L}=-1.645,$ and we get the important result that $P(-1.645\leq Z\leq 1.645)=0.90$.</p>
+<p>We can state the general result:</p>
+<p>(math fact) $P(-z_{\alpha /2}\leq Z\leq z_{\alpha /2})=1-\alpha .$</p>
+<p>Once we find the value of $z$ we can &ldquo;recover&rdquo; the original observations by setting $y_{L}=-z_{\alpha /2}\sigma +\mu$ and $y_{L}=z_{\alpha /2}\sigma +\mu$, and therefore state that $Y$ falls within $z_{\alpha /2}$ standard deviations of the mean with probability $1-\alpha .$ Here are some practice exercises.</p>
+<p>Within how many standard deviations from the mean does $88%$ of any normal curve lie?</p>
+<p>The diameter of a hypodermic needle is measured in &ldquo;gauge.&rdquo; Different gauges are used depending on the type of substance that needs to be injected. Becton Company manufactures insulin needles which must have an inside diameter of $0.016$ inches. Their current manufacturing process has a standard deviation of $0.0001$ (this is high-precision business)$.$ Within what interval will $97%$ of all the needles produced by the company fall?</p>
+<p>The weights of babies at birth have a normal distribution with a mean of $119.6$ ounces and a standard deviation of $18.2$ ounces. Birth weights that are too large or too small might indicate a serious problem. What interval will contain $95%$ of birth weights? Find the answer using the $68-95-99.7$ rule and the approach just discussed. Compare your answers.</p>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/bana3363/8-intervals-for-differences-in-proportions-independent-samples/" rel="next">Intervals for Differences in Proportions--Independent Samples</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/bana3363/2-types-of-statistical-analysis/" rel="prev">Types of Statistical Analysis</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on May 5, 2019</p>
+
+          
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/BANA3363/2%20-%20The%20Normal%20Distribution.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+          
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

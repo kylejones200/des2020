@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slides | Kyle Jones</title>
+    <link>/slides/</link>
+      <atom:link href="/slides/index.xml" rel="self" type="application/rss+xml" />
+    <description>Slides</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Slides</title>
+      <link>/slides/digital/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/slides/digital/</guid>
+      <description>&lt;h1 id=&#34;create-websites-in-markdown&#34;&gt;Create websites in Markdown&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt; | 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-problem-are-we-trying-to-solve&#34;&gt;What problem are we trying to solve?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Write in Markdown not HTML&lt;/li&gt;
+&lt;li&gt;Spend time focused on content not format&lt;/li&gt;
+&lt;li&gt;Separate content from presentation format&lt;/li&gt;
+&lt;li&gt;3-in-1: Create, Present, and Publish your content&lt;/li&gt;
+&lt;li&gt;Automatically update/deploy new versions&lt;/li&gt;
+&lt;li&gt;Track all pervious versions for version control&lt;/li&gt;
+&lt;li&gt;Free&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-did-i-chose-to-do-this&#34;&gt;Why did I chose to do this?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Writing code and math in PPT stinks&lt;/li&gt;
+&lt;li&gt;I wanted to write things in one place, not have to have versions in Word, PowerPoint, and Code editor&lt;/li&gt;
+&lt;li&gt;I wanted a way to do code syntax highlighting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;additional-requires-i-had&#34;&gt;Additional requires I had&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Must be able to create PDF of slides&lt;/li&gt;
+&lt;li&gt;Must be able handle math&lt;/li&gt;
+&lt;li&gt;Must be beautiful&lt;/li&gt;
+&lt;li&gt;Must have an active user community&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-does-good-look-like&#34;&gt;What does good look like?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A website that is interactive and beautiful&lt;/li&gt;
+&lt;li&gt;A simple process for adding, deleting, or changing content&lt;/li&gt;
+&lt;li&gt;Supports images, videos, and mathematical expressions&lt;/li&gt;
+&lt;li&gt;Works with tools like Jupyter Notebooks and R-Markdown&lt;/li&gt;
+&lt;li&gt;Free&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;static-site-generator-ssg&#34;&gt;Static Site Generator (SSG)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We will use Hugo&lt;/li&gt;
+&lt;li&gt;There are lots of options including:
+&lt;ul&gt;
+&lt;li&gt;Jekyll&lt;/li&gt;
+&lt;li&gt;MKDocs&lt;/li&gt;
+&lt;li&gt;Cleaver&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I like Hugo because:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It has lots of nice templates&lt;/li&gt;
+&lt;li&gt;It is wicked fast&lt;/li&gt;
+&lt;li&gt;It has widgets that can be used on multiple sites&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tools-required&#34;&gt;Tools required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Terminal&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Markdown editor (like 
+&lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VS Code&lt;/a&gt; or 
+&lt;a href=&#34;https://www.typora.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Typora&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;GitHub account and Git installed on computer&lt;/li&gt;
+&lt;li&gt;Netlify account&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-markdown&#34;&gt;What is Markdown?&lt;/h2&gt;
+&lt;p&gt;Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by John Gruber in 2004, Markdown is now one of the world’s most popular markup languages.&lt;/p&gt;
+&lt;p&gt;Using Markdown is different than using a WYSIWYG editor. In an application like Microsoft Word, you click buttons to format words and phrases, and the changes are visible immediately. Markdown isn’t like that. When you create a Markdown-formatted file, you add Markdown syntax to the text to indicate which words and phrases should look different.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.markdownguide.org/getting-started/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Markdown Guide&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-use-markdown&#34;&gt;Why use Markdown?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Markdown can be used for &lt;strong&gt;everything&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Markdown is &lt;em&gt;portable&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Markdown is &lt;em&gt;platform independent&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Markdown is &lt;strong&gt;future proof&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Markdown is &lt;strong&gt;everywhere&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-does-it-look-like&#34;&gt;What does it look like?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;## Why use Markdown?
+
+1. Markdown can be used for **everything**. 
+1. Markdown is *portable*. 
+1. Markdown is _platform independent_.
+1. Markdown is __future proof__. 
+1. Markdown is __everywhere__. 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;how-does-the-process-work&#34;&gt;How does the process work?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph LR; 
+  A(Write Markdown) --&amp;gt; B(Convert Markdown to HTML);
+  B --&amp;gt; C(Push HTML to GitHub);
+  C --&amp;gt; D(Render New Version of Site);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph LR; 
+  subgraph Your Computer
+  A(VS Code) --&amp;gt; B(Hugo and Terminal);
+  end
+  subgraph Internet
+  B --&amp;gt; C(Git and GitHub);
+  C --&amp;gt; D(Netlify);
+  end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;netlify&#34;&gt;Netlify&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Free for basic features&lt;/li&gt;
+&lt;li&gt;Connects to GitHub and automatically refreshes&lt;/li&gt;
+&lt;li&gt;You can change the default name in the URL&lt;/li&gt;
+&lt;li&gt;You can also bring your own URL&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Other options include 
+&lt;a href=&#34;https://aws.amazon.com/amplify/console/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AWS Amplify&lt;/a&gt; and 
+&lt;a href=&#34;https://pages.github.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github Pages&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;how-do-i-convert-existing-material&#34;&gt;How do I convert existing material?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://pandoc.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pandoc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://github.com/ssine/pptx2md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pptx2md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Online converters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;beware-of-these-dangers&#34;&gt;Beware of these Dangers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Markdown spell checkers don&amp;rsquo;t work well&lt;/li&gt;
+&lt;li&gt;Sometimes the formatting gets messed up&lt;/li&gt;
+&lt;li&gt;Markdown comes in multiple &amp;ldquo;flavors&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Converters are not perfect&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;where-do-we-go-from-here&#34;&gt;Where do we go from here?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
+&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
+&lt;li&gt;Supports speaker notes&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Template Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
+&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Code block:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
+if porridge == &amp;quot;blueberry&amp;quot;:
+    print(&amp;quot;Eating...&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
+&lt;p&gt;Block math:&lt;/p&gt;
+&lt;p&gt;$$
+f\left( x \right) = ;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
+&lt;p&gt;Make content appear incrementally&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
+{{% fragment %}} **Two** {{% /fragment %}}
+{{% fragment %}} Three {{% /fragment %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
+One
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+&lt;strong&gt;Two&lt;/strong&gt;
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+Three
+&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
+&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
+- Only the speaker can read these notes
+- Press `S` key to view
+{{% /speaker_note %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
+&lt;aside class=&#34;notes&#34;&gt;
+  &lt;ul&gt;
+&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/aside&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
+&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
+&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
+&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
+&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
+&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;/img/boards.jpg&#34;
+  &gt;
+
+&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
+&lt;p&gt;Customize the slide style and background&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/img/boards.jpg&amp;quot; &amp;gt;}}
+{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
+{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
+&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
+.reveal section h2,
+.reveal section h3 {
+  color: navy;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://spectrum.chat/academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Slides</title>
+      <link>/slides/example/</link>
+      <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/slides/example/</guid>
+      <description>&lt;h1 id=&#34;create-slides-in-markdown-with-academic&#34;&gt;Create slides in Markdown with Academic&lt;/h1&gt;
+&lt;p&gt;Kyle Jones
+Digital Education Summit
+
+&lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt; | 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-problem-are-we-trying-to-solve&#34;&gt;What problem are we trying to solve?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Write in Markdown not HTML&lt;/li&gt;
+&lt;li&gt;Spend time focused on content not format&lt;/li&gt;
+&lt;li&gt;Separate content from presentation format&lt;/li&gt;
+&lt;li&gt;3-in-1: Create, Present, and Publish your content&lt;/li&gt;
+&lt;li&gt;Automatically update/deploy new versions&lt;/li&gt;
+&lt;li&gt;Track all pervious versions for version control&lt;/li&gt;
+&lt;li&gt;Free&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-did-i-chose-to-do-this&#34;&gt;Why did I chose to do this?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Writing code and math in PPT stinks&lt;/li&gt;
+&lt;li&gt;I wanted to write things in one place, not have to have versions in Word, PowerPoint, and Code editor&lt;/li&gt;
+&lt;li&gt;I wanted a way to do code syntax highlighting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;additional-requires-i-had&#34;&gt;Additional requires I had&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Must be able to create PDF of slides&lt;/li&gt;
+&lt;li&gt;Must be able handle math&lt;/li&gt;
+&lt;li&gt;Must be beautiful&lt;/li&gt;
+&lt;li&gt;Must have an active user community&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-does-good-look-like&#34;&gt;What does good look like?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A website that is interactive and beautiful&lt;/li&gt;
+&lt;li&gt;A simple process for adding, deleting, or changing content&lt;/li&gt;
+&lt;li&gt;Supports images, videos, and mathematical expressions&lt;/li&gt;
+&lt;li&gt;Works with tools like Jupyter Notebooks and R-Markdown&lt;/li&gt;
+&lt;li&gt;Free&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;static-site-generator-ssg&#34;&gt;Static Site Generator (SSG)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We will use Hugo&lt;/li&gt;
+&lt;li&gt;There are lots of options including:
+&lt;ul&gt;
+&lt;li&gt;Jekyll&lt;/li&gt;
+&lt;li&gt;MKDocs&lt;/li&gt;
+&lt;li&gt;Cleaver&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;I like Hugo because:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It has lots of nice templates&lt;/li&gt;
+&lt;li&gt;It is wicked fast&lt;/li&gt;
+&lt;li&gt;It has widgets that can be used on multiple sites&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tools-required&#34;&gt;Tools required&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Terminal&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Markdown editor (like 
+&lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VS Code&lt;/a&gt; or 
+&lt;a href=&#34;https://www.typora.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Typora&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;GitHub account and Git installed on computer&lt;/li&gt;
+&lt;li&gt;Netlify account&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-markdown&#34;&gt;What is Markdown?&lt;/h2&gt;
+&lt;p&gt;Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.&lt;/p&gt;
+&lt;p&gt;Using Markdown is different than using a WYSIWYG editor. When you create a Markdown-formatted file, you add Markdown syntax to the text to indicate which words and phrases should look different.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.markdownguide.org/getting-started/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Markdown Guide&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-use-markdown&#34;&gt;Why use Markdown?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Markdown can be used for &lt;strong&gt;everything&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Markdown is &lt;em&gt;portable&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Markdown is &lt;em&gt;platform independent&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Markdown is &lt;strong&gt;future proof&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Markdown is &lt;strong&gt;everywhere&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-does-it-look-like&#34;&gt;What does it look like?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;## Why use Markdown?
+
+1. Markdown can be used for **everything**. 
+1. Markdown is *portable*. 
+1. Markdown is _platform independent_.
+1. Markdown is __future proof__. 
+1. Markdown is __everywhere__. 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;how-does-the-process-work&#34;&gt;How does the process work?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph LR; 
+  A(Write Markdown) --&amp;gt; B(Convert Markdown to HTML);
+  B --&amp;gt; C(Push HTML to GitHub);
+  C --&amp;gt; D(Render New Version of Site);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph LR; 
+  subgraph Your Computer
+  A(VS Code) --&amp;gt; B(Hugo and Terminal);
+  end
+  subgraph Internet
+  B --&amp;gt; C(Git and GitHub);
+  C --&amp;gt; D(Netlify);
+  end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;netlify&#34;&gt;Netlify&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Free for basic features&lt;/li&gt;
+&lt;li&gt;Connects to GitHub and automatically refreshes&lt;/li&gt;
+&lt;li&gt;You can change the default name in the URL&lt;/li&gt;
+&lt;li&gt;You can also bring your own URL&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Other options include 
+&lt;a href=&#34;https://aws.amazon.com/amplify/console/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AWS Amplify&lt;/a&gt; and 
+&lt;a href=&#34;https://pages.github.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github Pages&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;how-do-i-convert-existing-material&#34;&gt;How do I convert existing material?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://pandoc.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pandoc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://github.com/ssine/pptx2md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pptx2md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Online converters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;beware-of-these-dangers&#34;&gt;Beware of these Dangers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Markdown spell checkers don&amp;rsquo;t work well&lt;/li&gt;
+&lt;li&gt;Sometimes the formatting gets messed up&lt;/li&gt;
+&lt;li&gt;Markdown comes in multiple &amp;ldquo;flavors&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Converters are not perfect&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;where-do-we-go-from-here&#34;&gt;Where do we go from here?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
+&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
+&lt;li&gt;Supports speaker notes&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Template Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+&lt;p&gt;In-line math: $z = \frac{\bar{x}-\mu}{\sigma}$&lt;/p&gt;
+&lt;p&gt;Block math:&lt;/p&gt;
+&lt;p&gt;$$
+f\left( x \right) = ;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

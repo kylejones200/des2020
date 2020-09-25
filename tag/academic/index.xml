@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Academic | Kyle Jones</title>
+    <link>/tag/academic/</link>
+      <atom:link href="/tag/academic/index.xml" rel="self" type="application/rss+xml" />
+    <description>Academic</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Academic</title>
+      <link>/tag/academic/</link>
+    </image>
+    
+    <item>
+      <title>Adding interactive elements</title>
+      <link>/post/getting-started/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/post/getting-started/</guid>
+      <description>&lt;h1 id=&#34;quiz&#34;&gt;Quiz&lt;/h1&gt;
+&lt;p&gt;Here is a simple example of a quiz, written in markdown using hugo shortcodes&lt;/p&gt;
+
+
+&lt;style type=&#34;text/css&#34; scoped&gt;
+.quiz fieldset {
+    border-color: black;
+    border-width: 10px;
+    margin-bottom: 1em;
+}
+
+.quiz legend {
+    font-size: 105%;
+    font-weight: 600;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+
+.quiz label {
+    display: block;
+    line-height: 1.75em;
+}
+
+.quiz input[type=&#34;radio&#34;] {
+    margin-right: 10px;
+    page-break-after: avoid;
+    page-break-before: avoid;
+}
+
+.quiz input[type=&#34;submit&#34;] {
+    background: black;
+    color: white;
+    display: block;
+    font-size: 120%;
+    font-weight: 600;
+    height: 2.5em;
+    margin-top: 2em;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.quiz table {
+    color: white;
+    font-weight: bold;
+    margin: 1em auto 2em auto;
+    width: 100%;
+}
+
+.quiz td {
+    padding: 5px 15px;
+    text-align: left;
+    width: 60px;
+}
+
+.quiz td.missing-label,
+.quiz td.missing-score {
+    background: #CECBC2;
+}
+
+.quiz td.right-label,
+.quiz td.right-score {
+    background: #74b559;
+}
+
+.quiz td.wrong-label,
+.quiz td.wrong-score {
+    background: #D01F3C;
+}
+&lt;/style&gt;
+
+&lt;script src=&#34;/js/quiz.js&#34;&gt;&lt;/script&gt;
+
+&lt;div class=&#34;quiz&#34; id=&#34;test_quiz&#34;&gt;
+  &lt;h2 id=&#34;quiz-header&#34;&gt;Quiz header&lt;/h2&gt;
+&lt;script&gt;
+    var choices = &#34;Mike,Grant,Frank&#34;.split(&#34;,&#34;);
+    var id = &#34;test_quiz&#34;;
+    var question = &#34;What is buried in Grant\u0027s Tomb?&#34;;
+    var answer =  2 ;
+    if (! (id in questions)){
+      questions[id] = [];
+    }
+    questions[id].push(new Question(question, choices, answer-1));
+&lt;/script&gt;
+&lt;script&gt;
+    var choices = &#34;Cologne,Berlin,Hamburg&#34;.split(&#34;,&#34;);
+    var id = &#34;test_quiz&#34;;
+    var question = &#34;What is the capital of Germany?&#34;;
+    var answer =  2 ;
+    if (! (id in questions)){
+      questions[id] = [];
+    }
+    questions[id].push(new Question(question, choices, answer-1));
+&lt;/script&gt;
+
+  &lt;script&gt;
+    var quiz = new Quiz(&#34;test_quiz&#34;, questions, {&#34;shuffle&#34;: true});
+  &lt;/script&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Click on the &lt;code&gt;submit&lt;/code&gt; button to see the result.&lt;/p&gt;
+&lt;h1 id=&#34;interactive-code&#34;&gt;Interactive code&lt;/h1&gt;
+
+
+
+&lt;head&gt;
+  &lt;script async src=&#34;https://cdn.datacamp.com/dcl-react-dev.js.gz&#34;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&#34;exercise&#34;&gt;
+    &lt;div class=&#34;title&#34;&gt;
+      &lt;h2&gt;This is an python exercise with a plot&lt;/h2&gt;
+    &lt;/div&gt;
+
+    &lt;div data-datacamp-exercise data-lang=&#34;python&#34; data-height=&#34;auto&#34;&gt;
+      &lt;code data-type=&#34;pre-exercise-code&#34;&gt;&lt;/code&gt;
+      &lt;code data-type=&#34;sample-code&#34;&gt;
+        import numpy as np
+        import matplotlib.pyplot as plt
+
+        x = np.arange(0, 5, 0.1);
+        y = np.sin(x)
+        plt.plot(x, y)
+        plt.show()
+      &lt;/code&gt;
+      &lt;code data-type=&#34;solution&#34;&gt;&lt;/code&gt;
+      &lt;code data-type=&#34;sct&#34;&gt;&lt;/code&gt;
+      &lt;div data-type=&#34;hint&#34;&gt;Just press &#39;Run&#39;.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;exercise&#34;&gt;
+    &lt;div class=&#34;title&#34;&gt;
+      &lt;h2&gt;Here is an example using R&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div data-datacamp-exercise data-lang=&#34;r&#34; data-height=&#34;500&#34;&gt;
+      &lt;code data-type=&#34;pre-exercise-code&#34;&gt;# no pec&lt;/code&gt;
+      &lt;code data-type=&#34;sample-code&#34;&gt;
+        # Calculate 3 + 4
+        3 + 4
+
+        # Calculate 6 + 12
+      &lt;/code&gt;
+      &lt;code data-type=&#34;solution&#34;&gt;
+        # Calculate 3 + 4
+        3 + 4
+
+        # Calculate 6 + 12
+        6 + 12&lt;/code&gt;
+      &lt;code data-type=&#34;sct&#34;&gt;
+        test_output_contains(&amp;quot;18&amp;quot;, incorrect_msg = &amp;quot;Make sure to add `6 + 12`
+        on a new line. Do not start the line with a `#`, otherwise your R code is not executed!&amp;quot;)
+        success_msg(&amp;quot;Awesome! See how the console shows the result of the R code you
+        submitted? Now that you&amp;#39;re familiar with the interface, let&amp;#39;s get down to R
+        business!&amp;quot;)
+      &lt;/code&gt;
+      &lt;div data-type=&#34;hint&#34;&gt;
+        &lt;p&gt;Just add a line of R code that calculates the sum of 6 and 12, just like the
+          example
+          in the sample code!&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+</description>
+    </item>
+    
+  </channel>
+</rss>
