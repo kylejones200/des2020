@@ -28,7 +28,7 @@
 &lt;li&gt;Predict — predicting measurements using regression and neural networks, forecasting using time-series modeling techniques, and interpolating spatial data.&lt;/li&gt;
 &lt;li&gt;Explain — Explaining latent aspects of phenomena using regression, cluster analysis, discriminant analysis, factor analysis, and other data mining techniques.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;How do we do this? This table shows some statitical methods that can be used to accomplish different goals.&lt;/p&gt;
+&lt;p&gt;How do we do this? This table shows some statistical methods that can be used to accomplish different goals.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -66,7 +66,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;why-do-we-need-statistics&#34;&gt;Why do we need statistics?&lt;/h2&gt;
-&lt;p&gt;The world is full of uncertainy. Variability arises from two primary sources: variability in the natural process (inherent variability) and variability due to our imperfect measurement devices (measurement variability).&lt;/p&gt;
+&lt;p&gt;The world is full of uncertainty. Variability arises from two primary sources: variability in the natural process (inherent variability) and variability due to our imperfect measurement devices (measurement variability).&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;summary-statistics&#34;&gt;Summary Statistics&lt;/h1&gt;
 &lt;ul&gt;
@@ -320,7 +320,7 @@
 &lt;p&gt;A &lt;strong&gt;random variable&lt;/strong&gt; $X$ is a numerical or categorical characteristic of a population or process whose range of possible values is known or assumed but for which the values are subject to random (or &amp;ldquo;chance&amp;rdquo;) variation.&lt;/p&gt;
 &lt;p&gt;Any letter of the alphabet can be used to indicate a random variable. The most common choices are $X$, $Z$, and $Y$. The name of the random variable is written in capital letters, while a specific value that the random variable takes on is written in lowercase.&lt;/p&gt;
 &lt;p&gt;[[5k]]{#5k label=&amp;quot;5k&amp;rdquo;}Let $X$ be number of people out of $30$ who finish a $5$K race. This is a random variable before the race occurs because we cannot say with certainty how many people will ultimately finish. We know that the possible values are ${0,1,2,\ldots ,30}$. If it turns out that $25$ people finish, then $x=25$.&lt;/p&gt;
-&lt;h3 id=&#34;example-accodents&#34;&gt;Example: Accodents&lt;/h3&gt;
+&lt;h3 id=&#34;example-accidents&#34;&gt;Example: Accidents&lt;/h3&gt;
 &lt;p&gt;Let $V$ be the number of accidents that occur on a particular length of highway on a Tuesday between 5 p.m. and 9 p.m. Before this time period occurs, $V$ is a random variable because we cannot say with certainty how many accidents will occur. We do know that the least number of accidents is $0,$ so we would say the possible values of $V$ are ${0,1,2,\ldots }$&lt;/p&gt;
 &lt;h3 id=&#34;example-coffee&#34;&gt;Example: Coffee&lt;/h3&gt;
 &lt;p&gt;Let $Y$ be the time (in seconds) you spend in line at a coffee shop on a Wednesday morning. This is a random variable before you visit the coffee shop. The smallest possible wait time is $0,$ while the largest possible time is not clearly defined without more assumptions. If you decide that you will leave, with coffee or without, if the wait is more than $15$ minutes, then the range of possible values is $0\leq y\leq 900$. If on this particular trip you wait $350.96$ seconds, then $y=350.96$, or about $5$ minutes and $51$ seconds.&lt;/p&gt;
@@ -542,7 +542,6 @@ $$E(X^{2})-[E(X)]^{2}$$&lt;/p&gt;
 &lt;li&gt;No matter the distribution* the more samples, closer to normal&lt;/li&gt;
 &lt;li&gt;the bigger the samples, the closer to normal&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;measures-of-dispersion&#34;&gt;Measures of dispersion&lt;/h1&gt;
 &lt;p&gt;Population variance: The mean of the squares of the deviations.
@@ -939,17 +938,17 @@ Notation:&lt;/p&gt;
 &lt;p&gt;$$Z=\frac{\overline{Y}-\mu }{\sigma /\sqrt{n}}$$&lt;/p&gt;
 &lt;p&gt;Here are some examples to try out.&lt;/p&gt;
 &lt;p&gt;The foreman of a bottling plant has observed that the amount of soda in each &amp;ldquo;$32$-ounce&amp;rdquo; bottle is actually a normally distributed random variable, with a mean of $32$ ounces and a standard deviation of $0.3$ ounce. If the foreman is doing quality control by taking samples of $n$ $=4$ bottles from the line and calculating the average fill, would a reading of $32.5$ be unusually high? Answer by finding $P(\overline{Y}&amp;gt;32.5).$ How would your answer change if we took away the assumption that the amount of soda in each bottle comes from a normal distribution?&lt;/p&gt;
-&lt;p&gt;\vspace{1.5in} You take a random sample of size $50$ from a population with mean $\mu =16$ and standard deviation $\sigma =$ $8$.&lt;/p&gt;
+&lt;p&gt;You take a random sample of size $50$ from a population with mean $\mu =16$ and standard deviation $\sigma =$ $8$.&lt;/p&gt;
 &lt;p&gt;a). What are the mean and standard deviation of $\overline{Y}$, the sample mean?&lt;/p&gt;
 &lt;p&gt;b). Sketch the distribution, indicating the intervals within which $68%,$ $% 95%$, and $99.7%$ of the observations are expected to lie.&lt;/p&gt;
 &lt;p&gt;c). Find $P(\overline{Y}&amp;gt;18)$&lt;/p&gt;
 &lt;p&gt;d). Find $P(17&amp;lt;\overline{Y}&amp;lt;19.5)$&lt;/p&gt;
 &lt;p&gt;e). Explain why all of these probabilities are approximate.&lt;/p&gt;
-&lt;p&gt;\vspace{0.4in} In a random sample of $20$ college students, the average reported working time was $15.4$ hours per week. A researcher claims that the true working time of college students is normally distributed with a mean of $16$ hours and a standard deviation of $2.5$ hours. Let $\overline{Y}$ denote the sample mean.&lt;/p&gt;
+&lt;p&gt;In a random sample of $20$ college students, the average reported working time was $15.4$ hours per week. A researcher claims that the true working time of college students is normally distributed with a mean of $16$ hours and a standard deviation of $2.5$ hours. Let $\overline{Y}$ denote the sample mean.&lt;/p&gt;
 &lt;p&gt;a). What is $P(\overline{Y}&amp;lt;15.4)$?&lt;/p&gt;
 &lt;p&gt;b). Using your answer to (a), how reasonable do you think the researcher&amp;rsquo;s claim is?&lt;/p&gt;
 &lt;p&gt;c). Using the $68-95-99.7$ rule, find a set of sample averages that would be unusual to see (either &amp;ldquo;too large&amp;rdquo; or &amp;ldquo;too small&amp;rdquo;) if the true mean and standard deviation of college student working hours were as the researcher claims.&lt;/p&gt;
-&lt;p&gt;\vspace{1.5in} In the next section, we will discuss how we can use the sampling distribution of the sample mean to make inferences about $\mu .$&lt;/p&gt;
+&lt;p&gt;In the next section, we will discuss how we can use the sampling distribution of the sample mean to make inferences about $\mu .$&lt;/p&gt;
 &lt;h1 id=&#34;interval-inference-about-a-single-population-process-mean&#34;&gt;Interval Inference about a Single Population (Process) Mean&lt;/h1&gt;
 &lt;h2 id=&#34;basic-concepts&#34;&gt;Basic Concepts&lt;/h2&gt;
 &lt;p&gt;Our ultimate goal is to obtain a reasonable &amp;quot; guess&amp;rdquo; at the true value of a process parameter (in this section, $\mu$) using a sample of data. Before we do that, we have to introduce some terms.&lt;/p&gt;
@@ -970,7 +969,7 @@ Notation:&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;We know from Theorem 
 &lt;a href=&#34;#samp_dist&#34;&gt;[samp_dist]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;samp_dist&amp;rdquo;} that the sample mean $% \overline{Y}$ is unbiased because the theorem states that $E(\overline{Y})=% %TCIMACRO{\U{3bc} }% %BeginExpansion \mu %EndExpansion .$ The other two properties are also true, but we won&amp;rsquo;t prove it; just take my word for it. Also, it can be shown that $\overline{Y}$ is has the smallest variability among all unbiased estimators, so when we use it, we are using &amp;ldquo;the best&amp;rdquo; guess of $\mu .$&lt;/p&gt;
-&lt;h2 id=&#34;a-confidence-interval-for-the-mean-when-sigma-is-known------------------------------------------------------------------&#34;&gt;A Confidence Interval for the Mean When $\sigma$ Is Known &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/h2&gt;
+&lt;h2 id=&#34;a-confidence-interval-for-the-mean-when-sigma-is-known&#34;&gt;A Confidence Interval for the Mean When $\sigma$ Is Known&lt;/h2&gt;
 &lt;p&gt;By the Central Limit Theorem, Theorem 
 &lt;a href=&#34;#CLT&#34;&gt;[CLT]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;CLT&amp;rdquo;}, we know that the distribution of $\overline{Y}$ is approximately $N(\mu ,\sigma /\sqrt{n})$. This implies that we can predict something about the behavior of any given sample average $\overline{x}.$ Specifically, we know that a sample average will have about a $68%$ chance of being within one standard deviation of $% \mu$ about a $95%$ chance of being within two standard deviations of $\mu$ , and about a $99.7%$ chance of being within three standard deviations of $% \mu .$&lt;/p&gt;
 &lt;p&gt;Confidence intervals flip this logic around and use the fact that if $% \overline{Y}$ has a $68%$ chance of being within one standard deviation of $% \mu$, then we can also say that $\mu$ has a $68%$ chance of being within one standard deviation of $\overline{Y}.$ This means that&lt;/p&gt;
@@ -1149,13 +1148,15 @@ Notation:&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;Specify the hypothesis:&lt;/p&gt;
 &lt;p&gt;Now instead of $\mu$ we work with the population proportion, $p:$&lt;/p&gt;
-&lt;p&gt;$$\begin{aligned}     \text{(a) }H_{0} &amp;amp;:&amp;amp;p\leq p_{0}\text{ vs. }H_{1}:p&amp;gt;p_{0} \     \text{(b) }H_{0} &amp;amp;:&amp;amp;p\geq p_{0}\text{ vs. }H_{1}:p&amp;lt;p_{0}\text{ } \     \text{(c) }H_{0} &amp;amp;:&amp;amp;p=p_{0}\text{ vs. }H_{1}:p\neq p_{0}\end{aligned}$$&lt;/p&gt;
+&lt;p&gt;a) $H_{0}: p\leq p_{0}\text{ vs. }H_{1}:p&amp;gt;p_{0}$
+b) $H_{0} &amp;amp;:&amp;amp;p\geq p_{0}\text{ vs. }H_{1}:p&amp;lt;p_{0}$
+c) $H_{0} &amp;amp;:&amp;amp;p=p_{0}\text{ vs. }H_{1}:p\neq p_{0}$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Calculate the &lt;strong&gt;test statistic&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The test statistic will always be a standard normal $z$ statistic     since we assume $n$ is large:&lt;/p&gt;
-&lt;p&gt;$$z=\frac{\widehat{p}-p_{0}}{\sqrt{p_{0}(1-p_{0})/n}}$$&lt;/p&gt;
-&lt;p&gt;When the null hypothesis is true, the test statistic has the     standard normal distribution. Notice that we use $p_{0}$ in the     denominator rather than $%     \widehat{p}.$ This is because we always assume $H_{0}$ is true when     we calculate the test statistic. If $H_{0}$ is true, $p_{0}$ is the     true population proportion by definition.&lt;/p&gt;
+&lt;p&gt;The test statistic will always be a standard normal $z$ statistic since we assume $n$ is large:&lt;/p&gt;
+&lt;p&gt;$$z=\frac{\widehat{p}-p_0}{\sqrt{p_0(1-p_{0})/n}}$$&lt;/p&gt;
+&lt;p&gt;When the null hypothesis is true, the test statistic has the standard normal distribution. Notice that we use $p_{0}$ in the     denominator rather than $\widehat{p}.$ This is because we always assume $H_{0}$ is true when we calculate the test statistic. If $H_{0}$ is true, $p_{0}$ is the     true population proportion by definition.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Compute the &lt;strong&gt;p-value&lt;/strong&gt; or &lt;strong&gt;rejection region&lt;/strong&gt;&lt;/p&gt;
@@ -1195,15 +1196,14 @@ Notation:&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;.&lt;/p&gt;
 &lt;p&gt;If we take LEGAL as the event of interest, then we can calculate the sample proportion as&lt;/p&gt;
 &lt;p&gt;$$\widehat{p}=\frac{586}{1234}=0.475$$&lt;/p&gt;
 &lt;p&gt;Suppose a research firm wishes to see if the true proportion of individuals who favor legalization is less than $0.50$ using an $\alpha =0.01$ level of significance. Then we have the following hypotheses:&lt;/p&gt;
-&lt;p&gt;$$H_{0}:p\geq 0.50\text{ \ \ \ vs. \ \ \ }H_{1}:p&amp;lt;0.50$$&lt;/p&gt;
+&lt;p&gt;$$H_{0}:p\geq 0.50\text{  vs.  }H_{1}:p&amp;lt;0.50$$&lt;/p&gt;
 &lt;p&gt;The test statistic is calculated as&lt;/p&gt;
 &lt;p&gt;$$z=\frac{0.475-0.50}{\sqrt{0.50(1-0.50)/1234}}=-1.76$$&lt;/p&gt;
 &lt;p&gt;The p-value can be calculated as&lt;/p&gt;
-&lt;p&gt;$$\begin{aligned} P(Z &amp;amp;&amp;lt;&amp;amp;-1.76) \ &amp;amp;=&amp;amp;0.0392\end{aligned}$$&lt;/p&gt;
+&lt;p&gt;$$P(Z &amp;amp;&amp;lt;&amp;amp;-1.76) = 0.0392$$&lt;/p&gt;
 &lt;p&gt;Alternatively, the rejection region is defined as all values of $z$ that are greater than $z_{0.01}=2.33,$ as shown in Figure 
 &lt;a href=&#34;#rr1&#34;&gt;[rr1]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;rr1&amp;rdquo;}:&lt;/p&gt;
 &lt;p&gt;Using either method, we would fail-to-reject $H_{0}$ and state that we do not have enough evidence to conclude that the proportion of Americans favoring legalization exceeds $0.50.$&lt;/p&gt;
@@ -1475,7 +1475,7 @@ Notation:&lt;/p&gt;
       <guid>/courses/bana3363/8-intervals-for-differences-in-proportions-independent-samples/</guid>
       <description>&lt;h2 id=&#34;confidence-interval-for-difference-in-proportion&#34;&gt;Confidence Interval for Difference in Proportion&lt;/h2&gt;
 &lt;p&gt;We might be interested in the difference in the proportions of two groups who meet a certain criterion. For example, we might want to determine what type of website banner ad (one that flashes or one that is steady) leads to a higher proportion of people clicking on it. We might want to determine which of two packaging designs leads to a higher proportion of people who indicate they would buy the product. An excellent example of inference for proportions comes from prescription drug testing. Researchers might be interested to see if a new cancer drug has a reduced chance of causing nausea in patients compared to an existing drug. Opinion polls on issues such as marijuana legalization can be analyzed using techniques for differences in proportions.&lt;/p&gt;
-&lt;p&gt;The general notation for inference about two population/process proportions is similar to that of two population/process means. The big difference is that the data for both groups can only take on the values of $0$ or $1,$ with $1$ indicating a &amp;ldquo;success&amp;rdquo; (either a click on an ad, an indication to purchase, or a person indicating that they did not experience nausea, for example).&lt;/p&gt;
+&lt;p&gt;The general notation for inference about two population/process proportions is similar to that of two population/process means. The big difference is that the data for both groups can only take on the values of 0 or 1, with 1 indicating a &amp;ldquo;success&amp;rdquo; (either a click on an ad, an indication to purchase, or a person indicating that they did not experience nausea, for example).&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1508,11 +1508,11 @@ Notation:&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;We can now introduce the confidence interval for the difference in two proportions.&lt;/p&gt;
-&lt;p&gt;A $100(1-\alpha )%$ confidence interval for the difference in  two population proportions $p_{1}-p_{2}$, if the two sample sizes $n_{1}$ and $% n_{2}$ are sufficiently large, is given by&lt;/p&gt;
+&lt;p&gt;A $100(1-\alpha )%$ confidence interval for the difference in  two population proportions $p_{1}-p_{2}$, if the two sample sizes $n_{1}$ and $n_{2}$ are sufficiently large, is given by&lt;/p&gt;
 &lt;p&gt;$$\widehat{p_{1}}-\widehat{p_{2}}\pm z_{\alpha /2}\sqrt{\frac{\widehat{p_{1}}% (1-\widehat{p_{1}})}{n_{1}}+\frac{\widehat{p_{2}}(1-\widehat{p_{2}})}{n_{2}}}$$&lt;/p&gt;
 &lt;p&gt;The interval for the difference in proportions is interpreted in a similar manner as with the interval for the difference in two means. Because we are comparing two population proportions, we must phrase our interpretation in terms of being confident that the difference in proportions lies between the lower and upper bounds. Note that the interval will always fall between $-1$ and $1.$ Negative values will arise when the proportion in Group $2$ is higher than the proportion in Group $1.$ In a single sample interval for a proportion, we cannot have negative values, but when we discuss &lt;em&gt;differences in proportions,&lt;/em&gt; we certainly can.&lt;/p&gt;
-&lt;p&gt;Another issue regarding interpretation should be mentioned here. Because proportions can be interpreted as percentages, it would be tempting to say, if your interval were $[0.03,0.05]$ for example, that the difference between Group 1 and Group 2 on an issue is between $3%$ and $5%$. &lt;em&gt;This is wrong because the difference in two percents is NOT the percentage difference.&lt;/em&gt; For example, if the interval above represented the difference in the percentage of people in two voting populations who favored a new tax initiative, we &lt;em&gt;cannot&lt;/em&gt; say that between $3%$ and $5%$ more of Group $1$ favors the initiative than Group $2$. If, in a population of $12,000,$ $% 1,440$ $(12%)$ of people in Group 2 really do favor the initiative, then saying $3%$ more people in Group 1 favor the initiative implies that $1,483$ people in that group should be in favor. But if the population size of Group 1 is, let&amp;rsquo;s say, $34,000$ (populations can be different sizes) and $5,100$ $% \left( \frac{5,100}{34,000}=15%\right)$ were in favor, a $3%$ increase would suggest that $5,253$ people in Group 1 would be in favor, not $1,483.$ Thus, we must always speak of &lt;em&gt;percentage-point differences&lt;/em&gt; when we interpret these intervals.&lt;/p&gt;
-&lt;p&gt;The number of individuals for and against legalization of marijuana in the $% 18-30$ and $31$ and over age groups are given in the table below. Find a $% 95%$ confidence interval for the true difference in the proportion of people favoring marijuana legalization between the two groups.&lt;/p&gt;
+&lt;p&gt;Another issue regarding interpretation should be mentioned here. Because proportions can be interpreted as percentages, it would be tempting to say, if your interval were [0.03,0.05] for example, that the difference between Group 1 and Group 2 on an issue is between 3% and 5%. &lt;em&gt;This is wrong because the difference in two percents is NOT the percentage difference.&lt;/em&gt; For example, if the interval above represented the difference in the percentage of people in two voting populations who favored a new tax initiative, we &lt;em&gt;cannot&lt;/em&gt; say that between 3% and 5% more of Group 1 favors the initiative than Group 2. If, in a population of 12,000, 1,440 (12%) of people in Group 2 really do favor the initiative, then saying 3% more people in Group 1 favor the initiative implies that 1,483 people in that group should be in favor. But if the population size of Group 1 is, let&amp;rsquo;s say, 34,000 (populations can be different sizes) and 5,100 $\frac{5,100}{34,000}=15 %)$ were in favor, a 3% increase would suggest that 5,253 people in Group 1 would be in favor, not 1,483. Thus, we must always speak of &lt;em&gt;percentage-point differences&lt;/em&gt; when we interpret these intervals.&lt;/p&gt;
+&lt;p&gt;The number of individuals for and against legalization of marijuana in the 18-30 and 31 and over age groups are given in the table below. Find a  95% confidence interval for the true difference in the proportion of people favoring marijuana legalization between the two groups.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1525,25 +1525,25 @@ Notation:&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;18-30 (Group 1)&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;$131$&lt;/td&gt;
-&lt;td&gt;$104$&lt;/td&gt;
-&lt;td&gt;$235$&lt;/td&gt;
+&lt;td&gt;131&lt;/td&gt;
+&lt;td&gt;104&lt;/td&gt;
+&lt;td&gt;235&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;31 &amp;amp; over (Group 2)&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;$455$&lt;/td&gt;
-&lt;td&gt;$541$&lt;/td&gt;
-&lt;td&gt;$996$&lt;/td&gt;
+&lt;td&gt;455&lt;/td&gt;
+&lt;td&gt;541&lt;/td&gt;
+&lt;td&gt;996&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;TOTAL&lt;/td&gt;
-&lt;td&gt;$586$&lt;/td&gt;
-&lt;td&gt;$645$&lt;/td&gt;
-&lt;td&gt;$1231$&lt;/td&gt;
+&lt;td&gt;586&lt;/td&gt;
+&lt;td&gt;645&lt;/td&gt;
+&lt;td&gt;1231&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;A website designer wants to examine the effectiveness of two different layouts (A and B) for a small retail client in terms of the proportion of individuals who find and click on a special coupon within the first five minutes of browsing the retailer&amp;rsquo;s site. Presumably, the more people who find and click the coupon, the more effective the layout is. For two weeks, whenever a customer accessed the retailer&amp;rsquo;s site, one of the two layouts (A or B) was randomly chosen to load on the customer&amp;rsquo;s screen. Customers were tracked by their IP addresses, numbers that uniquely identify devices over the internet. Of the customers who browsed the site for at least five minutes, the proportion who clicked the coupon using each layout was recorded. The data are below. Construct a $95%$ confidence interval for the difference in the two proportions and interpret the interval in context.&lt;/p&gt;
+&lt;p&gt;A website designer wants to examine the effectiveness of two different layouts (A and B) for a small retail client in terms of the proportion of individuals who find and click on a special coupon within the first five minutes of browsing the retailer&amp;rsquo;s site. Presumably, the more people who find and click the coupon, the more effective the layout is. For two weeks, whenever a customer accessed the retailer&amp;rsquo;s site, one of the two layouts (A or B) was randomly chosen to load on the customer&amp;rsquo;s screen. Customers were tracked by their IP addresses, numbers that uniquely identify devices over the internet. Of the customers who browsed the site for at least five minutes, the proportion who clicked the coupon using each layout was recorded. The data are below. Construct a 95% confidence interval for the difference in the two proportions and interpret the interval in context.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1556,36 +1556,92 @@ Notation:&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;A&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;$675$&lt;/td&gt;
-&lt;td&gt;$658$&lt;/td&gt;
-&lt;td&gt;$1333$&lt;/td&gt;
+&lt;td&gt;675&lt;/td&gt;
+&lt;td&gt;658&lt;/td&gt;
+&lt;td&gt;1333&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;B&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;$690$&lt;/td&gt;
-&lt;td&gt;$477$&lt;/td&gt;
-&lt;td&gt;$1167$&lt;/td&gt;
+&lt;td&gt;690&lt;/td&gt;
+&lt;td&gt;477&lt;/td&gt;
+&lt;td&gt;1167&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;$1365$&lt;/td&gt;
-&lt;td&gt;$1135$&lt;/td&gt;
-&lt;td&gt;$2500$&lt;/td&gt;
+&lt;td&gt;1365&lt;/td&gt;
+&lt;td&gt;1135&lt;/td&gt;
+&lt;td&gt;2500&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;In a recent study, a drug manufacturer wanted to determine if a new antidepressant (Drug X) could also reduce pain that often comes with diabetes, called diabetic neuropathy. The data for the study are shown below. Calculate a $92%$ confidence interval for the difference in the proportion of people who experience relief from Drug X and the placebo.&lt;/p&gt;
-&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash; &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; &amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;   &lt;strong&gt;Dosage&lt;/strong&gt;    &lt;strong&gt;Some/Significant Relief&lt;/strong&gt;   &lt;strong&gt;No Relief&lt;/strong&gt;   &lt;strong&gt;Total&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;Drug X&lt;/strong&gt;    $159$                         $122$           $281$&lt;br&gt;
-&lt;strong&gt;Placebo&lt;/strong&gt;   $114$                         $197$           $311$                 $273$                         $319$           $592$   &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash; &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; &amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/p&gt;
-&lt;p&gt;A researcher is interested to see if there is a difference between married and unmarried people when it comes to certain social behavior, in particular, the frequency of sexual activity. The data from the study are shown below. Calculate a $90%$ confidence interval for the difference in the proportion of married and unmarried persons who have sex at least once per week.&lt;/p&gt;
-&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- &amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;   &lt;strong&gt;Group&lt;/strong&gt;       $\geq$&lt;strong&gt;Once/Week&lt;/strong&gt;   $\mathbf{&amp;lt;}$ &lt;strong&gt;Once/Week&lt;/strong&gt;   &lt;strong&gt;Total&lt;/strong&gt;   &lt;strong&gt;Married&lt;/strong&gt;     $608$                 $28$                         $636$   &lt;strong&gt;Unmarried&lt;/strong&gt;   $553$                 $7$                          $560$   Total           $1161$                $35$                         $1196$   &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- &amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/p&gt;
-&lt;p&gt;Astrology is a system of belief that, broadly speaking, claims that astronomical events somehow influence human behavior. One aspect of astrology is belief that the zodiac sign that one is born under (e.g., Pisces, Libra, Leo, Scorpio, etc.) somehow influences a person&amp;rsquo;s behavior. Is belief in astrology related significantly to education level? The $2012$ General Social Survey asked adults $18$ and over whether they believed at all in the zodiac. The results are presented below for individuals with an associate&amp;rsquo;s degree or higher (&amp;ldquo;College&amp;rdquo;) and those with a high school diploma or less (&amp;ldquo;HS or Below&amp;rdquo;). Calculate a $98%$ confidence interval for the difference in proportions between the two groups and interpret the interval in context.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Dosage&lt;/strong&gt;        &lt;strong&gt;Believe&lt;/strong&gt;   &lt;strong&gt;Do Not Believe&lt;/strong&gt;   &lt;strong&gt;Total&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;College&lt;/strong&gt;       $162$         $198$                $360$&lt;br&gt;
-&lt;strong&gt;HS or Below&lt;/strong&gt;   $330$         $306$                $636$                      &lt;strong&gt;Total&lt;/strong&gt;  $492$         $504$                $996$&lt;/p&gt;
-&lt;hr&gt;
+&lt;p&gt;In a recent study, a drug manufacturer wanted to determine if a new antidepressant (Drug X) could also reduce pain that often comes with diabetes, called diabetic neuropathy. The data for the study are shown below. Calculate a 92% confidence interval for the difference in the proportion of people who experience relief from Drug X and the placebo.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Dosage&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Some/Significant Relief&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;No Relief&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Drug X&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;159&lt;/td&gt;
+&lt;td&gt;122&lt;/td&gt;
+&lt;td&gt;281&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Placebo&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;114&lt;/td&gt;
+&lt;td&gt;197&lt;/td&gt;
+&lt;td&gt;311&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Total&lt;/td&gt;
+&lt;td&gt;273&lt;/td&gt;
+&lt;td&gt;319&lt;/td&gt;
+&lt;td&gt;592&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;A researcher is interested to see if there is a difference between married and unmarried people when it comes to certain social behavior, in particular, the frequency of sexual activity. The data from the study are shown below. Calculate a 90% confidence interval for the difference in the proportion of married and unmarried persons who have sex at least once per week.&lt;/p&gt;
+&lt;p&gt;|&lt;strong&gt;Group&lt;/strong&gt;       |$\geq$&lt;strong&gt;Once/Week&lt;/strong&gt;   |$\mathbf{&amp;lt;}$ &lt;strong&gt;Once/Week&lt;/strong&gt;  | &lt;strong&gt;Total&lt;/strong&gt;   |
+|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; |&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; |&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- &amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash; |
+| &lt;strong&gt;Married&lt;/strong&gt;    | 608                | 28                       |  636   |
+| &lt;strong&gt;Unmarried&lt;/strong&gt;   |553                | 7                        |  560  |
+| Total           |1161                |35                       |  1196  |&lt;/p&gt;
+&lt;p&gt;Astrology is a system of belief that, broadly speaking, claims that astronomical events somehow influence human behavior. One aspect of astrology is belief that the zodiac sign that one is born under (e.g., Pisces, Libra, Leo, Scorpio, etc.) somehow influences a person&amp;rsquo;s behavior. Is belief in astrology related significantly to education level? The 2012 General Social Survey asked adults 18 and over whether they believed at all in the zodiac. The results are presented below for individuals with an associate&amp;rsquo;s degree or higher (&amp;ldquo;College&amp;rdquo;) and those with a high school diploma or less (&amp;ldquo;HS or Below&amp;rdquo;). Calculate a 98% confidence interval for the difference in proportions between the two groups and interpret the interval in context.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Dosage&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Believe&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Do Not Believe&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;College&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;162&lt;/td&gt;
+&lt;td&gt;198&lt;/td&gt;
+&lt;td&gt;360&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;HS or Below&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;330&lt;/td&gt;
+&lt;td&gt;306&lt;/td&gt;
+&lt;td&gt;636&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;492&lt;/td&gt;
+&lt;td&gt;504&lt;/td&gt;
+&lt;td&gt;996&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     
@@ -1606,15 +1662,9 @@ Notation:&lt;/p&gt;
 &lt;a href=&#34;#normcrve&#34;&gt;[normcrve]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;normcrve&amp;rdquo;} examples of normal distributions. In general, the effect of changing $\mu$ is to move the graph to the left or right on the horizontal axis, while the effect of changing $\sigma$ is to make the graph narrower (decreasing $\sigma$) or wider (increasing $\sigma$).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(&lt;strong&gt;$68-95-99.7$&lt;/strong&gt; Rule)&lt;/strong&gt;. If $Y$ has a normal distribution with mean $\mu$ and standard deviation $\sigma$, then the following are true:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;About $68%$ of the normal curve lies within $1$ standard deviation     of the mean. That is,     $P(\mu -\sigma \leq Y\leq \mu +\sigma )\approx 0.68$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;About $95%$ of the normal curve lies within $2$ standard deviations     of the mean. That is,     $P(\mu -2\sigma \leq Y\leq \mu +2\sigma )\approx 0.95$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;About $99.7%$ of the normal curve lies within $3$ standard     deviation of the mean. That is,     $P(\mu -3\sigma \leq Y\leq \mu +3\sigma )\approx 0.997$&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;About $68%$ of the normal curve lies within $1$ standard deviation of the mean. That is, $P(\mu -\sigma \leq Y\leq \mu +\sigma )\approx 0.68$&lt;/li&gt;
+&lt;li&gt;About $95%$ of the normal curve lies within $2$ standard deviations of the mean. That is, $P(\mu -2\sigma \leq Y\leq \mu +2\sigma )\approx 0.95$&lt;/li&gt;
+&lt;li&gt;About $99.7%$ of the normal curve lies within $3$ standard deviation of the mean. That is, $P(\mu -3\sigma \leq Y\leq \mu +3\sigma )\approx 0.997$&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;A special type of normal distribution where $\mu =0$ and $\sigma =1$ is called &lt;strong&gt;the standard normal distribution&lt;/strong&gt; or &amp;ldquo;$Z$ distribution,&amp;rdquo; after the letter that we use to denote a random variable with a standard normal distribution.&lt;/p&gt;
 &lt;p&gt;This is the distribution that you had a table for in BANA 2372.&lt;/p&gt;
@@ -2412,14 +2462,16 @@ $$\begin{aligned} \text{(a) }p-value &amp;amp;=&amp;amp;P(t_{n-1}&amp;gt;t) \ \t
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Specify the hypotheses.&lt;/p&gt;
-&lt;p&gt;$$\begin{aligned}     \text{(a) }H_{0} &amp;amp;:&amp;amp;\mu _{1}-\mu _{2}\leq d\text{ vs. }H_{1}:\mu _{1}-\mu     _{2}&amp;gt;d\text{ }      \text{(b) }H_{0} &amp;amp;:&amp;amp;\mu _{1}-\mu _{2}\geq d\text{ vs. }H_{1}:\mu _{1}-\mu     _{2}&amp;lt;d      \text{(c) }H_{0} &amp;amp;:&amp;amp;\mu _{1}-\mu _{2}=d\text{ vs. }H_{1}:\mu _{1}-\mu     _{2}\neq d\end{aligned}$$&lt;/p&gt;
+&lt;p&gt;a) $H_{0}:\mu_{1}-\mu_{2}\leq d\text{ vs. }H_{1}:\mu_{1}-\mu_{2}&amp;gt;d$ &lt;br&gt;
+b) $H_{0}:\mu_{1}-\mu_{2}\geq d\text{ vs. }H_{1}:\mu_{1}-\mu_{2}&amp;lt;d$
+c) $H_{0}:\mu_{1}-\mu_{2}=d\text{ vs. }H_{1}:\mu_{1}-\mu_{2}\neq d$&lt;/p&gt;
 &lt;p&gt;where $-\infty &amp;lt;d$ $&amp;lt;\infty$ is some specified difference (usually     $0$, but it could be anything$)$.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Calculate the test statistic.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Case 1:&lt;/strong&gt; $\sigma _{1}=\sigma _{2}$ (the only case we will     consider in this class)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Case 1:&lt;/strong&gt; $\sigma _{1}=\sigma _{2}$ (the only case we willconsider in this class)&lt;/p&gt;
 &lt;p&gt;$$t_{0}=\frac{\overline{x}_{1}-\overline{x}_{2}-d}{s_{p}\sqrt{\frac{1}{n_{1}}+%     \frac{1}{n_{2}}}}$$&lt;/p&gt;
-&lt;p&gt;where     $s_{p}=\sqrt{\frac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2%     }}$ is the pooled standard deviation estimate.&lt;/p&gt;
+&lt;p&gt;where $s_{p}=\sqrt{\frac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2%     }}$ is the pooled standard deviation estimate.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Case 2:&lt;/strong&gt; $\sigma _{1}\neq \sigma _{2}$&lt;/p&gt;
 &lt;p&gt;$$t_{0}=\frac{\overline{x}_{1}-\overline{x}_{2}-d}{\sqrt{\frac{s_{1}^{2}}{n_{1}%     }+\frac{s_{2}^{2}}{n_{2}}}}$$&lt;/p&gt;
 &lt;/li&gt;
@@ -3437,39 +3489,31 @@ $x_{1}$              $p_{12}$   $\ldots$   $p_{1c}$      $X$   $x_{2}$          
       <guid>/courses/bana3363/15-intro-to-regression/</guid>
       <description>&lt;h2 id=&#34;dependence-between-numeric-variables-correlation&#34;&gt;Dependence Between Numeric Variables (Correlation)&lt;/h2&gt;
 &lt;p&gt;There are an infinite number of possible relationships between numeric variables. There could be quadratic relationships, cubic relationships, logarithmic relationships, and so forth. In much of statistics, the focus is on the &lt;em&gt;linear relationship&lt;/em&gt; because it is generally easy to specify, it captures the notion of dependence in many real-world situations, and many other relationships can be at least approximated by a line in some small, focused area. The measure of linear relationship between two numeric variables is known as &lt;strong&gt;correlation.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The &lt;strong&gt;population correlation coefficient&lt;/strong&gt; $\rho ,$ pronounced &amp;ldquo;row,&amp;rdquo; describes the linear association between two random variables $X$ and $Y$. It is calculated as&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;population correlation coefficient&lt;/strong&gt; $\rho$, pronounced &amp;ldquo;row,&amp;rdquo; describes the linear association between two random variables $X$ and $Y$. It is calculated as&lt;/p&gt;
 &lt;p&gt;$$\rho =\frac{E(XY)-E(X)E(Y)}{\sqrt{V(X)}\sqrt{V(Y)}}$$&lt;/p&gt;
 &lt;p&gt;where $E$ stands for &amp;ldquo;expected value&amp;rdquo; and $V$ stands for variance.&lt;/p&gt;
-&lt;p&gt;The correlation coefficient $\rho$ is a &lt;em&gt;population parameter,&lt;/em&gt; like $% \mu$ and $p,$ and must therefore be estimated with data. This leads to the next definition.&lt;/p&gt;
+&lt;p&gt;The correlation coefficient $\rho$ is a &lt;em&gt;population parameter,&lt;/em&gt; like $\mu$ and $p$, and must therefore be estimated with data. This leads to the next definition.&lt;/p&gt;
 &lt;p&gt;The &lt;strong&gt;sample correlation coefficient&lt;/strong&gt; $r$ is a random variable that describes the relationship between two sets of numeric data that are considered in pairs $(y_{1},x_{1}),(y_{2},x_{2}),\ldots ,(y_{n},x_{n})$. It is given by&lt;/p&gt;
 &lt;p&gt;$$r=\frac{\dsum_{i}x_{i}y_{i}-n(\overline{x})(\overline{y})}{(n-1)s_{x}s_{y}}$$&lt;/p&gt;
 &lt;p&gt;where $s_{x\text{ }}$ and $s_{y}$ are the standard deviations of $x$ and $y$ , respectively.&lt;/p&gt;
 &lt;p&gt;The following are facts about correlation:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Always lies between $-1$ and $1$ (inclusive)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The strength of correlation is measured by $|r|$, the absolute value     of the correlation coefficient&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Correlations of $1$ (or $-1$) indicate perfect positive (or     negative) linear relationship&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Correlation of $0$ indicates no linear relationship&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Always lies between $-1$ and $1$ (inclusive)&lt;/li&gt;
+&lt;li&gt;The strength of correlation is measured by $|r|$, the absolute value     of the correlation coefficient&lt;/li&gt;
+&lt;li&gt;Correlations of $1$ (or $-1$) indicate perfect positive (or negative) linear relationship&lt;/li&gt;
+&lt;li&gt;Correlation of $0$ indicates no linear relationship&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Suppose we wanted to create a model of gasoline prices that factors in crude oil prices. The data would appear as shown in Figure 
 &lt;a href=&#34;#data&#34;&gt;[data]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;data&amp;rdquo;} in a spreadsheet program. Using Excel&amp;rsquo;s chart feature, we could make a scatter plot as shown in Figure 
-&lt;a href=&#34;#gas_scatter&#34;&gt;[gas_scatter]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;gas_scatter&amp;rdquo;}. The correlation between crude oil price and gasoline price can be shown to be $r=0.987,$ which is an extremely strong positive linear relationship as can be seen.&lt;/p&gt;
+&lt;a href=&#34;#gas_scatter&#34;&gt;[gas_scatter]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;gas_scatter&amp;rdquo;}. The correlation between crude oil price and gasoline price can be shown to be $r=0.987$, which is an extremely strong positive linear relationship as can be seen.&lt;/p&gt;
 &lt;p&gt;The concept of correlation plays a key role in estimating the simple linear regression model, as we will see in the next section.&lt;/p&gt;
 &lt;h1 id=&#34;introduction-to-regression&#34;&gt;Introduction to Regression&lt;/h1&gt;
 &lt;p&gt;The broad set of techniques that fall under the &amp;ldquo;regression analysis&amp;rdquo; title drive most practical research studies, from drug trials in the pharmaceutical industry to new product test marketing. Businesses face tough competition in the information age. Not only must they navigate an increasingly fragmented customer base, manage their reputations through traditional and social media channels, innovate with products and services at an increasing rate, and negotiate with many suppliers and distributors, but they must also make short- and long-term decisions about personnel, production, new markets to enter, and strategies to increase (or at least maintain) market share against competitors. Sites such as Kickstarter &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; and Fundable&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; specialize in a type of online venture capital process called &amp;ldquo;crowdfunding,&amp;rdquo; where ordinary individuals can contribute to a project in exchange for a variety of rewards, from a simple acknowledgement as a supporter, to a functioning prototype of the company&amp;rsquo;s product, to a percentage of sales. You will no doubt hear a good deal more on this topic in your marketing and management classes.&lt;/p&gt;
 &lt;p&gt;Managers must be able to make decisions that incorporate a number of factors. Increasingly, these decisions have been influenced by mathematical modeling. A new field called &lt;strong&gt;business analytics&lt;/strong&gt;&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; has arisen that seeks to use advanced mathematics and large data sets to discover patterns and relationships among consumer choices that can help optimize product and service delivery. If you have ever wondered why grocery stores have rewards cards, the answer is simple: it allows the store to track your purchases in order to present you with customized deals and to understand how your purchases relate to those of other customers. If you use Netflix to stream movies, you should know that everything you do&amp;ndash;the programs you search for, the number of searches you perform, the time you spend browsing your recommendations, the device you are using to watch the program, the genre of the programs you view most often, and more&amp;ndash;is being monitored&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;. The data are fed into complex models designed by mathematicians and statisticians, and the patterns extracted from the data imply that, for instance, &lt;em&gt;Hot Tub Time Machine&lt;/em&gt; and &lt;em&gt;Les Miserables&lt;/em&gt; might appeal to the same user.&lt;/p&gt;
 &lt;p&gt;Mathematical models can be divided into two three broad classes: &lt;strong&gt;deterministic,&lt;/strong&gt; &lt;strong&gt;probabilistic,&lt;/strong&gt; and &lt;strong&gt;regression&lt;/strong&gt; models. The last type is actually a blend of the first two. Let&amp;rsquo;s define these terms.&lt;/p&gt;
 &lt;p&gt;A &lt;strong&gt;deterministic model&lt;/strong&gt; is a mathematical equation for which, if a set of inputs $\mathbf{x}$ are known, the output $y$ is known with certainty.&lt;/p&gt;
-&lt;p&gt;Deterministic models are what we are most familiar with in elementary mathematics. They are why mathematics is seen as &amp;ldquo;objective,&amp;rdquo; in the sense that there is often only one &amp;ldquo;right answer&amp;rdquo; to a problem. One simple example of a deterministic model that you should be familiar with is the formula for future value:$\ FV=P(1+r/n)^{nt}$. This formula is deterministic because, given a present value $P,$ an interest rate $r$, the compounding frequency $n$, and the investment period $t$, we can calculate what the future value of the investment will be. That is, given $P,r,n,$ and $t,$ $FV$ is known with certainty. Another example of a deterministic model is the formula for a company&amp;rsquo;s total cost: $T=F+Vq$, where $F$ is a company&amp;rsquo;s fixed cost, $V$ is the variable cost per unit, and $q$ is the quantity produced. Given $F$, $V$, and $q$, we can compute the company&amp;rsquo;s total cost. Remembering the formula for distance ($D=st,$ where $s=speed),$ the time it takes to drive $45$ miles to campus, if you drive $s$ miles per hour is $t=% \frac{45}{s}$.&lt;/p&gt;
-&lt;p&gt;These models are simple and leave much room for improvement. For instance, the future value formula assumes the interest rate remains fixed over time, which will rarely be the case. The total cost equation, meanwhile, ignores the fact that, for some level of production $q^{\ast },$ the company will need to expand and change its fixed costs to $F^{\ast }$ to keep up. More sophisticated models could be built to account for these factors. However, even when we incorporate these other variables, it is unlikely that we will be able to perfectly, to an infinite number of decimal places, the total cost of making a product or the future value of an investment.&lt;/p&gt;
+&lt;p&gt;Deterministic models are what we are most familiar with in elementary mathematics. They are why mathematics is seen as &amp;ldquo;objective,&amp;rdquo; in the sense that there is often only one &amp;ldquo;right answer&amp;rdquo; to a problem. One simple example of a deterministic model that you should be familiar with is the formula for future value:$FV=P(1+r/n)^{nt}$. This formula is deterministic because, given a present value $P$, an interest rate $r$, the compounding frequency $n$, and the investment period $t$, we can calculate what the future value of the investment will be. That is, given $P,r,n$, and $t$, $FV$ is known with certainty. Another example of a deterministic model is the formula for a company&amp;rsquo;s total cost: $T=F+Vq$, where $F$ is a company&amp;rsquo;s fixed cost, $V$ is the variable cost per unit, and $q$ is the quantity produced. Given $F$, $V$, and $q$, we can compute the company&amp;rsquo;s total cost. Remembering the formula for distance ($D=st$, where $s=speed)$, the time it takes to drive $45$ miles to campus, if you drive $s$ miles per hour is $t=\frac{45}{s}$.&lt;/p&gt;
+&lt;p&gt;These models are simple and leave much room for improvement. For instance, the future value formula assumes the interest rate remains fixed over time, which will rarely be the case. The total cost equation, meanwhile, ignores the fact that, for some level of production $q^{\ast }$, the company will need to expand and change its fixed costs to $F^{\ast }$ to keep up. More sophisticated models could be built to account for these factors. However, even when we incorporate these other variables, it is unlikely that we will be able to perfectly, to an infinite number of decimal places, the total cost of making a product or the future value of an investment.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Variability&lt;/strong&gt; is a basic characteristic of the natural world. Every time you drive $45$ miles to get to campus, it takes you a different amount of time to arrive here because your speed fluctuates by small amounts over the course of your trip. Everyone lives to a different age. People spend different amounts of money on each shopping trip. Differing amounts of soda are in a can that states that it contains $12$ ounces. With deterministic models, variability is ignored, so they are technically wrong.&lt;/p&gt;
 &lt;p&gt;A &lt;strong&gt;probabilistic model&lt;/strong&gt; assumes that the values of a variable arise from a random sample from a probability distribution (for example, the normal distribution).&lt;/p&gt;
 &lt;p&gt;These are the models that we have been working with all semester! For instance, if we were to calculate a confidence interval for the population mean amount of money that Americans give to charity each year, we might have said: &amp;ldquo;Assume you have a random sample of $n=1000$ people and their average yearly charitable contribution was $\overline{y}=1000$ and $s=300.&amp;ldquo;$ The histogram of the charitable contributions might appear as in Figure 
@@ -3478,27 +3522,28 @@ $x_{1}$              $p_{12}$   $\ldots$   $p_{1c}$      $X$   $x_{2}$          
 &lt;p&gt;It is sensible that charitable contributions depend on many factors, one of which is a person&amp;rsquo;s income (other variables might be education level, political affiliation, gender, etc.). We can model the idea that charitable contribution is a random variable, but one that is influenced by another (possibly nonrandom) variable. We can get at this idea by making a reasonable assumption:&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;for any given income, there is an entire distribution of possible &amp;gt; charitable contributions that a person with that income could choose &amp;gt; to make&lt;/em&gt; .&lt;/p&gt;
 &lt;p&gt;It would make sense that, as income increases, at least the mean contribution should increase, but how?&lt;/p&gt;
-&lt;p&gt;One possibility is that the mean changes linearly with income. That is, if income is $x$ dollars per year, the average charitable contribution is $% \beta_{0}+\beta_{1}x,$ where $\beta_{0}$ (read as &amp;ldquo;beta zero&amp;rdquo;) is the intercept of the line and $\beta_{1}$ (read as &amp;ldquo;beta one&amp;rdquo;) is the slope. These two $\beta$ values are **population parameters**, like $\mu$ and $p$, that we can use data to estimate. This is shown in Figure 
-&lt;a href=&#34;#reg_model&#34;&gt;[reg_model]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;reg_model&amp;rdquo;}. The linear part that specifies how the mean changes with increasing income is **deterministic** (if we know $x$, $\beta_{0},$ and $\beta_{1},$ we know the mean with certainty), but the actual value is random, modeled as a draw from a normal distribution with mean $\beta_{0}+\beta_{1}x$. Now we have the next definition.&lt;/p&gt;
-&lt;p&gt;A &lt;strong&gt;regression model&lt;/strong&gt; is a blend of deterministic and probabilistic models that specifies how the distribution of some random variable $Y$ changes for a function of other (possibly nonrandom) variables $% f(x_{1},x_{2},\ldots ,x_{p})$.&lt;/p&gt;
+&lt;p&gt;One possibility is that the mean changes linearly with income. That is, if income is $x$ dollars per year, the average charitable contribution is $\beta_{0}+\beta_{1}x$, where $\beta_{0}$ (read as &amp;ldquo;beta zero&amp;rdquo;) is the intercept of the line and $\beta_{1}$ (read as &amp;ldquo;beta one&amp;rdquo;) is the slope. These two $\beta$ values are **population parameters**, like $\mu$ and $p$, that we can use data to estimate. This is shown in Figure 
+&lt;a href=&#34;#reg_model&#34;&gt;[reg_model]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;reg_model&amp;rdquo;}. The linear part that specifies how the mean changes with increasing income is **deterministic** (if we know $x$, $\beta_{0}$, and $\beta_{1}$, we know the mean with certainty), but the actual value is random, modeled as a draw from a normal distribution with mean $\beta_{0}+\beta_{1}x$. Now we have the next definition.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;regression model&lt;/strong&gt; is a blend of deterministic and probabilistic models that specifies how the distribution of some random variable $Y$ changes for a function of other (possibly nonrandom) variables $f(x_{1},x_{2},\ldots ,x_{p})$.&lt;/p&gt;
 &lt;p&gt;How do we figure out what that function $f(x_{1},x_{2},\ldots ,x_{p})$ is? The best way is to simply graph the $\ Y$ variable with each of the $x$ variables using a **scatter plot**, a graph that plots each pair of points $(y_{i},x_{ij})$ in the ordinary $x-y$ plane. Looking at the scatter, you can see if a line might fit the data fairly well, or if another function such as a quadratic might work better. The simple linear regression model, which we now define, claims that the distribution of $Y$ depends only on one other variable, $x$.&lt;/p&gt;
-&lt;p&gt;For a random sample of bivariate data $(Y_{1},x_{1}),(Y_{2},x_{2}),\ldots ,(Y_{n},x_{n}),$ where the $Y_{i}$ are random variables and the $x_{i}$ are constants, the **simple linear regression model** relating $Y$ to $x$ is given by&lt;/p&gt;
-&lt;p&gt;$$\begin{aligned} Y_{i} &amp;amp;=&amp;amp;\beta_{0}+\beta_{1}x_{i}+\varepsilon_{i},\text{ }i=1,2,\ldots n% \text{ [sample form]}  \label{simple_model_eq} \ Y &amp;amp;=&amp;amp;\beta_{0}+\beta_{1}x+\varepsilon \text{ [population form]} \label{pop_version}\end{aligned}$$&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;where&lt;/em&gt; $\beta_{0}$* (read as &amp;ldquo;beta zero&amp;rdquo;) and* $\beta_{1}$ * (read as &amp;ldquo;beta one&amp;rdquo;) are fixed (but unknown) parameters and* $% \varepsilon_{i}$* (read as &amp;ldquo;epsilon&amp;rdquo;) are independent normally distributed random variables with mean* $0$* and standard deviation* $\sigma$* that are uncorrelated with* $x$.&lt;/p&gt;
+&lt;p&gt;For a random sample of bivariate data $(Y_{1},x_{1}),(Y_{2},x_{2}),\ldots ,(Y_{n},x_{n})$, where the $Y_{i}$ are random variables and the $x_{i}$ are constants, the **simple linear regression model** relating $Y$ to $x$ is given by&lt;/p&gt;
+&lt;p&gt;$Y_{i} =\beta_{0}+\beta_{1}x_{i}+\varepsilon_{i},\text{ }i=1,2,\ldots n\text{ [sample form]}$&lt;/p&gt;
+&lt;p&gt;$Y =\beta_{0}+\beta_{1}x+\varepsilon \text{ [population form]}$&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;where&lt;/em&gt; $\beta_{0}$* (read as &amp;ldquo;beta zero&amp;rdquo;) and* $\beta_{1}$ * (read as &amp;ldquo;beta one&amp;rdquo;) are fixed (but unknown) parameters and* $\varepsilon_{i}$* (read as &amp;ldquo;epsilon&amp;rdquo;) are independent normally distributed random variables with mean* $0$* and standard deviation* $\sigma$* that are uncorrelated with* $x$.&lt;/p&gt;
 &lt;p&gt;In Figure 
-&lt;a href=&#34;#reg_model&#34;&gt;[reg_model]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;reg_model&amp;rdquo;}, the only $x$ variable is income, but there are many other factors that affect charity that we could add to the model. What this equation says is that the actual value of $Y$ that we observe is made up of a deterministic (fixed and known) $x$ and a random (unknown) component $\varepsilon$. The $\varepsilon$ value is made up of the countless other factors that influence $Y$ that we have not explicitly included as an $x$ variable in the model. We require $\varepsilon$ to be in the model because we can never know $Y$ with absolute certainty. However, we hope that the relationship between $Y$ and $x$ is strong enough to account for a good bit of the change in $Y,$ because we can quantify this change by estimating $% \beta_{0}$ and $\beta_{1}$ (more on this below).&lt;/p&gt;
+&lt;a href=&#34;#reg_model&#34;&gt;[reg_model]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;reg_model&amp;rdquo;}, the only $x$ variable is income, but there are many other factors that affect charity that we could add to the model. What this equation says is that the actual value of $Y$ that we observe is made up of a deterministic (fixed and known) $x$ and a random (unknown) component $\varepsilon$. The $\varepsilon$ value is made up of the countless other factors that influence $Y$ that we have not explicitly included as an $x$ variable in the model. We require $\varepsilon$ to be in the model because we can never know $Y$ with absolute certainty. However, we hope that the relationship between $Y$ and $x$ is strong enough to account for a good bit of the change in $Y$, because we can quantify this change by estimating $\beta_{0}$ and $\beta_{1}$ (more on this below).&lt;/p&gt;
 &lt;p&gt;The implication of equation 
-&lt;a href=&#34;#pop_version&#34;&gt;[pop_version]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;pop_version&amp;rdquo;} is that the mean of $Y$ is $% E(Y|x)=$ $\beta_{0}+\beta_{1}x$ because, by the rules of expected value (see Handout $1$),&lt;/p&gt;
+&lt;a href=&#34;#pop_version&#34;&gt;[pop_version]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;pop_version&amp;rdquo;} is that the mean of $Y$ is $E(Y|x)=$ $\beta_{0}+\beta_{1}x$ because, by the rules of expected value (see Handout $1$),&lt;/p&gt;
 &lt;p&gt;$$\begin{aligned} E(Y|x) &amp;amp;=&amp;amp;E(\beta_{0}+\beta_{1}x+\varepsilon ) \ &amp;amp;=&amp;amp;\beta_{0}+\beta_{1}x+E(\varepsilon )\text{ [since }\beta_{0}+\beta_{1}x\text{ is a constant]} \ &amp;amp;=&amp;amp;\beta_{0}+\beta_{1}x\text{ [since we assume }E(\varepsilon )=0]\end{aligned}$$&lt;/p&gt;
-&lt;p&gt;We put the $&amp;quot;|x&amp;quot;$ part in the expected value to emphasize that the mean of $% Y$ depends on $x$. A shorthand notation for this is $\widehat{Y}$, read as $% &amp;ldquo;Y$ hat.&amp;rdquo; We also have the following important fact:&lt;/p&gt;
-&lt;p&gt;Because $\varepsilon$ is assumed to have a normal distribution, $Y$ also has a normal distribution, but with mean $\beta_{0}+\beta_{1}x.\label% {simple_ols_theorem}$&lt;/p&gt;
+&lt;p&gt;We put the $&amp;quot;|x&amp;quot;$ part in the expected value to emphasize that the mean of $Y$ depends on $x$. A shorthand notation for this is $\widehat{Y}$, read as $&amp;quot;Y$ hat.&amp;rdquo; We also have the following important fact:&lt;/p&gt;
+&lt;p&gt;Because $\varepsilon$ is assumed to have a normal distribution, $Y$ also has a normal distribution, but with mean $\beta_{0}+\beta_{1}x.\label{simple_ols_theorem}$&lt;/p&gt;
 &lt;p&gt;We can interpret $\beta_{0}$ and $\beta_{1}$ as follows:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;$\beta_{0}$ is the mean of $Y$ when $x=0$.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;$\beta_{1}$ is the increase in the mean of $Y$ for a one-unit     increase in $x$.&lt;/p&gt;
+&lt;p&gt;$\beta_{1}$ is the increase in the mean of $Y$ for a one-unit increase in $x$.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;As stated above, the values of $\beta_{0}$ and $\beta_{1}$ are parameters ** **that we must use data to estimate. It is not immediately obvious what the &amp;ldquo;best&amp;rdquo; way to do this is, but a reasonable choice would be to find the estimated values $b_{0}$ and $b_{1}$ such that the line $b_{0}+b_{1}x$ goes through most of the data points. Consider Figure 
@@ -3506,13 +3551,13 @@ $x_{1}$              $p_{12}$   $\ldots$   $p_{1c}$      $X$   $x_{2}$          
 &lt;a href=&#34;#c02&#34;&gt;[c02]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;c02&amp;rdquo;}, but it still appears as if a line might be an okay fit.&lt;/p&gt;
 &lt;p&gt;Notice that, even though we know that gasoline is directly related to crude oil through refining, we cannot perfectly predict gasoline prices using crude oil prices. However, using crude oil prices will let us make a much better prediction than if we just worked with the gasoline data alone. Figure 
 &lt;a href=&#34;#gasonoly&#34;&gt;[gasonoly]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;gasonoly&amp;rdquo;} displays a histogram of only the gas prices, which would (falsely) lead us to believe that our best prediction of gasoline price would be in the $$0.50-$1$ range, which is clearly not realistic.&lt;/p&gt;
-&lt;p&gt;One way to fit a line is to choose two points, say, $(x_{1},y_{1})$ and $% (x_{2},y_{2}),$ out of all the points in the scatterplot and find the slope and $y$ intercept. But which points would you pick? Your choice of two points might not match mine, and ours might still be different from a third person&amp;rsquo;s. Clearly, we need a more objective way of fitting the line. The most common method used in practice is known as the** method of ordinary least squares (OLS)**, which we now define.&lt;/p&gt;
-&lt;p&gt;The &lt;strong&gt;ordinary least squares (OLS) estimates,&lt;/strong&gt; $b_{0}$ and $b_{1},$ estimate $\beta_{0}$ and $\beta_{1}$ and are chosen such that the &amp;ldquo;sum of squared errors&amp;rdquo;, SSE, is made as small as possible. That is, we choose $b_{0}$ and $b_{1}$ so that&lt;/p&gt;
+&lt;p&gt;One way to fit a line is to choose two points, say, $(x_{1},y_{1})$ and $(x_{2},y_{2})$, out of all the points in the scatterplot and find the slope and $y$ intercept. But which points would you pick? Your choice of two points might not match mine, and ours might still be different from a third person&amp;rsquo;s. Clearly, we need a more objective way of fitting the line. The most common method used in practice is known as the** method of ordinary least squares (OLS)**, which we now define.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;ordinary least squares (OLS) estimates,&lt;/strong&gt; $b_{0}$ and $b_{1}$, estimate $\beta_{0}$ and $\beta_{1}$ and are chosen such that the &amp;ldquo;sum of squared errors&amp;rdquo;, SSE, is made as small as possible. That is, we choose $b_{0}$ and $b_{1}$ so that&lt;/p&gt;
 &lt;p&gt;$$SSE=\sum (y_{i}-b_{0}-b_{1}x_{i})^{2}$$&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;is minimized.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;If you know about multivariable calculus, the approach is clear: find the partial derivatives of $SSE$ with respect to $b_{0}$ and $b_{1},$ set them equal to $0$, and solve for $b_{0}$ and $b_{1}$. In this course, we will simply state the solution as a theorem without proof.&lt;/p&gt;
-&lt;p&gt;The values of $b_{0}$ and $b_{1}$ that minimize $\sum (y_{i}-b_{0}-b_{1}x_{i})^{2}$ are $b_{1}=r\frac{s_{y}}{s_{x}}$ and $b_{0}=% \overline{y}-b_{1}(\overline{x}),$ where $s_{y}$ and $s_{x}$ are the standard deviations of the observed data ${y_{i}}$ and ${x_{i}}$, respectively, and $r$ is the sample correlation coefficient between $% {y_{i}}$ and ${x_{i}}$.&lt;/p&gt;
-&lt;p&gt;Once we have estimated $b_{0}$ and $b_{1},$ we can estimate $y$ using the equation&lt;/p&gt;
+&lt;p&gt;If you know about multivariable calculus, the approach is clear: find the partial derivatives of $SSE$ with respect to $b_{0}$ and $b_{1}$, set them equal to $0$, and solve for $b_{0}$ and $b_{1}$. In this course, we will simply state the solution as a theorem without proof.&lt;/p&gt;
+&lt;p&gt;The values of $b_{0}$ and $b_{1}$ that minimize $\sum (y_{i}-b_{0}-b_{1}x_{i})^{2}$ are $b_{1}=r\frac{s_{y}}{s_{x}}$ and $b_{0}=\overline{y}-b_{1}(\overline{x})$, where $s_{y}$ and $s_{x}$ are the standard deviations of the observed data ${y_{i}}$ and ${x_{i}}$, respectively, and $r$ is the sample correlation coefficient between ${y_{i}}$ and ${x_{i}}$.&lt;/p&gt;
+&lt;p&gt;Once we have estimated $b_{0}$ and $b_{1}$, we can estimate $y$ using the equation&lt;/p&gt;
 &lt;p&gt;$$\widehat{y}=b_{0}+b_{1}x$$&lt;/p&gt;
 &lt;p&gt;We can simply plug in any value of $x$ and we get an estimate of $y$. What happened to the error term $\varepsilon ?$ Since the error term is not known, we simply use its mean of $0$ to estimate it. What does our estimate of $y$ represent? $\widehat{y\text{ }}$** is the estimated mean of the random variable** $Y$** at the value of** $x!$ Thus, through equation 
 &lt;a href=&#34;#simple_model_eq&#34;&gt;[simple_model_eq]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;simple_model_eq&amp;rdquo;}, we have now defined a model that allows the distribution of $Y$ to change with $x$.&lt;/p&gt;
@@ -3520,21 +3565,21 @@ $x_{1}$              $p_{12}$   $\ldots$   $p_{1c}$      $X$   $x_{2}$          
 &lt;a href=&#34;#scatter_and_reg&#34;&gt;[scatter_and_reg]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;scatter_and_reg&amp;rdquo;}. The plot was made using Excel&amp;rsquo;s scatter plot and &amp;ldquo;Add trendline&amp;rdquo; options. The estimated equation is&lt;/p&gt;
 &lt;p&gt;$$\widehat{y}=0.0268x+0.0315$$&lt;/p&gt;
 &lt;p&gt;where $x$ is the price of oil per barrel. From this equation referring to 
-&lt;a href=&#34;#simple_ols_theorem&#34;&gt;[simple_ols_theorem]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;simple_ols_theorem&amp;rdquo;}, we estimate that for each $$1$ increase in the price of oil per barrel, the average price of gasoline increases by about $$0.0268,$ or about three cents. Further, looking at $% b_{0},$ we can say (rather pointlessly) that the average price of gasoline when oil is $$0$ per barrel is $$0.0315$. Of course, oil will always cost something per barrel, so $b_{0}$ does not have a realistic interpretation here.&lt;/p&gt;
+&lt;a href=&#34;#simple_ols_theorem&#34;&gt;[simple_ols_theorem]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;simple_ols_theorem&amp;rdquo;}, we estimate that for each $1$ increase in the price of oil per barrel, the average price of gasoline increases by about $0.0268$, or about three cents. Further, looking at $b_{0}$, we can say (rather pointlessly) that the average price of gasoline when oil is $0$ per barrel is $0.0315$. Of course, oil will always cost something per barrel, so $b_{0}$ does not have a realistic interpretation here.&lt;/p&gt;
 &lt;h1 id=&#34;using-the-simple-linear-regression-model&#34;&gt;Using the Simple Linear Regression Model&lt;/h1&gt;
-&lt;p&gt;After the model has been fit, the next logical question is whether the model is useful or not. One way of assessing this is to determine if $x$ has significant predictive ability for $Y$. Since the effect of $x$ on $Y$ is measured by the unknown parameter $\beta_{1},$ the natural approach is to conduct a hypothesis test or construct a confidence interval for $\beta_{1}$ . First, we will address the confidence interval, since we can essentially define the test by determining whether a specified null hypothesis value of $% \beta_{1}$ lies in the interval or not, much like we have done already. Before we can define the interval, we have to define a few terms related to the estimate $b_{1}$, which is what we use to construct the interval.&lt;/p&gt;
-&lt;p&gt;The estimated value of $\beta_{1},$ known as $b_{1}$, is a random variable with a mean equal to $\beta_{1}$ and a standard deviation (called a **standard error)** of $\sqrt{\frac{\sigma ^{2}}{\dsum (x_{i}-\overline{x})^{2}}% }$ . Since we rarely assume $\sigma ^{2}$ is known, we set $s.e.(b_{1})=% \sqrt{\frac{SSE/(n-2)}{\dsum (x_{i}-\overline{x})^{2}}}=\sqrt{\frac{SSE/(n-2)% }{(n-1)s_{x}^{2}}},$ where $s_{x}$ is the standard deviation of the $x$ data.&lt;/p&gt;
+&lt;p&gt;After the model has been fit, the next logical question is whether the model is useful or not. One way of assessing this is to determine if $x$ has significant predictive ability for $Y$. Since the effect of $x$ on $Y$ is measured by the unknown parameter $\beta_{1}$, the natural approach is to conduct a hypothesis test or construct a confidence interval for $\beta_{1}$ . First, we will address the confidence interval, since we can essentially define the test by determining whether a specified null hypothesis value of $\beta_{1}$ lies in the interval or not, much like we have done already. Before we can define the interval, we have to define a few terms related to the estimate $b_{1}$, which is what we use to construct the interval.&lt;/p&gt;
+&lt;p&gt;The estimated value of $\beta_{1}$, known as $b_{1}$, is a random variable with a mean equal to $\beta_{1}$ and a standard deviation (called a **standard error)** of $\sqrt{\frac{\sigma ^{2}}{\dsum (x_{i}-\overline{x})^{2}}}$ . Since we rarely assume $\sigma ^{2}$ is known, we set $s.e.(b_{1})=\sqrt{\frac{SSE/(n-2)}{\dsum (x_{i}-\overline{x})^{2}}}=\sqrt{\frac{SSE/(n-2)}{(n-1)s_{x}^{2}}}$, where $s_{x}$ is the standard deviation of the $x$ data.&lt;/p&gt;
 &lt;p&gt;A consequence of this fact leads to the definition of the $(1-\alpha )100%$ confidence interval for $\beta_{1}:$&lt;/p&gt;
 &lt;p&gt;A $(1-\alpha)100%$ confidence interval for $\beta_{1}$ is given by&lt;/p&gt;
 &lt;p&gt;$$b_{1}\pm t_{\alpha /2,n-2}\sqrt{\frac{SSE/(n-2)}{(n-1)s_{x}^{2}}}$$&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;where&lt;/em&gt; $t_{n-2,\alpha /2}$ is the value of Student&amp;rsquo;s $t$  distribution with* $n-2$ degrees of freedom and* $\alpha /2$ probability to the right.&lt;/p&gt;
-&lt;p&gt;We use $n-2$ because we had to estimate two values, $b_{0}$ and $b_{1},$ using the data. The hypothesis testing procedure follows a familiar pattern:&lt;/p&gt;
+&lt;p&gt;We use $n-2$ because we had to estimate two values, $b_{0}$ and $b_{1}$, using the data. The hypothesis testing procedure follows a familiar pattern:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Specify the hypotheses&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;The parameter of interest is $\beta_{1},$ so the hypotheses are statements about its value.&lt;/p&gt;
+&lt;p&gt;The parameter of interest is $\beta_{1}$, so the hypotheses are statements about its value.&lt;/p&gt;
 &lt;p&gt;$$\begin{aligned} \text{(a) }H_{0} &amp;amp;:&amp;amp;\beta_{1}\leq c\text{ vs. }H_{0}:\beta_{1}&amp;gt;c \ \text{(b) }H_{0} &amp;amp;:&amp;amp;\beta_{1}\geq c\text{ vs. }H_{0}:\beta_{1}&amp;lt;c \ \text{(c) }H_{0} &amp;amp;:&amp;amp;\beta_{1}=c\text{ vs. }H_{0}:\beta_{1}\neq c\end{aligned}$$&lt;/p&gt;
-&lt;p&gt;In practice, $c$ is usually $0,$ but it could be anything. In regression programs such as Excel, the hypothesis tested by default is&lt;/p&gt;
+&lt;p&gt;In practice, $c$ is usually $0$, but it could be anything. In regression programs such as Excel, the hypothesis tested by default is&lt;/p&gt;
 &lt;p&gt;$$H_{0}:\beta_{1}=0\text{ vs. }H_{0}:\beta_{1}\neq 0$$&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Calculate the test statistic.&lt;/li&gt;
@@ -3551,7 +3596,7 @@ $x_{1}$              $p_{12}$   $\ldots$   $p_{1c}$      $X$   $x_{2}$          
 &lt;ol&gt;
 &lt;li&gt;Make a conclusion&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;If the $p$-value $\leq \alpha ,$ we reject $H_{0}$. If the $p$-value $% &amp;gt;\alpha ,$ we fail to reject $H_{0}$. Equivalently, if $t$ lies within the rejection region, we reject $H_{0}$. If $t$ lies outside the rejection region, we fail to reject $H_{0}$.&lt;/p&gt;
+&lt;p&gt;If the $p$-value $\leq \alpha$, we reject $H_{0}$. If the $p$-value $&amp;gt;\alpha$, we fail to reject $H_{0}$. Equivalently, if $t$ lies within the rejection region, we reject $H_{0}$. If $t$ lies outside the rejection region, we fail to reject $H_{0}$.&lt;/p&gt;
 &lt;p&gt;As was the case when we tested means from one and two populations, the following theorem is true:&lt;/p&gt;
 &lt;p&gt;If the $(1-\alpha )100%$ confidence interval for $\beta_{1}$ **contains** $c$, then a test of $H_{0}:\beta_{1}=c$ vs. $H_{0}:\beta_{1}\neq c$ at the $\alpha$ level will **fail to reject** $H_{0}$.&lt;/p&gt;
 &lt;p&gt;In practice, software programs such as Excel are used to fit regression models. Excel has a built-in tool to do this in the same location as the ANOVA program. The output even looks similar. As an example, let&amp;rsquo;s fit a simple linear regression model to the crude oil/gasoline price data which are graphed in Figure 
@@ -3571,86 +3616,122 @@ $x_{1}$              $p_{12}$   $\ldots$   $p_{1c}$      $X$   $x_{2}$          
 &lt;p&gt;d). What are the hypotheses that the $\mathit{p}$-value refers to?&lt;/p&gt;
 &lt;p&gt;e). Based on the $p$-value and on the confidence interval, what conclusion can you make about the relationship between the selling price of a house and its square footage?&lt;/p&gt;
 &lt;p&gt;Does the amount of education that one&amp;rsquo;s father has influence the amount of education his children have? A sample of $20$ people were asked to report the number of years of formal schooling they had along with the number of years their fathers had. The data are shown in the table below.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Dad_Schooling   Child_Schooling&lt;br&gt;
-16               18&lt;br&gt;
-15               15&lt;br&gt;
-12               14&lt;br&gt;
-12               20&lt;br&gt;
-12               13&lt;br&gt;
-12               16&lt;br&gt;
-12               12&lt;br&gt;
-12               14&lt;br&gt;
-12               16&lt;br&gt;
-14               16&lt;br&gt;
-12               20&lt;br&gt;
-12               14&lt;br&gt;
-20               17&lt;br&gt;
-16               13&lt;br&gt;
-9                15&lt;br&gt;
-11               12&lt;br&gt;
-12               12&lt;br&gt;
-10               11&lt;br&gt;
-16               18&lt;br&gt;
-8                10&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;a). Use Excel to fit the simple linear regression model to the data above.&lt;/p&gt;
-&lt;p&gt;b). Interpret the coefficients $b_{0}$ and $b_{0}$  in context.&lt;/p&gt;
-&lt;p&gt;c). Calculate a $90%$ confidence interval for $\beta_{1}$.&lt;/p&gt;
-&lt;p&gt;d). What are the hypotheses that the $\mathit{p}$-value refers to?&lt;/p&gt;
-&lt;p&gt;e). Based on the $p$-value and on the confidence interval, what conclusion can you make about the relationship between a child&amp;rsquo;s education level and his or her father&amp;rsquo;s education level?&lt;/p&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Dad_Schooling&lt;/th&gt;
+&lt;th&gt;Child_Schooling&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;
-&lt;a href=&#34;www.kickstarter.com/&#34;&gt;www.kickstarter.com/&lt;/a&gt; &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;Use Excel to fit the simple linear regression model to the data above.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;
-&lt;a href=&#34;www.fundable.com/&#34;&gt;www.fundable.com/&lt;/a&gt; &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;Interpret the coefficients $b_{0}$ and $b_{0}$  in context.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.indeed.com/jobs?q=business+analytics&amp;amp;l&#34;&gt;http://www.indeed.com/jobs?q=business+analytics&amp;amp;l&lt;/a&gt; &lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;Calculate a $90%$ confidence interval for $\beta_{1}$.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:4&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.wired.com/underwire/2013/08/qq_netflix-algorithm/?mbid=social10558894&#34;&gt;http://www.wired.com/underwire/2013/08/qq_netflix-algorithm/?mbid=social10558894&lt;/a&gt; &lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;What are the hypotheses that the $\mathit{p}$-value refers to?&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:5&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;Available here: 
-&lt;a href=&#34;www.r-project.org&#34;&gt;www.r-project.org&lt;/a&gt; &lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;Based on the $p$-value and on the confidence interval, what conclusion can you make about the relationship between a child&amp;rsquo;s education level and his or her father&amp;rsquo;s education level?&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/section&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Simple Linear Regression</title>
-      <link>/courses/bana3363/16-simple-linear-regression/</link>
-      <pubDate>Tue, 28 Jul 2020 15:19:27 +0000</pubDate>
-      <guid>/courses/bana3363/16-simple-linear-regression/</guid>
-      <description>&lt;h2 id=&#34;evaluating-the-simple-linear-regression-model&#34;&gt;Evaluating the Simple Linear Regression Model&lt;/h2&gt;
+&lt;h2 id=&#34;evaluating-the-simple-linear-regression-model&#34;&gt;Evaluating the Simple Linear Regression Model&lt;/h2&gt;
 &lt;p&gt;The essential components of regression analysis are the following:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;We assume that two variables, $x$ and $Y,$ are somehow related.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Specifically, we assume the probability distribution of $Y$ (which     is called the response or dependent variable) changes as $x$ (which     is called the predictor or independent variable) changes.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Specifically, we assume that the mean (or expected value) of      $Y,$ denoted as $E(Y),$ changes as $x$ changes. To indicate this     we write $E(Y|x)$ read as &amp;ldquo;the expected value of $Y$ given $x.&amp;ldquo;$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;We can also indicate $E(Y|x)$ using the notation $\widehat{Y},$ read     as $&amp;quot;y$ hat.&amp;rdquo;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Specifically, with simple regression, we assume that $Y=\beta   &lt;em&gt;{0}+\beta&lt;/em&gt;{1}x+\varepsilon$, where $\varepsilon$ has a normal     distribution with mean $0$ and standard deviation $\sigma $.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Given a set of paired data points $(Y_{1},x_{1}),$ $%     (Y_{2},x_{2}),\ldots ,(Y_{n},x_{n}),$ we can fit the simple linear     regression model $\widehat{y}=b_{0}+b_{1}x$ by finding the values     $b_{0}$ and $b_{1}$ that makes the &amp;ldquo;sum of squared errors&amp;rdquo; $SSE=$     $\sum     (y_{i}-(b_{0}+b_{1}x_{i}))^{2}$ as small as possible. As you will     recall, this is the **OLS (ordinary least squares) criterion.**&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;We assume that two variables, $x$ and $Y,$ are somehow related.&lt;/li&gt;
+&lt;li&gt;Specifically, we assume the probability distribution of $Y$ (which is called the response or dependent variable) changes as $x$ (which is called the predictor or independent variable) changes.&lt;/li&gt;
+&lt;li&gt;Specifically, we assume that the mean (or expected value) of  $Y,$ denoted as $E(Y),$ changes as $x$ changes. To indicate this     we write $E(Y|x)$ read as &amp;ldquo;the expected value of $Y$ given $x.&amp;ldquo;$&lt;/li&gt;
+&lt;li&gt;We can also indicate $E(Y|x)$ using the notation $\widehat{Y},$ read as $&amp;quot;y$ hat.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Specifically, with simple regression, we assume that $Y=\beta_{0}+\beta_{1}x+\varepsilon$, where $\varepsilon$ has a normal     distribution with mean $0$ and standard deviation $\sigma $.&lt;/li&gt;
+&lt;li&gt;Given a set of paired data points $(Y_{1},x_{1}),$ $(Y_{2},x_{2}),\ldots ,(Y_{n},x_{n}),$ we can fit the simple linear     regression model $\widehat{y}=b_{0}+b_{1}x$ by finding the values $b_{0}$ and $b_{1}$ that makes the &amp;ldquo;sum of squared errors&amp;rdquo; $SSE=$     $\sum (y_{i}-(b_{0}+b_{1}x_{i}))^{2}$ as small as possible. As you will recall, this is the **OLS (ordinary least squares) criterion.**&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Once the model is fit, we should examine how good the fit is. Several items should be checked, but they fall under three general categories: $1)$. Does the model make sense? $2)$. Are the assumptions satisfied? and $3)$. Is the model practically useful? Statisticians have devised many ways to address these questions, some qualitative, some quantitative. Many of the quantitative methods are focused on examining $(2)$, since the validity of the predictions from the model rest upon the assumptions being at least reasonably satisfied. However, even if the assumptions are badly violated, the model could be made to be useful by making adjustments to the model-fitting process.&lt;/p&gt;
 &lt;h2 id=&#34;assessing-the-fit-of-the-model&#34;&gt;Assessing the Fit of the Model&lt;/h2&gt;
@@ -3661,17 +3742,13 @@ $x_{1}$              $p_{12}$   $\ldots$   $p_{1c}$      $X$   $x_{2}$          
 &lt;a href=&#34;#gas_scatter&#34;&gt;[gas_scatter]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;gas_scatter&amp;rdquo;} and 
 &lt;a href=&#34;#c02&#34;&gt;[c02]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;c02&amp;rdquo;} confirm what we suspect: higher oil prices lead to higher gas prices, and the more cars on the road, the higher the CO$_{2}$ output. But what about the relationship between the square footage of a house and its selling price? Figure 
 &lt;a href=&#34;#housescatter&#34;&gt;[housescatter]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;housescatter&amp;rdquo;} is a scatterplot of over $2,000$ selling prices of houses in Ames, Iowa, and their associated square footage. Is the relationship linear or quadratic? In this case, it is a little harder to see.&lt;/p&gt;
-&lt;p&gt;\FRAME{ftbphFU}{3.8017in}{2.9698in}{0pt}{\Qcb{One possible relationship between charitable contributions and income is a linear relationship, where as income increases, average contributions increase at a constant rate.}}{% \Qlb{reg_model}}{Figure}{\special{language &amp;ldquo;Scientific Word&amp;rdquo;;type &amp;ldquo;GRAPHIC&amp;rdquo;;maintain-aspect-ratio TRUE;display &amp;ldquo;USEDEF&amp;rdquo;;valid_file &amp;ldquo;T&amp;rdquo;;width 3.8017in;height 2.9698in;depth 0pt;original-width 10.1149in;original-height 7.8854in;cropleft &amp;ldquo;0&amp;rdquo;;croptop &amp;ldquo;1&amp;rdquo;;cropright &amp;ldquo;1&amp;rdquo;;cropbottom &amp;ldquo;0&amp;rdquo;;tempfilename &amp;lsquo;N7HNF80F.wmf&amp;rsquo;;tempfile-properties &amp;ldquo;XPR&amp;rdquo;;}}&lt;/p&gt;
-&lt;p&gt;\FRAME{ftbphFU}{3.8242in}{2.9032in}{0pt}{\Qcb{Another possible relationship between charitable contributions and income is a quadratic relationship, where as income increases, average contributions increase at an increasing rate.}}{\Qlb{quadreg}}{Figure}{\special{language &amp;ldquo;Scientific Word&amp;rdquo;;type &amp;ldquo;GRAPHIC&amp;rdquo;;maintain-aspect-ratio TRUE;display &amp;ldquo;USEDEF&amp;rdquo;;valid_file &amp;ldquo;T&amp;rdquo;;width 3.8242in;height 2.9032in;depth 0pt;original-width 10.4063in;original-height 7.8854in;cropleft &amp;ldquo;0&amp;rdquo;;croptop &amp;ldquo;1&amp;rdquo;;cropright &amp;ldquo;1&amp;rdquo;;cropbottom &amp;ldquo;0&amp;rdquo;;tempfilename &amp;lsquo;N7HNF80G.wmf&amp;rsquo;;tempfile-properties &amp;ldquo;XPR&amp;rdquo;;}}&lt;/p&gt;
-&lt;p&gt;\FRAME{ftbphFU}{4.1096in}{2.2667in}{0pt}{\Qcb{Scatterplot of gasoline prices ($y$ axis) and crude oil prices ($x$ axis).}}{\Qlb{gas_scatter}}{Figure}{% \special{language &amp;ldquo;Scientific Word&amp;rdquo;;type &amp;ldquo;GRAPHIC&amp;rdquo;;maintain-aspect-ratio TRUE;display &amp;ldquo;USEDEF&amp;rdquo;;valid_file &amp;ldquo;T&amp;rdquo;;width 4.1096in;height 2.2667in;depth 0pt;original-width 6.9254in;original-height 3.8043in;cropleft &amp;ldquo;0&amp;rdquo;;croptop &amp;ldquo;1&amp;rdquo;;cropright &amp;ldquo;1&amp;rdquo;;cropbottom &amp;ldquo;0&amp;rdquo;;tempfilename &amp;lsquo;N7HNF80H.wmf&amp;rsquo;;tempfile-properties &amp;ldquo;XPR&amp;rdquo;;}}&lt;/p&gt;
-&lt;p&gt;\FRAME{ftbphFU}{4.1831in}{2.2416in}{0pt}{\Qcb{CO$_{2}$ output and number of motor vehicles per $1000$ people.}}{\Qlb{c02}}{Figure}{\special{language &amp;ldquo;Scientific Word&amp;rdquo;;type &amp;ldquo;GRAPHIC&amp;rdquo;;maintain-aspect-ratio TRUE;display &amp;ldquo;USEDEF&amp;rdquo;;valid_file &amp;ldquo;T&amp;rdquo;;width 4.1831in;height 2.2416in;depth 0pt;original-width 7.3232in;original-height 3.9064in;cropleft &amp;ldquo;0&amp;rdquo;;croptop &amp;ldquo;1&amp;rdquo;;cropright &amp;ldquo;1&amp;rdquo;;cropbottom &amp;ldquo;0&amp;rdquo;;tempfilename &amp;lsquo;N7HNF80I.wmf&amp;rsquo;;tempfile-properties &amp;ldquo;XPR&amp;rdquo;;}} \FRAME{ftbphFU}{3.9401in}{2.9265in}{0pt}{\Qcb{Scatterplot of sales prices of houses in Ames, Iowa, and total square footage.}}{\Qlb{housescatter}}{Figure% }{\special{language &amp;ldquo;Scientific Word&amp;rdquo;;type &amp;ldquo;GRAPHIC&amp;rdquo;;maintain-aspect-ratio TRUE;display &amp;ldquo;USEDEF&amp;rdquo;;valid_file &amp;ldquo;T&amp;rdquo;;width 3.9401in;height 2.9265in;depth 0pt;original-width 6.6565in;original-height 4.9372in;cropleft &amp;ldquo;0&amp;rdquo;;croptop &amp;ldquo;1&amp;rdquo;;cropright &amp;ldquo;1&amp;rdquo;;cropbottom &amp;ldquo;0&amp;rdquo;;tempfilename &amp;lsquo;N7HNF80J.wmf&amp;rsquo;;tempfile-properties &amp;ldquo;XPR&amp;rdquo;;}}&lt;/p&gt;
+&lt;h2 id=&#34;the-coefficient-of-determination&#34;&gt;The coefficient of determination&lt;/h2&gt;
 &lt;p&gt;One way of measuring the fit of a model is known as $R^{2},$ read as $&amp;quot;R$ square,&amp;rdquo; which we now define.&lt;/p&gt;
-&lt;p&gt;$\mathbf{R}^{2}$, also known as &lt;strong&gt;the coefficient of determination&lt;/strong&gt; is the proportion of total variability in $Y$ that is accounted for, or &amp;ldquo;explained,&amp;rdquo; by the regression fit between $Y$ and $x$.&lt;/p&gt;
+&lt;p&gt;$R^2$, also known as &lt;strong&gt;the coefficient of determination&lt;/strong&gt; is the proportion of total variability in $Y$ that is accounted for, or &amp;ldquo;explained,&amp;rdquo; by the regression fit between $Y$ and $x$.&lt;/p&gt;
 &lt;p&gt;The idea of &amp;ldquo;explained variability&amp;rdquo; should remind you of the ANOVA discussion. ANOVA is, in fact, a type of regression model where the $x$ variable is a categorical rather than a numeric variable. Remember that the &lt;strong&gt;fundamental assumption of statistics&lt;/strong&gt; is that variability exists in the world. It is inescapable. So the question is not whether we can eliminate variability,* *but rather* how we can account for it.* In the three data sets plotted above, we clearly see variability in the $Y$ variable. Some of that variability can potentially be &amp;ldquo;explained&amp;rdquo; by a regression line fit to the data. The rest we regard as &amp;ldquo;unexplained.&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;Figure 
-&lt;a href=&#34;#rsq&#34;&gt;[rsq]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;rsq&amp;rdquo;} shows the idea. Panel (a) shows that the total variability in the data can be measured by the differences between each actual observation and the sample mean $\overline{y}$. We already know a measure for that: the sample standard deviation $s$. However, the variability is really measured just by the numerator of that equation, which we defined as $% &amp;ldquo;SSTOT,&amp;ldquo;$ which stands for &amp;ldquo;total sum of squares.&amp;rdquo; This is defined as&lt;/p&gt;
+&lt;a href=&#34;#rsq&#34;&gt;[rsq]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;rsq&amp;rdquo;} shows the idea. Panel (a) shows that the total variability in the data can be measured by the differences between each actual observation and the sample mean $\overline{y}$. We already know a measure for that: the sample standard deviation $s$. However, the variability is really measured just by the numerator of that equation, which we defined as $&amp;quot;SSTOT,&amp;ldquo;$ which stands for &amp;ldquo;total sum of squares.&amp;rdquo; This is defined as&lt;/p&gt;
 &lt;p&gt;$$SSTOT=\sum (y_{i}-\overline{y})^{2}$$&lt;/p&gt;
-&lt;p&gt;\FRAME{ftbphFU}{6.6712in}{2.7735in}{0pt}{\Qcb{Decomposition of variability into &amp;ldquo;explained&amp;rdquo; and &amp;ldquo;unexplained&amp;rdquo; components.}}{\Qlb{rsq}}{Figure}{\special% {language &amp;ldquo;Scientific Word&amp;rdquo;;type &amp;ldquo;GRAPHIC&amp;rdquo;;maintain-aspect-ratio TRUE;display &amp;ldquo;USEDEF&amp;rdquo;;valid_file &amp;ldquo;T&amp;rdquo;;width 6.6712in;height 2.7735in;depth 0pt;original-width 7.2809in;original-height 3.0104in;cropleft &amp;ldquo;0&amp;rdquo;;croptop &amp;ldquo;1&amp;rdquo;;cropright &amp;ldquo;1&amp;rdquo;;cropbottom &amp;ldquo;0&amp;rdquo;;tempfilename &amp;lsquo;N7HNF80K.wmf&amp;rsquo;;tempfile-properties &amp;ldquo;XPR&amp;rdquo;;}}&lt;/p&gt;
 &lt;p&gt;In panel (c), we see that some of this variability can be &amp;ldquo;explained&amp;rdquo; by the regression line through the differences between the values $\widehat{y_{i}}$ and the sample mean $\overline{y}$. This &amp;ldquo;explained&amp;rdquo; variability is measured by a sum of squares as well, which we call $SSR$, which stands for &amp;ldquo;sum of squares for regression.&amp;rdquo; This is defined as:&lt;/p&gt;
 &lt;p&gt;$$SSR=\sum (\widehat{y_{i}}-\overline{y})^{2}$$&lt;/p&gt;
 &lt;p&gt;The remaining variability is accounted for by the differences in the actual values, $y_{i},$ and the predicted values $\widehat{y_{i}}$. This is also a sum of squares, called , $SSE,$ which stands for &amp;ldquo;sum of squares for error.&amp;rdquo; It is defined as:&lt;/p&gt;
@@ -3683,47 +3760,43 @@ $x_{1}$              $p_{12}$   $\ldots$   $p_{1c}$      $X$   $x_{2}$          
 &lt;p&gt;$$R^{2}=\frac{SSR}{SSTOT}=1-\frac{SSE}{SSTOT}$$&lt;/p&gt;
 &lt;p&gt;Here is a useful fact relating $R^{2}$ to correlation.&lt;/p&gt;
 &lt;p&gt;In the simple linear regression model $Y=\beta_{0}+\beta_{1}x+\varepsilon ,$ $R^{2}$ is equal to the square of the correlation coefficient $r$. That is $R^{2}=r^{2}$.&lt;/p&gt;
-&lt;p&gt;How much variability is accounted for by the regression model is only one indication of its usefulness. It is possible to have a fairly large $R^{2}$ in a model that is not practically useful. A $95%$ confidence interval for $% \beta_{1}$, for instance, could be too wide to make any reasonable judgment on the relationship between a unit increase in $x$ on the mean of $Y$. Another problem is that a high $R^{2}$ is possible when the underlying assumptions of the regression procedure are violated. Fortunately, in this case, adjustments to the model or transformations of the data are usually possible in order to make the assumptions more reasonably met. In the next section, we give an overview of some common regression assumption violations.&lt;/p&gt;
+&lt;p&gt;How much variability is accounted for by the regression model is only one indication of its usefulness. It is possible to have a fairly large $R^{2}$ in a model that is not practically useful. A $95%$ confidence interval for $\beta_{1}$, for instance, could be too wide to make any reasonable judgment on the relationship between a unit increase in $x$ on the mean of $Y$. Another problem is that a high $R^{2}$ is possible when the underlying assumptions of the regression procedure are violated. Fortunately, in this case, adjustments to the model or transformations of the data are usually possible in order to make the assumptions more reasonably met. In the next section, we give an overview of some common regression assumption violations.&lt;/p&gt;
 &lt;h2 id=&#34;violations-of-regression-assumptions&#34;&gt;Violations of Regression Assumptions&lt;/h2&gt;
-&lt;p&gt;The basic ways that a simple linear regression model can go wrong are 1). the true $E(Y|x)$ is not linear, but some other function; 2). The error terms $\varepsilon_{i}$ are not independent of one another or of $x;$ 3). The error terms $\varepsilon_{i}$ do not have the same variance $% V(\varepsilon )=$ $\sigma ^{2}$ for all values of $x$ ; 4). Several of these assumptions are violated. Let&amp;rsquo;s expand upon points $(2)$ and $(3)$.&lt;/p&gt;
-&lt;p&gt;The error terms $\varepsilon_{i}$ arise due to the imperfect fit between the regression line $\beta_{0}+\beta_{1}x$ and the actual value $Y$. For each value of $Y_{i}$ and $x_{i},$ there is an associated $\varepsilon_{i}$ that &amp;ldquo;absorbs&amp;rdquo; the effects of all of the variables that we didn&amp;rsquo;t include in the model. One of the key assumptions is that the variance of the error term $V(\varepsilon )$ *does not change* as $x$ changes. That is, $% V(\varepsilon_{i})=V(\varepsilon_{j})$ for any $i$ and $\ j$. We further assume that the correlation between $\varepsilon_{i}$ and $\varepsilon_{j}$ is exactly $0,$ that is, the error in predicting $Y_{i}$ using $x_{i}$ is unrelated to the error in predicting $Y_{j}$ using $x_{j}$, for any $i$ and $% j$. If these assumptions about the $\varepsilon_{i}$ are not satisfied, inferential statements we make using the fitted model (for example, calculating a confidence interval or test for $\beta_{1}$, or predicting a new observation of $Y)$ are not strictly valid, and may thus be highly misleading.&lt;/p&gt;
+&lt;p&gt;The basic ways that a simple linear regression model can go wrong are 1). the true $E(Y|x)$ is not linear, but some other function; 2). The error terms $\varepsilon_{i}$ are not independent of one another or of $x;$ 3). The error terms $\varepsilon_{i}$ do not have the same variance $V(\varepsilon )=$ $\sigma ^{2}$ for all values of $x$ ; 4). Several of these assumptions are violated. Let&amp;rsquo;s expand upon points $(2)$ and $(3)$.&lt;/p&gt;
+&lt;p&gt;The error terms $\varepsilon_{i}$ arise due to the imperfect fit between the regression line $\beta_{0}+\beta_{1}x$ and the actual value $Y$. For each value of $Y_{i}$ and $x_{i},$ there is an associated $\varepsilon_{i}$ that &amp;ldquo;absorbs&amp;rdquo; the effects of all of the variables that we didn&amp;rsquo;t include in the model. One of the key assumptions is that the variance of the error term $V(\varepsilon )$ *does not change* as $x$ changes. That is, $V(\varepsilon_{i})=V(\varepsilon_{j})$ for any $i$ and $\ j$. We further assume that the correlation between $\varepsilon_{i}$ and $\varepsilon_{j}$ is exactly $0,$ that is, the error in predicting $Y_{i}$ using $x_{i}$ is unrelated to the error in predicting $Y_{j}$ using $x_{j}$, for any $i$ and $j$. If these assumptions about the $\varepsilon_{i}$ are not satisfied, inferential statements we make using the fitted model (for example, calculating a confidence interval or test for $\beta_{1}$, or predicting a new observation of $Y)$ are not strictly valid, and may thus be highly misleading.&lt;/p&gt;
 &lt;p&gt;The most common method by which we evaluate the assumptions of the regression model is by examining what are called &amp;ldquo;residuals.&amp;rdquo; First, we need to define what a residual is.&lt;/p&gt;
 &lt;p&gt;A regression &lt;strong&gt;residual&lt;/strong&gt; $e_{i}$** **is the difference between the actual value $y_{i}$ and the fitted value $\widehat{y_{i}}$. For a fitted regression model, the residual is&lt;/p&gt;
 &lt;p&gt;$$e_{i}=y_{i}-\widehat{y_{i}}$$&lt;/p&gt;
 &lt;p&gt;In the case of the simple linear regression model, plotting the residuals by the $x$ variable is a natural choice. A scatterplot of $(e_{i},x_{i})$ is called a **residual plot**. Examining residual plots can help identify problems with the model fit. How should the residual plot look if all of the assumptions are reasonably met? The short answer is: *look for the absence of a pattern.* Figure 
 &lt;a href=&#34;#good_resid&#34;&gt;[good_resid]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;good_resid&amp;rdquo;} illustrates this idea. Notice that the residuals seem to scatter around $0$ with no apparent pattern. We would say this model is a reasonably good fit to the data.&lt;/p&gt;
-&lt;p&gt;\FRAME{ftbphFU}{6.1315in}{3.0666in}{0pt}{\Qcb{Residual plot for a model where the assumptions are reasonably satisfied. In this model, &amp;ldquo;time&amp;rdquo; is the  $x$ variable.}}{\Qlb{good_resid}}{Figure}{\special{language &amp;ldquo;Scientific Word&amp;rdquo;;type &amp;ldquo;GRAPHIC&amp;rdquo;;maintain-aspect-ratio TRUE;display &amp;ldquo;USEDEF&amp;rdquo;;valid_file &amp;ldquo;T&amp;rdquo;;width 6.1315in;height 3.0666in;depth 0pt;original-width 9.6868in;original-height 4.8317in;cropleft &amp;ldquo;0&amp;rdquo;;croptop &amp;ldquo;1&amp;rdquo;;cropright &amp;ldquo;1&amp;rdquo;;cropbottom &amp;ldquo;0&amp;rdquo;;tempfilename &amp;lsquo;N7HREN0P.wmf&amp;rsquo;;tempfile-properties &amp;ldquo;XPR&amp;rdquo;;}}&lt;/p&gt;
 &lt;p&gt;A violation of the assumption of constant standard deviation (known formally as &lt;strong&gt;heteroscedasticity)&lt;/strong&gt; is shown in Figure 
 &lt;a href=&#34;#hetero&#34;&gt;[hetero]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;hetero&amp;rdquo;}. Notice that as the $x$ variable (&amp;ldquo;time&amp;rdquo; in this case) gets larger, the residuals begin to &amp;ldquo;fan out&amp;rdquo; in a megaphone pattern, indicating an increase in the variability. In practice, an analyst would employ a &lt;strong&gt;variable transformation&lt;/strong&gt; to the data to correct for this. Discussion of how this transformation is accomplished is beyond the scope of this handout &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;p&gt;An example of a model in which the assumption that $E(Y|x)$ is linear is not met is shown next in Figure 
-&lt;a href=&#34;#misspesified&#34;&gt;[misspesified]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;misspesified&amp;rdquo;}. Such a model is called a &lt;strong&gt;misspecified model,&lt;/strong&gt; and many times such models will result in error terms that are correlated. Moreover, misspecified models are problematic in their own right simply because any predictions we get from using the model will be wrong because the wrong relationship was postulated between $Y$ and $% x$. In the example below, it can be shown that fitting a parabola $% E(Y|x)=\beta_{0}+\beta_{1}x+\beta_{2}x^{2}$ rather than a line will lead to a residual plot that looks like Figure 
+&lt;a href=&#34;#misspesified&#34;&gt;[misspesified]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;misspesified&amp;rdquo;}. Such a model is called a &lt;strong&gt;misspecified model,&lt;/strong&gt; and many times such models will result in error terms that are correlated. Moreover, misspecified models are problematic in their own right simply because any predictions we get from using the model will be wrong because the wrong relationship was postulated between $Y$ and $x$. In the example below, it can be shown that fitting a parabola $E(Y|x)=\beta_{0}+\beta_{1}x+\beta_{2}x^{2}$ rather than a line will lead to a residual plot that looks like Figure 
 &lt;a href=&#34;#good_resid&#34;&gt;[good_resid]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;good_resid&amp;rdquo;} above.&lt;/p&gt;
-&lt;p&gt;\FRAME{ftbphFU}{6.0623in}{3.4108in}{0pt}{\Qcb{Example of a model in which $% E(Y|x)$ was quadratic rather than linear.}}{\Qlb{misspesified}}{Figure}{% \special{language &amp;ldquo;Scientific Word&amp;rdquo;;type &amp;ldquo;GRAPHIC&amp;rdquo;;maintain-aspect-ratio TRUE;display &amp;ldquo;USEDEF&amp;rdquo;;valid_file &amp;ldquo;T&amp;rdquo;;width 6.0623in;height 3.4108in;depth 0pt;original-width 9.6522in;original-height 5.4146in;cropleft &amp;ldquo;0&amp;rdquo;;croptop &amp;ldquo;1&amp;rdquo;;cropright &amp;ldquo;1&amp;rdquo;;cropbottom &amp;ldquo;0&amp;rdquo;;tempfilename &amp;lsquo;N7HREO0R.wmf&amp;rsquo;;tempfile-properties &amp;ldquo;XPR&amp;rdquo;;}}&lt;/p&gt;
 &lt;p&gt;For many of the real-world data sets we will use, the assumptions of the simple model will be violated. For instance, Figure 
 &lt;a href=&#34;#crude_resid&#34;&gt;[crude_resid]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;crude_resid&amp;rdquo;} indicates that the standard deviation of the residual terms increases as the price of oil increases. The pattern is that of the &amp;ldquo;megaphone&amp;rdquo; we saw earlier. It turns out that for this model, the fitted values $\widehat{y}%_{i}$ (i.e., the predictions of $y$ for each price per barrel of oil) don&amp;rsquo;t differ by much when the problem of non-constant variability is corrected (this correction isn&amp;rsquo;t shown here and is beyond the scope of this handout.) Therefore, &lt;em&gt;we will proceed in the examples as if the model assumptions are reasonably met&lt;/em&gt;, although in &amp;ldquo;real life,&amp;rdquo; as you should always do in any situation, you will need to check assumptions.&lt;/p&gt;
-&lt;p&gt;\FRAME{ftbphFU}{5.495in}{2.5728in}{0pt}{\Qcb{Residual plot of the regression of the price of gasoline on the price of oil. This plot shows non-constant error standard deviation.}}{\Qlb{crude_resid}}{Figure}{\special{language &amp;ldquo;Scientific Word&amp;rdquo;;type &amp;ldquo;GRAPHIC&amp;rdquo;;maintain-aspect-ratio TRUE;display &amp;ldquo;USEDEF&amp;rdquo;;valid_file &amp;ldquo;T&amp;rdquo;;width 5.495in;height 2.5728in;depth 0pt;original-width 5.4371in;original-height 2.5313in;cropleft &amp;ldquo;0&amp;rdquo;;croptop &amp;ldquo;1&amp;rdquo;;cropright &amp;ldquo;1&amp;rdquo;;cropbottom &amp;ldquo;0&amp;rdquo;;tempfilename &amp;lsquo;N7HREO0S.wmf&amp;rsquo;;tempfile-properties &amp;ldquo;XPR&amp;rdquo;;}}&lt;/p&gt;
 &lt;p&gt;Once you have fit the model, there are two things you might want to do with it: make an inference about $E(Y|x)$ for a specific $x$ and predict a new value of $Y,$ call it $Y^{new}$. We will discuss these two issues in the next section.&lt;/p&gt;
 &lt;h2 id=&#34;estimation-of-mean-of-y-and-prediction-of-new-y&#34;&gt;Estimation of Mean of Y and Prediction of New Y&lt;/h2&gt;
 &lt;p&gt;It turns out that estimating the mean of $Y$ for a specific value of $x$ and predicting a new value of $Y$ for a specific value of $x$ are done the same way: plug the specific value of $x$, call it $x_{p}$, into the fitted model.  What differs is constructing the interval. In general, the confidence interval for $E(Y|x_{p})$ will be narrower than the **prediction interval** for the value of $Y^{new}$. This fact makes sense because estimating a specific value of a distribution should logically be less precise than estimating its mean.&lt;/p&gt;
 &lt;p&gt;Here are the two formulas&lt;/p&gt;
 &lt;p&gt;A $(1-\alpha )100%$ &lt;strong&gt;confidence interval&lt;/strong&gt; for $E(Y|x_{p})$ for the simple linear regression model is&lt;/p&gt;
-&lt;p&gt;$$\widehat{y}\pm t_{n-2,\alpha /2}\sqrt{\frac{SSE}{n-2}\left[ \frac{1}{n}+% \frac{(x_{p}-\overline{x})^{2}}{(n-1)s_{x}^{2}}\right] }$$&lt;/p&gt;
+&lt;p&gt;$$\widehat{y}\pm t_{n-2,\alpha /2}\sqrt{\frac{SSE}{n-2}\left[ \frac{1}{n}+\frac{(x_{p}-\overline{x})^{2}}{(n-1)s_{x}^{2}}\right] }$$&lt;/p&gt;
 &lt;p&gt;where $x_{p}$ is the specific value of $x$ for which we want to estimate the mean of $Y$.&lt;/p&gt;
-&lt;p&gt;A $(1-\alpha )100%$ &lt;strong&gt;prediction interval&lt;/strong&gt;  for a new observation $% Y^{new}$ at a specific value $x_{p}$, is&lt;/p&gt;
-&lt;p&gt;$$\widehat{y}\pm t_{n-2,\alpha /2}\sqrt{\frac{SSE}{n-2}\left[ 1+\frac{1}{n}+% \frac{(x_{p}-\overline{x})^{2}}{(n-1)s_{x}^{2}}\right] }$$&lt;/p&gt;
+&lt;p&gt;A $(1-\alpha )100%$ &lt;strong&gt;prediction interval&lt;/strong&gt;  for a new observation $Y^{new}$ at a specific value $x_{p}$, is&lt;/p&gt;
+&lt;p&gt;$$\widehat{y}\pm t_{n-2,\alpha /2}\sqrt{\frac{SSE}{n-2}\left[ 1+\frac{1}{n}+\frac{(x_{p}-\overline{x})^{2}}{(n-1)s_{x}^{2}}\right] }$$&lt;/p&gt;
 &lt;p&gt;Notice that the only difference between the two is the addition of the $&amp;quot;1&amp;quot;$ in the prediction interval formula.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s work some examples to put all of the concepts of this handout into practice.&lt;/p&gt;
 &lt;p&gt;For the following values of SSR, SSE, and SSTOT, calculate $R^{2}$.&lt;/p&gt;
 &lt;p&gt;a). $SSE=159$, $SSTOT=309.3$&lt;/p&gt;
 &lt;p&gt;b). $SSR=1682,$ $SSTOT=1982$&lt;/p&gt;
 &lt;p&gt;c). $SSR=149,$ $SSE=592$&lt;/p&gt;
-&lt;p&gt;The fitted regression model relating motor vehicles per $1000$ people to $% CO_{2}$ output for a sample of countries using the data displayed in Figure 
+&lt;p&gt;The fitted regression model relating motor vehicles per $1000$ people to $CO_{2}$ output for a sample of countries using the data displayed in Figure 
 &lt;a href=&#34;#c02&#34;&gt;[c02]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;c02&amp;rdquo;} is shown below$.$.The average number of motor vehicles per $1000$ people $\overline{x}=260.1$ with a standard deviation $s_{x}=236$.&lt;/p&gt;
 &lt;p&gt;a). Show how $R^{2}$ was calculated.&lt;/p&gt;
 &lt;p&gt;b). Interpret $R^{2}$ in the context of the problem.&lt;/p&gt;
 &lt;p&gt;c). Compute a $99%$ confidence interval for the true mean CO$_{2}$ output in a country when it has $400$ motor vehicles per $1000$ people.&lt;/p&gt;
 &lt;p&gt;d). Compute a $99%$ confidence interval for the true mean CO$_{2}$ output in a country when it has $400$ motor vehicles per $1000$ people.&lt;/p&gt;
-&lt;p&gt;\FRAME{ftbphFU}{5.9836in}{3.1445in}{0pt}{\Qcb{Regression fit relating $% CO_{2}$ output $(y)$ to motor vehicles per $1000$ people $(x)$.}}{\Qlb{% co2_reg}}{Figure}{\special{language &amp;ldquo;Scientific Word&amp;rdquo;;type &amp;ldquo;GRAPHIC&amp;rdquo;;maintain-aspect-ratio TRUE;display &amp;ldquo;USEDEF&amp;rdquo;;valid_file &amp;ldquo;T&amp;rdquo;;width 5.9836in;height 3.1445in;depth 0pt;original-width 7.3025in;original-height 3.8233in;cropleft &amp;ldquo;0&amp;rdquo;;croptop &amp;ldquo;1&amp;rdquo;;cropright &amp;ldquo;1&amp;rdquo;;cropbottom &amp;ldquo;0&amp;rdquo;;tempfilename &amp;lsquo;N7LIL300.wmf&amp;rsquo;;tempfile-properties &amp;ldquo;XPR&amp;rdquo;;}}&lt;/p&gt;
 &lt;p&gt;An economist is studying the nature of street vendors in Mexico. She has gathered the following data on $15$ vendors: age, number of hours worked per day, and annual earnings. Using Excel, fit a simple linear regression model to predict annual earnings using hours worked per day as the $x$ variable.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -3821,142 +3894,29 @@ $x_{1}$              $p_{12}$   $\ldots$   $p_{1c}$      $X$   $x_{2}$          
 &lt;p&gt;b). Interpret $R^{2}$ in the context of the problem.&lt;/p&gt;
 &lt;p&gt;c). Compute a $99%$ confidence interval for the average price of a $10$-year-old home.&lt;/p&gt;
 &lt;p&gt;d).Compute a $99%$ prediction interval for the price of a $10$-year-old home.&lt;/p&gt;
-&lt;p&gt;\FRAME{ftbphFU}{5.6861in}{3.5405in}{0pt}{\Qcb{Excel regression output for a model of selling price $(Y,$ in thousands of dollars$)$ to age $(x=Age)$.}}{% \Qlb{house_example}}{Figure}{\special{language &amp;ldquo;Scientific Word&amp;rdquo;;type &amp;ldquo;GRAPHIC&amp;rdquo;;maintain-aspect-ratio TRUE;display &amp;ldquo;USEDEF&amp;rdquo;;valid_file &amp;ldquo;T&amp;rdquo;;width 5.6861in;height 3.5405in;depth 0pt;original-width 6.1566in;original-height 3.8233in;cropleft &amp;ldquo;0&amp;rdquo;;croptop &amp;ldquo;1&amp;rdquo;;cropright &amp;ldquo;1&amp;rdquo;;cropbottom &amp;ldquo;0&amp;rdquo;;tempfilename &amp;lsquo;N7LLO700.wmf&amp;rsquo;;tempfile-properties &amp;ldquo;XPR&amp;rdquo;;}}&lt;/p&gt;
 &lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.npr.org/2013/09/03/218627288/why-being-wealthy-doesnt-lead-to-more-giving&#34;&gt;http://www.npr.org/2013/09/03/218627288/why-being-wealthy-doesnt-lead-to-more-giving&lt;/a&gt; &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;www.kickstarter.com/&#34;&gt;www.kickstarter.com/&lt;/a&gt; &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;A common solution to the unequal variance problem is to perform a     regression using $x$ and $y^{\ast }=\ln (y)$, the natural logarithm     of $y$. &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;www.fundable.com/&#34;&gt;www.fundable.com/&lt;/a&gt; &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.indeed.com/jobs?q=business+analytics&amp;amp;l&#34;&gt;http://www.indeed.com/jobs?q=business+analytics&amp;amp;l&lt;/a&gt; &lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.wired.com/underwire/2013/08/qq_netflix-algorithm/?mbid=social10558894&#34;&gt;http://www.wired.com/underwire/2013/08/qq_netflix-algorithm/?mbid=social10558894&lt;/a&gt; &lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Available here: 
+&lt;a href=&#34;www.r-project.org&#34;&gt;www.r-project.org&lt;/a&gt; &lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Evaluating Linear Regression</title>
-      <link>/courses/bana3363/17-evaluating-linear-regression/</link>
-      <pubDate>Tue, 28 Jul 2020 15:19:27 +0000</pubDate>
-      <guid>/courses/bana3363/17-evaluating-linear-regression/</guid>
-      <description>&lt;h2 id=&#34;evaluating-the-simple-linear-regression-model--part-1&#34;&gt;Evaluating the Simple Linear Regression Model&amp;ndash;Part 1&lt;/h2&gt;
-&lt;p&gt;The essential components of regression analysis are the following:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;We assume that two variables, $x$ and $Y,$ are somehow related.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Specifically, we assume the probability distribution of $Y$ (which is called the response or dependent variable) changes as $x$ (which is called the predictor or independent variable) changes.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Specifically, we assume that &lt;em&gt;the mean (or expected value)&lt;/em&gt; of $Y,$ denoted as $E(Y),$ changes as $x$ changes. To indicate this we write $E(Y|x)$ read as &amp;ldquo;the expected value of $Y$ given $x.&amp;ldquo;$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;We can also indicate $E(Y|x)$ using the notation $\widehat{Y},$ read as $&amp;quot;y$ hat.&amp;rdquo;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Specifically, with simple regression, we assume that $Y=\beta_{0}+\beta_{1}x+\varepsilon$, where $\varepsilon$ has a normal distribution with mean $0$ and standard deviation $\sigma.$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Given a set of paired data points ${(Y_{i},x_{i})},$ we can fit     the simple linear regression model $\widehat{y}=b_{0}+b_{1}x$ by finding the values $b_{0}$ and $b_{1}$ that makes the &amp;ldquo;sum of squared errors&amp;rdquo; $SSE= \sum (y_{i}-(b_{0}+b_{1}x_{i}))^{2}$ as small as possible. This is the **OLS (ordinary least squares) criterion.**&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Once the model is fit, we should examine how good the fit is. Several items should be checked, but they fall under three general categories: $1)$. Does the model make sense? $2).$ Are the assumptions satisfied?, and $3).$ Is the model practically useful? Statisticians have devised many ways to address these questions, some qualitative, some quantitative. Many of the quantitative methods are focused on examining $(2)$, since the validity of the predictions from the model rest upon the assumptions being at least reasonably satisfied. However, even if the assumptions are badly violated, the model might be useful and sensible. In practice, then, adjustments to the model-fitting process would be performed to make $(2)$ more reasonable. We won&amp;rsquo;t be worried too much about adjusting anything at this point. We will focus on $(1)$ in this handout.&lt;/p&gt;
-&lt;p&gt;Whether the fitted model $\widehat{y}=b_{0}+b_{1}x$ makes sense or not depends on your knowledge of the subject you are trying to learn about, and specifically on your idea of how the two variables should be related. For example, it seems sensible that as income increases,. the total amount of charitable contributions should increase as well. The relationship might be linear or non-linear. Two possible relationships are shown in Figures 
-&lt;a href=&#34;#reg_model&#34;&gt;[reg_model]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;reg_model&amp;rdquo;} and 
-&lt;a href=&#34;#quadreg&#34;&gt;[quadreg]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;quadreg&amp;rdquo;} below. However, other relationships are possible. 
-&lt;a href=&#34;http://www.npr.org/2013/09/03/218627288/why-being-wealthy-doesnt-lead-to-more-giving&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;A recent study&lt;/a&gt; has shown that the very wealthy are less generous in that they give a smaller percentage of their income to charity.&lt;/p&gt;
-&lt;p&gt;The most important way to determine the relationship between variables is to simply graph the data. Scatterplots such as those in Figures 
-&lt;a href=&#34;#gas_scatter&#34;&gt;[gas_scatter]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;gas_scatter&amp;rdquo;} and 
-&lt;a href=&#34;#c02&#34;&gt;[c02]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;c02&amp;rdquo;} confirm what we suspect: higher oil prices lead to higher gas prices, and the more cars on the road, the higher the CO$_{2}$ output. But what about the relationship between the square footage of a house and its selling price? Figure 
-&lt;a href=&#34;#housescatter&#34;&gt;[housescatter]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;housescatter&amp;rdquo;} is a scatterplot of over $2,000$ selling prices of houses in Ames, Iowa, and their associated square footage. Is the relationship linear or quadratic? In this case, it is a little harder to see.&lt;/p&gt;
-&lt;p&gt;One way of measuring the fit of a model is known as $R^{2},$ read as $&amp;quot;R$ square,&amp;rdquo; which we now define.&lt;/p&gt;
-&lt;p&gt;$R^{2}$, also known as &lt;strong&gt;&amp;ldquo;the coefficient of determination&amp;rdquo;&lt;/strong&gt; is the proportion of total variability in $Y$ that is accounted for, or &amp;ldquo;explained,&amp;rdquo; by the regression fit between $Y$ and $x.$&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;Accounting for variability&amp;rdquo; seems to be an odd concept. After all, shouldn&amp;rsquo;t we be aiming for &lt;em&gt;no&lt;/em&gt; variability in the data? Remember that the &lt;strong&gt;fundamental assumption of statistics&lt;/strong&gt; is that variability exists in the world. It is inescapable. So the question is not whether we can eliminate variability,* but rather how we can model it.* In the three data sets plotted in the figures above, we clearly see variability in the $Y$ variable. Some of that variability can potentially be &amp;ldquo;explained&amp;rdquo; by a regression line fit to the data. The rest we regard as &amp;ldquo;unexplained.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;Figure 
-&lt;a href=&#34;#rsq&#34;&gt;[rsq]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;rsq&amp;rdquo;} shows the idea. Panel (a) shows that the total variability in the data can be measured by the differences between each actual observation and the sample mean $\overline{y}.$ We already know a measure for that: the sample standard deviation $s.$ However, the variability is really measured just by the numerator of that equation, which we defined as $% &amp;ldquo;SSTOT,&amp;ldquo;$ which stands for &amp;ldquo;total sum of squares.&amp;rdquo; This is defined as&lt;/p&gt;
-&lt;p&gt;$$SSTOT=\sum (y_{i}-\overline{y})^{2}$$&lt;/p&gt;
-&lt;p&gt;In panel (c), we see that some of this variability can be &amp;ldquo;explained&amp;rdquo; by the regression line through the differences between the values $\widehat{y_{i}}$ and the sample mean $\overline{y}.$ This &amp;ldquo;explained&amp;rdquo; variability is measured by a sum of squares as well, which we call $SSR$, which stands for &amp;ldquo;sum of squares for regression.&amp;rdquo; This is defined as:&lt;/p&gt;
-&lt;p&gt;$$SSR=\sum (\widehat{y_{i}}-\overline{y})^{2}$$&lt;/p&gt;
-&lt;p&gt;The remaining variability is accounted for by the differences in the actual values, $y_{i},$ and the predicted values $\widehat{y_{i}}.$ This is also a sum of squares, called , $SSE,$ which stands for &amp;ldquo;sum of squares for error.&amp;rdquo; It is defined as:&lt;/p&gt;
-&lt;p&gt;$$SSE=\sum (y_{i}-\widehat{y_{i}})^{2}$$&lt;/p&gt;
-&lt;p&gt;As implied in the figure, the following relationship holds:&lt;/p&gt;
-&lt;p&gt;$$SSTOT=SSR+SSE$$&lt;/p&gt;
-&lt;p&gt;This should remind you of the ANOVA decomposition. In fact, regression &lt;em&gt;is&lt;/em&gt; ANOVA, except that the $x$ variable is not called a &amp;ldquo;treatment,&amp;rdquo; and is numeric rather than categorical. If a &amp;ldquo;large&amp;rdquo; proportion of variability in the data can be accounted for by the model then we have evidence that the model is useful. The statistic that quantifies the proportion of variability accounted for by the model is known as $R^{2}$, which we now define.&lt;/p&gt;
-&lt;p&gt;$R^{2},$ read as &amp;ldquo;r squared&amp;rdquo; and also known as &lt;strong&gt;the coefficient of determination&lt;/strong&gt;, measures the proportion of total variability in the $Y$ data that is accounted for by the regression fit. The formula is&lt;/p&gt;
-&lt;p&gt;$$R^{2}=\frac{SSR}{SSTOT}=1-\frac{SSE}{SSTOT}$$&lt;/p&gt;
-&lt;p&gt;Here is a useful fact relating $R^{2}$ to correlation.&lt;/p&gt;
-&lt;p&gt;In the simple linear regression model $Y=\beta_{0}+\beta_{1}x+\varepsilon ,$ $R^{2}$ is equal to the square of the correlation coefficient $r.$ That is $R^{2}=r^{2}.$&lt;/p&gt;
-&lt;p&gt;Here are some exercises to practice these concepts.&lt;/p&gt;
-&lt;p&gt;For the following values of SSR, SSE, and SSTOT, calculate $R^{2}.$&lt;/p&gt;
-&lt;p&gt;a). $SSE=159$, $SSTOT=309.3$&lt;/p&gt;
-&lt;p&gt;b). $SSR=1682,$ $SSTOT=1982$&lt;/p&gt;
-&lt;p&gt;c). $SSR=149,$ $SSE=592$&lt;/p&gt;
-&lt;p&gt;a).  Draw a scatter plot of the data. Does a linear model make sense?&lt;/p&gt;
-&lt;p&gt;b). Fit the simple linear regression model $Y=\beta_{0}+\beta_{1}x+\varepsilon$ to the following data by finding $b_{0}$ and $b_{1}.$&lt;/p&gt;
-&lt;p&gt;b). Compute and interpret $R^{2}.$&lt;/p&gt;
-&lt;p&gt;$\begin{array}{cc} x &amp;amp; y \  2 &amp;amp; 4 \  3 &amp;amp; 7 \  4 &amp;amp; 11 \  7 &amp;amp; 14% \end{array}%$&lt;/p&gt;
-&lt;p&gt;Using the output in Figure 
-&lt;a href=&#34;#reg_ouytpu&#34;&gt;[reg_ouytpu]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;reg_ouytpu&amp;rdquo;}, answer the following questions:&lt;/p&gt;
-&lt;p&gt;a). Show how $R^{2}$ was calculated.&lt;/p&gt;
-&lt;p&gt;b). Interpret $R^{2}$ in the context of the problem&lt;/p&gt;
-&lt;p&gt;Use the output in Figure 
-&lt;a href=&#34;#house_out&#34;&gt;[house_out]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;house_out&amp;rdquo;} to answer the following questions.&lt;/p&gt;
-&lt;p&gt;a). Show how $R^{2}$ was calculated.&lt;/p&gt;
-&lt;p&gt;b). Interpret $R^{2}$ in the context of the problem.&lt;/p&gt;
-&lt;p&gt;b). Construct a $95%$ confidence interval for $\beta_{1}.$&lt;/p&gt;
-&lt;p&gt;d). Interpret the estimated parameters $b_{0}$ and $b_{1}.$&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1). Evaluating the Simple Linear Regression Model&amp;ndash;Part 2&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2). Confidence Interval for&lt;/strong&gt; $E(Y|x)$** and Prediction of New Response** $Y^{new}$&lt;/p&gt;
-&lt;p&gt;In the last handout we examined $R^{2}$, the coefficient of determination, as a measure of how good the fit of a regression model was to the data. Another important element to examine are the assumptions in the regression model itself. Remember the key points (bullet point $4$ is an expansion from Handout 17):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;We assume the probability distribution of $Y$ changes as $x$     changes.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Specifically, we assume that &lt;em&gt;the mean (or expected value)&lt;/em&gt; of     * *$Y,$ denoted as $E(Y),$ changes as $x$ changes. To indicate this     we write $E(Y|x)$ read as &amp;ldquo;the expected value of $Y$ given $x.&amp;ldquo;$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;We can also indicate $E(Y|x)$ using the notation $\widehat{Y},$ read as $&amp;quot;y$ hat.&amp;rdquo;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;With simple regression, we assume that $Y_{i}=\beta_{0}+\beta_{1}x_{i}+\varepsilon_{i}$, where the $\varepsilon_{i}$ are independent random variables from a normal distribution with mean $0$ and standard deviation $\sigma .$&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The basic ways that a simple linear regression model can go wrong are 1). the true $E(Y|x)$ is not linear, but some other function; 2). The error terms $\varepsilon_{i}$ are not independent; 3). The error terms $% \varepsilon_{i}$ do not have the same standard deviation $\sigma ;$ 4). Several of these assumptions are violated. Let&amp;rsquo;s expand upon points (2) and (3). The error terms $\varepsilon_{i}$ arise due to the imperfect fit between the regression line $\beta_{0}+\beta_{1}x$ and the actual value $Y.$ For each value of $Y_{i}$ and $x_{i},$ there is an associated $\varepsilon_{i}$ that &amp;ldquo;absorbs&amp;rdquo; the effects of all of the variables that we didn&amp;rsquo;t include in the model. One of the key assumptions is that the variance of the error term $V(\varepsilon )$ *does not change* as $x$ changes. That is, $V(\varepsilon_{i})=V(\varepsilon_{j})$ for any $i\neq j.$ We further assume that the correlation between $\varepsilon_{i}$ and $\varepsilon_{j}$ is exactly $0,$ that is, the error in predicting $Y_{i}$ using $x_{i}$ is unrelated to the error in predicting $Y_{j}$ using $x_{j}$, for any $i$ and $% j.$ If these assumptions about the $\varepsilon_{i}$ are not satisfied, inferential statements we make using the fitted model (for example, calculating a confidence interval or test for $\beta_{1}$, or predicting a new observation of $Y)$ are not strictly valid, and may thus be highly misleading.&lt;/p&gt;
-&lt;p&gt;The most common method by which we evaluate the assumptions of the regression model is by examining what are called &amp;ldquo;residuals.&amp;rdquo; First, we need to define what a residual is.&lt;/p&gt;
-&lt;p&gt;A regression &lt;strong&gt;residual&lt;/strong&gt; $e_{i}$** **is the difference between the actual value $Y_{i}$ and the fitted value $\widehat{Y_{i}}.$ For a fitted regression model, the residual is&lt;/p&gt;
-&lt;p&gt;$$e_{i}=y_{i}-\widehat{y_{i}}$$&lt;/p&gt;
-&lt;p&gt;A scatterplot of $(e_{i},\widehat{y_{i}})$ is called a **residual plot** . Examining residual plots can help identify problems with the model fit. How should the residual plot look if all of the assumptions are reasonably met? The short answer is: *look for the absence of a pattern.* Figure 
-&lt;a href=&#34;#good_resid&#34;&gt;[good_resid]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;good_resid&amp;rdquo;} illustrates this idea. Notice that the residuals seem to scatter around $0$ with no apparent pattern. We would say this model is a reasonably good fit to the data.&lt;/p&gt;
-&lt;p&gt;A violation of the assumption of constant standard deviation (known formally as &lt;strong&gt;heteroscedasticity)&lt;/strong&gt; is shown in Figure 
-&lt;a href=&#34;#hetero&#34;&gt;[hetero]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;hetero&amp;rdquo;}. Notice that as the $x$ variable (&amp;ldquo;time&amp;rdquo; in this case) gets larger, the residuals begin to &amp;ldquo;fan out&amp;rdquo; in a megaphone pattern, indicating an increase in the variability. In practice, an analyst would employ a &lt;strong&gt;variable transformation&lt;/strong&gt; to the data to correct for this. Discussion of how this transformation is accomplished is beyond the scope of this course.&lt;/p&gt;
-&lt;p&gt;An example of a model in which the assumption that $E(Y|x)$ is linear is not met is shown next in Figure 
-&lt;a href=&#34;#misspesified&#34;&gt;[misspesified]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;misspesified&amp;rdquo;}. Such a model is called a &lt;strong&gt;misspecified model,&lt;/strong&gt; and many times such models will result in error terms that are correlated. Moreover, misspecified models are problematic in their own right simply because any predictions we get from using the model will be wrong because the wrong relationship was postulated between $Y$ and $% x.$ In the example below, it can be shown that fitting a parabola $% E(Y|x)=\beta_{0}+\beta_{1}x+\beta_{2}^{2}$ rather than a line will lead to a residual plot that looks like Figure 
-&lt;a href=&#34;#good_resid&#34;&gt;[good_resid]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;good_resid&amp;rdquo;} above.&lt;/p&gt;
-&lt;p&gt;For many of the real-world data sets we will use, the assumptions of the simple model will be violated. For instance, Figure 
-&lt;a href=&#34;#crude_resid&#34;&gt;[crude_resid]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;crude_resid&amp;rdquo;} indicates that the standard deviation of the residual terms increases as the price of oil increases. The pattern is that of the &amp;ldquo;megaphone&amp;rdquo; we saw earlier. It turns out that for this model, the fitted values $\widehat{y}_{i}$ (i.e., the predictions of $y$ for each price per barrel of oil) don&amp;rsquo;t differ by much when the problem of non-constant variability is corrected. Such correction is beyond the scope of the course in any event. Therefore, &lt;em&gt;we will proceed in the examples as if the model assumptions are reasonably met&lt;/em&gt;, although in &amp;ldquo;real life,&amp;rdquo; as you should always do in any situation, you will need to check assumptions.&lt;/p&gt;
-&lt;p&gt;Once you have fit the model, there are two things you might want to do with it: make an inference about $E(Y|x)$ for a specific $x$ and predict a new value of $Y,$ call it $Y^{new}.$ We will discuss these two issues in the next section.&lt;/p&gt;
-&lt;h1 id=&#34;estimation-of-mean-of-y-and-prediction-of-new-y&#34;&gt;Estimation of Mean of Y and Prediction of New Y&lt;/h1&gt;
-&lt;p&gt;It turns out that estimating the mean of $Y$ for a specific value of $x$ and predicting a new value of $Y$ for a specific value of $x$ are done the same way: plug the specific value of $x$, call it $x_{0}$, into the fitted model.  What differs is constructing the interval. In general, the confidence interval for $E(Y|x_{0})$ will be narrower than the **prediction interval** for the value of $Y^{new}.$ This fact makes sense because estimating a specific value of a distribution should logically be less precise than estimating its mean.&lt;/p&gt;
-&lt;p&gt;Here are the two formulas&lt;/p&gt;
-&lt;p&gt;A $(1-\alpha )100%$ &lt;strong&gt;confidence interval&lt;/strong&gt; for $E(Y|x_{0})$ for the simple linear regression model is&lt;/p&gt;
-&lt;p&gt;$$\widehat{y}\pm t_{n-2,\alpha /2}\sqrt{\frac{SSE}{n-2}\left[ \frac{1}{n}+% \frac{(x_{0}-\overline{x})^{2}}{(n-1)s_{x}^{2}}\right] }$$&lt;/p&gt;
-&lt;p&gt;where $x_{0}$ is the specific value of $x$ for which we want to estimate the mean of $Y.$&lt;/p&gt;
-&lt;p&gt;A $(1-\alpha )100%$ &lt;strong&gt;prediction interval&lt;/strong&gt;  for a new observation $% Y^{new}$ at a specific value of $x,x_{0}$, is&lt;/p&gt;
-&lt;p&gt;$$\widehat{y}\pm t_{n-2,\alpha /2}\sqrt{\frac{SSE}{n-2}\left[ 1+\frac{1}{n}+% \frac{(x_{0}-\overline{x})^{2}}{(n-1)s_{x}^{2}}\right] }$$&lt;/p&gt;
-&lt;p&gt;Notice that the only difference between the two is the addition of the $&amp;quot;1&amp;quot;$ in the prediction interval formula. This makes the interval wider to account for the fact that we are trying to estimate a &lt;em&gt;particular value of&lt;/em&gt; $Y$ , which is a more uncertain task than estimating the mean of $Y.$&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s work some examples to put these formulas into practice.&lt;/p&gt;
-&lt;p&gt;Using the output in Figure 
-&lt;a href=&#34;#reg_ouytpu&#34;&gt;[reg_ouytpu]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;reg_ouytpu&amp;rdquo;} and the fact that the average crude oil price was $$38.13$ with a standard deviation of $$27.85,$ do the following:&lt;/p&gt;
-&lt;p&gt;a). Compute a $90%$ confidence interval for the average price of gasoline when oil costs $$80$ per barrel.&lt;/p&gt;
-&lt;p&gt;b). Compute a $90%$ prediction interval for the average price of gasoline when oil costs $$80$ per barrel.&lt;/p&gt;
-&lt;p&gt;Use the output in Figure 
-&lt;a href=&#34;#house_out&#34;&gt;[house_out]&lt;/a&gt;{reference-type=&amp;quot;ref&amp;rdquo; reference=&amp;quot;house_out&amp;rdquo;}  and the fact that the average age of a house is $36.4$ years with a standard deviation of $30.3$ years to answer the following questions.&lt;/p&gt;
-&lt;p&gt;a). Compute a $99%$ confidence interval for the average price of a $10$ -year-old home.&lt;/p&gt;
-&lt;p&gt;b). Compute a $99%$ prediction interval for the price of a $10$-year-old home.&lt;/p&gt;
 </description>
     </item>
     

@@ -627,14 +627,6 @@
       </li>
       
       <li >
-        <a href="/courses/bana3363/16-simple-linear-regression/">Simple Linear Regression</a>
-      </li>
-      
-      <li >
-        <a href="/courses/bana3363/17-evaluating-linear-regression/">Evaluating Linear Regression</a>
-      </li>
-      
-      <li >
         <a href="/courses/bana3363/18-multiple-linear-regression/">Multiple Linear Regression</a>
       </li>
       
@@ -679,13 +671,15 @@
 <li>
 <p>Specify the hypothesis:</p>
 <p>Now instead of $\mu$ we work with the population proportion, $p:$</p>
-<p>$$\begin{aligned}     \text{(a) }H_{0} &amp;:&amp;p\leq p_{0}\text{ vs. }H_{1}:p&gt;p_{0} \     \text{(b) }H_{0} &amp;:&amp;p\geq p_{0}\text{ vs. }H_{1}:p&lt;p_{0}\text{ } \     \text{(c) }H_{0} &amp;:&amp;p=p_{0}\text{ vs. }H_{1}:p\neq p_{0}\end{aligned}$$</p>
+<p>a) $H_{0}: p\leq p_{0}\text{ vs. }H_{1}:p&gt;p_{0}$
+b) $H_{0} &amp;:&amp;p\geq p_{0}\text{ vs. }H_{1}:p&lt;p_{0}$
+c) $H_{0} &amp;:&amp;p=p_{0}\text{ vs. }H_{1}:p\neq p_{0}$</p>
 </li>
 <li>
 <p>Calculate the <strong>test statistic</strong></p>
-<p>The test statistic will always be a standard normal $z$ statistic     since we assume $n$ is large:</p>
-<p>$$z=\frac{\widehat{p}-p_{0}}{\sqrt{p_{0}(1-p_{0})/n}}$$</p>
-<p>When the null hypothesis is true, the test statistic has the     standard normal distribution. Notice that we use $p_{0}$ in the     denominator rather than $%     \widehat{p}.$ This is because we always assume $H_{0}$ is true when     we calculate the test statistic. If $H_{0}$ is true, $p_{0}$ is the     true population proportion by definition.</p>
+<p>The test statistic will always be a standard normal $z$ statistic since we assume $n$ is large:</p>
+<p>$$z=\frac{\widehat{p}-p_0}{\sqrt{p_0(1-p_{0})/n}}$$</p>
+<p>When the null hypothesis is true, the test statistic has the standard normal distribution. Notice that we use $p_{0}$ in the     denominator rather than $\widehat{p}.$ This is because we always assume $H_{0}$ is true when we calculate the test statistic. If $H_{0}$ is true, $p_{0}$ is the     true population proportion by definition.</p>
 </li>
 <li>
 <p>Compute the <strong>p-value</strong> or <strong>rejection region</strong></p>
@@ -725,15 +719,14 @@
 </tr>
 </tbody>
 </table>
-<p>.</p>
 <p>If we take LEGAL as the event of interest, then we can calculate the sample proportion as</p>
 <p>$$\widehat{p}=\frac{586}{1234}=0.475$$</p>
 <p>Suppose a research firm wishes to see if the true proportion of individuals who favor legalization is less than $0.50$ using an $\alpha =0.01$ level of significance. Then we have the following hypotheses:</p>
-<p>$$H_{0}:p\geq 0.50\text{ \ \ \ vs. \ \ \ }H_{1}:p&lt;0.50$$</p>
+<p>$$H_{0}:p\geq 0.50\text{  vs.  }H_{1}:p&lt;0.50$$</p>
 <p>The test statistic is calculated as</p>
 <p>$$z=\frac{0.475-0.50}{\sqrt{0.50(1-0.50)/1234}}=-1.76$$</p>
 <p>The p-value can be calculated as</p>
-<p>$$\begin{aligned} P(Z &amp;&lt;&amp;-1.76) \ &amp;=&amp;0.0392\end{aligned}$$</p>
+<p>$$P(Z &amp;&lt;&amp;-1.76) = 0.0392$$</p>
 <p>Alternatively, the rejection region is defined as all values of $z$ that are greater than $z_{0.01}=2.33,$ as shown in Figure 
 <a href="#rr1">[rr1]</a>{reference-type=&quot;ref&rdquo; reference=&quot;rr1&rdquo;}:</p>
 <p>Using either method, we would fail-to-reject $H_{0}$ and state that we do not have enough evidence to conclude that the proportion of Americans favoring legalization exceeds $0.50.$</p>

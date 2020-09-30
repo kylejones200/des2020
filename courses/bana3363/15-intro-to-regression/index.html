@@ -627,14 +627,6 @@
       </li>
       
       <li >
-        <a href="/courses/bana3363/16-simple-linear-regression/">Simple Linear Regression</a>
-      </li>
-      
-      <li >
-        <a href="/courses/bana3363/17-evaluating-linear-regression/">Evaluating Linear Regression</a>
-      </li>
-      
-      <li >
         <a href="/courses/bana3363/18-multiple-linear-regression/">Multiple Linear Regression</a>
       </li>
       
@@ -658,6 +650,14 @@
   <ul>
     <li><a href="#dependence-between-numeric-variables-correlation">Dependence Between Numeric Variables (Correlation)</a></li>
   </ul>
+
+  <ul>
+    <li><a href="#evaluating-the-simple-linear-regression-model">Evaluating the Simple Linear Regression Model</a></li>
+    <li><a href="#assessing-the-fit-of-the-model">Assessing the Fit of the Model</a></li>
+    <li><a href="#the-coefficient-of-determination">The coefficient of determination</a></li>
+    <li><a href="#violations-of-regression-assumptions">Violations of Regression Assumptions</a></li>
+    <li><a href="#estimation-of-mean-of-y-and-prediction-of-new-y">Estimation of Mean of Y and Prediction of New Y</a></li>
+  </ul>
 </nav>
 
       
@@ -674,39 +674,31 @@
           <div class="article-style">
             <h2 id="dependence-between-numeric-variables-correlation">Dependence Between Numeric Variables (Correlation)</h2>
 <p>There are an infinite number of possible relationships between numeric variables. There could be quadratic relationships, cubic relationships, logarithmic relationships, and so forth. In much of statistics, the focus is on the <em>linear relationship</em> because it is generally easy to specify, it captures the notion of dependence in many real-world situations, and many other relationships can be at least approximated by a line in some small, focused area. The measure of linear relationship between two numeric variables is known as <strong>correlation.</strong></p>
-<p>The <strong>population correlation coefficient</strong> $\rho ,$ pronounced &ldquo;row,&rdquo; describes the linear association between two random variables $X$ and $Y$. It is calculated as</p>
+<p>The <strong>population correlation coefficient</strong> $\rho$, pronounced &ldquo;row,&rdquo; describes the linear association between two random variables $X$ and $Y$. It is calculated as</p>
 <p>$$\rho =\frac{E(XY)-E(X)E(Y)}{\sqrt{V(X)}\sqrt{V(Y)}}$$</p>
 <p>where $E$ stands for &ldquo;expected value&rdquo; and $V$ stands for variance.</p>
-<p>The correlation coefficient $\rho$ is a <em>population parameter,</em> like $% \mu$ and $p,$ and must therefore be estimated with data. This leads to the next definition.</p>
+<p>The correlation coefficient $\rho$ is a <em>population parameter,</em> like $\mu$ and $p$, and must therefore be estimated with data. This leads to the next definition.</p>
 <p>The <strong>sample correlation coefficient</strong> $r$ is a random variable that describes the relationship between two sets of numeric data that are considered in pairs $(y_{1},x_{1}),(y_{2},x_{2}),\ldots ,(y_{n},x_{n})$. It is given by</p>
 <p>$$r=\frac{\dsum_{i}x_{i}y_{i}-n(\overline{x})(\overline{y})}{(n-1)s_{x}s_{y}}$$</p>
 <p>where $s_{x\text{ }}$ and $s_{y}$ are the standard deviations of $x$ and $y$ , respectively.</p>
 <p>The following are facts about correlation:</p>
 <ul>
-<li>
-<p>Always lies between $-1$ and $1$ (inclusive)</p>
-</li>
-<li>
-<p>The strength of correlation is measured by $|r|$, the absolute value     of the correlation coefficient</p>
-</li>
-<li>
-<p>Correlations of $1$ (or $-1$) indicate perfect positive (or     negative) linear relationship</p>
-</li>
-<li>
-<p>Correlation of $0$ indicates no linear relationship</p>
-</li>
+<li>Always lies between $-1$ and $1$ (inclusive)</li>
+<li>The strength of correlation is measured by $|r|$, the absolute value     of the correlation coefficient</li>
+<li>Correlations of $1$ (or $-1$) indicate perfect positive (or negative) linear relationship</li>
+<li>Correlation of $0$ indicates no linear relationship</li>
 </ul>
 <p>Suppose we wanted to create a model of gasoline prices that factors in crude oil prices. The data would appear as shown in Figure 
 <a href="#data">[data]</a>{reference-type=&quot;ref&rdquo; reference=&quot;data&rdquo;} in a spreadsheet program. Using Excel&rsquo;s chart feature, we could make a scatter plot as shown in Figure 
-<a href="#gas_scatter">[gas_scatter]</a>{reference-type=&quot;ref&rdquo; reference=&quot;gas_scatter&rdquo;}. The correlation between crude oil price and gasoline price can be shown to be $r=0.987,$ which is an extremely strong positive linear relationship as can be seen.</p>
+<a href="#gas_scatter">[gas_scatter]</a>{reference-type=&quot;ref&rdquo; reference=&quot;gas_scatter&rdquo;}. The correlation between crude oil price and gasoline price can be shown to be $r=0.987$, which is an extremely strong positive linear relationship as can be seen.</p>
 <p>The concept of correlation plays a key role in estimating the simple linear regression model, as we will see in the next section.</p>
 <h1 id="introduction-to-regression">Introduction to Regression</h1>
 <p>The broad set of techniques that fall under the &ldquo;regression analysis&rdquo; title drive most practical research studies, from drug trials in the pharmaceutical industry to new product test marketing. Businesses face tough competition in the information age. Not only must they navigate an increasingly fragmented customer base, manage their reputations through traditional and social media channels, innovate with products and services at an increasing rate, and negotiate with many suppliers and distributors, but they must also make short- and long-term decisions about personnel, production, new markets to enter, and strategies to increase (or at least maintain) market share against competitors. Sites such as Kickstarter <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and Fundable<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> specialize in a type of online venture capital process called &ldquo;crowdfunding,&rdquo; where ordinary individuals can contribute to a project in exchange for a variety of rewards, from a simple acknowledgement as a supporter, to a functioning prototype of the company&rsquo;s product, to a percentage of sales. You will no doubt hear a good deal more on this topic in your marketing and management classes.</p>
 <p>Managers must be able to make decisions that incorporate a number of factors. Increasingly, these decisions have been influenced by mathematical modeling. A new field called <strong>business analytics</strong><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> has arisen that seeks to use advanced mathematics and large data sets to discover patterns and relationships among consumer choices that can help optimize product and service delivery. If you have ever wondered why grocery stores have rewards cards, the answer is simple: it allows the store to track your purchases in order to present you with customized deals and to understand how your purchases relate to those of other customers. If you use Netflix to stream movies, you should know that everything you do&ndash;the programs you search for, the number of searches you perform, the time you spend browsing your recommendations, the device you are using to watch the program, the genre of the programs you view most often, and more&ndash;is being monitored<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>. The data are fed into complex models designed by mathematicians and statisticians, and the patterns extracted from the data imply that, for instance, <em>Hot Tub Time Machine</em> and <em>Les Miserables</em> might appeal to the same user.</p>
 <p>Mathematical models can be divided into two three broad classes: <strong>deterministic,</strong> <strong>probabilistic,</strong> and <strong>regression</strong> models. The last type is actually a blend of the first two. Let&rsquo;s define these terms.</p>
 <p>A <strong>deterministic model</strong> is a mathematical equation for which, if a set of inputs $\mathbf{x}$ are known, the output $y$ is known with certainty.</p>
-<p>Deterministic models are what we are most familiar with in elementary mathematics. They are why mathematics is seen as &ldquo;objective,&rdquo; in the sense that there is often only one &ldquo;right answer&rdquo; to a problem. One simple example of a deterministic model that you should be familiar with is the formula for future value:$\ FV=P(1+r/n)^{nt}$. This formula is deterministic because, given a present value $P,$ an interest rate $r$, the compounding frequency $n$, and the investment period $t$, we can calculate what the future value of the investment will be. That is, given $P,r,n,$ and $t,$ $FV$ is known with certainty. Another example of a deterministic model is the formula for a company&rsquo;s total cost: $T=F+Vq$, where $F$ is a company&rsquo;s fixed cost, $V$ is the variable cost per unit, and $q$ is the quantity produced. Given $F$, $V$, and $q$, we can compute the company&rsquo;s total cost. Remembering the formula for distance ($D=st,$ where $s=speed),$ the time it takes to drive $45$ miles to campus, if you drive $s$ miles per hour is $t=% \frac{45}{s}$.</p>
-<p>These models are simple and leave much room for improvement. For instance, the future value formula assumes the interest rate remains fixed over time, which will rarely be the case. The total cost equation, meanwhile, ignores the fact that, for some level of production $q^{\ast },$ the company will need to expand and change its fixed costs to $F^{\ast }$ to keep up. More sophisticated models could be built to account for these factors. However, even when we incorporate these other variables, it is unlikely that we will be able to perfectly, to an infinite number of decimal places, the total cost of making a product or the future value of an investment.</p>
+<p>Deterministic models are what we are most familiar with in elementary mathematics. They are why mathematics is seen as &ldquo;objective,&rdquo; in the sense that there is often only one &ldquo;right answer&rdquo; to a problem. One simple example of a deterministic model that you should be familiar with is the formula for future value:$FV=P(1+r/n)^{nt}$. This formula is deterministic because, given a present value $P$, an interest rate $r$, the compounding frequency $n$, and the investment period $t$, we can calculate what the future value of the investment will be. That is, given $P,r,n$, and $t$, $FV$ is known with certainty. Another example of a deterministic model is the formula for a company&rsquo;s total cost: $T=F+Vq$, where $F$ is a company&rsquo;s fixed cost, $V$ is the variable cost per unit, and $q$ is the quantity produced. Given $F$, $V$, and $q$, we can compute the company&rsquo;s total cost. Remembering the formula for distance ($D=st$, where $s=speed)$, the time it takes to drive $45$ miles to campus, if you drive $s$ miles per hour is $t=\frac{45}{s}$.</p>
+<p>These models are simple and leave much room for improvement. For instance, the future value formula assumes the interest rate remains fixed over time, which will rarely be the case. The total cost equation, meanwhile, ignores the fact that, for some level of production $q^{\ast }$, the company will need to expand and change its fixed costs to $F^{\ast }$ to keep up. More sophisticated models could be built to account for these factors. However, even when we incorporate these other variables, it is unlikely that we will be able to perfectly, to an infinite number of decimal places, the total cost of making a product or the future value of an investment.</p>
 <p><strong>Variability</strong> is a basic characteristic of the natural world. Every time you drive $45$ miles to get to campus, it takes you a different amount of time to arrive here because your speed fluctuates by small amounts over the course of your trip. Everyone lives to a different age. People spend different amounts of money on each shopping trip. Differing amounts of soda are in a can that states that it contains $12$ ounces. With deterministic models, variability is ignored, so they are technically wrong.</p>
 <p>A <strong>probabilistic model</strong> assumes that the values of a variable arise from a random sample from a probability distribution (for example, the normal distribution).</p>
 <p>These are the models that we have been working with all semester! For instance, if we were to calculate a confidence interval for the population mean amount of money that Americans give to charity each year, we might have said: &ldquo;Assume you have a random sample of $n=1000$ people and their average yearly charitable contribution was $\overline{y}=1000$ and $s=300.&ldquo;$ The histogram of the charitable contributions might appear as in Figure 
@@ -715,27 +707,28 @@
 <p>It is sensible that charitable contributions depend on many factors, one of which is a person&rsquo;s income (other variables might be education level, political affiliation, gender, etc.). We can model the idea that charitable contribution is a random variable, but one that is influenced by another (possibly nonrandom) variable. We can get at this idea by making a reasonable assumption:</p>
 <p><em>for any given income, there is an entire distribution of possible &gt; charitable contributions that a person with that income could choose &gt; to make</em> .</p>
 <p>It would make sense that, as income increases, at least the mean contribution should increase, but how?</p>
-<p>One possibility is that the mean changes linearly with income. That is, if income is $x$ dollars per year, the average charitable contribution is $% \beta_{0}+\beta_{1}x,$ where $\beta_{0}$ (read as &ldquo;beta zero&rdquo;) is the intercept of the line and $\beta_{1}$ (read as &ldquo;beta one&rdquo;) is the slope. These two $\beta$ values are **population parameters**, like $\mu$ and $p$, that we can use data to estimate. This is shown in Figure 
-<a href="#reg_model">[reg_model]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_model&rdquo;}. The linear part that specifies how the mean changes with increasing income is **deterministic** (if we know $x$, $\beta_{0},$ and $\beta_{1},$ we know the mean with certainty), but the actual value is random, modeled as a draw from a normal distribution with mean $\beta_{0}+\beta_{1}x$. Now we have the next definition.</p>
-<p>A <strong>regression model</strong> is a blend of deterministic and probabilistic models that specifies how the distribution of some random variable $Y$ changes for a function of other (possibly nonrandom) variables $% f(x_{1},x_{2},\ldots ,x_{p})$.</p>
+<p>One possibility is that the mean changes linearly with income. That is, if income is $x$ dollars per year, the average charitable contribution is $\beta_{0}+\beta_{1}x$, where $\beta_{0}$ (read as &ldquo;beta zero&rdquo;) is the intercept of the line and $\beta_{1}$ (read as &ldquo;beta one&rdquo;) is the slope. These two $\beta$ values are **population parameters**, like $\mu$ and $p$, that we can use data to estimate. This is shown in Figure 
+<a href="#reg_model">[reg_model]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_model&rdquo;}. The linear part that specifies how the mean changes with increasing income is **deterministic** (if we know $x$, $\beta_{0}$, and $\beta_{1}$, we know the mean with certainty), but the actual value is random, modeled as a draw from a normal distribution with mean $\beta_{0}+\beta_{1}x$. Now we have the next definition.</p>
+<p>A <strong>regression model</strong> is a blend of deterministic and probabilistic models that specifies how the distribution of some random variable $Y$ changes for a function of other (possibly nonrandom) variables $f(x_{1},x_{2},\ldots ,x_{p})$.</p>
 <p>How do we figure out what that function $f(x_{1},x_{2},\ldots ,x_{p})$ is? The best way is to simply graph the $\ Y$ variable with each of the $x$ variables using a **scatter plot**, a graph that plots each pair of points $(y_{i},x_{ij})$ in the ordinary $x-y$ plane. Looking at the scatter, you can see if a line might fit the data fairly well, or if another function such as a quadratic might work better. The simple linear regression model, which we now define, claims that the distribution of $Y$ depends only on one other variable, $x$.</p>
-<p>For a random sample of bivariate data $(Y_{1},x_{1}),(Y_{2},x_{2}),\ldots ,(Y_{n},x_{n}),$ where the $Y_{i}$ are random variables and the $x_{i}$ are constants, the **simple linear regression model** relating $Y$ to $x$ is given by</p>
-<p>$$\begin{aligned} Y_{i} &amp;=&amp;\beta_{0}+\beta_{1}x_{i}+\varepsilon_{i},\text{ }i=1,2,\ldots n% \text{ [sample form]}  \label{simple_model_eq} \ Y &amp;=&amp;\beta_{0}+\beta_{1}x+\varepsilon \text{ [population form]} \label{pop_version}\end{aligned}$$</p>
-<p><em>where</em> $\beta_{0}$* (read as &ldquo;beta zero&rdquo;) and* $\beta_{1}$ * (read as &ldquo;beta one&rdquo;) are fixed (but unknown) parameters and* $% \varepsilon_{i}$* (read as &ldquo;epsilon&rdquo;) are independent normally distributed random variables with mean* $0$* and standard deviation* $\sigma$* that are uncorrelated with* $x$.</p>
+<p>For a random sample of bivariate data $(Y_{1},x_{1}),(Y_{2},x_{2}),\ldots ,(Y_{n},x_{n})$, where the $Y_{i}$ are random variables and the $x_{i}$ are constants, the **simple linear regression model** relating $Y$ to $x$ is given by</p>
+<p>$Y_{i} =\beta_{0}+\beta_{1}x_{i}+\varepsilon_{i},\text{ }i=1,2,\ldots n\text{ [sample form]}$</p>
+<p>$Y =\beta_{0}+\beta_{1}x+\varepsilon \text{ [population form]}$</p>
+<p><em>where</em> $\beta_{0}$* (read as &ldquo;beta zero&rdquo;) and* $\beta_{1}$ * (read as &ldquo;beta one&rdquo;) are fixed (but unknown) parameters and* $\varepsilon_{i}$* (read as &ldquo;epsilon&rdquo;) are independent normally distributed random variables with mean* $0$* and standard deviation* $\sigma$* that are uncorrelated with* $x$.</p>
 <p>In Figure 
-<a href="#reg_model">[reg_model]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_model&rdquo;}, the only $x$ variable is income, but there are many other factors that affect charity that we could add to the model. What this equation says is that the actual value of $Y$ that we observe is made up of a deterministic (fixed and known) $x$ and a random (unknown) component $\varepsilon$. The $\varepsilon$ value is made up of the countless other factors that influence $Y$ that we have not explicitly included as an $x$ variable in the model. We require $\varepsilon$ to be in the model because we can never know $Y$ with absolute certainty. However, we hope that the relationship between $Y$ and $x$ is strong enough to account for a good bit of the change in $Y,$ because we can quantify this change by estimating $% \beta_{0}$ and $\beta_{1}$ (more on this below).</p>
+<a href="#reg_model">[reg_model]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_model&rdquo;}, the only $x$ variable is income, but there are many other factors that affect charity that we could add to the model. What this equation says is that the actual value of $Y$ that we observe is made up of a deterministic (fixed and known) $x$ and a random (unknown) component $\varepsilon$. The $\varepsilon$ value is made up of the countless other factors that influence $Y$ that we have not explicitly included as an $x$ variable in the model. We require $\varepsilon$ to be in the model because we can never know $Y$ with absolute certainty. However, we hope that the relationship between $Y$ and $x$ is strong enough to account for a good bit of the change in $Y$, because we can quantify this change by estimating $\beta_{0}$ and $\beta_{1}$ (more on this below).</p>
 <p>The implication of equation 
-<a href="#pop_version">[pop_version]</a>{reference-type=&quot;ref&rdquo; reference=&quot;pop_version&rdquo;} is that the mean of $Y$ is $% E(Y|x)=$ $\beta_{0}+\beta_{1}x$ because, by the rules of expected value (see Handout $1$),</p>
+<a href="#pop_version">[pop_version]</a>{reference-type=&quot;ref&rdquo; reference=&quot;pop_version&rdquo;} is that the mean of $Y$ is $E(Y|x)=$ $\beta_{0}+\beta_{1}x$ because, by the rules of expected value (see Handout $1$),</p>
 <p>$$\begin{aligned} E(Y|x) &amp;=&amp;E(\beta_{0}+\beta_{1}x+\varepsilon ) \ &amp;=&amp;\beta_{0}+\beta_{1}x+E(\varepsilon )\text{ [since }\beta_{0}+\beta_{1}x\text{ is a constant]} \ &amp;=&amp;\beta_{0}+\beta_{1}x\text{ [since we assume }E(\varepsilon )=0]\end{aligned}$$</p>
-<p>We put the $&quot;|x&quot;$ part in the expected value to emphasize that the mean of $% Y$ depends on $x$. A shorthand notation for this is $\widehat{Y}$, read as $% &ldquo;Y$ hat.&rdquo; We also have the following important fact:</p>
-<p>Because $\varepsilon$ is assumed to have a normal distribution, $Y$ also has a normal distribution, but with mean $\beta_{0}+\beta_{1}x.\label% {simple_ols_theorem}$</p>
+<p>We put the $&quot;|x&quot;$ part in the expected value to emphasize that the mean of $Y$ depends on $x$. A shorthand notation for this is $\widehat{Y}$, read as $&quot;Y$ hat.&rdquo; We also have the following important fact:</p>
+<p>Because $\varepsilon$ is assumed to have a normal distribution, $Y$ also has a normal distribution, but with mean $\beta_{0}+\beta_{1}x.\label{simple_ols_theorem}$</p>
 <p>We can interpret $\beta_{0}$ and $\beta_{1}$ as follows:</p>
 <ul>
 <li>
 <p>$\beta_{0}$ is the mean of $Y$ when $x=0$.</p>
 </li>
 <li>
-<p>$\beta_{1}$ is the increase in the mean of $Y$ for a one-unit     increase in $x$.</p>
+<p>$\beta_{1}$ is the increase in the mean of $Y$ for a one-unit increase in $x$.</p>
 </li>
 </ul>
 <p>As stated above, the values of $\beta_{0}$ and $\beta_{1}$ are parameters ** **that we must use data to estimate. It is not immediately obvious what the &ldquo;best&rdquo; way to do this is, but a reasonable choice would be to find the estimated values $b_{0}$ and $b_{1}$ such that the line $b_{0}+b_{1}x$ goes through most of the data points. Consider Figure 
@@ -743,13 +736,13 @@
 <a href="#c02">[c02]</a>{reference-type=&quot;ref&rdquo; reference=&quot;c02&rdquo;}, but it still appears as if a line might be an okay fit.</p>
 <p>Notice that, even though we know that gasoline is directly related to crude oil through refining, we cannot perfectly predict gasoline prices using crude oil prices. However, using crude oil prices will let us make a much better prediction than if we just worked with the gasoline data alone. Figure 
 <a href="#gasonoly">[gasonoly]</a>{reference-type=&quot;ref&rdquo; reference=&quot;gasonoly&rdquo;} displays a histogram of only the gas prices, which would (falsely) lead us to believe that our best prediction of gasoline price would be in the $$0.50-$1$ range, which is clearly not realistic.</p>
-<p>One way to fit a line is to choose two points, say, $(x_{1},y_{1})$ and $% (x_{2},y_{2}),$ out of all the points in the scatterplot and find the slope and $y$ intercept. But which points would you pick? Your choice of two points might not match mine, and ours might still be different from a third person&rsquo;s. Clearly, we need a more objective way of fitting the line. The most common method used in practice is known as the** method of ordinary least squares (OLS)**, which we now define.</p>
-<p>The <strong>ordinary least squares (OLS) estimates,</strong> $b_{0}$ and $b_{1},$ estimate $\beta_{0}$ and $\beta_{1}$ and are chosen such that the &ldquo;sum of squared errors&rdquo;, SSE, is made as small as possible. That is, we choose $b_{0}$ and $b_{1}$ so that</p>
+<p>One way to fit a line is to choose two points, say, $(x_{1},y_{1})$ and $(x_{2},y_{2})$, out of all the points in the scatterplot and find the slope and $y$ intercept. But which points would you pick? Your choice of two points might not match mine, and ours might still be different from a third person&rsquo;s. Clearly, we need a more objective way of fitting the line. The most common method used in practice is known as the** method of ordinary least squares (OLS)**, which we now define.</p>
+<p>The <strong>ordinary least squares (OLS) estimates,</strong> $b_{0}$ and $b_{1}$, estimate $\beta_{0}$ and $\beta_{1}$ and are chosen such that the &ldquo;sum of squared errors&rdquo;, SSE, is made as small as possible. That is, we choose $b_{0}$ and $b_{1}$ so that</p>
 <p>$$SSE=\sum (y_{i}-b_{0}-b_{1}x_{i})^{2}$$</p>
 <p><em>is minimized.</em></p>
-<p>If you know about multivariable calculus, the approach is clear: find the partial derivatives of $SSE$ with respect to $b_{0}$ and $b_{1},$ set them equal to $0$, and solve for $b_{0}$ and $b_{1}$. In this course, we will simply state the solution as a theorem without proof.</p>
-<p>The values of $b_{0}$ and $b_{1}$ that minimize $\sum (y_{i}-b_{0}-b_{1}x_{i})^{2}$ are $b_{1}=r\frac{s_{y}}{s_{x}}$ and $b_{0}=% \overline{y}-b_{1}(\overline{x}),$ where $s_{y}$ and $s_{x}$ are the standard deviations of the observed data ${y_{i}}$ and ${x_{i}}$, respectively, and $r$ is the sample correlation coefficient between $% {y_{i}}$ and ${x_{i}}$.</p>
-<p>Once we have estimated $b_{0}$ and $b_{1},$ we can estimate $y$ using the equation</p>
+<p>If you know about multivariable calculus, the approach is clear: find the partial derivatives of $SSE$ with respect to $b_{0}$ and $b_{1}$, set them equal to $0$, and solve for $b_{0}$ and $b_{1}$. In this course, we will simply state the solution as a theorem without proof.</p>
+<p>The values of $b_{0}$ and $b_{1}$ that minimize $\sum (y_{i}-b_{0}-b_{1}x_{i})^{2}$ are $b_{1}=r\frac{s_{y}}{s_{x}}$ and $b_{0}=\overline{y}-b_{1}(\overline{x})$, where $s_{y}$ and $s_{x}$ are the standard deviations of the observed data ${y_{i}}$ and ${x_{i}}$, respectively, and $r$ is the sample correlation coefficient between ${y_{i}}$ and ${x_{i}}$.</p>
+<p>Once we have estimated $b_{0}$ and $b_{1}$, we can estimate $y$ using the equation</p>
 <p>$$\widehat{y}=b_{0}+b_{1}x$$</p>
 <p>We can simply plug in any value of $x$ and we get an estimate of $y$. What happened to the error term $\varepsilon ?$ Since the error term is not known, we simply use its mean of $0$ to estimate it. What does our estimate of $y$ represent? $\widehat{y\text{ }}$** is the estimated mean of the random variable** $Y$** at the value of** $x!$ Thus, through equation 
 <a href="#simple_model_eq">[simple_model_eq]</a>{reference-type=&quot;ref&rdquo; reference=&quot;simple_model_eq&rdquo;}, we have now defined a model that allows the distribution of $Y$ to change with $x$.</p>
@@ -757,21 +750,21 @@
 <a href="#scatter_and_reg">[scatter_and_reg]</a>{reference-type=&quot;ref&rdquo; reference=&quot;scatter_and_reg&rdquo;}. The plot was made using Excel&rsquo;s scatter plot and &ldquo;Add trendline&rdquo; options. The estimated equation is</p>
 <p>$$\widehat{y}=0.0268x+0.0315$$</p>
 <p>where $x$ is the price of oil per barrel. From this equation referring to 
-<a href="#simple_ols_theorem">[simple_ols_theorem]</a>{reference-type=&quot;ref&rdquo; reference=&quot;simple_ols_theorem&rdquo;}, we estimate that for each $$1$ increase in the price of oil per barrel, the average price of gasoline increases by about $$0.0268,$ or about three cents. Further, looking at $% b_{0},$ we can say (rather pointlessly) that the average price of gasoline when oil is $$0$ per barrel is $$0.0315$. Of course, oil will always cost something per barrel, so $b_{0}$ does not have a realistic interpretation here.</p>
+<a href="#simple_ols_theorem">[simple_ols_theorem]</a>{reference-type=&quot;ref&rdquo; reference=&quot;simple_ols_theorem&rdquo;}, we estimate that for each $1$ increase in the price of oil per barrel, the average price of gasoline increases by about $0.0268$, or about three cents. Further, looking at $b_{0}$, we can say (rather pointlessly) that the average price of gasoline when oil is $0$ per barrel is $0.0315$. Of course, oil will always cost something per barrel, so $b_{0}$ does not have a realistic interpretation here.</p>
 <h1 id="using-the-simple-linear-regression-model">Using the Simple Linear Regression Model</h1>
-<p>After the model has been fit, the next logical question is whether the model is useful or not. One way of assessing this is to determine if $x$ has significant predictive ability for $Y$. Since the effect of $x$ on $Y$ is measured by the unknown parameter $\beta_{1},$ the natural approach is to conduct a hypothesis test or construct a confidence interval for $\beta_{1}$ . First, we will address the confidence interval, since we can essentially define the test by determining whether a specified null hypothesis value of $% \beta_{1}$ lies in the interval or not, much like we have done already. Before we can define the interval, we have to define a few terms related to the estimate $b_{1}$, which is what we use to construct the interval.</p>
-<p>The estimated value of $\beta_{1},$ known as $b_{1}$, is a random variable with a mean equal to $\beta_{1}$ and a standard deviation (called a **standard error)** of $\sqrt{\frac{\sigma ^{2}}{\dsum (x_{i}-\overline{x})^{2}}% }$ . Since we rarely assume $\sigma ^{2}$ is known, we set $s.e.(b_{1})=% \sqrt{\frac{SSE/(n-2)}{\dsum (x_{i}-\overline{x})^{2}}}=\sqrt{\frac{SSE/(n-2)% }{(n-1)s_{x}^{2}}},$ where $s_{x}$ is the standard deviation of the $x$ data.</p>
+<p>After the model has been fit, the next logical question is whether the model is useful or not. One way of assessing this is to determine if $x$ has significant predictive ability for $Y$. Since the effect of $x$ on $Y$ is measured by the unknown parameter $\beta_{1}$, the natural approach is to conduct a hypothesis test or construct a confidence interval for $\beta_{1}$ . First, we will address the confidence interval, since we can essentially define the test by determining whether a specified null hypothesis value of $\beta_{1}$ lies in the interval or not, much like we have done already. Before we can define the interval, we have to define a few terms related to the estimate $b_{1}$, which is what we use to construct the interval.</p>
+<p>The estimated value of $\beta_{1}$, known as $b_{1}$, is a random variable with a mean equal to $\beta_{1}$ and a standard deviation (called a **standard error)** of $\sqrt{\frac{\sigma ^{2}}{\dsum (x_{i}-\overline{x})^{2}}}$ . Since we rarely assume $\sigma ^{2}$ is known, we set $s.e.(b_{1})=\sqrt{\frac{SSE/(n-2)}{\dsum (x_{i}-\overline{x})^{2}}}=\sqrt{\frac{SSE/(n-2)}{(n-1)s_{x}^{2}}}$, where $s_{x}$ is the standard deviation of the $x$ data.</p>
 <p>A consequence of this fact leads to the definition of the $(1-\alpha )100%$ confidence interval for $\beta_{1}:$</p>
 <p>A $(1-\alpha)100%$ confidence interval for $\beta_{1}$ is given by</p>
 <p>$$b_{1}\pm t_{\alpha /2,n-2}\sqrt{\frac{SSE/(n-2)}{(n-1)s_{x}^{2}}}$$</p>
 <p><em>where</em> $t_{n-2,\alpha /2}$ is the value of Student&rsquo;s $t$  distribution with* $n-2$ degrees of freedom and* $\alpha /2$ probability to the right.</p>
-<p>We use $n-2$ because we had to estimate two values, $b_{0}$ and $b_{1},$ using the data. The hypothesis testing procedure follows a familiar pattern:</p>
+<p>We use $n-2$ because we had to estimate two values, $b_{0}$ and $b_{1}$, using the data. The hypothesis testing procedure follows a familiar pattern:</p>
 <ol>
 <li>Specify the hypotheses</li>
 </ol>
-<p>The parameter of interest is $\beta_{1},$ so the hypotheses are statements about its value.</p>
+<p>The parameter of interest is $\beta_{1}$, so the hypotheses are statements about its value.</p>
 <p>$$\begin{aligned} \text{(a) }H_{0} &amp;:&amp;\beta_{1}\leq c\text{ vs. }H_{0}:\beta_{1}&gt;c \ \text{(b) }H_{0} &amp;:&amp;\beta_{1}\geq c\text{ vs. }H_{0}:\beta_{1}&lt;c \ \text{(c) }H_{0} &amp;:&amp;\beta_{1}=c\text{ vs. }H_{0}:\beta_{1}\neq c\end{aligned}$$</p>
-<p>In practice, $c$ is usually $0,$ but it could be anything. In regression programs such as Excel, the hypothesis tested by default is</p>
+<p>In practice, $c$ is usually $0$, but it could be anything. In regression programs such as Excel, the hypothesis tested by default is</p>
 <p>$$H_{0}:\beta_{1}=0\text{ vs. }H_{0}:\beta_{1}\neq 0$$</p>
 <ol>
 <li>Calculate the test statistic.</li>
@@ -788,7 +781,7 @@
 <ol>
 <li>Make a conclusion</li>
 </ol>
-<p>If the $p$-value $\leq \alpha ,$ we reject $H_{0}$. If the $p$-value $% &gt;\alpha ,$ we fail to reject $H_{0}$. Equivalently, if $t$ lies within the rejection region, we reject $H_{0}$. If $t$ lies outside the rejection region, we fail to reject $H_{0}$.</p>
+<p>If the $p$-value $\leq \alpha$, we reject $H_{0}$. If the $p$-value $&gt;\alpha$, we fail to reject $H_{0}$. Equivalently, if $t$ lies within the rejection region, we reject $H_{0}$. If $t$ lies outside the rejection region, we fail to reject $H_{0}$.</p>
 <p>As was the case when we tested means from one and two populations, the following theorem is true:</p>
 <p>If the $(1-\alpha )100%$ confidence interval for $\beta_{1}$ **contains** $c$, then a test of $H_{0}:\beta_{1}=c$ vs. $H_{0}:\beta_{1}\neq c$ at the $\alpha$ level will **fail to reject** $H_{0}$.</p>
 <p>In practice, software programs such as Excel are used to fit regression models. Excel has a built-in tool to do this in the same location as the ANOVA program. The output even looks similar. As an example, let&rsquo;s fit a simple linear regression model to the crude oil/gasoline price data which are graphed in Figure 
@@ -808,34 +801,284 @@
 <p>d). What are the hypotheses that the $\mathit{p}$-value refers to?</p>
 <p>e). Based on the $p$-value and on the confidence interval, what conclusion can you make about the relationship between the selling price of a house and its square footage?</p>
 <p>Does the amount of education that one&rsquo;s father has influence the amount of education his children have? A sample of $20$ people were asked to report the number of years of formal schooling they had along with the number of years their fathers had. The data are shown in the table below.</p>
-<hr>
-<p>Dad_Schooling   Child_Schooling<br>
-16               18<br>
-15               15<br>
-12               14<br>
-12               20<br>
-12               13<br>
-12               16<br>
-12               12<br>
-12               14<br>
-12               16<br>
-14               16<br>
-12               20<br>
-12               14<br>
-20               17<br>
-16               13<br>
-9                15<br>
-11               12<br>
-12               12<br>
-10               11<br>
-16               18<br>
-8                10</p>
-<hr>
-<p>a). Use Excel to fit the simple linear regression model to the data above.</p>
-<p>b). Interpret the coefficients $b_{0}$ and $b_{0}$  in context.</p>
-<p>c). Calculate a $90%$ confidence interval for $\beta_{1}$.</p>
-<p>d). What are the hypotheses that the $\mathit{p}$-value refers to?</p>
-<p>e). Based on the $p$-value and on the confidence interval, what conclusion can you make about the relationship between a child&rsquo;s education level and his or her father&rsquo;s education level?</p>
+<table>
+<thead>
+<tr>
+<th>Dad_Schooling</th>
+<th>Child_Schooling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16</td>
+<td>18</td>
+</tr>
+<tr>
+<td>15</td>
+<td>15</td>
+</tr>
+<tr>
+<td>12</td>
+<td>14</td>
+</tr>
+<tr>
+<td>12</td>
+<td>20</td>
+</tr>
+<tr>
+<td>12</td>
+<td>13</td>
+</tr>
+<tr>
+<td>12</td>
+<td>16</td>
+</tr>
+<tr>
+<td>12</td>
+<td>12</td>
+</tr>
+<tr>
+<td>12</td>
+<td>14</td>
+</tr>
+<tr>
+<td>12</td>
+<td>16</td>
+</tr>
+<tr>
+<td>14</td>
+<td>16</td>
+</tr>
+<tr>
+<td>12</td>
+<td>20</td>
+</tr>
+<tr>
+<td>12</td>
+<td>14</td>
+</tr>
+<tr>
+<td>20</td>
+<td>17</td>
+</tr>
+<tr>
+<td>16</td>
+<td>13</td>
+</tr>
+<tr>
+<td>9</td>
+<td>15</td>
+</tr>
+<tr>
+<td>11</td>
+<td>12</td>
+</tr>
+<tr>
+<td>12</td>
+<td>12</td>
+</tr>
+<tr>
+<td>10</td>
+<td>11</td>
+</tr>
+<tr>
+<td>16</td>
+<td>18</td>
+</tr>
+<tr>
+<td>8</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Use Excel to fit the simple linear regression model to the data above.</p>
+</li>
+<li>
+<p>Interpret the coefficients $b_{0}$ and $b_{0}$  in context.</p>
+</li>
+<li>
+<p>Calculate a $90%$ confidence interval for $\beta_{1}$.</p>
+</li>
+<li>
+<p>What are the hypotheses that the $\mathit{p}$-value refers to?</p>
+</li>
+<li>
+<p>Based on the $p$-value and on the confidence interval, what conclusion can you make about the relationship between a child&rsquo;s education level and his or her father&rsquo;s education level?</p>
+</li>
+</ol>
+<h2 id="evaluating-the-simple-linear-regression-model">Evaluating the Simple Linear Regression Model</h2>
+<p>The essential components of regression analysis are the following:</p>
+<ul>
+<li>We assume that two variables, $x$ and $Y,$ are somehow related.</li>
+<li>Specifically, we assume the probability distribution of $Y$ (which is called the response or dependent variable) changes as $x$ (which is called the predictor or independent variable) changes.</li>
+<li>Specifically, we assume that the mean (or expected value) of  $Y,$ denoted as $E(Y),$ changes as $x$ changes. To indicate this     we write $E(Y|x)$ read as &ldquo;the expected value of $Y$ given $x.&ldquo;$</li>
+<li>We can also indicate $E(Y|x)$ using the notation $\widehat{Y},$ read as $&quot;y$ hat.&rdquo;</li>
+<li>Specifically, with simple regression, we assume that $Y=\beta_{0}+\beta_{1}x+\varepsilon$, where $\varepsilon$ has a normal     distribution with mean $0$ and standard deviation $\sigma $.</li>
+<li>Given a set of paired data points $(Y_{1},x_{1}),$ $(Y_{2},x_{2}),\ldots ,(Y_{n},x_{n}),$ we can fit the simple linear     regression model $\widehat{y}=b_{0}+b_{1}x$ by finding the values $b_{0}$ and $b_{1}$ that makes the &ldquo;sum of squared errors&rdquo; $SSE=$     $\sum (y_{i}-(b_{0}+b_{1}x_{i}))^{2}$ as small as possible. As you will recall, this is the **OLS (ordinary least squares) criterion.**</li>
+</ul>
+<p>Once the model is fit, we should examine how good the fit is. Several items should be checked, but they fall under three general categories: $1)$. Does the model make sense? $2)$. Are the assumptions satisfied? and $3)$. Is the model practically useful? Statisticians have devised many ways to address these questions, some qualitative, some quantitative. Many of the quantitative methods are focused on examining $(2)$, since the validity of the predictions from the model rest upon the assumptions being at least reasonably satisfied. However, even if the assumptions are badly violated, the model could be made to be useful by making adjustments to the model-fitting process.</p>
+<h2 id="assessing-the-fit-of-the-model">Assessing the Fit of the Model</h2>
+<p>Whether the fitted model $\widehat{y}=b_{0}+b_{1}x$ makes sense or not depends on your knowledge of the subject you are trying to learn about, and specifically on your idea of how the two variables should be related. For example, it seems sensible that as income increases, the total amount of charitable contributions should increase as well. The relationship might be linear or non-linear. Two possible relationships are shown in Figures 
+<a href="#reg_model">[reg_model]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_model&rdquo;} and 
+<a href="#quadreg">[quadreg]</a>{reference-type=&quot;ref&rdquo; reference=&quot;quadreg&rdquo;} below. However, other relationships are possible. A recent study has shown that the very wealthy are less generous in that they give a smaller percentage of their income to charity<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>The most important way to determine the relationship between variables is to simply graph the data. Scatter plots such as those in Figures 
+<a href="#gas_scatter">[gas_scatter]</a>{reference-type=&quot;ref&rdquo; reference=&quot;gas_scatter&rdquo;} and 
+<a href="#c02">[c02]</a>{reference-type=&quot;ref&rdquo; reference=&quot;c02&rdquo;} confirm what we suspect: higher oil prices lead to higher gas prices, and the more cars on the road, the higher the CO$_{2}$ output. But what about the relationship between the square footage of a house and its selling price? Figure 
+<a href="#housescatter">[housescatter]</a>{reference-type=&quot;ref&rdquo; reference=&quot;housescatter&rdquo;} is a scatterplot of over $2,000$ selling prices of houses in Ames, Iowa, and their associated square footage. Is the relationship linear or quadratic? In this case, it is a little harder to see.</p>
+<h2 id="the-coefficient-of-determination">The coefficient of determination</h2>
+<p>One way of measuring the fit of a model is known as $R^{2},$ read as $&quot;R$ square,&rdquo; which we now define.</p>
+<p>$R^2$, also known as <strong>the coefficient of determination</strong> is the proportion of total variability in $Y$ that is accounted for, or &ldquo;explained,&rdquo; by the regression fit between $Y$ and $x$.</p>
+<p>The idea of &ldquo;explained variability&rdquo; should remind you of the ANOVA discussion. ANOVA is, in fact, a type of regression model where the $x$ variable is a categorical rather than a numeric variable. Remember that the <strong>fundamental assumption of statistics</strong> is that variability exists in the world. It is inescapable. So the question is not whether we can eliminate variability,* *but rather* how we can account for it.* In the three data sets plotted above, we clearly see variability in the $Y$ variable. Some of that variability can potentially be &ldquo;explained&rdquo; by a regression line fit to the data. The rest we regard as &ldquo;unexplained.&rdquo;</p>
+<p>Figure 
+<a href="#rsq">[rsq]</a>{reference-type=&quot;ref&rdquo; reference=&quot;rsq&rdquo;} shows the idea. Panel (a) shows that the total variability in the data can be measured by the differences between each actual observation and the sample mean $\overline{y}$. We already know a measure for that: the sample standard deviation $s$. However, the variability is really measured just by the numerator of that equation, which we defined as $&quot;SSTOT,&ldquo;$ which stands for &ldquo;total sum of squares.&rdquo; This is defined as</p>
+<p>$$SSTOT=\sum (y_{i}-\overline{y})^{2}$$</p>
+<p>In panel (c), we see that some of this variability can be &ldquo;explained&rdquo; by the regression line through the differences between the values $\widehat{y_{i}}$ and the sample mean $\overline{y}$. This &ldquo;explained&rdquo; variability is measured by a sum of squares as well, which we call $SSR$, which stands for &ldquo;sum of squares for regression.&rdquo; This is defined as:</p>
+<p>$$SSR=\sum (\widehat{y_{i}}-\overline{y})^{2}$$</p>
+<p>The remaining variability is accounted for by the differences in the actual values, $y_{i},$ and the predicted values $\widehat{y_{i}}$. This is also a sum of squares, called , $SSE,$ which stands for &ldquo;sum of squares for error.&rdquo; It is defined as:</p>
+<p>$$SSE=\sum (y_{i}-\widehat{y_{i}})^{2}$$</p>
+<p>As implied in the figure, the following relationship holds:</p>
+<p>$$SSTOT=SSR+SSE$$</p>
+<p>If a &ldquo;large&rdquo; proportion of variability in the data can be accounted for by the model then we have evidence that the model is useful. The statistic that quantifies the proportion of variability accounted for by the model is known as $R^{2}$, which we now define.</p>
+<p>$R^{2},$ read as &ldquo;r squared&rdquo; and also known as <strong>the coefficient of determination</strong>, measures the proportion of total variability in the $Y$ data that is accounted for by the regression fit. The formula is</p>
+<p>$$R^{2}=\frac{SSR}{SSTOT}=1-\frac{SSE}{SSTOT}$$</p>
+<p>Here is a useful fact relating $R^{2}$ to correlation.</p>
+<p>In the simple linear regression model $Y=\beta_{0}+\beta_{1}x+\varepsilon ,$ $R^{2}$ is equal to the square of the correlation coefficient $r$. That is $R^{2}=r^{2}$.</p>
+<p>How much variability is accounted for by the regression model is only one indication of its usefulness. It is possible to have a fairly large $R^{2}$ in a model that is not practically useful. A $95%$ confidence interval for $\beta_{1}$, for instance, could be too wide to make any reasonable judgment on the relationship between a unit increase in $x$ on the mean of $Y$. Another problem is that a high $R^{2}$ is possible when the underlying assumptions of the regression procedure are violated. Fortunately, in this case, adjustments to the model or transformations of the data are usually possible in order to make the assumptions more reasonably met. In the next section, we give an overview of some common regression assumption violations.</p>
+<h2 id="violations-of-regression-assumptions">Violations of Regression Assumptions</h2>
+<p>The basic ways that a simple linear regression model can go wrong are 1). the true $E(Y|x)$ is not linear, but some other function; 2). The error terms $\varepsilon_{i}$ are not independent of one another or of $x;$ 3). The error terms $\varepsilon_{i}$ do not have the same variance $V(\varepsilon )=$ $\sigma ^{2}$ for all values of $x$ ; 4). Several of these assumptions are violated. Let&rsquo;s expand upon points $(2)$ and $(3)$.</p>
+<p>The error terms $\varepsilon_{i}$ arise due to the imperfect fit between the regression line $\beta_{0}+\beta_{1}x$ and the actual value $Y$. For each value of $Y_{i}$ and $x_{i},$ there is an associated $\varepsilon_{i}$ that &ldquo;absorbs&rdquo; the effects of all of the variables that we didn&rsquo;t include in the model. One of the key assumptions is that the variance of the error term $V(\varepsilon )$ *does not change* as $x$ changes. That is, $V(\varepsilon_{i})=V(\varepsilon_{j})$ for any $i$ and $\ j$. We further assume that the correlation between $\varepsilon_{i}$ and $\varepsilon_{j}$ is exactly $0,$ that is, the error in predicting $Y_{i}$ using $x_{i}$ is unrelated to the error in predicting $Y_{j}$ using $x_{j}$, for any $i$ and $j$. If these assumptions about the $\varepsilon_{i}$ are not satisfied, inferential statements we make using the fitted model (for example, calculating a confidence interval or test for $\beta_{1}$, or predicting a new observation of $Y)$ are not strictly valid, and may thus be highly misleading.</p>
+<p>The most common method by which we evaluate the assumptions of the regression model is by examining what are called &ldquo;residuals.&rdquo; First, we need to define what a residual is.</p>
+<p>A regression <strong>residual</strong> $e_{i}$** **is the difference between the actual value $y_{i}$ and the fitted value $\widehat{y_{i}}$. For a fitted regression model, the residual is</p>
+<p>$$e_{i}=y_{i}-\widehat{y_{i}}$$</p>
+<p>In the case of the simple linear regression model, plotting the residuals by the $x$ variable is a natural choice. A scatterplot of $(e_{i},x_{i})$ is called a **residual plot**. Examining residual plots can help identify problems with the model fit. How should the residual plot look if all of the assumptions are reasonably met? The short answer is: *look for the absence of a pattern.* Figure 
+<a href="#good_resid">[good_resid]</a>{reference-type=&quot;ref&rdquo; reference=&quot;good_resid&rdquo;} illustrates this idea. Notice that the residuals seem to scatter around $0$ with no apparent pattern. We would say this model is a reasonably good fit to the data.</p>
+<p>A violation of the assumption of constant standard deviation (known formally as <strong>heteroscedasticity)</strong> is shown in Figure 
+<a href="#hetero">[hetero]</a>{reference-type=&quot;ref&rdquo; reference=&quot;hetero&rdquo;}. Notice that as the $x$ variable (&ldquo;time&rdquo; in this case) gets larger, the residuals begin to &ldquo;fan out&rdquo; in a megaphone pattern, indicating an increase in the variability. In practice, an analyst would employ a <strong>variable transformation</strong> to the data to correct for this. Discussion of how this transformation is accomplished is beyond the scope of this handout <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<p>An example of a model in which the assumption that $E(Y|x)$ is linear is not met is shown next in Figure 
+<a href="#misspesified">[misspesified]</a>{reference-type=&quot;ref&rdquo; reference=&quot;misspesified&rdquo;}. Such a model is called a <strong>misspecified model,</strong> and many times such models will result in error terms that are correlated. Moreover, misspecified models are problematic in their own right simply because any predictions we get from using the model will be wrong because the wrong relationship was postulated between $Y$ and $x$. In the example below, it can be shown that fitting a parabola $E(Y|x)=\beta_{0}+\beta_{1}x+\beta_{2}x^{2}$ rather than a line will lead to a residual plot that looks like Figure 
+<a href="#good_resid">[good_resid]</a>{reference-type=&quot;ref&rdquo; reference=&quot;good_resid&rdquo;} above.</p>
+<p>For many of the real-world data sets we will use, the assumptions of the simple model will be violated. For instance, Figure 
+<a href="#crude_resid">[crude_resid]</a>{reference-type=&quot;ref&rdquo; reference=&quot;crude_resid&rdquo;} indicates that the standard deviation of the residual terms increases as the price of oil increases. The pattern is that of the &ldquo;megaphone&rdquo; we saw earlier. It turns out that for this model, the fitted values $\widehat{y}%_{i}$ (i.e., the predictions of $y$ for each price per barrel of oil) don&rsquo;t differ by much when the problem of non-constant variability is corrected (this correction isn&rsquo;t shown here and is beyond the scope of this handout.) Therefore, <em>we will proceed in the examples as if the model assumptions are reasonably met</em>, although in &ldquo;real life,&rdquo; as you should always do in any situation, you will need to check assumptions.</p>
+<p>Once you have fit the model, there are two things you might want to do with it: make an inference about $E(Y|x)$ for a specific $x$ and predict a new value of $Y,$ call it $Y^{new}$. We will discuss these two issues in the next section.</p>
+<h2 id="estimation-of-mean-of-y-and-prediction-of-new-y">Estimation of Mean of Y and Prediction of New Y</h2>
+<p>It turns out that estimating the mean of $Y$ for a specific value of $x$ and predicting a new value of $Y$ for a specific value of $x$ are done the same way: plug the specific value of $x$, call it $x_{p}$, into the fitted model.  What differs is constructing the interval. In general, the confidence interval for $E(Y|x_{p})$ will be narrower than the **prediction interval** for the value of $Y^{new}$. This fact makes sense because estimating a specific value of a distribution should logically be less precise than estimating its mean.</p>
+<p>Here are the two formulas</p>
+<p>A $(1-\alpha )100%$ <strong>confidence interval</strong> for $E(Y|x_{p})$ for the simple linear regression model is</p>
+<p>$$\widehat{y}\pm t_{n-2,\alpha /2}\sqrt{\frac{SSE}{n-2}\left[ \frac{1}{n}+\frac{(x_{p}-\overline{x})^{2}}{(n-1)s_{x}^{2}}\right] }$$</p>
+<p>where $x_{p}$ is the specific value of $x$ for which we want to estimate the mean of $Y$.</p>
+<p>A $(1-\alpha )100%$ <strong>prediction interval</strong>  for a new observation $Y^{new}$ at a specific value $x_{p}$, is</p>
+<p>$$\widehat{y}\pm t_{n-2,\alpha /2}\sqrt{\frac{SSE}{n-2}\left[ 1+\frac{1}{n}+\frac{(x_{p}-\overline{x})^{2}}{(n-1)s_{x}^{2}}\right] }$$</p>
+<p>Notice that the only difference between the two is the addition of the $&quot;1&quot;$ in the prediction interval formula.</p>
+<p>Let&rsquo;s work some examples to put all of the concepts of this handout into practice.</p>
+<p>For the following values of SSR, SSE, and SSTOT, calculate $R^{2}$.</p>
+<p>a). $SSE=159$, $SSTOT=309.3$</p>
+<p>b). $SSR=1682,$ $SSTOT=1982$</p>
+<p>c). $SSR=149,$ $SSE=592$</p>
+<p>The fitted regression model relating motor vehicles per $1000$ people to $CO_{2}$ output for a sample of countries using the data displayed in Figure 
+<a href="#c02">[c02]</a>{reference-type=&quot;ref&rdquo; reference=&quot;c02&rdquo;} is shown below$.$.The average number of motor vehicles per $1000$ people $\overline{x}=260.1$ with a standard deviation $s_{x}=236$.</p>
+<p>a). Show how $R^{2}$ was calculated.</p>
+<p>b). Interpret $R^{2}$ in the context of the problem.</p>
+<p>c). Compute a $99%$ confidence interval for the true mean CO$_{2}$ output in a country when it has $400$ motor vehicles per $1000$ people.</p>
+<p>d). Compute a $99%$ confidence interval for the true mean CO$_{2}$ output in a country when it has $400$ motor vehicles per $1000$ people.</p>
+<p>An economist is studying the nature of street vendors in Mexico. She has gathered the following data on $15$ vendors: age, number of hours worked per day, and annual earnings. Using Excel, fit a simple linear regression model to predict annual earnings using hours worked per day as the $x$ variable.</p>
+<table>
+<thead>
+<tr>
+<th>Earnings</th>
+<th>Age</th>
+<th>Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2841</td>
+<td>29</td>
+<td>12</td>
+</tr>
+<tr>
+<td>1876</td>
+<td>21</td>
+<td>8</td>
+</tr>
+<tr>
+<td>2934</td>
+<td>62</td>
+<td>10</td>
+</tr>
+<tr>
+<td>1552</td>
+<td>18</td>
+<td>10</td>
+</tr>
+<tr>
+<td>3065</td>
+<td>40</td>
+<td>11</td>
+</tr>
+<tr>
+<td>3670</td>
+<td>50</td>
+<td>11</td>
+</tr>
+<tr>
+<td>2005</td>
+<td>65</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3215</td>
+<td>44</td>
+<td>8</td>
+</tr>
+<tr>
+<td>1930</td>
+<td>17</td>
+<td>8</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>70</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3111</td>
+<td>20</td>
+<td>9</td>
+</tr>
+<tr>
+<td>2882</td>
+<td>29</td>
+<td>9</td>
+</tr>
+<tr>
+<td>1683</td>
+<td>15</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1817</td>
+<td>14</td>
+<td>7</td>
+</tr>
+<tr>
+<td>4066</td>
+<td>33</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<p>a). Show how $R^{2}$ was calculated.</p>
+<p>b). Interpret $R^{2}$ in the context of the problem</p>
+<p>c). Compute a $95%$ confidence interval for the true mean earnings of a vendor who works $\mathit{6}$ hours per day using the fact that the average work hours $\overline{x}=$ $8.7$ with a standard deviation $s_{x}=2.3$. </p>
+<p>d).Compute a $95%$ prediction interval for the earnings of a street vendor who works $\mathit{6}$ hours per day.</p>
+<p>Use the output in Figure 
+<a href="#house_example">[house_example]</a>{reference-type=&quot;ref&rdquo; reference=&quot;house_example&rdquo;}  and the fact that the average age of a house is $36.4$ years with a standard deviation of $30.3$ years to answer the following questions.</p>
+<p>a). Show how $R^{2}$ was calculated.</p>
+<p>b). Interpret $R^{2}$ in the context of the problem.</p>
+<p>c). Compute a $99%$ confidence interval for the average price of a $10$-year-old home.</p>
+<p>d).Compute a $99%$ prediction interval for the price of a $10$-year-old home.</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -882,7 +1125,7 @@
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/courses/bana3363/16-simple-linear-regression/" rel="prev">Simple Linear Regression</a>
+    <a href="/courses/bana3363/18-multiple-linear-regression/" rel="prev">Multiple Linear Regression</a>
   </div>
   
 </div>

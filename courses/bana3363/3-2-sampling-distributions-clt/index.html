@@ -574,7 +574,7 @@ A sample is a small collection of objects whose properties are thought to corres
 
   <ul>
     <li><a href="#basic-concepts">Basic Concepts</a></li>
-    <li><a href="#a-confidence-interval-for-the-mean-when-sigma-is-known------------------------------------------------------------------">A Confidence Interval for the Mean When $\sigma$ Is Known &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</a></li>
+    <li><a href="#a-confidence-interval-for-the-mean-when-sigma-is-known">A Confidence Interval for the Mean When $\sigma$ Is Known</a></li>
     <li><a href="#a-confidence-interval-for-the-mean-when-sigma-is-unknown">A Confidence Interval for the Mean When $\sigma$ Is Unknown</a></li>
   </ul>
 
@@ -630,17 +630,17 @@ A sample is a small collection of objects whose properties are thought to corres
 <p>$$Z=\frac{\overline{Y}-\mu }{\sigma /\sqrt{n}}$$</p>
 <p>Here are some examples to try out.</p>
 <p>The foreman of a bottling plant has observed that the amount of soda in each &ldquo;$32$-ounce&rdquo; bottle is actually a normally distributed random variable, with a mean of $32$ ounces and a standard deviation of $0.3$ ounce. If the foreman is doing quality control by taking samples of $n$ $=4$ bottles from the line and calculating the average fill, would a reading of $32.5$ be unusually high? Answer by finding $P(\overline{Y}&gt;32.5).$ How would your answer change if we took away the assumption that the amount of soda in each bottle comes from a normal distribution?</p>
-<p>\vspace{1.5in} You take a random sample of size $50$ from a population with mean $\mu =16$ and standard deviation $\sigma =$ $8$.</p>
+<p>You take a random sample of size $50$ from a population with mean $\mu =16$ and standard deviation $\sigma =$ $8$.</p>
 <p>a). What are the mean and standard deviation of $\overline{Y}$, the sample mean?</p>
 <p>b). Sketch the distribution, indicating the intervals within which $68%,$ $% 95%$, and $99.7%$ of the observations are expected to lie.</p>
 <p>c). Find $P(\overline{Y}&gt;18)$</p>
 <p>d). Find $P(17&lt;\overline{Y}&lt;19.5)$</p>
 <p>e). Explain why all of these probabilities are approximate.</p>
-<p>\vspace{0.4in} In a random sample of $20$ college students, the average reported working time was $15.4$ hours per week. A researcher claims that the true working time of college students is normally distributed with a mean of $16$ hours and a standard deviation of $2.5$ hours. Let $\overline{Y}$ denote the sample mean.</p>
+<p>In a random sample of $20$ college students, the average reported working time was $15.4$ hours per week. A researcher claims that the true working time of college students is normally distributed with a mean of $16$ hours and a standard deviation of $2.5$ hours. Let $\overline{Y}$ denote the sample mean.</p>
 <p>a). What is $P(\overline{Y}&lt;15.4)$?</p>
 <p>b). Using your answer to (a), how reasonable do you think the researcher&rsquo;s claim is?</p>
 <p>c). Using the $68-95-99.7$ rule, find a set of sample averages that would be unusual to see (either &ldquo;too large&rdquo; or &ldquo;too small&rdquo;) if the true mean and standard deviation of college student working hours were as the researcher claims.</p>
-<p>\vspace{1.5in} In the next section, we will discuss how we can use the sampling distribution of the sample mean to make inferences about $\mu .$</p>
+<p>In the next section, we will discuss how we can use the sampling distribution of the sample mean to make inferences about $\mu .$</p>
 <h1 id="interval-inference-about-a-single-population-process-mean">Interval Inference about a Single Population (Process) Mean</h1>
 <h2 id="basic-concepts">Basic Concepts</h2>
 <p>Our ultimate goal is to obtain a reasonable &quot; guess&rdquo; at the true value of a process parameter (in this section, $\mu$) using a sample of data. Before we do that, we have to introduce some terms.</p>
@@ -661,7 +661,7 @@ A sample is a small collection of objects whose properties are thought to corres
 </ol>
 <p>We know from Theorem 
 <a href="#samp_dist">[samp_dist]</a>{reference-type=&quot;ref&rdquo; reference=&quot;samp_dist&rdquo;} that the sample mean $% \overline{Y}$ is unbiased because the theorem states that $E(\overline{Y})=% %TCIMACRO{\U{3bc} }% %BeginExpansion \mu %EndExpansion .$ The other two properties are also true, but we won&rsquo;t prove it; just take my word for it. Also, it can be shown that $\overline{Y}$ is has the smallest variability among all unbiased estimators, so when we use it, we are using &ldquo;the best&rdquo; guess of $\mu .$</p>
-<h2 id="a-confidence-interval-for-the-mean-when-sigma-is-known------------------------------------------------------------------">A Confidence Interval for the Mean When $\sigma$ Is Known &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</h2>
+<h2 id="a-confidence-interval-for-the-mean-when-sigma-is-known">A Confidence Interval for the Mean When $\sigma$ Is Known</h2>
 <p>By the Central Limit Theorem, Theorem 
 <a href="#CLT">[CLT]</a>{reference-type=&quot;ref&rdquo; reference=&quot;CLT&rdquo;}, we know that the distribution of $\overline{Y}$ is approximately $N(\mu ,\sigma /\sqrt{n})$. This implies that we can predict something about the behavior of any given sample average $\overline{x}.$ Specifically, we know that a sample average will have about a $68%$ chance of being within one standard deviation of $% \mu$ about a $95%$ chance of being within two standard deviations of $\mu$ , and about a $99.7%$ chance of being within three standard deviations of $% \mu .$</p>
 <p>Confidence intervals flip this logic around and use the fact that if $% \overline{Y}$ has a $68%$ chance of being within one standard deviation of $% \mu$, then we can also say that $\mu$ has a $68%$ chance of being within one standard deviation of $\overline{Y}.$ This means that</p>

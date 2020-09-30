@@ -627,14 +627,6 @@
       </li>
       
       <li >
-        <a href="/courses/bana3363/16-simple-linear-regression/">Simple Linear Regression</a>
-      </li>
-      
-      <li >
-        <a href="/courses/bana3363/17-evaluating-linear-regression/">Evaluating Linear Regression</a>
-      </li>
-      
-      <li >
         <a href="/courses/bana3363/18-multiple-linear-regression/">Multiple Linear Regression</a>
       </li>
       
@@ -681,14 +673,16 @@
 <ol>
 <li>
 <p>Specify the hypotheses.</p>
-<p>$$\begin{aligned}     \text{(a) }H_{0} &amp;:&amp;\mu _{1}-\mu _{2}\leq d\text{ vs. }H_{1}:\mu _{1}-\mu     _{2}&gt;d\text{ }      \text{(b) }H_{0} &amp;:&amp;\mu _{1}-\mu _{2}\geq d\text{ vs. }H_{1}:\mu _{1}-\mu     _{2}&lt;d      \text{(c) }H_{0} &amp;:&amp;\mu _{1}-\mu _{2}=d\text{ vs. }H_{1}:\mu _{1}-\mu     _{2}\neq d\end{aligned}$$</p>
+<p>a) $H_{0}:\mu_{1}-\mu_{2}\leq d\text{ vs. }H_{1}:\mu_{1}-\mu_{2}&gt;d$ <br>
+b) $H_{0}:\mu_{1}-\mu_{2}\geq d\text{ vs. }H_{1}:\mu_{1}-\mu_{2}&lt;d$
+c) $H_{0}:\mu_{1}-\mu_{2}=d\text{ vs. }H_{1}:\mu_{1}-\mu_{2}\neq d$</p>
 <p>where $-\infty &lt;d$ $&lt;\infty$ is some specified difference (usually     $0$, but it could be anything$)$.</p>
 </li>
 <li>
 <p>Calculate the test statistic.</p>
-<p><strong>Case 1:</strong> $\sigma _{1}=\sigma _{2}$ (the only case we will     consider in this class)</p>
+<p><strong>Case 1:</strong> $\sigma _{1}=\sigma _{2}$ (the only case we willconsider in this class)</p>
 <p>$$t_{0}=\frac{\overline{x}_{1}-\overline{x}_{2}-d}{s_{p}\sqrt{\frac{1}{n_{1}}+%     \frac{1}{n_{2}}}}$$</p>
-<p>where     $s_{p}=\sqrt{\frac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2%     }}$ is the pooled standard deviation estimate.</p>
+<p>where $s_{p}=\sqrt{\frac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2%     }}$ is the pooled standard deviation estimate.</p>
 <p><strong>Case 2:</strong> $\sigma _{1}\neq \sigma _{2}$</p>
 <p>$$t_{0}=\frac{\overline{x}_{1}-\overline{x}_{2}-d}{\sqrt{\frac{s_{1}^{2}}{n_{1}%     }+\frac{s_{2}^{2}}{n_{2}}}}$$</p>
 </li>
