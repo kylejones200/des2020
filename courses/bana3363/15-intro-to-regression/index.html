@@ -602,15 +602,11 @@
       </li>
       
       <li >
-        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Goodness-of-Fit Test</a>
+        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Tests</a>
       </li>
       
       <li >
         <a href="/courses/bana3363/8-matched-pairs/">Matched Pairs</a>
-      </li>
-      
-      <li >
-        <a href="/courses/bana3363/14-chi-squared-test-of-independence/">Chi Squared Test of Independence</a>
       </li>
       
     </ul>
@@ -679,7 +675,7 @@
 <p>where $E$ stands for &ldquo;expected value&rdquo; and $V$ stands for variance.</p>
 <p>The correlation coefficient $\rho$ is a <em>population parameter,</em> like $\mu$ and $p$, and must therefore be estimated with data. This leads to the next definition.</p>
 <p>The <strong>sample correlation coefficient</strong> $r$ is a random variable that describes the relationship between two sets of numeric data that are considered in pairs $(y_{1},x_{1}),(y_{2},x_{2}),\ldots ,(y_{n},x_{n})$. It is given by</p>
-<p>$$r=\frac{\dsum_{i}x_{i}y_{i}-n(\overline{x})(\overline{y})}{(n-1)s_{x}s_{y}}$$</p>
+<p>$$r=\frac{\sum_{i}x_{i}y_{i}-n(\overline{x})(\overline{y})}{(n-1)s_{x}s_{y}}$$</p>
 <p>where $s_{x\text{ }}$ and $s_{y}$ are the standard deviations of $x$ and $y$ , respectively.</p>
 <p>The following are facts about correlation:</p>
 <ul>
@@ -696,7 +692,7 @@
 <p>The broad set of techniques that fall under the &ldquo;regression analysis&rdquo; title drive most practical research studies, from drug trials in the pharmaceutical industry to new product test marketing. Businesses face tough competition in the information age. Not only must they navigate an increasingly fragmented customer base, manage their reputations through traditional and social media channels, innovate with products and services at an increasing rate, and negotiate with many suppliers and distributors, but they must also make short- and long-term decisions about personnel, production, new markets to enter, and strategies to increase (or at least maintain) market share against competitors. Sites such as Kickstarter <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and Fundable<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> specialize in a type of online venture capital process called &ldquo;crowdfunding,&rdquo; where ordinary individuals can contribute to a project in exchange for a variety of rewards, from a simple acknowledgement as a supporter, to a functioning prototype of the company&rsquo;s product, to a percentage of sales. You will no doubt hear a good deal more on this topic in your marketing and management classes.</p>
 <p>Managers must be able to make decisions that incorporate a number of factors. Increasingly, these decisions have been influenced by mathematical modeling. A new field called <strong>business analytics</strong><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> has arisen that seeks to use advanced mathematics and large data sets to discover patterns and relationships among consumer choices that can help optimize product and service delivery. If you have ever wondered why grocery stores have rewards cards, the answer is simple: it allows the store to track your purchases in order to present you with customized deals and to understand how your purchases relate to those of other customers. If you use Netflix to stream movies, you should know that everything you do&ndash;the programs you search for, the number of searches you perform, the time you spend browsing your recommendations, the device you are using to watch the program, the genre of the programs you view most often, and more&ndash;is being monitored<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>. The data are fed into complex models designed by mathematicians and statisticians, and the patterns extracted from the data imply that, for instance, <em>Hot Tub Time Machine</em> and <em>Les Miserables</em> might appeal to the same user.</p>
 <p>Mathematical models can be divided into two three broad classes: <strong>deterministic,</strong> <strong>probabilistic,</strong> and <strong>regression</strong> models. The last type is actually a blend of the first two. Let&rsquo;s define these terms.</p>
-<p>A <strong>deterministic model</strong> is a mathematical equation for which, if a set of inputs $\mathbf{x}$ are known, the output $y$ is known with certainty.</p>
+<p>A <strong>deterministic model</strong> is a mathematical equation for which, if a set of inputs $x$ are known, the output $y$ is known with certainty.</p>
 <p>Deterministic models are what we are most familiar with in elementary mathematics. They are why mathematics is seen as &ldquo;objective,&rdquo; in the sense that there is often only one &ldquo;right answer&rdquo; to a problem. One simple example of a deterministic model that you should be familiar with is the formula for future value:$FV=P(1+r/n)^{nt}$. This formula is deterministic because, given a present value $P$, an interest rate $r$, the compounding frequency $n$, and the investment period $t$, we can calculate what the future value of the investment will be. That is, given $P,r,n$, and $t$, $FV$ is known with certainty. Another example of a deterministic model is the formula for a company&rsquo;s total cost: $T=F+Vq$, where $F$ is a company&rsquo;s fixed cost, $V$ is the variable cost per unit, and $q$ is the quantity produced. Given $F$, $V$, and $q$, we can compute the company&rsquo;s total cost. Remembering the formula for distance ($D=st$, where $s=speed)$, the time it takes to drive $45$ miles to campus, if you drive $s$ miles per hour is $t=\frac{45}{s}$.</p>
 <p>These models are simple and leave much room for improvement. For instance, the future value formula assumes the interest rate remains fixed over time, which will rarely be the case. The total cost equation, meanwhile, ignores the fact that, for some level of production $q^{\ast }$, the company will need to expand and change its fixed costs to $F^{\ast }$ to keep up. More sophisticated models could be built to account for these factors. However, even when we incorporate these other variables, it is unlikely that we will be able to perfectly, to an infinite number of decimal places, the total cost of making a product or the future value of an investment.</p>
 <p><strong>Variability</strong> is a basic characteristic of the natural world. Every time you drive $45$ miles to get to campus, it takes you a different amount of time to arrive here because your speed fluctuates by small amounts over the course of your trip. Everyone lives to a different age. People spend different amounts of money on each shopping trip. Differing amounts of soda are in a can that states that it contains $12$ ounces. With deterministic models, variability is ignored, so they are technically wrong.</p>
@@ -705,7 +701,7 @@
 <a href="#charity_cont">[charity_cont]</a>{reference-type=&quot;ref&rdquo; reference=&quot;charity_cont&rdquo;}.</p>
 <p>It is undeniable that the amount of money that people contribute to charity varies from person to person and even from time to time for the same person over different years. Assuming that &ldquo;charitable contributions&rdquo; is a random variable is a useful first approach to understanding the natural world, but we can do much better by bringing in additional information.</p>
 <p>It is sensible that charitable contributions depend on many factors, one of which is a person&rsquo;s income (other variables might be education level, political affiliation, gender, etc.). We can model the idea that charitable contribution is a random variable, but one that is influenced by another (possibly nonrandom) variable. We can get at this idea by making a reasonable assumption:</p>
-<p><em>for any given income, there is an entire distribution of possible &gt; charitable contributions that a person with that income could choose &gt; to make</em> .</p>
+<p>for any given income, there is an entire distribution of possible &gt; charitable contributions that a person with that income could choose &gt; to make.</p>
 <p>It would make sense that, as income increases, at least the mean contribution should increase, but how?</p>
 <p>One possibility is that the mean changes linearly with income. That is, if income is $x$ dollars per year, the average charitable contribution is $\beta_{0}+\beta_{1}x$, where $\beta_{0}$ (read as &ldquo;beta zero&rdquo;) is the intercept of the line and $\beta_{1}$ (read as &ldquo;beta one&rdquo;) is the slope. These two $\beta$ values are **population parameters**, like $\mu$ and $p$, that we can use data to estimate. This is shown in Figure 
 <a href="#reg_model">[reg_model]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_model&rdquo;}. The linear part that specifies how the mean changes with increasing income is **deterministic** (if we know $x$, $\beta_{0}$, and $\beta_{1}$, we know the mean with certainty), but the actual value is random, modeled as a draw from a normal distribution with mean $\beta_{0}+\beta_{1}x$. Now we have the next definition.</p>
@@ -714,12 +710,14 @@
 <p>For a random sample of bivariate data $(Y_{1},x_{1}),(Y_{2},x_{2}),\ldots ,(Y_{n},x_{n})$, where the $Y_{i}$ are random variables and the $x_{i}$ are constants, the **simple linear regression model** relating $Y$ to $x$ is given by</p>
 <p>$Y_{i} =\beta_{0}+\beta_{1}x_{i}+\varepsilon_{i},\text{ }i=1,2,\ldots n\text{ [sample form]}$</p>
 <p>$Y =\beta_{0}+\beta_{1}x+\varepsilon \text{ [population form]}$</p>
-<p><em>where</em> $\beta_{0}$* (read as &ldquo;beta zero&rdquo;) and* $\beta_{1}$ * (read as &ldquo;beta one&rdquo;) are fixed (but unknown) parameters and* $\varepsilon_{i}$* (read as &ldquo;epsilon&rdquo;) are independent normally distributed random variables with mean* $0$* and standard deviation* $\sigma$* that are uncorrelated with* $x$.</p>
+<p>where $\beta_{0}$ (read as &ldquo;beta zero&rdquo;) and $\beta_{1}$ (read as &ldquo;beta one&rdquo;) are fixed (but unknown) parameters and $\varepsilon_{i}$ (read as &ldquo;epsilon&rdquo;) are independent normally distributed random variables with mean $0$ and standard deviation $\sigma$ that are uncorrelated with $x$.</p>
 <p>In Figure 
 <a href="#reg_model">[reg_model]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_model&rdquo;}, the only $x$ variable is income, but there are many other factors that affect charity that we could add to the model. What this equation says is that the actual value of $Y$ that we observe is made up of a deterministic (fixed and known) $x$ and a random (unknown) component $\varepsilon$. The $\varepsilon$ value is made up of the countless other factors that influence $Y$ that we have not explicitly included as an $x$ variable in the model. We require $\varepsilon$ to be in the model because we can never know $Y$ with absolute certainty. However, we hope that the relationship between $Y$ and $x$ is strong enough to account for a good bit of the change in $Y$, because we can quantify this change by estimating $\beta_{0}$ and $\beta_{1}$ (more on this below).</p>
 <p>The implication of equation 
 <a href="#pop_version">[pop_version]</a>{reference-type=&quot;ref&rdquo; reference=&quot;pop_version&rdquo;} is that the mean of $Y$ is $E(Y|x)=$ $\beta_{0}+\beta_{1}x$ because, by the rules of expected value (see Handout $1$),</p>
-<p>$$\begin{aligned} E(Y|x) &amp;=&amp;E(\beta_{0}+\beta_{1}x+\varepsilon ) \ &amp;=&amp;\beta_{0}+\beta_{1}x+E(\varepsilon )\text{ [since }\beta_{0}+\beta_{1}x\text{ is a constant]} \ &amp;=&amp;\beta_{0}+\beta_{1}x\text{ [since we assume }E(\varepsilon )=0]\end{aligned}$$</p>
+<p>$E(Y|x) = E(\beta_{0}+\beta_{1}x+\varepsilon )$</p>
+<p>$ = \beta_{0}+\beta_{1}x+E(\varepsilon )\text{ [since }\beta_{0}+\beta_{1}x\text{ is a constant]}$</p>
+<p>$ = \beta_{0}+\beta_{1}x\text{ [since we assume }E(\varepsilon )=0]$</p>
 <p>We put the $&quot;|x&quot;$ part in the expected value to emphasize that the mean of $Y$ depends on $x$. A shorthand notation for this is $\widehat{Y}$, read as $&quot;Y$ hat.&rdquo; We also have the following important fact:</p>
 <p>Because $\varepsilon$ is assumed to have a normal distribution, $Y$ also has a normal distribution, but with mean $\beta_{0}+\beta_{1}x.\label{simple_ols_theorem}$</p>
 <p>We can interpret $\beta_{0}$ and $\beta_{1}$ as follows:</p>
@@ -744,7 +742,7 @@
 <p>The values of $b_{0}$ and $b_{1}$ that minimize $\sum (y_{i}-b_{0}-b_{1}x_{i})^{2}$ are $b_{1}=r\frac{s_{y}}{s_{x}}$ and $b_{0}=\overline{y}-b_{1}(\overline{x})$, where $s_{y}$ and $s_{x}$ are the standard deviations of the observed data ${y_{i}}$ and ${x_{i}}$, respectively, and $r$ is the sample correlation coefficient between ${y_{i}}$ and ${x_{i}}$.</p>
 <p>Once we have estimated $b_{0}$ and $b_{1}$, we can estimate $y$ using the equation</p>
 <p>$$\widehat{y}=b_{0}+b_{1}x$$</p>
-<p>We can simply plug in any value of $x$ and we get an estimate of $y$. What happened to the error term $\varepsilon ?$ Since the error term is not known, we simply use its mean of $0$ to estimate it. What does our estimate of $y$ represent? $\widehat{y\text{ }}$** is the estimated mean of the random variable** $Y$** at the value of** $x!$ Thus, through equation 
+<p>We can simply plug in any value of $x$ and we get an estimate of $y$. What happened to the error term $\varepsilon ?$ Since the error term is not known, we simply use its mean of $0$ to estimate it. What does our estimate of $y$ represent? $\widehat{y}$** is the estimated mean of the random variable** $Y$** at the value of** $x!$ Thus, through equation 
 <a href="#simple_model_eq">[simple_model_eq]</a>{reference-type=&quot;ref&rdquo; reference=&quot;simple_model_eq&rdquo;}, we have now defined a model that allows the distribution of $Y$ to change with $x$.</p>
 <p>The scatter plot of gasoline and oil prices with the least-square line is shown in Figure 
 <a href="#scatter_and_reg">[scatter_and_reg]</a>{reference-type=&quot;ref&rdquo; reference=&quot;scatter_and_reg&rdquo;}. The plot was made using Excel&rsquo;s scatter plot and &ldquo;Add trendline&rdquo; options. The estimated equation is</p>
@@ -753,17 +751,21 @@
 <a href="#simple_ols_theorem">[simple_ols_theorem]</a>{reference-type=&quot;ref&rdquo; reference=&quot;simple_ols_theorem&rdquo;}, we estimate that for each $1$ increase in the price of oil per barrel, the average price of gasoline increases by about $0.0268$, or about three cents. Further, looking at $b_{0}$, we can say (rather pointlessly) that the average price of gasoline when oil is $0$ per barrel is $0.0315$. Of course, oil will always cost something per barrel, so $b_{0}$ does not have a realistic interpretation here.</p>
 <h1 id="using-the-simple-linear-regression-model">Using the Simple Linear Regression Model</h1>
 <p>After the model has been fit, the next logical question is whether the model is useful or not. One way of assessing this is to determine if $x$ has significant predictive ability for $Y$. Since the effect of $x$ on $Y$ is measured by the unknown parameter $\beta_{1}$, the natural approach is to conduct a hypothesis test or construct a confidence interval for $\beta_{1}$ . First, we will address the confidence interval, since we can essentially define the test by determining whether a specified null hypothesis value of $\beta_{1}$ lies in the interval or not, much like we have done already. Before we can define the interval, we have to define a few terms related to the estimate $b_{1}$, which is what we use to construct the interval.</p>
-<p>The estimated value of $\beta_{1}$, known as $b_{1}$, is a random variable with a mean equal to $\beta_{1}$ and a standard deviation (called a **standard error)** of $\sqrt{\frac{\sigma ^{2}}{\dsum (x_{i}-\overline{x})^{2}}}$ . Since we rarely assume $\sigma ^{2}$ is known, we set $s.e.(b_{1})=\sqrt{\frac{SSE/(n-2)}{\dsum (x_{i}-\overline{x})^{2}}}=\sqrt{\frac{SSE/(n-2)}{(n-1)s_{x}^{2}}}$, where $s_{x}$ is the standard deviation of the $x$ data.</p>
-<p>A consequence of this fact leads to the definition of the $(1-\alpha )100%$ confidence interval for $\beta_{1}:$</p>
+<p>The estimated value of $\beta_{1}$, known as $b_{1}$, is a random variable with a mean equal to $\beta_{1}$ and a standard deviation (called a **standard error)** of $\sqrt{\frac{\sigma ^{2}}{\sum (x_{i}-\overline{x})^{2}}}$. Since we rarely assume $\sigma ^{2}$ is known, we set $s.e.(b_{1})=\sqrt{\frac{SSE/(n-2)}{\sum (x_{i}-\overline{x})^{2}}}=\sqrt{\frac{SSE/(n-2)}{(n-1)s_{x}^{2}}}$, where $s_{x}$ is the standard deviation of the $x$ data.</p>
+<p>A consequence of this fact leads to the definition of the $(1-\alpha )100%$ confidence interval for $\beta_{1}$:</p>
 <p>A $(1-\alpha)100%$ confidence interval for $\beta_{1}$ is given by</p>
 <p>$$b_{1}\pm t_{\alpha /2,n-2}\sqrt{\frac{SSE/(n-2)}{(n-1)s_{x}^{2}}}$$</p>
-<p><em>where</em> $t_{n-2,\alpha /2}$ is the value of Student&rsquo;s $t$  distribution with* $n-2$ degrees of freedom and* $\alpha /2$ probability to the right.</p>
+<p><em>where</em> $t_{n-2,\alpha /2}$ is the value of Student&rsquo;s $t$  distribution with* $n-2$ degrees of freedom and* $\alpha/2$ probability to the right.</p>
 <p>We use $n-2$ because we had to estimate two values, $b_{0}$ and $b_{1}$, using the data. The hypothesis testing procedure follows a familiar pattern:</p>
 <ol>
 <li>Specify the hypotheses</li>
 </ol>
 <p>The parameter of interest is $\beta_{1}$, so the hypotheses are statements about its value.</p>
-<p>$$\begin{aligned} \text{(a) }H_{0} &amp;:&amp;\beta_{1}\leq c\text{ vs. }H_{0}:\beta_{1}&gt;c \ \text{(b) }H_{0} &amp;:&amp;\beta_{1}\geq c\text{ vs. }H_{0}:\beta_{1}&lt;c \ \text{(c) }H_{0} &amp;:&amp;\beta_{1}=c\text{ vs. }H_{0}:\beta_{1}\neq c\end{aligned}$$</p>
+<ul>
+<li>$H_{0}: \beta_{1}\leq c\text{ vs. }H_{0}:\beta_{1}&gt;c$</li>
+<li>$H_{0}: \beta_{1}\geq c\text{ vs. }H_{0}:\beta_{1}&lt;c$</li>
+<li>$H_{0} &amp;:&amp;\beta_{1}=c\text{ vs. }H_{0}:\beta_{1}\neq c$</li>
+</ul>
 <p>In practice, $c$ is usually $0$, but it could be anything. In regression programs such as Excel, the hypothesis tested by default is</p>
 <p>$$H_{0}:\beta_{1}=0\text{ vs. }H_{0}:\beta_{1}\neq 0$$</p>
 <ol>
@@ -775,9 +777,17 @@
 <li>Determine the rejection region (or compute the $p$-value).</li>
 </ol>
 <p>The test statistic is a Student&rsquo;s $t$ statistic, so the critical values that mark the rejection regions are as follows:</p>
-<p>$$\begin{aligned} \text{(a)}{\text{ }t_{n-2} &amp;:&amp;t_{n-2}&gt;\text{ }t_{n-2,\alpha }} \ \text{(b) }{\text{ }t_{n-2} &amp;:&amp;t_{n-2}&lt;-\text{ }t_{n-2,\alpha }} \ \text{(c) }{\text{ }t_{n-2} &amp;:&amp;|t_{n-2}|&gt;\text{ }t_{n-2,\alpha /2}\end{aligned}$$</p>
+<ul>
+<li>$t_{n-2}: t_{n-2}&gt;\text{ }t_{n-2,\alpha }}$</li>
+<li>$t_{n-2}: t_{n-2}&lt;-\text{ }t_{n-2,\alpha }}$</li>
+<li>$t_{n-2} &amp;:&amp;|t_{n-2}|&gt;\text{ }t_{n-2,\alpha /2}$</li>
+</ul>
 <p>Alternatively, with software we can calculate the $p$-value as follows:</p>
-<p>$$\begin{aligned} \text{(a) }p &amp;=&amp;P(t_{n-2}&gt;t) \ \text{(b) }p &amp;=&amp;P(t_{n-2}&lt;t) \ \text{(c) }p &amp;=&amp;2\min [P(t_{n-2}&lt;t_{0}),P(t_{n-2}&gt;t)]\end{aligned}$$</p>
+<ul>
+<li>$p = P(t_{n-2}&gt;t)$</li>
+<li>$p &amp;=&amp;P(t_{n-2}&lt;t)$</li>
+<li>$p &amp;=&amp;2\min [P(t_{n-2}&lt;t_{0}),P(t_{n-2}&gt;t)]$</li>
+</ul>
 <ol>
 <li>Make a conclusion</li>
 </ol>
@@ -798,7 +808,7 @@
 <p>a). What is the estimated model?</p>
 <p>b). Interpret the coefficients $b_{0}$ and $b_{0}$  in context.</p>
 <p>c). Calculate the $95%$ confidence interval for $\beta_{1}$.</p>
-<p>d). What are the hypotheses that the $\mathit{p}$-value refers to?</p>
+<p>d). What are the hypotheses that the $p$-value refers to?</p>
 <p>e). Based on the $p$-value and on the confidence interval, what conclusion can you make about the relationship between the selling price of a house and its square footage?</p>
 <p>Does the amount of education that one&rsquo;s father has influence the amount of education his children have? A sample of $20$ people were asked to report the number of years of formal schooling they had along with the number of years their fathers had. The data are shown in the table below.</p>
 <table>
@@ -902,7 +912,7 @@
 <p>Calculate a $90%$ confidence interval for $\beta_{1}$.</p>
 </li>
 <li>
-<p>What are the hypotheses that the $\mathit{p}$-value refers to?</p>
+<p>What are the hypotheses that the $p$-value refers to?</p>
 </li>
 <li>
 <p>Based on the $p$-value and on the confidence interval, what conclusion can you make about the relationship between a child&rsquo;s education level and his or her father&rsquo;s education level?</p>
@@ -1118,7 +1128,7 @@
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/courses/bana3363/14-chi-squared-test-of-independence/" rel="next">Chi Squared Test of Independence</a>
+    <a href="/courses/bana3363/8-matched-pairs/" rel="next">Matched Pairs</a>
   </div>
   
   

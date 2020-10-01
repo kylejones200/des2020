@@ -602,15 +602,11 @@
       </li>
       
       <li >
-        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Goodness-of-Fit Test</a>
+        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Tests</a>
       </li>
       
       <li >
         <a href="/courses/bana3363/8-matched-pairs/">Matched Pairs</a>
-      </li>
-      
-      <li >
-        <a href="/courses/bana3363/14-chi-squared-test-of-independence/">Chi Squared Test of Independence</a>
       </li>
       
     </ul>
@@ -673,24 +669,36 @@
 <ol>
 <li>
 <p>Specify the hypothesis:</p>
-<p>Now instead of $\mu <em>{1}-\mu <em>{2},$ we work with the population     proportions, $p</em>{1}-p</em>{2}:$</p>
-<p>$$\begin{aligned}     \text{(a) }H_{0} &amp;:&amp;p_{1}-p_{2}\leq 0\text{ vs. }H_{1}:p_{1}-p_{2}&gt;0\text{ }     \     \text{(b) }H_{0} &amp;:&amp;p_{1}-p_{2}\geq 0\text{ vs. }H_{1}:p_{1}-p_{2}&lt;0 \     \text{(c) }H_{0} &amp;:&amp;p_{1}-p_{2}=0\text{ vs. }H_{1}:p_{1}-p_{2}\neq 0\end{aligned}$$</p>
-<p>Note that now we explicitly say that $d=0$. It doesn&rsquo;t have to be,     but if we consider nonzero differences, we must change the test     statistic. The additional burden of describing two cases ($d=0$     versus $d$ being nonzero) is not warranted for our purposes, since     testing the zero difference is far more common.</p>
+<p>Now instead of $\mu <em>{1}-\mu <em>{2}$, we work with the population proportions, $p</em>{1}-p</em>{2}:$</p>
+<ul>
+<li>$H_{0}: p_{1}-p_{2}\leq 0\text{ vs. }H_{1}: p_{1}-p_{2}&gt;0$</li>
+<li>$H_{0}: p_{1}-p_{2}\geq 0\text{ vs. }H_{1}: p_{1}-p_{2}&lt;0$</li>
+<li>$H_{0}: p_{1}-p_{2}=0\text{ vs. }H_{1}: p_{1}-p_{2}\neq 0$</li>
+</ul>
+<p>Note that now we explicitly say that $d=0$. It doesn&rsquo;t have to be, but if we consider nonzero differences, we must change the test statistic. The additional burden of describing two cases ($d=0$ versus $d$ being nonzero) is not warranted for our purposes, since testing the zero difference is far more common.</p>
 </li>
 <li>
 <p>Calculate the <strong>test statistic</strong></p>
 <p>The test statistic will always be a $z$ statistic since we assume     $n$ is large:</p>
-<p>$$z=\frac{\widehat{p_{1}}-\widehat{p_{2}}}{\sqrt{\widehat{p}%     _{p}(1-p_{p})\left( \frac{1}{n_{1}}+\frac{1}{n_{2}}\right) }}$$</p>
-<p>where $\widehat{p}<em>{p}$ is the &ldquo;pooled&rdquo; proportion of successes,     i.e., $%     \widehat{p}</em>{p}=\frac{\sum_{j}x_{1j}+\sum_{j}x_{2j}}{n_{1}+n_{2}}=\frac{%     \text{Total Number of &ldquo;Successes&rdquo;}}{\text{Total Sample Size}}$</p>
+<p>$$z=\frac{\widehat{p_{1}}-\widehat{p_{2}}}{\sqrt{\widehat{p}_{p}(1-p_{p})\left( \frac{1}{n_{1}}+\frac{1}{n_{2}}\right) }}$$</p>
+<p>where $\widehat{p}<em>{p}$ is the &ldquo;pooled&rdquo; proportion of successes, i.e., $\widehat{p}</em>{p}=\frac{\sum_{j}x_{1j}+\sum_{j}x_{2j}}{n_{1}+n_{2}}=\frac{\text{Total Number of &ldquo;Successes&rdquo;}}{\text{Total Sample Size}}$</p>
 </li>
 <li>
 <p>Determine the rejection region or compute the $p$-value.</p>
 </li>
 </ol>
-<p>The the rejection region for a test with the $\alpha$ level of significance would be determined using the standard normal distribution using the following critical values. <em>Note that these are the same critical values that we used for the test of a single proportion.</em></p>
-<p>$$\begin{aligned} \text{(a)}{\text{ }z &amp;:&amp;z&gt;\text{ }z_{\alpha }} \ \text{(b) }{z &amp;:&amp;z&lt;-z_{\alpha }} \ \text{(c) }{z &amp;:&amp;|z|&gt;\text{ }z_{\alpha /2}}\end{aligned}$$</p>
+<p>The the rejection region for a test with the $\alpha$ level of significance would be determined using the standard normal distribution using the following critical values. Note that these are the same critical values that we used for the test of a single proportion.</p>
+<ul>
+<li>$z: z&gt;\text{ }z_{\alpha }</li>
+<li>$z: z&lt;-z_{\alpha }</li>
+<li>$z: |z|&gt;\text{ }z_{\alpha /2}}$</li>
+</ul>
 <p>Alternatively, we can compute the $p$-value as follows:</p>
-<p>$$\begin{aligned} \text{(a) }pval &amp;=&amp;P(Z&gt;z) \ \text{(b) }pval &amp;=&amp;P(Z&lt;z) \ \text{(c) }pval &amp;=&amp;2\min [P(Z&gt;z),P(Z&lt;z)]\end{aligned}$$</p>
+<ul>
+<li>$pval =P(Z&gt;z)</li>
+<li>$pval =P(Z&lt;z)$</li>
+<li>$pval =2\min [P(Z&gt;z),P(Z&lt;z)]$</li>
+</ul>
 <ol>
 <li>Make a conclusion</li>
 </ol>

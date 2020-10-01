@@ -602,15 +602,11 @@
       </li>
       
       <li >
-        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Goodness-of-Fit Test</a>
+        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Tests</a>
       </li>
       
       <li >
         <a href="/courses/bana3363/8-matched-pairs/">Matched Pairs</a>
-      </li>
-      
-      <li >
-        <a href="/courses/bana3363/14-chi-squared-test-of-independence/">Chi Squared Test of Independence</a>
       </li>
       
     </ul>
@@ -952,13 +948,17 @@
 </li>
 <li>
 <p>Compute the p-value</p>
-<p>$$\begin{aligned} \text{(a) }p &amp;=&amp;P(t_{n-(p+1)}&gt;t_{0}) \ \text{(b) }p &amp;=&amp;P(t_{n-(p+1)}&lt;t_{0}) \ \text{(c) }p &amp;=&amp;2\min [P(t_{n-(p+1)}&lt;t_{0}),P(t_{n-(p+1)}&gt;t_{0})]\end{aligned}$$</p>
+<p>a) $p =P(t_{n-(p+1)}&gt;t_{0})$
+b) $p =P(t_{n-(p+1)}&lt;t_{0})$
+c) $p =2\min [P(t_{n-(p+1)}&lt;t_{0}),P(t_{n-(p+1)}&gt;t_{0})]$</p>
 <p>Alternatively, we can define the rejection region as follows:</p>
-<p>$$\begin{aligned} \text{(a)}{\text{ }t_{n-(p+1)} &amp;:&amp;t_{n-(p+1)}&gt;t_{n-(p+1),\alpha }} \ \text{(b)}{\text{ }t_{n-(p+1)} &amp;:&amp;t_{n-(p+1)}&lt;-t_{n-(p+1),\alpha }} \ \text{(c)}{t_{n-(p+1)} &amp;:&amp;|t_{n-(p+1)}|&gt;t_{n-(p+1),\alpha /2}}\end{aligned}$$</p>
+<p>a) $t_{n-(p+1)} &amp;:&amp;t_{n-(p+1)}&gt;t_{n-(p+1),\alpha }}$
+b) $t_{n-(p+1)} &amp;:&amp;t_{n-(p+1)}&lt;-t_{n-(p+1),\alpha }}$
+c) $t_{n-(p+1)} &amp;:&amp;|t_{n-(p+1)}|&gt;t_{n-(p+1),\alpha /2}}$</p>
 </li>
 <li>
 <p>Make a conclusion</p>
-<p>If the $p$-value $\leq \alpha $, we reject $H_{0}.$ If the $p$-value $% &gt;\alpha $, we fail to reject $H_{0}.$ Equivalently, if $t_{0}$ lies within the rejection region, we reject $H_{0}$. If $t_{0}$ lies outside the rejection region, we fail to reject $H_{0}.$</p>
+<p>If the $p$-value $\leq \alpha$, we reject $H_{0}.$ If the $p$-value $% &gt;\alpha$, we fail to reject $H_{0}$. Equivalently, if $t_{0}$ lies within the rejection region, we reject $H_{0}$. If $t_{0}$ lies outside the rejection region, we fail to reject $H_{0}.$</p>
 </li>
 </ol>
 <p>An important issue arises in multiple regression with respect to $R^{2}$ that we summarize in the following theorem.</p>
@@ -976,7 +976,7 @@
 <p>Let&rsquo;s work an example or two using Excel.</p>
 <p>We can think of many factors that might influence the final sale of a house, such as age, square footage, # of bathrooms, # of bedrooms, amenities, etc. Let&rsquo;s fit a model to age, square footage, and # of bathrooms using the Ames housing data set from earlier handouts.  Using the excel output in Figure 
 <a href="#reg_output">[reg_output]</a>{reference-type=&quot;ref&rdquo; reference=&quot;reg_output&rdquo;}, answer the following questions.</p>
-<p>a). What would be the estimated selling price of a house that is $10$ years old, and for which there are $2$ bathrooms and $% 1400$ square feet?</p>
+<p>a). What would be the estimated selling price of a house that is $10$ years old, and for which there are $2$ bathrooms and $1400$ square feet?</p>
 <p>b). How would you interpret the coefficients?</p>
 <p>c). How would you interpret the coefficient for Bath?</p>
 <p>d). Show how adjusted $R^{2}$ was calculated. Why should we look at this value rather than $R^{2}?$</p>
@@ -985,7 +985,7 @@
 <p>Data on $4,137$ college students was obtained and a first-order multiple linear regression model was fit in order to determine the effects of various factors on college GPA, measured on the usual four-point scale. The results are shown in the Excel output below in Figure 
 <a href="#col_gpa">[col_gpa]</a>{reference-type=&quot;ref&rdquo; reference=&quot;col_gpa&rdquo;}.</p>
 <p>a). Write down the estimated model.</p>
-<p>b). What would be the estimated GPA of a student with an SAT score of $1190$ who graduated $3^{rd\text{ \ }}$in a class of $% 542$ students?</p>
+<p>b). What would be the estimated GPA of a student with an SAT score of $1190$ who graduated third in a class of $542$ students?</p>
 <p>c). How would you interpret the coefficients?</p>
 <p>d). Calculate and interpret a $95%$ confidence interval for $\beta_{3}$, the coefficient for high school rank.</p>
 <p>e). Test the hypothesis that $\beta_{2}\neq 0$ using the four-step procedure.</p>

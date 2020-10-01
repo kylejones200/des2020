@@ -602,15 +602,11 @@
       </li>
       
       <li >
-        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Goodness-of-Fit Test</a>
+        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Tests</a>
       </li>
       
       <li >
         <a href="/courses/bana3363/8-matched-pairs/">Matched Pairs</a>
-      </li>
-      
-      <li >
-        <a href="/courses/bana3363/14-chi-squared-test-of-independence/">Chi Squared Test of Independence</a>
       </li>
       
     </ul>
@@ -672,20 +668,28 @@
 <p>Specify the hypothesis:</p>
 <p>Now instead of $\mu$ we work with the population proportion, $p:$</p>
 <p>a) $H_{0}: p\leq p_{0}\text{ vs. }H_{1}:p&gt;p_{0}$
-b) $H_{0} &amp;:&amp;p\geq p_{0}\text{ vs. }H_{1}:p&lt;p_{0}$
-c) $H_{0} &amp;:&amp;p=p_{0}\text{ vs. }H_{1}:p\neq p_{0}$</p>
+b) $H_{0}: p\geq p_{0}\text{ vs. }H_{1}:p&lt;p_{0}$
+c) $H_{0}: p=p_{0}\text{ vs. }H_{1}:p\neq p_{0}$</p>
 </li>
 <li>
 <p>Calculate the <strong>test statistic</strong></p>
 <p>The test statistic will always be a standard normal $z$ statistic since we assume $n$ is large:</p>
 <p>$$z=\frac{\widehat{p}-p_0}{\sqrt{p_0(1-p_{0})/n}}$$</p>
-<p>When the null hypothesis is true, the test statistic has the standard normal distribution. Notice that we use $p_{0}$ in the     denominator rather than $\widehat{p}.$ This is because we always assume $H_{0}$ is true when we calculate the test statistic. If $H_{0}$ is true, $p_{0}$ is the     true population proportion by definition.</p>
+<p>When the null hypothesis is true, the test statistic has the standard normal distribution. Notice that we use $p_{0}$ in the     denominator rather than $\widehat{p}$. This is because we always assume $H_{0}$ is true when we calculate the test statistic. If $H_{0}$ is true, $p_{0}$ is the     true population proportion by definition.</p>
 </li>
 <li>
 <p>Compute the <strong>p-value</strong> or <strong>rejection region</strong></p>
-<p>$$\begin{aligned}     \text{(a) }pval &amp;=&amp;P(Z&gt;z_{0}) \     \text{(b) }pval &amp;=&amp;P(Z&lt;z_{0}) \     \text{(c) }pval &amp;=&amp;2\min [P(Z&gt;z_{0}),P(Z&lt;z_{0})]\end{aligned}$$</p>
-<p>The the rejection region (i.e., the &ldquo;critical values&rdquo;) for a test     with the $%     \alpha$ level of significance would be computed as follows:</p>
-<p>$$\begin{aligned}     \text{(a)}{\text{ }z &amp;:&amp;z&gt;\text{ }z_{\alpha }} \     \text{(b) }{z &amp;:&amp;z&lt;-z_{\alpha }} \     \text{(c) }{z &amp;:&amp;|z|&gt;\text{ }z_{\alpha /2}}\end{aligned}$$</p>
+<ul>
+<li>$pval = P(Z&gt;z_{0})$</li>
+<li>$pval = P(Z&lt;z_{0})$</li>
+<li>$pval = 2\min [P(Z&gt;z_{0}),P(Z&lt;z_{0})]$</li>
+</ul>
+<p>The the rejection region (i.e., the &ldquo;critical values&rdquo;) for a test     with the $\alpha$ level of significance would be computed as follows:</p>
+<ul>
+<li>$z: z&gt;\text{ }z_{\alpha }$</li>
+<li>$z: z&lt;-z_{\alpha }$</li>
+<li>$z: |z|&gt;\text{ }z_{\alpha /2}$</li>
+</ul>
 <p>As an     example, the rejection regions for a test at the $\alpha =0.05$     level are depicted in Figures     
 <a href="#left_tail">[left_tail]</a>{reference-type=&quot;ref&rdquo;     reference=&quot;left_tail&rdquo;},     
 <a href="#right_tail">[right_tail]</a>{reference-type=&quot;ref&rdquo;     reference=&quot;right_tail&rdquo;}, and     
@@ -695,7 +699,7 @@ c) $H_{0} &amp;:&amp;p=p_{0}\text{ vs. }H_{1}:p\neq p_{0}$</p>
 </ol>
 </li>
 </ol>
-<p>If the $p$-value $\leq \alpha ,$ we reject $H_{0}.$ If the $p$-value $% &gt;\alpha ,$ we fail to reject $H_{0}.$ Equivalently, if $z$ lies within the rejection region, we reject $H_{0}$. If $z$ lies outside the rejection region, we fail to reject $H_{0}.$</p>
+<p>If the $p$-value $\leq \alpha$, we reject $H_{0}$. If the $p$-value $&gt;\alpha$, we fail to reject $H_{0}$. Equivalently, if $z$ lies within the rejection region, we reject $H_{0}$. If $z$ lies outside the rejection region, we fail to reject $H_{0}$.</p>
 <p>Let&rsquo;s go back to the issue of marijuana legalization. The latest General Social Survey, which was conducted in $2012$, gives the following breakdown on the question of whether marijuana should be made legal or not.</p>
 <table>
 <thead>
@@ -729,9 +733,9 @@ c) $H_{0} &amp;:&amp;p=p_{0}\text{ vs. }H_{1}:p\neq p_{0}$</p>
 <p>$$P(Z &amp;&lt;&amp;-1.76) = 0.0392$$</p>
 <p>Alternatively, the rejection region is defined as all values of $z$ that are greater than $z_{0.01}=2.33,$ as shown in Figure 
 <a href="#rr1">[rr1]</a>{reference-type=&quot;ref&rdquo; reference=&quot;rr1&rdquo;}:</p>
-<p>Using either method, we would fail-to-reject $H_{0}$ and state that we do not have enough evidence to conclude that the proportion of Americans favoring legalization exceeds $0.50.$</p>
+<p>Using either method, we would fail-to-reject $H_{0}$ and state that we do not have enough evidence to conclude that the proportion of Americans favoring legalization exceeds $0.50$.</p>
 <p>Let&rsquo;s work some more examples of this.</p>
-<p>The number of individuals for and against legalization of marijuana in the $% 30$ and older age group is given in the table below. Conduct an $\alpha =0.05$ test of the hypothesis that the proportion of adults over $30$ who favor legalization is less than $0.50.$</p>
+<p>The number of individuals for and against legalization of marijuana in the $% 30$ and older age group is given in the table below. Conduct an $\alpha =0.05$ test of the hypothesis that the proportion of adults over $30$ who favor legalization is less than $0.50$.</p>
 <table>
 <thead>
 <tr>

@@ -602,15 +602,11 @@
       </li>
       
       <li >
-        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Goodness-of-Fit Test</a>
+        <a href="/courses/bana3363/13-chi-squared-goodness-of-fit-test/">Chi Squared Tests</a>
       </li>
       
       <li >
         <a href="/courses/bana3363/8-matched-pairs/">Matched Pairs</a>
-      </li>
-      
-      <li >
-        <a href="/courses/bana3363/14-chi-squared-test-of-independence/">Chi Squared Test of Independence</a>
       </li>
       
     </ul>
@@ -667,22 +663,197 @@
             <h2 id="confidence-interval-for-difference-in-proportion">Confidence Interval for Difference in Proportion</h2>
 <p>We might be interested in the difference in the proportions of two groups who meet a certain criterion. For example, we might want to determine what type of website banner ad (one that flashes or one that is steady) leads to a higher proportion of people clicking on it. We might want to determine which of two packaging designs leads to a higher proportion of people who indicate they would buy the product. An excellent example of inference for proportions comes from prescription drug testing. Researchers might be interested to see if a new cancer drug has a reduced chance of causing nausea in patients compared to an existing drug. Opinion polls on issues such as marijuana legalization can be analyzed using techniques for differences in proportions.</p>
 <p>The general notation for inference about two population/process proportions is similar to that of two population/process means. The big difference is that the data for both groups can only take on the values of $0$ or $1,$ with $1$ indicating a &quot;success&quot; (either a click on an ad, an indication to purchase, or a person indicating that they did not experience nausea, for example).</p>
-<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;   <strong>Group 1</strong>                                                                                                <strong>Group 2</strong>   Sample of size $n_{1}:$ $X_{11},X_{12},\ldots ,X_{1n_{1}}$ , all either $0$ or $1$                         Sample of size $n_{2}:$ $X_{21},X_{22},\ldots ,X_{2n_{2}},$ all either $0$ or $1$   Mean: $p_{1}$                                                                                              Mean: $p_{2}$   Sample Proportion: $\widehat{p_{1}}=\frac{\sum_{j}x_{1j}}{n_{1}}$ (i.e., number of successes in Group 1)   Sample proportion: $\widehat{p_{2}}=\frac{%                                                                                                              \sum_{j}x_{2j}}{n_{2}}$ (i.e., number of successes in Group 2)   Estimated Standard Deviation: $\sqrt{\frac{\widehat{p_{1}}(1-\widehat{p_{1}})%                             Estimated Standard Deviation:$\sqrt{\frac{\widehat{p_{2}}(1-%   }{n_{1}}}$                                                                                                 \widehat{p_{2}})}{n_{2}}}$   &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Group 1</strong></th>
+<th><strong>Group 2</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sample of size</td>
+<td>$n_{1}:$ $X_{11},X_{12},\ldots ,X_{1n_{1}}$ , all either $0$ or $1$</td>
+<td>$n_{2}:$ $X_{21},X_{22},\ldots ,X_{2n_{2}},$ all either $0$ or $1$</td>
+</tr>
+<tr>
+<td>Mean</td>
+<td>$p_{1}$</td>
+<td>$p_{2}$</td>
+</tr>
+<tr>
+<td>Sample Proportion</td>
+<td>$\widehat{p_{1}}=\frac{\sum_{j}x_{1j}}{n_{1}}$ (i.e., number of successes in Group 1)</td>
+<td>$\widehat{p_{2}}=\frac{\sum_{j}x_{2j}}{n_{2}}$ (i.e., number of successes in Group 2)</td>
+</tr>
+<tr>
+<td>Estimated Standard Deviation</td>
+<td>$\sqrt{\frac{\widehat{p_{1}}(1-\widehat{p_{1}})$</td>
+<td>$\sqrt{\frac{\widehat{p_{2}}(1-%   }{n_{1}}}\widehat{p_{2}})}{n_{2}}}$</td>
+</tr>
+</tbody>
+</table>
 <p>We can now introduce the confidence interval for the difference in two proportions.</p>
 <p>A $100(1-\alpha )%$ confidence interval for the difference in  two population proportions $p_{1}-p_{2}$, if the two sample sizes $n_{1}$ and $% n_{2}$ are sufficiently large, is given by</p>
 <p>$$\widehat{p_{1}}-\widehat{p_{2}}\pm z_{\alpha /2}\sqrt{\frac{\widehat{p_{1}}% (1-\widehat{p_{1}})}{n_{1}}+\frac{\widehat{p_{2}}(1-\widehat{p_{2}})}{n_{2}}}$$</p>
 <p>The interval for the difference in proportions is interpreted in a similar manner as with the interval for the difference in two means. Because we are comparing two population proportions, we must phrase our interpretation in terms of being confident that the difference in proportions lies between the lower and upper bounds. Note that the interval will always fall between $-1$ and $1.$ Negative values will arise when the proportion in Group $2$ is higher than the proportion in Group $1.$ In a single sample interval for a proportion, we cannot have negative values, but when we discuss <em>differences in proportions,</em> we certainly can.</p>
 <p>Another issue regarding interpretation should be mentioned here. Because proportions can be interpreted as percentages, it would be tempting to say, if your interval were $[0.03,0.05]$ for example, that the difference between Group 1 and Group 2 on an issue is between $3%$ and $5%$. <em>This is wrong because the difference in two percents is NOT the percentage difference.</em> For example, if the interval above represented the difference in the percentage of people in two voting populations who favored a new tax initiative, we <em>cannot</em> say that between $3%$ and $5%$ more of Group $% 1$ favors the initiative than Group $2$. If, in a population of $12,000,$ $% 1,440$ $(12%)$ of people in Group 2 really do favor the initiative, then saying $3%$ more people in Group 1 favor the initiative implies that $1,483$ people in that group should be in favor. But if the population size of Group 1 is, let&rsquo;s say, $34,000$ (populations can be different sizes) and $5,100$ $% \left( \frac{5,100}{34,000}=15%\right)$ were in favor, a $3%$ increase would suggest that $5,253$ people in Group 1 would be in favor, not $1,483.$ Thus, we must always speak of <em>percentage-point differences</em> when we interpret these intervals.</p>
 <p>The number of individuals for and against legalization of marijuana in the $% 18-30$ and $31$ and over age groups are given in the table below. Find a $% 95%$ confidence interval for the true difference in the proportion of people favoring marijuana legalization between the two groups.</p>
-<p><strong>Group</strong>                 <strong>Legal</strong>   <strong>Not Legal</strong>   <strong>Total</strong>   &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- &mdash;&mdash;&mdash;&ndash; &mdash;&mdash;&mdash;&mdash;&mdash; &mdash;&mdash;&mdash;&ndash;   <strong>18-30 (Group 1)</strong>       $131$       $104$           $235$   <strong>31 &amp; over (Group 2)</strong>   $455$       $541$           $996$   TOTAL                     $586$       $645$           $1231$</p>
+<table>
+<thead>
+<tr>
+<th><strong>Group</strong></th>
+<th><strong>Legal</strong></th>
+<th><strong>Not Legal</strong></th>
+<th><strong>Total</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>18-30 (Group 1)</strong></td>
+<td>$131$</td>
+<td>$104$</td>
+<td>$235$</td>
+</tr>
+<tr>
+<td><strong>31 &amp; over (Group 2)</strong></td>
+<td>$455$</td>
+<td>$541$</td>
+<td>$996$</td>
+</tr>
+<tr>
+<td>TOTAL</td>
+<td>$586$</td>
+<td>$645$</td>
+<td>$1231$</td>
+</tr>
+</tbody>
+</table>
 <p>A website designer wants to examine the effectiveness of two different layouts (A and B) for a small retail client in terms of the proportion of individuals who find and click on a special coupon within the first five minutes of browsing the retailer&rsquo;s site. Presumably, the more people who find and click the coupon, the more effective the layout is. For two weeks, whenever a customer accessed the retailer&rsquo;s site, one of the two layouts (A or B) was randomly chosen to load on the customer&rsquo;s screen. Customers were tracked by their IP addresses, numbers that uniquely identify devices over the internet. Of the customers who browsed the site for at least five minutes, the proportion who clicked the coupon using each layout was recorded. The data are below. Construct a $95%$ confidence interval for the difference in the two proportions and interpret the interval in context.</p>
-<p>&mdash;&mdash;&mdash;&mdash; &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- &mdash;&mdash;&mdash;&ndash;   <strong>Layout</strong>   <strong>Found Coupon</strong>   <strong>Did Not Find Coupon</strong>   <strong>Total</strong>   <strong>A</strong>        $675$              $658$                     $1333$   <strong>B</strong>        $690$              $477$                     $1167$   <strong>Total</strong>    $1365$             $1135$                    $2500$   &mdash;&mdash;&mdash;&mdash; &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- &mdash;&mdash;&mdash;&ndash;</p>
+<table>
+<thead>
+<tr>
+<th><strong>Layout</strong></th>
+<th><strong>Found Coupon</strong></th>
+<th><strong>Did Not Find Coupon</strong></th>
+<th><strong>Total</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>$675$</td>
+<td>$658$</td>
+<td>$1333$</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>$690$</td>
+<td>$477$</td>
+<td>$1167$</td>
+</tr>
+<tr>
+<td><strong>Total</strong>    $1365$</td>
+<td>$1135$</td>
+<td>$2500$</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p>In a recent study, a drug manufacturer wanted to determine if a new antidepressant (Drug X) could also reduce pain that often comes with diabetes, called diabetic neuropathy. The data for the study are shown below. Calculate a $92%$ confidence interval for the difference in the proportion of people who experience relief from Drug X and the placebo.</p>
-<p>&mdash;&mdash;&mdash;&mdash;- &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; &mdash;&mdash;&mdash;&mdash;&mdash; &mdash;&mdash;&mdash;&ndash;   <strong>Dosage</strong>    <strong>Some/Significant Relief</strong>   <strong>No Relief</strong>   <strong>Total</strong>   <strong>Drug X</strong>    $159$                         $122$           $281$   <strong>Placebo</strong>   $114$                         $197$           $311$                 $273$                         $319$           $592$   &mdash;&mdash;&mdash;&mdash;- &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; &mdash;&mdash;&mdash;&mdash;&mdash; &mdash;&mdash;&mdash;&ndash;</p>
-<p>\vspace{1.7in} A researcher is interested to see if there is a difference between married and unmarried people when it comes to certain social behavior, in particular, the frequency of sexual activity. The data from the study are shown below. Calculate a $90%$ confidence interval for the difference in the proportion of married and unmarried persons who have sex at least once per week.</p>
-<p>&mdash;&mdash;&mdash;&mdash;&mdash; &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- &mdash;&mdash;&mdash;&ndash;   <strong>Group</strong>       $\geq$<strong>Once/Week</strong>   $\mathbf{&lt;}$ <strong>Once/Week</strong>   <strong>Total</strong>   <strong>Married</strong>     $608$                 $28$                         $636$   <strong>Unmarried</strong>   $553$                 $7$                          $560$   Total           $1161$                $35$                         $1196$   &mdash;&mdash;&mdash;&mdash;&mdash; &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- &mdash;&mdash;&mdash;&ndash;</p>
+<table>
+<thead>
+<tr>
+<th><strong>Dosage</strong></th>
+<th><strong>Some/Significant Relief</strong></th>
+<th><strong>No Relief</strong></th>
+<th><strong>Total</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Drug X</strong></td>
+<td>$159$</td>
+<td>$122$</td>
+<td>$281$</td>
+</tr>
+<tr>
+<td><strong>Placebo</strong></td>
+<td>$114$</td>
+<td>$197$</td>
+<td>$311$</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>$273$</td>
+<td>$319$</td>
+<td>$592$</td>
+</tr>
+</tbody>
+</table>
+<p>A researcher is interested to see if there is a difference between married and unmarried people when it comes to certain social behavior, in particular, the frequency of sexual activity. The data from the study are shown below. Calculate a $90%$ confidence interval for the difference in the proportion of married and unmarried persons who have sex at least once per week.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Group</strong></th>
+<th>$\geq$<strong>Once/Week</strong></th>
+<th>$\mathbf{&lt;}$ <strong>Once/Week</strong></th>
+<th><strong>Total</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Married</strong></td>
+<td>$608$                 $28$</td>
+<td>$636$</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Unmarried</strong></td>
+<td>$553$</td>
+<td>$7$</td>
+<td>$560$</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>$1161$</td>
+<td>$35$</td>
+<td>$1196$</td>
+</tr>
+</tbody>
+</table>
 <p>Astrology is a system of belief that, broadly speaking, claims that astronomical events somehow influence human behavior. One aspect of astrology is belief that the zodiac sign that one is born under (e.g., Pisces, Libra, Leo, Scorpio, etc.) somehow influences a person&rsquo;s behavior. Is belief in astrology related significantly to education level? The $2012$ General Social Survey asked adults $18$ and over whether they believed at all in the zodiac. The results are presented below for individuals with an associate&rsquo;s degree or higher (&quot;College&quot;) and those with a high school diploma or less (&quot;HS or Below&quot;). Calculate a $98%$ confidence interval for the difference in proportions between the two groups and interpret the interval in context.</p>
-<p>&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; &mdash;&mdash;&mdash;&mdash;- &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; &mdash;&mdash;&mdash;&ndash;   <strong>Dosage</strong>        <strong>Believe</strong>   <strong>Do Not Believe</strong>   <strong>Total</strong>   <strong>College</strong>       $162$         $198$                $360$   <strong>HS or Below</strong>   $330$         $306$                $636$                     $492$         $504$                $996$   &mdash;&mdash;&mdash;&mdash;&mdash;&ndash; &mdash;&mdash;&mdash;&mdash;- &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; &mdash;&mdash;&mdash;&ndash;</p>
+<table>
+<thead>
+<tr>
+<th><strong>Dosage</strong></th>
+<th><strong>Believe</strong></th>
+<th><strong>Do Not Believe</strong></th>
+<th><strong>Total</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>College</strong></td>
+<td>$162$</td>
+<td>$198$</td>
+<td>$360$</td>
+</tr>
+<tr>
+<td><strong>HS or Below</strong></td>
+<td>$330$</td>
+<td>$306$</td>
+<td>$636$</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>$492$</td>
+<td>$504$</td>
+<td>$996$</td>
+</tr>
+</tbody>
+</table>
 
           </div>
 
